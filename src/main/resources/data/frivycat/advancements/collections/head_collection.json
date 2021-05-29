@@ -1,0 +1,38 @@
+{
+  "parent": "frivycat:collections/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:barrel"
+    },
+    "title": {
+      "text": "What did Timmy give you?",
+      "color": "yellow"
+    },
+    "description": {
+      "text": "Open a Head Box from Timothy"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "open_head_box": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "frivycat:chests/head_box"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "open_head_box"
+    ]
+  ],
+    "rewards": {
+        "recipes": [
+            "frivycat:skull",
+	    "frivycat:lucky_block"
+        ]
+    }
+}

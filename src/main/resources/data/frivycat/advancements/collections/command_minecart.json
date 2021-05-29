@@ -1,0 +1,39 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "collect": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:command_block_minecart"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "text": "Get a command block minecart"
+        },
+        "frame": "challenge",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:command_block_minecart",
+            "nbt": "{Enchantments:[{id:69}]}"
+        },
+        "show_toast": true,
+        "title": {
+            "bold": false,
+            "color": "gold",
+            "text": "Wait, that rolls?"
+        }
+    },
+    "requirements": [
+        [
+            "collect"
+        ]
+    ],
+    "parent": "frivycat:collections/get_command_block"
+}
