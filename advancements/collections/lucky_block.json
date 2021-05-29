@@ -1,0 +1,34 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Wonder what you'll get",
+            "color": "gold"
+        },
+        "description": {
+            "text": "Place a Lucky Block"
+        },
+        "icon": {
+            "item": "minecraft:player_head",
+            "nbt": "{SkullOwner:MHF_Question}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "place": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:player_head"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "place"
+        ]
+    ],
+    "parent": "frivycat:collections/root"
+}

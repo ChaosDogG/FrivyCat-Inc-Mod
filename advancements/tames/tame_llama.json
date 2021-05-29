@@ -1,0 +1,42 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "tame": {
+            "trigger": "minecraft:tame_animal",
+            "conditions": {
+                "entity": {
+                    "type": "#frivycat:llamas"
+                }
+            }
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "text": "Tame a llama"
+        },
+        "frame": "goal",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:llama_spawn_egg"
+        },
+        "show_toast": true,
+        "title": {
+            "bold": false,
+            "color": "yellow",
+            "text": "LLAMA-llama-llama-llama"
+        }
+    },
+    "requirements": [
+        [
+            "tame"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "frivycat:llama_spawn_egg",
+            "frivycat:trader_llama_spawn_egg"
+        ]
+    },
+    "parent": "frivycat:tames/tame_birb"
+}
