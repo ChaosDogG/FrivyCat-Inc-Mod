@@ -1,0 +1,38 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:player_head"
+      },
+      "title": {
+        "text": "Death to you!",
+        "color": "red"
+      },
+      "description": {
+        "text": "Kill a player"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true
+    },
+    "parent": "frivycat:kills/root",
+    "criteria": {
+      "murder": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:player"
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "murder"
+      ]
+    ],
+    "rewards": {
+      "loot": [
+        "frivycat:chests/head_box"
+      ]
+    }
+  }
