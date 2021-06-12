@@ -1,0 +1,43 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "collect": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:name_tag"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "text": "Get a name tag"
+        },
+        "frame": "task",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:name_tag"
+        },
+        "show_toast": true,
+        "title": {
+            "bold": false,
+            "color": "gold",
+            "text": "Anyone got a name?"
+        }
+    },
+    "requirements": [
+        [
+            "collect"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "frivycat:tag"
+        ]
+    },
+    "parent": "frivycat:collections/root"
+}

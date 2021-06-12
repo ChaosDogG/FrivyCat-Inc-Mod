@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:light_blue_shulker_box"
+    },
+    "title": {
+      "text": "What'dyougetwhat'dyouget?",
+      "color": "gold"
+    },
+    "description": {
+      "text": "Open the Mega Materials box"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "frivycat:actions/root",
+  "criteria": {
+    "open": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "item": "minecraft:debug_stick"
+        },
+        "location": {
+          "block": {
+            "block": "minecraft:light_blue_shulker_box",
+            "nbt": "{Lock:\"Lock Pick\"}"
+          }
+        }
+      }
+    }
+  }
+}

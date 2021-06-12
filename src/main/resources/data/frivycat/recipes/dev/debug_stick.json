@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        {
+            "tag": "frivycat:dyes"
+        },
+        {
+            "item": "minecraft:observer"
+        },
+        {
+            "item": "minecraft:barrier"
+        },
+        {
+            "item": "minecraft:stick"
+        },
+        {
+            "tag": "frivycat:command_blocks"
+        },
+        {
+            "item": "minecraft:redstone"
+        },
+        {
+            "item": "minecraft:sticky_piston"
+        },
+        {
+            "item": "minecraft:nether_star"
+        }
+    ],
+    "result": {
+        "item": "minecraft:debug_stick",
+        "count": 1
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:ender_chest"
+    },
+    "title": {
+      "text": "Collections"
+    },
+    "description": {
+      "text": "Collections Tab"
+    },
+    "frame": "task",
+    "background": "minecraft:textures/block/structure_block_data.png",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "load": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

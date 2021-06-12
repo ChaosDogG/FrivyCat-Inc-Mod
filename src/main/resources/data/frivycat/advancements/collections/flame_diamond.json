@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond",
+      "nbt": "{Enchantments:[{id:69}],CustomModelData:4}"
+    },
+    "title": {
+      "text": "May your enemies burn to Hell",
+      "color": "red"
+    },
+    "description": {
+      "text": "Get a Flame Diamond"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "frivycat:collections/special_diamonds",
+  "criteria": {
+    "collect_fire_diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:diamond",
+            "count": 1,
+            "nbt": "{CustomModelData:4}"
+          }
+        ]
+      }
+    }
+  }
+}

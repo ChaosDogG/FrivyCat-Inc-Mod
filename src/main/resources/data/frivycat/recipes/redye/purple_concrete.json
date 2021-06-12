@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "tag": "frivycat:concretes"
+        },
+        {
+            "tag": "frivycat:concretes"
+        },
+        {
+            "tag": "frivycat:concretes"
+        },
+        {
+            "tag": "frivycat:concretes"
+        },
+        {
+            "item": "minecraft:purple_dye"
+        },
+        {
+            "tag": "frivycat:concretes"
+        },
+        {
+            "tag": "frivycat:concretes"
+        },
+        {
+            "tag": "frivycat:concretes"
+        },
+        {
+            "tag": "frivycat:concretes"
+        }
+    ],
+    "result": {
+        "item": "minecraft:purple_concrete",
+        "count": 8
+    },
+    "group": "redye_concrete"
+}
