@@ -1,0 +1,10 @@
+.vscode
+out
+*.ipr
+*.iws
+*.iml
+.idea# gradle
+build
+.gradle
+eclipse
+run
