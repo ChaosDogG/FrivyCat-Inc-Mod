@@ -1,0 +1,18 @@
+{
+	"schema_version": "imm_ptl:v1",
+	"from": ["minecraft:overworld"],
+	"to": "frivycat:insane_end_barrens",
+	"reversable": true,
+	"form": {
+		"type": "imm_ptl:classical",
+		"from_frame_block": "minecraft:purple_concrete",
+		"area_block": "minecraft:air",
+		"to_frame_block": "minecraft:lime_concrete",
+		"generate_frame_if_not_found": true
+	},
+	"trigger": {
+		"type": "imm_ptl:use_item",
+		"item": "minecraft:ink_sac",
+		"consume": true
+	}
+}

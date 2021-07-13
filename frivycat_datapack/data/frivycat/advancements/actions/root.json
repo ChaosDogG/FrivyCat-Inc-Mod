@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:leather_boots"
+    },
+    "title": {
+      "text": "Actions"
+    },
+    "description": {
+      "text": "Actions Tab"
+    },
+    "frame": "task",
+    "background": "minecraft:textures/block/structure_block.png",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "load": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

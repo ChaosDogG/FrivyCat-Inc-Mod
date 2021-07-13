@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:bedrock"
+        },
+        {
+            "item": "minecraft:piston"
+        },
+        {
+            "item": "minecraft:spawner"
+        },
+        {
+            "item": "minecraft:nether_star"
+        },
+        {
+            "item": "minecraft:observer"
+        },
+        {
+            "item": "minecraft:comparator"
+        },
+        {
+            "item": "minecraft:daylight_detector"
+        },
+        {
+            "item": "minecraft:redstone"
+        },
+        {
+            "item": "minecraft:repeater"
+        }
+    ],
+    "result": {
+        "item": "minecraft:command_block",
+        "count": 5
+    }
+}

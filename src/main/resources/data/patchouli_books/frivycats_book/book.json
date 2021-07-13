@@ -1,0 +1,7 @@
+{
+	"name": "FrivyCat's Book o\' Her Datapack",
+	"landing_text": "Hello! I am FrivyCat! The dumn human who wrote the info for this book and made the datapack is Chaos. We're only gonna mention him when it's absolutely necessary. Anywho, I hope we can get through the datapack\'s functions quite swiftly!",
+	"version": 1,
+	"book_texture": "patchouli:textures/gui/book_green.png",
+	"model": "patchouli:book_green" 
+}

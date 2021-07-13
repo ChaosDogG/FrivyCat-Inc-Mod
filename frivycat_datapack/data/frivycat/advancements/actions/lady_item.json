@@ -1,0 +1,43 @@
+{
+  "parent": "frivycat:actions/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:zombie_head"
+    },
+    "title": {
+      "text": "She has what?! XD",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Give a lady a funny pickle"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "give_lady": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+       "item": {
+          "item": "minecraft:sea_pickle"
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "#frivycat:whores"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "give_lady"
+    ]
+  ]
+}

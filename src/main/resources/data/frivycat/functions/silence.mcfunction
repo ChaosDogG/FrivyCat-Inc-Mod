@@ -1,0 +1,10 @@
+execute as @e[type=#frivycat:whores,nbt=!{Silent:1b}] run data merge entity @s {Silent:1}
+execute as @e[type=cod,nbt=!{Silent:1b}] run data merge entity @s {Silent:1}
+execute as @e[type=salmon,nbt=!{Silent:1b}] run data merge entity @s {Silent:1}
+execute as @e[type=tropical_fish,nbt=!{Silent:1b}] run data merge entity @s {Silent:1}
+execute as @e[type=pufferfish,nbt=!{Silent:1b}] run data merge entity @s {Silent:1}
+execute as @e[type=#raiders,nbt=!{Silent:1b}] run data merge entity @s {Silent:1}
+execute as @e[type=villager,nbt=!{Silent:1b}] run data merge entity @s {Silent:1}
+execute as @e[type=piglin,nbt=!{Silent:1b}] run data merge entity @s {Silent:1}
+execute as @e[type=piglin_brute,nbt=!{Silent:1b}] run data merge entity @s {Silent:1}
+execute as @e[type=wandering_trader,nbt=!{Silent:1b}] run data merge entity @s {Silent:1}

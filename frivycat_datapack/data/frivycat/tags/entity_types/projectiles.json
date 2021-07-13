@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:impact_projectiles",
+    "minecraft:trident",
+    "minecraft:potion"
+  ]
+}

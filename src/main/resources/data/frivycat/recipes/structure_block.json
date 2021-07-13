@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:ender_pearl"
+        },
+        {
+            "item": "minecraft:oak_sign"
+        },
+        {
+            "item": "minecraft:redstone"
+        },
+        {
+            "item": "minecraft:glass_pane"
+        },
+        {
+            "item": "minecraft:nether_star"
+        },
+        {
+            "item": "minecraft:chest"
+        },
+        {
+            "item": "minecraft:infested_cobblestone"
+        },
+        {
+            "item": "minecraft:bricks"
+        },
+        {
+            "item": "minecraft:bedrock"
+        }
+    ],
+    "result": {
+        "item": "minecraft:structure_block",
+        "count": 5
+    }
+}

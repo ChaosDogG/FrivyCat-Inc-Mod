@@ -1,0 +1,37 @@
+{
+	"name": "Recipes",
+	"category": "patchouli:recipes",
+	"icon": "minecraft:crafting_table",
+	"pages": [
+				{
+				"type": "text",
+				"text": "All types of recipes shown here, pay attention"
+		},
+		{
+			"type": "crafting",
+			"recipe": "frivycat:bell",
+			"recipe2": "frivycat:dragon_egg"
+		},
+		{
+			"type": "crafting",
+			"recipe": "frivycat:dispenser",
+			"recipe2": "frivycat:dropper"
+		},
+		{
+			"type": "crafting",
+			"recipe": "frivycat:blaze_rod",
+			"recipe2": "frivycat:grass"
+		},
+		{
+			"type": "smelting",
+			"recipe": "frivycat:flesh_to_leather1",
+			"recipe2": "frivycat:iron_smelt1",
+			"text": "Some of these recipes are just added, not replaced. So don\'t flip out for needing concrete in the beginning of the game"
+		},
+		{
+			"type": "crafting",
+			"recipe": "frivycat:lucky_block",
+			"recipe2": "frivycat:allium"
+		}
+	]
+}

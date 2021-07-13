@@ -1,0 +1,30 @@
+{
+	"name": "The Madness",
+	"category": "patchouli:madness",
+	"icon": "minecraft:ink_sac",
+	"pages": [
+				{
+				"type": "text",
+				"text": "Well...this is the madness then..."
+		},
+		{
+			"type": "spotlight",
+			"item": "minecraft:ink_sac",
+			"title": "The Madness",
+			"text": "Good God...what the actual fuck just happened...? That was hellish..."
+		},
+		{
+			"type": "spotlight",
+			"item": "minecraft:netherite_sword",
+			"title": "What Happens",
+			"text": "Well, apparently what happens is you\'re met with a swarm of nightmares. Another side effect is that they\'re corrupted. And it corrupts ALL hostile mobs that have been loaded into the world up until this point"
+		},
+		{
+			"type": "spotlight",
+			"item": "minecraft:diamond{CustomModelData:12}",
+			"title": "Corruption",
+			"text": "When a mob is corrupted, its stats take a HUGE boost, stronger, faster, and their loot is also messed up"
+		}
+	],
+	"advancement": "frivycat:actions/madness"
+}

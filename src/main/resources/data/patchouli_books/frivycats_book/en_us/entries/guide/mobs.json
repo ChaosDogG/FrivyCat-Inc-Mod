@@ -1,0 +1,162 @@
+{
+	"name": "New Mobs",
+	"category": "patchouli:mobs",
+	"icon": "minecraft:spawner",
+	"pages": [
+				{
+				"type": "text",
+				"text": "I'll tell you about the different mobs here"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:villager",
+			"text": "The new and improved villager girl! No more Squidward-nosed freaks of nature!"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:villager{CustomName:\\'{\"text\":\"Lewd\"}\\'}",
+			"text": "Trust me on this one...she is definitely lewd...Name her this and...oh God...you can also name her anything with the \"-Chan\" suffix..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:villager{CustomName:\\'{\"text\":\"Kamiya Midori\"}\\'}",
+			"text": "This gal is from...*gags*...human erotic anime images...Luckily she's in a bikini rn..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:zombie",
+			"text": "A bikini babe who wanders the world after dark...although I don't understand why..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:zombie{CustomName:\\'{\"text\":\"Maid\"}\\'}",
+			"text": "I don't get why humans think this is ok...thank God OptiFine doesn't work with this book...This also applies to the Sandy and Diver girls and the Giant..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:husk",
+			"text": "She lives in the desert with her gal pals...but she\'s kinda oddly dressed..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:drowned",
+			"text": "Now this girl knows how to dress properly! But why water..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:skeleton",
+			"text": "Dogs are so stupid...Chaos made ALL the skeletons out of Scooby Snacks...even the horse AND the mutant one..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:enderman",
+			"text": "Is this guy ok...? He's kinda overflowing with energy..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:ender_dragon",
+			"text": "Oh...now it all makes sense..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:vindicator",
+			"text": "Looks like the illagers got some new looks too!"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:vindicator{CustomName:\\'{\"text\":\"Lewd\"}\\'}",
+			"text": "You're kidding me...right...? Same rules as the villager..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:evoker",
+			"text": "Damn, this chick lookin good! Her cloak even glows!"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:evoker{CustomName:\\'{\"text\":\"Lewd\"}\\'}",
+			"text": "Stop...please..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:pillager",
+			"text": "Sharp shot, girl!"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:pillager{CustomName:\\'{\"text\":\"Lewd\"}\\'}",
+			"text": "Please...shoot me..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:illusioner",
+			"text": "Girl, you must got me under your spells, 'cuz you're glowin!"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:illusioner{CustomName:\\'{\"text\":\"Lewd\"}\\'}",
+			"text": "Tell me this is an illusion...please..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:giant",
+			"text": "JESUS FUCK!!! SHE\'S HUGE!!!"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:rabbit{RabbitType:99}",
+			"text": "Um...is that...blood...?"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:snow_golem{Pumpkin:0}",
+			"text": "That Snow Golem looks familiar..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:creeper",
+			"text": "Remember when Notch did a bad with the pig? This is when Chaos gets a hold of this info and learns resourcepacks..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:pig",
+			"text": "Turn the creeper into a pig, vise-versa must apply...dammit..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:panda",
+			"text": "Multi-Color pandas! Each kind of panda now has its own special color, how cute!"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:cat{CustomName:\\'{\"text\":\"FrivyCat\"}\\',CatType:1,Sitting:1}",
+			"text": "Guess who! It\'s yours truly!"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:wolf{CustomName:\\'{\"text\":\"Daxter\"}\\'}",
+			"text": "Who the fuck opened the dog door...? I specifically closed it so this walking flea-circus couldn't get in..."
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:player",
+			"text": "Oh my! Guess you wouldn't wanna go around w/o a skin lookin like this! XDDDD"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:squid",
+			"text": "Goddammit, Chaos...You left your resourcepack full of bugs again...",
+			"scale": .25
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:shulker",
+			"text": "The eyes appear different, they change color based on its name (1 of the 16 in MC), and their color\' initials are etched on top of its shell"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:turtle",
+			"text": "Who put the masks on the turtles again...not every single one is a TMNT...."
+		}
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"schema_version": "imm_ptl:v1",
+	"from": ["minecraft:overworld"],
+	"to": "frivycat:enraged_nether_wastes",
+	"reversable": true,
+	"form": {
+		"type": "imm_ptl:classical",
+		"from_frame_block": "minecraft:netherrack",
+		"area_block": "minecraft:air",
+		"to_frame_block": "minecraft:netherrack",
+		"generate_frame_if_not_found": true
+	},
+	"trigger": {
+		"type": "imm_ptl:use_item",
+		"item": "minecraft:damaged_anvil",
+		"consume": true
+	}
+}

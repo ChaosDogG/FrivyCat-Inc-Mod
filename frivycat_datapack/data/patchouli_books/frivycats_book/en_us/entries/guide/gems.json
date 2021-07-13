@@ -1,0 +1,65 @@
+{
+	"name": "Custom Gems",
+	"category": "patchouli:gems",
+	"icon": "minecraft:emerald",
+	"pages": [
+				{
+				"type": "text",
+				"text": "Here, I'll tell ya about all 9 of the gems in this book! There's the Ruby, Sapphire, Amethyst, Garnet, Jade, Jasper, Spinel, Topaz, and Agate. To "
+		},
+		{
+			"type": "spotlight",
+			"title": "Ruby",
+			"item": "minecraft:emerald{CustomModelData:1}",
+			"text": "This is the Ruby. This simple lookin gem w/ a texture unchanged from the original beta design by Mojang, edited to be multi-color by Chaos for some dumbass reason, can turn any zombie villager back into a villager within a 50 block radius! Powerful sucker, aint it?"
+		},
+		{
+			"type": "spotlight",
+			"title": "Sapphire",
+			"item": "minecraft:emerald{CustomModelData:2}",
+			"text": "A Sapphire. It's abilities are a bit unknown to me, but it seems to have something to do with Impending...wutever that means"
+		},
+		{
+			"type": "spotlight",
+			"title": "Amethyst",
+			"item": "minecraft:emerald{CustomModelData:3}",
+			"text": "Ah, the Amethyst. Truthy the most useful of them all. And quite a bit different to use. More info in the dimensions tab"
+		},
+		{
+			"type": "spotlight",
+			"title": "Garnet",
+			"item": "minecraft:emerald{CustomModelData:4}",
+			"text": "This gem's pretty handy. When this one's used, projectiles that fly by you will be noped! No more pesky Scooby-Skeletons!"
+		},
+		{
+			"type": "spotlight",
+			"title": "Jade",
+			"item": "minecraft:emerald{CustomModelData:5}",
+			"text": "This one isnt quite as OP as the Ruby, but it does a neat trick. Within a small radius, crops will instantly grow to full size while in use!"
+		},
+		{
+			"type": "spotlight",
+			"title": "Jasper",
+			"item": "minecraft:emerald{CustomModelData:6}",
+			"text": "The Jasper seemingly makes Lucky Mobs weaker so they put up less of a fight when you try to farm lukcy blocks."
+		},
+		{
+			"type": "spotlight",
+			"title": "Spinel",
+			"item": "minecraft:emerald{CustomModelData:7}",
+			"text": "Works better if you have a Topaz with you as well. When placed in an item frame above a spawner, it overclocks it, meaning things will spawn like CRAZY!"
+		},
+		{
+			"type": "spotlight",
+			"title": "Topaz",
+			"item": "minecraft:emerald{CustomModelData:8}",
+			"text": "Doesn't do much on it's own. This handy gem resets any spawner overclocking any Spinels caused. Does not reverse the effects of a Corrupted Ink Sac though..."
+		},
+		{
+			"type": "spotlight",
+			"title": "Agate",
+			"item": "minecraft:emerald{CustomModelData:9}",
+			"text": "Need more eggs? This gem is for you! Place this in a frame and any nearby chickens will lay eggs like there's no tomorrow! Good God, that's a LOT of omlets!"
+		}
+	]
+}

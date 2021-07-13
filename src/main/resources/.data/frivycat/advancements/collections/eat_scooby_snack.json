@@ -1,0 +1,37 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "eat": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "item": "minecraft:cookie"
+                }
+            }
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "text": "Eat the cookie"
+        },
+        "frame": "challenge",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:cookie",
+            "nbt": "{Enchantments:[{id:69}]}"
+        },
+        "show_toast": true,
+        "title": {
+            "bold": false,
+            "color": "dark_red",
+            "text": "Ree-hee-hee-hee-hee-hee-hee"
+        }
+    },
+    "requirements": [
+        [
+            "eat"
+        ]
+    ],
+    "parent": "frivycat:collections/get_scooby_snacks"
+}

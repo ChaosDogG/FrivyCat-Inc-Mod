@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#B#",
+        "WRW"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:light_gray_concrete"
+        },
+        "B": {
+            "item": "minecraft:bow"
+        },
+        "W": {
+            "item": "minecraft:white_concrete"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "minecraft:dispenser",
+        "count": 1
+    }
+}

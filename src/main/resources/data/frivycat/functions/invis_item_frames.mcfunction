@@ -1,0 +1,2 @@
+execute as @e[type=#frivycat:frames,tag=invis] unless data entity @s Item run data merge entity @s {Invisible:0,Tags:[""]}
+execute as @e[type=#frivycat:frames,tag=!invis] if data entity @s Item run data merge entity @s {Invisible:1,Tags:["invis"]}

@@ -1,0 +1,211 @@
+{
+  "surface_builder": "frivycat:pff",
+  "depth": 0.125,
+  "scale": 0.05,
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "precipitation": "rain",
+  "temperature_modifier": "none",
+  "category": "forest",
+  "player_spawn_friendly": false,
+  "effects": {
+    "sky_color": 15662848,
+    "fog_color": 12240640,
+    "water_color": 30417,
+    "water_fog_color": 11637,
+    "grass_color": 838188,
+    "foliage_color": 3393545
+  },
+  "starts": [],
+  "spawners": {
+    "creature": [
+      {
+        "type": "minecraft:rabbit",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:cow",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:sheep",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:pig",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:horse",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:donkey",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:mule",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:chicken",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:cat",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:wolf",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:fox",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:llama",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:snow_golem",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:iron_golem",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:bee",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:panda",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:parrot",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:villager",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      }
+    ],
+    "water_creature": [
+      {
+        "type": "minecraft:axolotl",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:cod",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:salmon",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:tropical_fish",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:dolphin",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      },
+      {
+        "type": "minecraft:turtle",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 10
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:ocean_cave",
+      "minecraft:crack",
+      "minecraft:canyon",
+      "minecraft:cave"
+    ]
+  },
+  "features": [
+    [],
+    [
+      "minecraft:lake_water"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel",
+      "minecraft:disk_sand"
+    ],
+    [],
+    [
+      "minecraft:spring_water",
+      "minecraft:patch_grass_forest",
+      "minecraft:forest_flower_vegetation",
+      "minecraft:flower_forest",
+      "minecraft:flower_warm",
+      "minecraft:flower_swamp",
+      "minecraft:flower_plain",
+      "minecraft:flower_default",
+      "minecraft:patch_sunflower",
+      "minecraft:patch_berry_bush",
+      "minecraft:patch_large_fern"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "surface_builder": "frivycat:cop",
+  "depth": 0.125,
+  "scale": 0.05,
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "precipitation": "rain",
+  "temperature_modifier": "none",
+  "category": "plains",
+  "player_spawn_friendly": false,
+  "effects": {
+    "sky_color": 19715,
+    "fog_color": 16907,
+    "water_color": 22289,
+    "water_fog_color": 161024,
+    "grass_color": 96533,
+    "foliage_color": 1531395
+  },
+  "starts": [],
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:creeper",
+        "weight": 15,
+        "minCount": 1,
+        "maxCount": 5
+      }
+    ],
+    "misc": [
+      {
+        "type": "minecraft:end_crystal",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:ocean_cave",
+      "minecraft:canyon",
+      "minecraft:nether_cave"
+    ]
+  },
+  "features": []
+}

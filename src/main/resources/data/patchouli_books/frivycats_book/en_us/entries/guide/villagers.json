@@ -1,0 +1,59 @@
+{
+	"name": "Custom Villagers",
+	"category": "patchouli:villagers",
+	"icon": "minecraft:villager_spawn_egg",
+	"pages": [
+				{
+				"type": "text",
+				"text": "This will teach you the different custom villagers here! For most of them, just give them the proper name and presto, they're there!"
+		},
+		{
+			"type": "entity",
+			"name": "Timothy",
+			"entity": "minecraft:villager{VillagerData:{profession:shepherd}}",
+			"text": "This is good ol' Timothy, or Timmy as I like to call 'im. He gives misc things that don't really fit with the other villagers. He also offers Head Boxes...how nice..."
+		},
+		{
+			"type": "entity",
+			"name": "Book Guy",
+			"entity": "minecraft:villager{VillagerData:{profession:librarian}}",
+			"text": "This one, she sells an Unobtainable Recipes book. But not only that, but she also grants special weapons/tools if you're willing to give the required stuff to her"
+		},
+		{
+			"type": "entity",
+			"name": "Decor Guy",
+			"entity": "minecraft:villager{VillagerData:{profession:librarian}}",
+			"text": "This gal gives items that, as her name suggests, are for looks. They do look good though, hats off to you, Chaos"
+		},
+		{
+			"type": "entity",
+			"name": "Baby Item Merchant",
+			"entity": "minecraft:villager{VillagerData:{profession:leatherworker}}",
+			"text": "She loves babies, so much that she's willing to give you some baby-care items as well. I'll never understand humans..."
+		},
+		{
+			"type": "entity",
+			"name": "Gem Guy",
+			"entity": "minecraft:villager{VillagerData:{profession:cartographer}}",
+			"text": "This girl loves gems, and she sells all the special gems available in the game for a fairly cheap price each."
+		},
+		{
+			"type": "entity",
+			"name": "Loot Box Guy",
+			"entity": "minecraft:villager{VillagerData:{profession:cartographer}}",
+			"text": "the loot box gal is a bit trickier to get. She comes from an egg sold by the Egg Guy. She offers some loot boxes from this fine datapack!"
+		},
+		{
+			"type": "entity",
+			"name": "Egg Guy",
+			"entity": "minecraft:villager{VillagerData:{profession:cleric}}",
+			"text": "This gal has a thing for spawn eggs, er, creation capsules. She'll give ya some of the ones of unobtainable mobs, like Illusioners and Giants!"
+		},
+		{
+			"type": "entity",
+			"name": "Potion Master",
+			"entity": "minecraft:villager{VillagerData:{profession:cleric}}",
+			"text": "She loves potions, and she'll give you her very own concoctions for a price. Although...her potions are a bit...oddly named..."
+		}
+	]
+}

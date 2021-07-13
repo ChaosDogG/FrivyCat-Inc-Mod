@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+      "item": "minecraft:wolf_spawn_egg"
+    },
+    "addition": {
+      "tag": "minecraft:wool"
+    },
+    "result": {
+      "item": "quark:shiba_spawn_egg"
+    }
+  }

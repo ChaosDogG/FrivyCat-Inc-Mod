@@ -1,0 +1,1 @@
+execute as @e[tag=Ant] run data merge entity @s {DeathLootTable:"minecraft:blocks/player_head"}

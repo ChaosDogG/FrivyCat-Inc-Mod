@@ -1,0 +1,26 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:redstone",
+		"minecraft:redstone_block",
+		"minecraft:piston",
+		"minecraft:sticky_piston",
+		"minecraft:observer",
+		"minecraft:dispenser",
+		"minecraft:dropper",
+		"minecraft:lever",
+		"#minecraft:buttons",
+		"#frivycat:command_blocks",
+		"minecraft:daylight_detector",
+		"minecraft:repeater",
+		"minecraft:comparator",
+		"minecraft:hopper",
+		"#frivycat:pressure_plates",
+		"#frivycat:fence_gates",
+		"minecraft:redstone_lamp",
+		"minecraft:tripwire_hook",
+		"minecraft:note_block",
+		"minecraft:redstone_torch",
+		"minecraft:target"
+	]
+}

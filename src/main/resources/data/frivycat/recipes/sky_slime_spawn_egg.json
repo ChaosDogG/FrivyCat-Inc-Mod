@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+      "item": "minecraft:slime_spawn_egg"
+    },
+    "addition": {
+      "item": "tconstruct:sky_slime_ball"
+    },
+    "result": {
+      "item": "tconstruct:sky_slime_spawn_egg"
+    }
+  }

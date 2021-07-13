@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "#frivycat:ender",
+    "#frivycat:whores",
+    "#minecraft:skeletons",
+    "#minecraft:raiders",
+    "minecraft:spider",
+    "minecraft:cave_spider",
+    "minecraft:creeper",
+    "minecraft:phantom",
+    "minecraft:elder_guardian",
+    "minecraft:guardian",
+    "minecraft:slime",
+    "minecraft:magma_cube",
+    "minecraft:blaze",
+    "minecraft:silverfish",
+    "minecraft:ender_dragon",
+    "minecraft:wither",
+    "minecraft:zombie_villager",
+    "minecraft:hoglin",
+    "minecraft:zoglin",
+    "minecraft:ghast",
+    "minecraft:piglin_brute"
+  ]
+}

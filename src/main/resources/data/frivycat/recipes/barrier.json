@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#B#",
+        "IRI",
+        "#B#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:glass_pane"
+        },
+        "B": {
+            "item": "minecraft:bedrock"
+        },
+        "I": {
+            "item": "minecraft:iron_bars"
+        },
+        "R": {
+            "item": "minecraft:red_dye"
+        }
+    },
+    "result": {
+        "item": "minecraft:barrier",
+        "count": 1
+    }
+}
