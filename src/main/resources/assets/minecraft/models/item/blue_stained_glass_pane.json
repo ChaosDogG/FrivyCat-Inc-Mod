@@ -1,0 +1,12 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "block/blue_stained_glass"
+	   },
+	    "display": {
+        "head": {
+            "translation": [ 0, 0, -6.5]
+		}
+    }
+}
+

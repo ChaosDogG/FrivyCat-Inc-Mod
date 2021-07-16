@@ -1,0 +1,108 @@
+{
+  "comment": "Model by sixfootblue",
+  "textureSize": [64,64],
+  "models": 
+  [
+    {
+      "model": "stevehead.jpm",
+      "part": "head", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    },
+	{
+      "model": "stevebody.jpm",
+      "part": "body", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0],
+	  "scale": "1.01"
+    },
+	{
+      "model": "stevearmright_tool.jpm",
+      "part": "body", 
+      "attach": true,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0],
+	  "animations":
+      [
+        {
+          "this.rz": "270.235 + (sin(time / 13) / 18)",
+		  "this.rx": "(sin(time / 23) / 18) + left_leg.rx",
+		  "this.tx": "-4",
+		  "this.ty": "2"
+		  
+        }
+      ]
+    },
+	{
+      "model": "stevearmleft.jpm",
+      "part": "body", 
+      "attach": true,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0],
+	  "animations":
+      [
+        {
+          "this.rz": "270.125 - (sin(time / 13) / 18)",
+		  "this.rx": "-(sin(time / 23) / 18) + right_leg.rx",
+		  "this.tx": "4",
+		  "this.ty": "2"
+        }
+      ]
+    },
+	{
+      "model": "stevearms.jpm",
+      "part": "arms", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    },
+	{
+      "model": "stevelegright.jpm",
+      "part": "right_leg", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    },
+	{
+      "model": "stevelegleft.jpm",
+      "part": "left_leg", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    },
+	
+	
+	
+	{
+	  "model": "",
+      "part": "nose", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+	},
+	{
+	  "model": "",
+      "part": "headwear", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+	},
+	{
+	  "model": "",
+      "part": "headwear2", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+	},
+	{
+	  "model": "",
+      "part": "bodywear", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+	}
+	
+  ]
+}

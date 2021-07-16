@@ -1,0 +1,88 @@
+{
+  "comment": "Model by sixfootblue",
+  "textureSize": [64,64],
+  "models": 
+  [
+    {
+      "model": "stevehead.jpm",
+      "part": "head", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    },
+    {
+      "model": "stevehead.jpm",
+      "part": "headwear", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    },
+	{
+      "model": "stevebody.jpm",
+      "part": "body", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    },
+	{
+      "model": "stevearmright.jpm",
+      "part": "body", 
+      "attach": true,
+      "translate": [1, 0, 0],
+      "rotate": [0, 0, 0],
+	  "animations":
+      [
+        {
+          "this.rx": "0.75 + (sin(time / 23) / 18) + left_leg.rx",
+		  "this.rz": "270.235 + (sin(time / 13) / 18)",
+		  "this.tx": "-4",
+		  "this.ty": "-1.4",
+		  "this.tz": "0.1"
+        }
+      ]
+    },
+	{
+      "model": "stevearmleft.jpm",
+      "part": "body", 
+      "attach": true,
+      "translate": [-1, 0, 0],
+      "rotate": [0, 0, 0],
+	  "animations":
+      [
+        {
+          "this.rx": "0.75 + (sin(time / 23) / 18) + left_leg.rx",
+		  "this.rz": "270.235 + (sin(time / 13) / 18)",
+		  "this.tx": "-4",
+		  "this.ty": "-1.4",
+		  "this.tz": "0.1"
+        }
+      ]
+    },
+	{
+      "model": "stevelegright.jpm",
+      "part": "right_leg", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    },
+	{
+      "model": "stevelegleft.jpm",
+      "part": "left_leg", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    },
+    {
+      "part": "left_ear", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    },
+    {
+      "part": "right_ear", 
+      "attach": false,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0]
+    }
+  ]
+}

@@ -15,6 +15,5 @@ public class ModItems {
 
     public static void init(IEventBus eventBus) {
         ITEMS.register(eventBus);
-
     }
 }
