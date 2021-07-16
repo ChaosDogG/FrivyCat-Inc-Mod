@@ -3,7 +3,7 @@ out
 *.ipr
 *.iws
 *.iml
-.idea# gradle
+.idea
 build
 .gradle
 eclipse
