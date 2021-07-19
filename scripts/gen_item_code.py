@@ -25,6 +25,7 @@ names = [
     "spinel",
     "topaz",
     "veteran_diamond",
+    "vine_diamond",
     "water_diamond",
     "zircon"
 ]
