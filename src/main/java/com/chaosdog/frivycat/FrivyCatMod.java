@@ -1,11 +1,11 @@
 package com.chaosdog.frivycat;
 
 import com.chaosdog.frivycat.init.ModItems;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
-import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
@@ -22,18 +22,35 @@ public class FrivyCatMod {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.init(eventBus);
 
-        // put debug stick in misc tab of creative inventory
-        ObfuscationReflectionHelper.setPrivateValue(Item.class,Items.DEBUG_STICK.asItem(), ItemGroup.TAB_MISC,"category");
+        // put debug stick and knowldedge book in tools tab of creative inventory
+        changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TAB_TOOLS);
+        changeCreativeTab(Items.KNOWLEDGE_BOOK, ItemGroup.TAB_TOOLS);
 
         // add jigsaw, structure, and command blocks to the redstone tab
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, Blocks.JIGSAW.asItem(), ItemGroup.TAB_REDSTONE,"category");
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, Blocks.STRUCTURE_BLOCK.asItem(), ItemGroup.TAB_REDSTONE,"category");
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, Blocks.STRUCTURE_VOID.asItem(), ItemGroup.TAB_REDSTONE,"category");
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, Blocks.COMMAND_BLOCK.asItem(), ItemGroup.TAB_REDSTONE,"category");
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, Blocks.CHAIN_COMMAND_BLOCK.asItem(), ItemGroup.TAB_REDSTONE,"category");
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, Blocks.REPEATING_COMMAND_BLOCK.asItem(), ItemGroup.TAB_REDSTONE,"category");
+        changeCreativeTab(Blocks.JIGSAW, ItemGroup.TAB_REDSTONE);
+        changeCreativeTab(Blocks.STRUCTURE_BLOCK, ItemGroup.TAB_REDSTONE);
+        changeCreativeTab(Blocks.STRUCTURE_VOID, ItemGroup.TAB_REDSTONE);
+        changeCreativeTab(Blocks.COMMAND_BLOCK.asItem(), ItemGroup.TAB_REDSTONE);
+        changeCreativeTab(Blocks.CHAIN_COMMAND_BLOCK, ItemGroup.TAB_REDSTONE);
+        changeCreativeTab(Blocks.REPEATING_COMMAND_BLOCK, ItemGroup.TAB_REDSTONE);
 
         // add monster spawner to decorations tab
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, Blocks.SPAWNER.asItem(), ItemGroup.TAB_DECORATIONS,"category");
+        changeCreativeTab(Blocks.SPAWNER, ItemGroup.TAB_DECORATIONS);
+
+        // add barrier to building blocks tab
+        changeCreativeTab(Blocks.BARRIER, ItemGroup.TAB_BUILDING_BLOCKS);
+
+        // add command block minecarts to transportation tab
+        changeCreativeTab(Items.COMMAND_BLOCK_MINECART, ItemGroup.TAB_TRANSPORTATION);
+    }
+
+    // sets or changes the creative tab of a vanilla item
+    public static void changeCreativeTab(Item item, ItemGroup tab) {
+        ObfuscationReflectionHelper.setPrivateValue(Item.class, item, tab,"category");
+    }
+
+    // sets or changes the creative tab of a vanilla block
+    public static void changeCreativeTab(Block block, ItemGroup tab) {
+        ObfuscationReflectionHelper.setPrivateValue(Item.class, block.asItem(), tab,"category");
     }
 }

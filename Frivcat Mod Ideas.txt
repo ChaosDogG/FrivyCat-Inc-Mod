@@ -1,0 +1,3 @@
+Full conversion of ChaosDog's data pack into a mod
+Spawn eggs for Golems, Illusioners, and Spawner Minecarts
+Allow Killer Rabbits and Giants to spawn
