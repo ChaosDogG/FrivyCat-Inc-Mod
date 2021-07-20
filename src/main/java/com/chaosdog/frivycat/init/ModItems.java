@@ -1,6 +1,7 @@
 package com.chaosdog.frivycat.init;
 
 import com.chaosdog.frivycat.FrivyCatMod;
+import com.chaosdog.frivycat.items.ShinyItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Foods;
 import net.minecraft.item.Item;
@@ -34,7 +35,10 @@ public class ModItems {
     public static final RegistryObject<Item> JASPER = ITEMS.register("jasper", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
     public static final RegistryObject<Item> LIGHTNING_DIAMOND = ITEMS.register("lightning_diamond", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
     public static final RegistryObject<Item> MADNESS_DIAMOND = ITEMS.register("madness_diamond", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
-    public static final RegistryObject<Item> MAGE_BOOK = ITEMS.register("mage_book", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
+    
+    // this is a shiny item
+    public static final RegistryObject<Item> MAGE_BOOK = ITEMS.register("mage_book", () -> new ShinyItem(new Item.Properties().tab(ItemGroup.TAB_MISC)));
+
     public static final RegistryObject<Item> MAGIC_WAND = ITEMS.register("magic_wand", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
     public static final RegistryObject<Item> MIC = ITEMS.register("mic", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
     public static final RegistryObject<Item> PEACE_DIAMOND = ITEMS.register("peace_diamond", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
