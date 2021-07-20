@@ -5,3 +5,9 @@ Make some Knowledge Books in creative inventory have premade recipes like capsul
 Give Knowledge Books an easy-to-underatand tooltip depicting the recipe it holds
 Work on item stack size properties
 Find a way to add Senko Loaves as inventory companions
+Mug of Honey same as Honey Bottle
+Liquid Filled Mugs are new Potion variants
+Mug is variant of Bottle
+Baby Bottle and Red Tea Bucket same as Milk
+Baby Rattles unused as of now, but go in Misc
+S T O N E  B A N A N A
