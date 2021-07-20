@@ -1,3 +1,7 @@
 Full conversion of ChaosDog's data pack into a mod
 Spawn eggs for Golems, Illusioners, and Spawner Minecarts
 Allow Killer Rabbits and Giants to spawn
+Make some Knowledge Books in creative inventory have premade recipes like capsules and tools
+Give Knowledge Books an easy-to-underatand tooltip depicting the recipe it holds
+Work on item stack size properties
+Find a way to add Senko Loaves as inventory companions
