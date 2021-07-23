@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "C"
+    ],
+    "key": {
+        "#": {
+            "tag": "frivycat:sticks"
+        },
+        "C": {
+            "tag": "minecraft:coals"
+        }
+    },
+    "result": {
+        "item": "frivycat:pencil",
+        "count": 1
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "S",
+        "C"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:pink_dye"
+        },
+        "S": {
+            "tag": "frivycat:sticks"
+        },
+        "C": {
+            "tag": "minecraft:coals"
+        }
+    },
+    "result": {
+        "item": "frivycat:pencil",
+        "count": 1
+    }
+}
