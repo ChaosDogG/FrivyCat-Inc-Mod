@@ -28,7 +28,9 @@
     "item.frivycat.zircon":"Zircon",
     "item.frivycat.scooby_snack":"Scooby Snack",
     "item.frivycat.vine_diamond":"Vine Diamond",
-    "item.frivycat.stone_banana":"Stone Banana (WIP)",
+    "item.frivycat.stone_banana":"Stone Banana (WiP)",
+    "item.frivycat.red_tea_bucket": "Red Tea Bucket",
+    "item.frivycat.redstone_with_mustash": "Mumbo Dust",
     
     "biome.frivycat.co-bdeltas": "Error 404: Biome name not found.",
     "biome.frivycat.co-plains":"Controlled Plains",
