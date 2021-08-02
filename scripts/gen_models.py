@@ -27,7 +27,9 @@ names = [
     "veteran_diamond",
     "vine_diamond",
     "water_diamond",
-    "zircon"
+    "zircon",
+    "red_tea_bucket",
+    "redstone_with_mustash"
 ]
 
 file_content = "{{\n    \"parent\": \"minecraft:item/generated\",\n    \"textures\": {{\n        \"layer0\": \"frivycat:item/{m_name}\"\n    }}\n}}"

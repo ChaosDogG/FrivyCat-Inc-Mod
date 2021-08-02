@@ -2,13 +2,11 @@
 names = [
     "agate",
     "corrupted_diamond",
-    "cotton_candy_strand",
     "cultist_diamond",
     "dark_diamond",
     "easter_egg",
     "fire_diamond",
     "garnet",
-    "green_apple_candy",
     "holy_diamond",
     "jade",
     "jasper",
@@ -27,7 +25,9 @@ names = [
     "veteran_diamond",
     "vine_diamond",
     "water_diamond",
-    "zircon"
+    "zircon",
+    "red_tea_bucket",
+    "redstone_with_mustash"
 ]
 
 code = "public static final RegistryObject<Item> {name_cap} = ITEMS.register(\"{reg_name}\", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));"
