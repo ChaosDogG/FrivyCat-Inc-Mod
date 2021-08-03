@@ -1,8 +1,7 @@
 {
     "display": {
       "icon": {
-        "item": "minecraft:redstone",
-        "nbt": "{CustomModelData:1}"
+        "item": "frivycat:redstone_with_mustash"
       },
       "title": {
         "text": "Holy mackerel! Now I'm just a pile of dust!",
@@ -23,11 +22,10 @@
         "conditions": {
           "items": [
             {
-              "item": "minecraft:redstone",
+              "item": "frivycat:redstone_with_mustash",
               "count": {
                 "min": 1
-              },
-              "nbt": "{CustomModelData:1}"
+              }
             }
           ]
         }
