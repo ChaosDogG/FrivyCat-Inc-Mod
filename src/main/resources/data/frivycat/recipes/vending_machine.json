@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iDi",
+        "iRi",
+        "iEi"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "D": {
+            "item": "minecraft:daylight_detector"
+        },
+        "R": {
+            "item": "rigmod:random_item_generator_item"
+        },
+        "E": {
+            "item": "minecraft:emerald"
+        }
+    },
+    "result": {
+        "item": "vm:vending_machine",
+        "count": 1
+    }
+}

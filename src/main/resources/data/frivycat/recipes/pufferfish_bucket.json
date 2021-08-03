@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:pufferfish_spawn_egg"
+        },
+        {
+            "item": "minecraft:water_bucket"
+        }
+    ],
+    "result": {
+        "item": "minecraft:pufferfish_bucket",
+        "count": 1
+    },
+    "group": "fish_bucket"
+}
