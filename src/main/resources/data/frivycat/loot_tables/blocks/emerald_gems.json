@@ -10,156 +10,35 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Ruby",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1}"
-            }
-          ]
+          "name": "frivycat:ruby"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Sapphire",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:2}"
-            }
-          ]
+          "name": "frivycat:sapphire"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Amethyst",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:3}"
-            }
-          ]
+          "name": "frivycat:garnet"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Garnet",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:4}"
-            }
-          ]
+          "name": "frivycat:jade"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Jade",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:5}"
-            }
-          ]
+          "name": "frivycat:jasper"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Jasper",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:6}"
-            }
-          ]
+          "name": "frivycat:spinel"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Spinel",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:7}"
-            }
-          ]
+          "name": "frivycat:topaz"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Topaz",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:8}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Agate",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:9}"
-            }
-          ]
+          "name": "frivycat:agate"
         }
       ]
     }

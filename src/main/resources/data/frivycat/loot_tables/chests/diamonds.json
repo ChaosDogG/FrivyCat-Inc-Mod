@@ -5,22 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Dark Diamond",
-                "color": "black",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:1}"
-            }
-          ],
+          "name": "frivycat:dark_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -41,24 +26,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Shadow Diamond",
-                "color": "dark_gray",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:2}"
-            }
-          ],
+          "name": "frivycat:shadow_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -79,24 +50,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Conspiracy Diamond",
-                "color": "gray",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:3}"
-            }
-          ],
+          "name": "frivycat:cultist_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -117,24 +74,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Flame Diamond",
-                "color": "red",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:4}"
-            }
-          ],
+          "name": "frivycat:fire_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -155,24 +98,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Electric Diamond",
-                "color": "gold",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:5}"
-            }
-          ],
+          "name": "frivycat:lightning_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -193,24 +122,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Peace Diamond",
-                "color": "yellow",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:6}"
-            }
-          ],
+          "name": "frivycat:peace_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -231,24 +146,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Vine Diamond",
-                "color": "green",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:7}"
-            }
-          ],
+          "name": "frivycat:vine_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -269,24 +170,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Veteran Diamond",
-                "color": "dark_green",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:8}"
-            }
-          ],
+          "name": "frivycat:veteran_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -307,24 +194,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Holy Diamond",
-                "color": "aqua",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:9}"
-            }
-          ],
+          "name": "frivycat:holy_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -345,24 +218,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Drunken Diamond",
-                "color": "blue",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:10}"
-            }
-          ],
+          "name": "frivycat:water_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -383,24 +242,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:11}"
-            },
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Madness Diamond",
-                "color": "light_purple",
-                "italic": false
-              },
-              "entity": "this"
-            }
-          ],
+          "name": "frivycat:madness_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -421,24 +266,10 @@
             }
           ]
         },
+
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Corrupted Diamond",
-                "color": "dark_purple",
-                "italic": false
-              },
-              "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:69}],CustomModelData:12}"
-            }
-          ],
+          "name": "frivycat:corrupted_diamond",
           "conditions": [
             {
               "condition": "minecraft:location_check",

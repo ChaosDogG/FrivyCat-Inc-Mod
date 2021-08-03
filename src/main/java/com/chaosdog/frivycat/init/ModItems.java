@@ -71,7 +71,6 @@ public class ModItems {
     public static final RegistryObject<Item> MAGIC_WAND = ITEMS.register("magic_wand", () -> new ShinyItem(new Item.Properties().tab(ItemGroup.TAB_MISC)));
 
     // stone banana (work in progress)
-    // Sorry I was MIA for so long, ChaosDog
     public static final RegistryObject<Item> STONE_BANANA = ITEMS.register("stone_banana", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
 
     public static void init(IEventBus eventBus) {
