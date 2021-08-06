@@ -19,3 +19,4 @@ Work on item stack size properties
 
 Will not/Cannot implement (and why):
 
+Fully implemented:
