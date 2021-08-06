@@ -1,6 +1,6 @@
 Ideas to implement:
 Full conversion of ChaosDog's datapack into a mod
-Spawn eggs for Golems, Illusioners, and Spawner Minecarts
+Spawn eggs for Golems, Illusioners, Giants, and Spawner Minecarts
 Allow Killer Rabbits and Giants to spawn
 Make some Knowledge Books in creative inventory have premade recipes like capsules and tools
 Give Knowledge Books an easy-to-underatand tooltip depicting the recipe it holds
