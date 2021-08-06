@@ -1,2 +1,0 @@
-execute as @a[distance=..3] if entity @s[predicate=!frivycat:depressed_dim_item] run function frivycat:dim_travel/travel_fail
-execute as @a[distance=..3] if entity @s[predicate=frivycat:depressed_dim_item] run function frivycat:dim_travel/success/depressed_dim_travel
