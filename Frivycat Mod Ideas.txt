@@ -1,18 +1,21 @@
-Full conversion of ChaosDog's data pack into a mod
+Ideas to implement:
+Full conversion of ChaosDog's datapack into a mod
 Spawn eggs for Golems, Illusioners, and Spawner Minecarts
 Allow Killer Rabbits and Giants to spawn
 Make some Knowledge Books in creative inventory have premade recipes like capsules and tools
 Give Knowledge Books an easy-to-underatand tooltip depicting the recipe it holds
-Work on item stack size properties
 Find a way to add Senko Loaves as inventory companions
 Mug of Honey same as Honey Bottle
 Liquid Filled Mugs are new Potion variants
 Mug is variant of Bottle
-Baby Bottle and Red Tea Bucket same as Milk
 Baby Rattles unused as of now, but go in Misc
+Humans, some like villagers, some like the illager family (nix Ravager and Vex), and some like basic mobs
+Add Illusioners to raids and maybe the mansion or new structure
+
+Currently in development:
 S T O N E  B A N A N A
+Baby Bottle and Red Tea Bucket same as Milk
+Work on item stack size properties
 
+Will not/Cannot implement (and why):
 
-
-
-Will not/Cannot implement:
