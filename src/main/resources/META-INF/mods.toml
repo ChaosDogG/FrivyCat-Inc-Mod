@@ -6,7 +6,7 @@ modLoader="javafml"
 loaderVersion="[36,)"
 
 # A URL to refer people to when problems occur with this mod
-issueTrackerURL="https://github.com/ChaosDogG/Chaos-Inc-Mod/issues"
+issueTrackerURL="https://github.com/ChaosDogG/FrivyCat-Inc-Mod/issues"
 
 # If the mods defined in this file should show as seperate resource packs
 showAsResourcePack=false
@@ -15,9 +15,9 @@ license = "GPL-3.0-or-later"
 [[mods]]
     modId="frivycat"
     version="${file.jarVersion}"
-    displayName="ChaosDog Inc. Mod"
+    displayName="FrivyCat Inc. Mod"
     logoFile="pack.png"
-    credits="I'd like to thank my mother and father."
+    credits="I'd like to thank NetherNoah, who is helping me develop this mod!"
     authors="ChaosDog, NetherNoah777"
     description="Based on the FrivyCat Inc. Datapack"
 
