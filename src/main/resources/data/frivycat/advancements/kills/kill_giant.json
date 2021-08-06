@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:zombie_head"
+    },
+    "title": {
+      "bold": false,
+      "color": "dark_green",
+      "text": "TF?! THAT THING WAS HUGE!"
+    },
+    "description": {
+      "text": "Kill a giant"
+    },
+    "frame": "task",
+    "background": "minecraft:textures/item/feather.png",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "frivycat:kills/root",
+  "criteria": {
+    "kill": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:giant"
+        }
+      }
+    }
+  }
+}

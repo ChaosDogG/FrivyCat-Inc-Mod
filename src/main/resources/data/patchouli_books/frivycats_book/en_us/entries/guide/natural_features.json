@@ -1,0 +1,31 @@
+{
+	"name": "Natural Features",
+	"category": "patchouli:features",
+	"icon": "minecraft:repeating_command_block",
+	"pages": [
+				{
+				"type": "text",
+				"text": "Here\'s all the crap that happens here"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:zombie",
+			"text": "Bikini girls, and like mobs, will no longer burn in the daylight due to the fact that they aren\'t undead. Also, they won\'t drop zombie flesh"
+		},
+		{
+			"type": "spotlight",
+			"item": "minecraft:chest",
+			"text": "There\'s also new loot tables, some have lucky blocks in them"
+		},
+		{
+			"type": "spotlight",
+			"item": "minecraft:emerald",
+			"text": "There are also the gems and custom advancements"
+		},
+		{
+			"type": "spotlight",
+			"item": "minecraft:villager_spawn_egg",
+			"text": "There's also ways to get creation capsules now!"
+		}
+	]
+}

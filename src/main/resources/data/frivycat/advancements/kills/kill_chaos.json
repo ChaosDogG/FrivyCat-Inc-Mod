@@ -1,0 +1,41 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:player_head",
+        "nbt": "{SkullOwner:ChaosDog}"
+      },
+      "title": {
+        "text": "OW!",
+        "color": "lime"
+      },
+      "description": {
+        "text": "Kill Chaos"
+      },
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "parent": "frivycat:kills/kill_player",
+    "criteria": {
+      "murder": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:player",
+            "nbt": "{UUID:[I; -530030939, 1883652773, -1564832859, 1169135322]}"
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "murder"
+      ]
+    ],
+    "rewards": {
+      "loot": [
+        "frivycat:chests/head_box"
+      ]
+    }
+  }

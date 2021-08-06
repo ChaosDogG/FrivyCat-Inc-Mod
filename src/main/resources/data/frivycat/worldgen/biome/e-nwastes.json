@@ -1,0 +1,84 @@
+{
+  "surface_builder": "frivycat:enw",
+  "depth": 0.125,
+  "scale": 0.05,
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "precipitation": "none",
+  "temperature_modifier": "none",
+  "category": "nether",
+  "player_spawn_friendly": false,
+  "effects": {
+    "sky_color": 16711680,
+    "fog_color": 13041664,
+    "water_color": 8716288,
+    "water_fog_color": 7667712,
+    "grass_color": 11010048,
+    "foliage_color": 11337985
+  },
+  "starts": [
+    "minecraft:fortress",
+    "minecraft:bastion_remnant"
+  ],
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:magma_cube",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 15
+      },
+      {
+        "type": "minecraft:blaze",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 15
+      },
+      {
+        "type": "minecraft:ghast",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 15
+      },
+      {
+        "type": "minecraft:piglin_brute",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 15
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:canyon",
+      "minecraft:cave",
+      "minecraft:nether_cave"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:patch_soul_fire",
+      "minecraft:patch_fire"
+    ],
+    [
+      "minecraft:ore_debris_large",
+      "minecraft:ore_debris_small"
+    ],
+    [
+      "minecraft:ore_gold_nether",
+      "minecraft:ore_quartz_nether"
+    ],
+    [
+      "frivycat:blackstone_patch",
+      "frivycat:nether_brick_patch",
+      "minecraft:ore_magma",
+      "minecraft:delta"
+    ]
+  ]
+}

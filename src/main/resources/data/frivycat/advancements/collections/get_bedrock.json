@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bedrock",
+      "nbt": "{Enchantments:[{id:69}]}"
+    },
+    "title": {
+      "bold": false,
+      "color": "dark_gray",
+      "text": "OH! Now I GET it!"
+    },
+    "description": {
+      "text": "Obtain bedrock"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "frivycat:collections/root",
+  "criteria": {
+    "collect": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:bedrock",
+            "count": {
+              "max": 1,
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:gift",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:knowledge_book"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:knowledge_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Recipes:[\"frivycat:debug_stick\"]}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.minecraft.debug_stick"
+              },
+              "entity": "this"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+	"name": "Lucky Blocks",
+	"category": "patchouli:lucky_blocks",
+	"icon": "minecraft:player_head{SkullOwner:MHF_Question}",
+	"pages": [
+				{
+				"type": "text",
+				"text": "This is the part where I tell you how to get Lucky Blocks. I shouldn\'t have to tell you how to use them"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:bat",
+			"text": "Mobs like these will appear all throughout the world"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:silverfish",
+			"text": "be it through mines or dungeons"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:endermite",
+			"text": "game mechanics"
+		},
+		{
+			"type": "entity",
+			"entity": "minecraft:vex",
+			"text": "or during a fight"
+		},
+		{
+			"type": "spotlight",
+			"item": "minecraft:player_head{SkullOwner:ChaosDog}",
+			"text": "If you\'re real desperate for heads, kill your buddy! Given you\'re on a server with this pack"
+		}
+	]
+}

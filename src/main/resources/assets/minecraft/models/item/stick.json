@@ -1,0 +1,14 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/stick"
+	},
+	
+	"overrides": [
+		{"predicate": {"custom_model_data":1}, "model": "item/mic"},
+		{"predicate": {"custom_model_data":2}, "model": "item/pencil"},
+		{"predicate": {"custom_model_data":3}, "model": "item/magic_wand"},
+		{"predicate": {"custom_model_data":4}, "model": "item/baby_rattle_girl"},
+		{"predicate": {"custom_model_data":5}, "model": "item/baby_rattle_boy"}
+	]
+}

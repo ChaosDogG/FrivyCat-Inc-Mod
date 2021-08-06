@@ -1,0 +1,277 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:end_stone",
+          "weight": 75
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:blast_protection",
+                "minecraft:efficiency",
+                "minecraft:fire_aspect",
+                "minecraft:fire_protection",
+                "minecraft:flame",
+                "minecraft:fortune",
+                "minecraft:infinity",
+                "minecraft:looting",
+                "minecraft:mending",
+                "minecraft:projectile_protection",
+                "minecraft:protection",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:unbreaking",
+                "minecraft:soul_speed"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 75,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 24
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:chests/end_city_treasure"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "frivycat:chests/head_box",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "frivycat:chests/eggs",
+          "weight": 50
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "frivycat:chests/magic_loot",
+          "weight": 35
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:light_blue_shulker_box",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Mega Materials!!"
+              },
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{BlockEntityTag:{Lock:\"Lock Pick\",LootTable:\"frivycat:chests/mega_materials\"}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:debug_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Lock Pick"
+              },
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:tag",
+          "name": "frivycat:meats",
+          "weight": 50,
+          "expand": true,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 5,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potato",
+          "weight": 75
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chorus_fruit",
+          "weight": 75
+        },
+        {
+          "type": "minecraft:item",
+          "name": "skeleton_spawn_egg",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Sans",
+                "italic": false
+              },
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{EntityTag:{Team:\"Corrupted\",Health:1f,CustomName:'{\"text\":\"Sans\",\"color\":\"blue\",\"bold\":true,\"italic\":false}',HandItems:[{id:'minecraft:bow',Count:1b,tag:{Enchantments:[{id:'minecraft:power',lvl:10s},{id:'minecraft:punch',lvl:30s},{id:'minecraft:flame',lvl:10s}]}},{id:'minecraft:tipped_arrow',Count:64b,tag:{CustomPotionEffects:[{Id:4b,Amplifier:100b,Duration:1000},{Id:19b,Amplifier:100b,Duration:1000},{Id:20b,Amplifier:100b,Duration:1000},{Id:25b,Amplifier:100b,Duration:60}],CustomPotionColor:2228479}}],ArmorItems:[{id:'minecraft:leather_boots',Count:1b,tag:{display:{Name:'{\"text\":\"Sans Boots\",\"italic\":false}',color:16711918}}},{id:'minecraft:leather_leggings',Count:1b,tag:{display:{Name:'{\"text\":\"Sans Pants\",\"italic\":false}',color:530}}},{id:'minecraft:leather_chestplate',Count:1b,tag:{display:{Name:'{\"text\":\"Sans Tunic\",\"italic\":false}',color:8959}}},{id:\"minecraft:player_head\",Count:1b,tag:{SkullOwner:_Sans_}}],Attributes:[{Name:generic.max_health,Base:1},{Name:generic.follow_range,Base:10000},{Name:generic.knockback_resistance,Base:100},{Name:generic.movement_speed,Base:10},{Name:generic.armor,Base:20},{Name:generic.armor_toughness,Base:20}]}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:sea_pickle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "HOLY DICK",
+                "italic": false
+              },
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{RepairCost: 1023, Enchantments: [{lvl: 10s, id: \"minecraft:depth_strider\"}, {lvl: 10s, id: \"minecraft:feather_falling\"}, {lvl: 10s, id: \"minecraft:flame\"}, {lvl: 10s, id: \"minecraft:impaling\"}, {lvl: 10s, id: \"minecraft:infinity\"}, {lvl: 10s, id: \"minecraft:looting\"}, {lvl: 10s, id: \"minecraft:loyalty\"}, {lvl: 10s, id: \"minecraft:projectile_protection\"}, {lvl: 10s, id: \"minecraft:punch\"}, {lvl: 10s, id: \"minecraft:sharpness\"}]}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "type": "minecraft:player",
+                  "nbt": "{Tags:[\"safe\"]}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cave_spider_spawn_egg",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "cavebruh",
+                "italic": false
+              },
+              "entity": "this"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:creeper_spawn_egg",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Fat Cree-pig",
+                "italic": false
+              },
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{EntityTag:{ExplosionRadius:0b,Fuse:10000,ignited:1b,CustomName:'{\"text\":\"Fat Cree-pig\",\"color\":\"gold\"}',HandItems:[{id:\"minecraft:magenta_trracotta\",Count:1b,tag:{display:{Name:'{\"text\":\"Fat Porkchop\",\"italic\":false}'}}},{}],HandDropChances:[1.000F,0.085F]}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shulker_shell",
+          "weight": 50
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:fox_spawn_egg",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Tiny Cree-pig",
+                "italic": false
+              },
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{EntityTag:{Silent:1b,Age:-10000,AgeLocked:1b,CustomName:'{\"text\":\"Tiny Creepig\",\"color\":\"gold\",\"italic\":false}',HandItems:[{id:\"minecraft:creeper_head\",Count:1b},{}],ArmorItems:[{},{},{id:\"minecraft:birch_button\",Count:1b,tag:{display:{Name:'{\"text\":\"Tiny Porkchop\",\"italic\":false}'}}},{}],ArmorDropChances:[0.085F,0.085F,1.000F,0.085F],ActiveEffects:[{Id:11b,Amplifier:3b,Duration:1000000,ShowParticles:0b},{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}]}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:spawner",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Ant Hill",
+                "italic": false
+              },
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{BlockEntityTag:{MaxNearbyEntities: 100s, RequiredPlayerRange: 16s, SpawnCount: 5s, SpawnData: {AgeLocked: 1b, ArmorDropChances: [0.085f, 0.085f, 0.085f, 0.01f], ArmorItems: [{}, {}, {}, {id: \"minecraft:golden_shovel\", Count: 1b, tag: {Damage: 0, display: {Name: '{\"text\":\"Fly Swatter\",\"italic\":false}'}, Enchantments: [{lvl: 10s, id: \"minecraft:bane_of_arthropods\"}, {lvl: 10s, id: \"minecraft:knockback\"}, {lvl: 10s, id: \"minecraft:punch\"}]}}], Silent: 1b, id: \"minecraft:fox\", Age: -100000, Tags: [\"Ant\"], ActiveEffects: [{Duration: 100000, Id: 11b, Amplifier: 3b, ShowParticles: 0b}, {Duration: 100000, Id: 14b, Amplifier: 0b, ShowParticles: 0b}], HandItems: [{id: \"minecraft:spider_eye\", Count: 1b, tag: {display: {Name: '{\"text\":\"Queen Ant\",\"italic\":false}'}}}, {}]}, MaxSpawnDelay: 500s, Delay: 322s, x: -2524, y: 65, z: 1118, id: \"minecraft:mob_spawner\", SpawnRange: 4s, MinSpawnDelay: 500s, SpawnPotentials: [{Entity: {AgeLocked: 1b, Silent: 1b, id: \"minecraft:fox\", Age: -100000, Tags: [\"Ant\"], ActiveEffects: [{ShowParticles: 0b, Duration: 100000, Id: 11b, Amplifier: 0b}, {ShowParticles: 0b, Duration: 100000, Id: 14b, Amplifier: 0b}], HandItems: [{id: \"minecraft:acacia_button\", Count: 1b, tag: {display: {Name: '{\"text\":\"Ant\",\"italic\":false}'}}}, {}]}, Weight: 30}, {Entity: {AgeLocked: 1b, ArmorDropChances: [0.085f, 0.085f, 0.085f, 0.01f], ArmorItems: [{}, {}, {}, {id: \"minecraft:golden_shovel\", Count: 1b, tag: {display: {Name: '{\"text\":\"Fly Swatter\",\"italic\":false}'}, Enchantments: [{lvl: 10s, id: \"minecraft:bane_of_arthropods\"}, {lvl: 10s, id: \"minecraft:knockback\"}, {lvl: 10s, id: \"minecraft:punch\"}], Damage: 0}}], Silent: 1b, id: \"minecraft:fox\", Age: -100000, Tags: [\"Ant\"], ActiveEffects: [{ShowParticles: 0b, Duration: 100000, Id: 11b, Amplifier: 3b}, {ShowParticles: 0b, Duration: 100000, Id: 14b, Amplifier: 0b}], HandItems: [{id: \"minecraft:spider_eye\", Count: 1b, tag: {display: {Name: '{\"text\":\"Queen Ant\",\"italic\":false}'}}}, {}]}, Weight: 1}]}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:debug_stick",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Egg-stractor",
+                "italic": false
+              },
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:Infinity,Operation:0,Slot:\"mainhand\"},{AttributeName:\"generic.luck\",Name:\"generic.luck\",Amount:Infinity,Operation:0,Slot:\"mainhand\"},{AttributeName:\"generic.luck\",Name:\"generic.luck\",Amount:Infinity,Operation:0,Slot:\"offhand\"},{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:Infinity,Operation:0,Slot:\"mainhand\"}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

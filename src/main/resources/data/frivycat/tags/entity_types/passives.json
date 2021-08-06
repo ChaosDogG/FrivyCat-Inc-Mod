@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "#frivycat:horse",
+    "#frivycat:sacred",
+    "minecraft:rabbit",
+    "minecraft:pig",
+    "minecraft:cow",
+    "minecraft:chicken",
+    "minecraft:squid",
+    "minecraft:cod",
+    "minecraft:salmon",
+    "minecraft:tropical_fish",
+    "minecraft:mooshroom",
+    "minecraft:villager",
+    "minecraft:strider",
+    "#frivycat:undead_horse",
+    "quark:crab",
+    "quark:stoneling",
+    "quark:toretoise",
+    "#frivycat:llamas"
+  ]
+}

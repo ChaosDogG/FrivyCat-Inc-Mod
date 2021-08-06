@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:pink_tulip"
+        },
+        {
+            "item": "minecraft:bone_meal"
+        }
+    ],
+    "result": {
+        "item": "minecraft:peony",
+        "count": 1
+    },
+    "group": "flower"
+}
