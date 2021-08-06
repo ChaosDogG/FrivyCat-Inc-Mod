@@ -1,0 +1,1 @@
+tellraw @s {"text":"You doof! You forgot the key item listed in the frame below the base of the pad!","color":"dark_red","bold":true}

@@ -1,0 +1,83 @@
+{
+	"name": "Custom Dimensions",
+	"category": "patchouli:dimensions",
+	"icon": "minecraft:emerald{CustomModelData:3}",
+	"pages": [
+				{
+				"type": "text",
+				"text": "There's lots of dimensions this datapack adds, so I'll be short with my descriptions here. To access a dimension, hold an Amethyst in your offhand, a specific item of choice in your mainhand, and stand on a Netherite Block and boom, you're there!"
+		},
+		{
+			"type": "spotlight",
+			"title": "Malicious Dark Forest",
+			"item": "minecraft:diamond{CustomModelData:1}",
+			"text": "What a horrid place to find yourself in...This place is constantly dark, os mobs will find you quite a treat to find here...The item of choice is a Wither Skull"
+		},
+		{
+			"type": "spotlight",
+			"title": "Depressed Badlands",
+			"item": "minecraft:diamond{CustomModelData:2}",
+			"text": "What a dreary place to be...Honestly, the Dark Forest was happier. At least there were things to interact with...To get here, use Dead Brain Coral..."
+		},
+		{
+			"type": "spotlight",
+			"title": "Paranoid End Highlands",
+			"item": "minecraft:diamond{CustomModelData:3}",
+			"text": "This one is a bit of a freaky one. It'd make even me paranoid...but basically to get there you'll need to pay up w/ your Totem of Undying"
+		},
+		{
+			"type": "spotlight",
+			"title": "Enraged Nether Wastes",
+			"item": "minecraft:diamond{CustomModelData:4}",
+			"text": "A Hellish landscape indeed, pretty much anger in manifestation. You'll want a Damaged Anvil to get here."
+		},
+		{
+			"type": "spotlight",
+			"title": "Curious Overworld",
+			"item": "minecraft:diamond{CustomModelData:5}",
+			"text": "A bit of an odd one this is, it's similar to the Overworld, but its....floating...? To get here, use a Command Block"
+		},
+		{
+			"type": "spotlight",
+			"title": "Peacful Flower Forest",
+			"item": "minecraft:diamond{CustomModelData:6}",
+			"text": "As the name suggests, its very peaceful here and no mobs spawn, just fluffy and harmless beasts. Use a Written Book to get here."
+		},
+		{
+			"type": "spotlight",
+			"title": "Honest Plains",
+			"item": "minecraft:diamond{CustomModelData:7}",
+			"text": "Just as it sounds, an honest plains area...but it floats...All the same, everything here biome-wise is unchanged. Get here with a honey bottle in hand"
+		},
+		{
+			"type": "spotlight",
+			"title": "Controlled Overworld",
+			"item": "minecraft:diamond{CustomModelData:8}",
+			"text": "A pretty expensive way to get here, requiring one End Crystal just for a one-way trip there. It may not be as controlling as it sounds, but it's definitely not a fun place to be."
+		},
+		{
+			"type": "spotlight",
+			"title": "Light Overworld",
+			"item": "minecraft:diamond{CustomModelData:9}",
+			"text": "What can I say, a dimension that has no corruption. It's as if going here washes away all corruption and sin. Getting herer requires the fabled Notch Apple, though"
+		},
+		{
+			"type": "spotlight",
+			"title": "Drunken Ocean",
+			"item": "minecraft:diamond{CustomModelData:10}",
+			"text": "What more is there to say? An ocean of beer...how delightful...getting here requires a potion, any will do"
+		},
+		{
+			"type": "spotlight",
+			"title": "Insane End Barrens",
+			"item": "minecraft:diamond{CustomModelData:11}",
+			"text": "I cannot deny the state of this place, it makes me want to slap Chaos' face. It looks like the end, oh no, oh dear, and a Corrupted Ink Sac is required to getting here. (Why did I have to rhyme that...)"
+		},
+		{
+			"type": "spotlight",
+			"title": "Corrupted Basalt Deltas",
+			"item": "minecraft:diamond{CustomModelData:12}",
+			"text": "Even speaking it's name could get me killed on the spot...all I can say is getting there costs a Nether Star."
+		}
+	]
+}

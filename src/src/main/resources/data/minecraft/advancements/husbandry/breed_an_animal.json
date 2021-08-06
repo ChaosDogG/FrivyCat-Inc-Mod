@@ -1,0 +1,64 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:wheat"
+    },
+    "title": {
+      "translate": "advancements.husbandry.breed_an_animal.title"
+    },
+    "description": {
+      "translate": "advancements.husbandry.breed_an_animal.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bred": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {}
+    }
+  },
+  "requirements": [
+    [
+      "bred"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "frivycat:sheep_spawn_egg",
+      "frivycat:sheep_spawn_egg2",
+      "frivycat:sheep_spawn_egg3",
+      "frivycat:cow_spawn_egg1",
+      "frivycat:cow_spawn_egg2",
+      "frivycat:cow_spawn_egg3",
+      "frivycat:horse_spawn_egg1",
+      "frivycat:horse_spawn_egg2",
+      "frivycat:horse_spawn_egg3",
+      "frivycat:pig_spawn_egg",
+      "frivycat:hoglin_spawn_egg",
+      "frivycat:strider_spawn_egg",
+      "frivycat:rabbit_spawn_egg1",
+      "frivycat:rabbit_spawn_egg2",
+      "frivycat:rabbit_spawn_egg3",
+      "frivycat:rabbit_spawn_egg4",
+      "frivycat:rabbit_spawn_egg5",
+      "frivycat:rabbit_spawn_egg6",
+      "frivycat:rabbit_spawn_egg7",
+      "frivycat:chicken_spawn_egg",
+      "frivycat:chicken_spawn_egg2",
+      "frivycat:mule_spawn_egg",
+      "frivycat:ocelot_spawn_egg",
+      "frivycat:turtle_spawn_egg",
+      "frivycat:squid_spawn_egg",
+      "frivycat:dolphin_spawn_egg",
+      "frivycat:fox_spawn_egg",
+      "frivycat:panda_spawn_egg",
+      "frivycat:skeleton_horse_spawn_egg",
+      "frivycat:zombie_horse_spawn_egg",
+      "frivycat:mooshroom_spawn_egg"
+    ]
+  }
+}

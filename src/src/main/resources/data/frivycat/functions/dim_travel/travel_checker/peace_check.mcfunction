@@ -1,0 +1,2 @@
+execute as @a[distance=..3] if entity @s[predicate=!frivycat:peace_dim_item] run function frivycat:dim_travel/travel_fail
+execute as @a[distance=..3] if entity @s[predicate=frivycat:peace_dim_item] run function frivycat:dim_travel/success/peace_dim_travel

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "tag": "frivycat:sticks"
+    },
+    "X": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "minecraft:stone_axe"
+  }
+}

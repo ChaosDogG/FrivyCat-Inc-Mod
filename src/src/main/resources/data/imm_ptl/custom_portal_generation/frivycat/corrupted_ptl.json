@@ -1,0 +1,18 @@
+{
+	"schema_version": "imm_ptl:v1",
+	"from": ["minecraft:overworld"],
+	"to": "frivycat:corrupted_basalt_deltas",
+	"reversable": true,
+	"form": {
+		"type": "imm_ptl:flipping_floor_square_new",
+		"frame_block": "minecraft:warped_stem",
+		"area_block": "minecraft:air",
+		"generate_frame_if_not_found": true
+	},
+	"trigger": {
+		"type": "imm_ptl:use_item",
+		"item": "minecraft:nether_star",
+		"consume": true
+	},
+	"post_invoke_commands": ["/execute as @p run function frivycat:madness"]
+}

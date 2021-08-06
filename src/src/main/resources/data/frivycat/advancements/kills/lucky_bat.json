@@ -1,0 +1,40 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Flap Flap",
+            "color": "dark_red"
+        },
+        "description": {
+            "text": "Kill a Lucky Bat"
+        },
+        "icon": {
+            "item": "minecraft:bat_spawn_egg"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "slay": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:bat"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "slay"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "frivycat:bat_spawn_egg"
+        ]
+    },
+    "parent": "frivycat:kills/root"
+}

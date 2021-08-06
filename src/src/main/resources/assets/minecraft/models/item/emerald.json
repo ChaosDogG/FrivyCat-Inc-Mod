@@ -1,0 +1,18 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/emerald"
+	},
+	
+	"overrides": [
+		{"predicate": {"custom_model_data":1}, "model": "item/ruby"},
+		{"predicate": {"custom_model_data":2}, "model": "item/emerald_2"},
+		{"predicate": {"custom_model_data":3}, "model": "item/emerald_3"},
+		{"predicate": {"custom_model_data":4}, "model": "item/emerald_4"},
+		{"predicate": {"custom_model_data":5}, "model": "item/emerald_5"},
+		{"predicate": {"custom_model_data":6}, "model": "item/emerald_6"},
+		{"predicate": {"custom_model_data":7}, "model": "item/emerald_7"},
+		{"predicate": {"custom_model_data":8}, "model": "item/emerald_8"},
+		{"predicate": {"custom_model_data":9}, "model": "item/emerald_9"}
+	]
+}

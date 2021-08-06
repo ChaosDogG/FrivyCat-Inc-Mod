@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "frivycat:sticks"
+    },
+    "X": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "minecraft:item_frame"
+  }
+}

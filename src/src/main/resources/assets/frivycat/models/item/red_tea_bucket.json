@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "frivycat:item/red_tea_bucket"
+	}
+}

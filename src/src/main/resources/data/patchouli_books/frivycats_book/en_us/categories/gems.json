@@ -1,0 +1,5 @@
+{
+	"name": "Gems",
+	"description": "Here is a list of the custom gems and their abilities",
+	"icon": "minecraft:emerald{CustomModelData:1}"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iSi",
+        "iGi",
+        "i i"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "S": {
+            "tag": "frivycat:sticks"
+        },
+        "G": {
+            "item": "minecraft:gold_block"
+        }
+    },
+    "result": {
+        "item": "minecraft:bell",
+        "count": 1
+    }
+}
