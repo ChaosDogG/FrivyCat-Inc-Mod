@@ -1,8 +1,8 @@
 Ideas to implement:
     Spawn eggs for Golems, Illusioners, Giants, and Spawner Minecarts
     Allow Killer Rabbits and Giants to spawn naturally
-    Make some Knowledge Books in creative inventory have premade recipes like capsules and tools
-    Give Knowledge Books an easy-to-underatand tooltip depicting the recipe it holds
+    Make some Knowledge Books in creative inventory have pre-made recipes like capsules and tools
+    Give Knowledge Books an easy-to-understand tooltip depicting the recipe it holds
     Find a way to add Senko Loaves as inventory companions
     Humans; some like villagers, some like the illager family (nix Ravager and Vex), and some like basic mobs
     Add Illusioners to raids (last wave) and maybe the mansion or new structure
