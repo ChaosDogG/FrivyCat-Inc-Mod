@@ -8,7 +8,7 @@ loaderVersion="[36,)"
 # A URL to refer people to when problems occur with this mod
 issueTrackerURL="https://github.com/ChaosDogG/FrivyCat-Inc-Mod/issues"
 
-# If the mods defined in this file should show as seperate resource packs
+# If the mods defined in this file should show as separate resource packs
 showAsResourcePack=false
 license = "GPL-3.0-or-later"
 
