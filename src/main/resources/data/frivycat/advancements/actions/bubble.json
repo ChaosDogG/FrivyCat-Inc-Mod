@@ -11,7 +11,7 @@
     "display": {
         "announce_to_chat": true,
         "description": {
-            "text": "Swim into a bubble collumn"
+            "text": "Swim into a bubble column"
         },
         "frame": "task",
         "hidden": false,
@@ -22,7 +22,7 @@
         "title": {
             "bold": false,
             "color": "dark_aqua",
-            "text": "Bubble? OwO"
+            "text": "Bubble?"
         }
     },
     "requirements": [
