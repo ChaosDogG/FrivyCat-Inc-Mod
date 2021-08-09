@@ -44,7 +44,7 @@ public class FrivyCatMod {
         changeCreativeTab(Items.COMMAND_BLOCK_MINECART, ItemGroup.TAB_TRANSPORTATION);
 
         // add Suspicious Stew to food tab
-        changeCreativeTab(Items.SUSPICIOUS_STEW, Item.Group.TAB_FOOD);
+        changeCreativeTab(Items.SUSPICIOUS_STEW, ItemGroup.TAB_FOOD);
     }
 
     // sets or changes the creative tab of a vanilla item
