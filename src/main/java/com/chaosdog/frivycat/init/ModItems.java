@@ -30,15 +30,15 @@ public class ModItems {
     )));
     public static final RegistryObject<Item> GREEN_APPLE_CANDY = ITEMS.register("green_apple_candy", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD).food(
             new Food.Builder()
-                    .nutrition(2)
-                    .saturationMod(1)
+                    .nutrition(4)
+                    .saturationMod(2.4)
                     .meat()
                     .build()
     )));
     public static final RegistryObject<Item> HONEY_MUG = ITEMS.register("honey_mug", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD).stacksTo(1).food(
         new Food.Builder()
                 .nutrition(12)
-                .saturationMod(1)
+                .saturationMod(2.4)
                 .meat()
                 .build()
     )));
