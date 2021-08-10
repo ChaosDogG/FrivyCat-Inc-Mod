@@ -1,5 +1,6 @@
 package com.chaosdog.frivycat;
 
+import com.chaosdog.frivycat.init.ModBlocks;
 import com.chaosdog.frivycat.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -21,8 +22,9 @@ public class FrivyCatMod {
     public FrivyCatMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.init(eventBus);
+        ModBlocks.init(eventBus);
 
-        // put debug stick and knowldedge book in tools tab of creative inventory
+        // put debug stick and knowledge book in tools tab of creative inventory
         changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TAB_TOOLS);
         changeCreativeTab(Items.KNOWLEDGE_BOOK, ItemGroup.TAB_TOOLS);
 
