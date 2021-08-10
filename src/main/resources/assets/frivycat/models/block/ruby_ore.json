@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "frivycat:block/ruby_ore"
+    "all": "frivycat:block/ore/ruby_ore"
   }
 } 
  

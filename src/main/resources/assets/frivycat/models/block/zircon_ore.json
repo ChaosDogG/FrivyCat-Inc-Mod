@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "frivycat:block/material/jade_block"
+    "all": "frivycat:block/ore/zircon_ore"
   }
 } 
  
