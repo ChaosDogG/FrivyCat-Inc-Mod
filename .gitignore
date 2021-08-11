@@ -6,3 +6,4 @@ build
 eclipse
 run
 .project
+.settings
