@@ -1,7 +1,7 @@
 {
-  "variants": {
+    "variants": {
     "": {
-      "model": "frivycat:block/garnet_block"
+        "model": "frivycat:block/garnet_block"
     }
   }
-} 
+}

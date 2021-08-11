@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "frivycat:block/material/ruby_block"
+        "all": "frivycat:block/ore/sapphire_ore"
     }
 }

@@ -10,6 +10,25 @@
     "biome.frivycat.p-ehighlands": "Paranoid End Highlands",
     "biome.frivycat.p-fforest": "Peaceful Flower Forest",
 
+    "block.frivycat.agate_block": "Agate Block",
+    "block.frivycat.agate_ore": "Agate Ore",
+    "block.frivycat.garnet_block": "Garnet Block",
+    "block.frivycat.garnet_ore": "Garnet Ore",
+    "block.frivycat.jade_block": "Jade Block",
+    "block.frivycat.jade_ore": "Jade Ore",
+    "block.frivycat.jasper_block": "Jasper Block",
+    "block.frivycat.jasper_ore": "Jasper Ore",
+    "block.frivycat.ruby_block": "Ruby Block",
+    "block.frivycat.ruby_ore": "Ruby Ore",
+    "block.frivycat.sapphire_block": "Sapphire Block",
+    "block.frivycat.sapphire_ore": "Sapphire Ore",
+    "block.frivycat.spinel_block": "Spinel Block",
+    "block.frivycat.spinel_ore": "Spinel Ore",
+    "block.frivycat.topaz_block": "Topaz Block",
+    "block.frivycat.topaz_ore": "Topaz Ore",
+    "block.frivycat.zircon_block": "Zircon Block",
+    "block.frivycat.zircon_ore": "Zircon Ore",
+
     "item.frivycat.agate": "Agate",
     "item.frivycat.baby_bottle": "Baby Bottle",
     "item.frivycat.baby_rattle_boy": "Baby Rattle",
@@ -48,7 +67,5 @@
     "item.frivycat.veteran_diamond": "Veteran Diamond",
     "item.frivycat.vine_diamond": "Vine Diamond",
     "item.frivycat.water_diamond": "Water Diamond",
-    "item.frivycat.zircon": "Zircon",
-    
-    "block.frivycat.ruby_block":"Ruby Block"
+    "item.frivycat.zircon": "Zircon"
 }

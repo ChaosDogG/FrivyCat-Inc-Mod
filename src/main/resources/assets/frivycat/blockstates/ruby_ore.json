@@ -1,8 +1,7 @@
 {
-  "variants": {
+    "variants": {
     "": {
-      "model": "frivycat:block/ruby_ore"
+        "model": "frivycat:block/ruby_ore"
     }
   }
-} 
- 
+}

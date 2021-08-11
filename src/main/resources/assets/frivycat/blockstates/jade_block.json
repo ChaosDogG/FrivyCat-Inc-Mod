@@ -1,8 +1,7 @@
 {
-  "variants": {
+    "variants": {
     "": {
-      "model": "frivycat:block/jade_block"
+        "model": "frivycat:block/jade_block"
     }
   }
-} 
- 
+}
