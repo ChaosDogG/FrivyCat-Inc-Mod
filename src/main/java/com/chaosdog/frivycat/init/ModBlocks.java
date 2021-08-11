@@ -19,7 +19,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FrivyCatMod.ID);
 
     public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.METAL)
+            () -> new Block(AbstractBlock.Properties.create(Material.IRON)
                     .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)));
     public static void init() {
 
@@ -33,7 +33,7 @@ public class ModBlocks {
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+                new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
     }
 
     public static void init(IEventBus eventBus) {

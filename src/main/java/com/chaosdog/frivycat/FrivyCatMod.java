@@ -25,37 +25,37 @@ public class FrivyCatMod {
         ModBlocks.init(eventBus);
 
         // put debug stick and knowledge book in tools tab of creative inventory
-        changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TAB_TOOLS);
-        changeCreativeTab(Items.KNOWLEDGE_BOOK, ItemGroup.TAB_TOOLS);
+        changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TOOLS);
+        changeCreativeTab(Items.KNOWLEDGE_BOOK, ItemGroup.TOOLS);
 
         // add jigsaw, structure, and command blocks to the redstone tab
-        changeCreativeTab(Blocks.JIGSAW, ItemGroup.TAB_REDSTONE);
-        changeCreativeTab(Blocks.STRUCTURE_BLOCK, ItemGroup.TAB_REDSTONE);
-        changeCreativeTab(Blocks.STRUCTURE_VOID, ItemGroup.TAB_REDSTONE);
-        changeCreativeTab(Blocks.COMMAND_BLOCK.asItem(), ItemGroup.TAB_REDSTONE);
-        changeCreativeTab(Blocks.CHAIN_COMMAND_BLOCK, ItemGroup.TAB_REDSTONE);
-        changeCreativeTab(Blocks.REPEATING_COMMAND_BLOCK, ItemGroup.TAB_REDSTONE);
+        changeCreativeTab(Blocks.JIGSAW, ItemGroup.REDSTONE);
+        changeCreativeTab(Blocks.STRUCTURE_BLOCK, ItemGroup.REDSTONE);
+        changeCreativeTab(Blocks.STRUCTURE_VOID, ItemGroup.REDSTONE);
+        changeCreativeTab(Blocks.COMMAND_BLOCK.asItem(), ItemGroup.REDSTONE);
+        changeCreativeTab(Blocks.CHAIN_COMMAND_BLOCK, ItemGroup.REDSTONE);
+        changeCreativeTab(Blocks.REPEATING_COMMAND_BLOCK, ItemGroup.REDSTONE);
 
         // add monster spawner to decorations tab
-        changeCreativeTab(Blocks.SPAWNER, ItemGroup.TAB_DECORATIONS);
+        changeCreativeTab(Blocks.SPAWNER, ItemGroup.DECORATIONS);
 
         // add barrier to building blocks tab
-        changeCreativeTab(Blocks.BARRIER, ItemGroup.TAB_BUILDING_BLOCKS);
+        changeCreativeTab(Blocks.BARRIER, ItemGroup.BUILDING_BLOCKS);
 
         // add command block minecarts to transportation tab
-        changeCreativeTab(Items.COMMAND_BLOCK_MINECART, ItemGroup.TAB_TRANSPORTATION);
+        changeCreativeTab(Items.COMMAND_BLOCK_MINECART, ItemGroup.TRANSPORTATION);
 
         // add Suspicious Stew to food tab
-        changeCreativeTab(Items.SUSPICIOUS_STEW, ItemGroup.TAB_FOOD);
+        changeCreativeTab(Items.SUSPICIOUS_STEW, ItemGroup.FOOD);
     }
 
     // sets or changes the creative tab of a vanilla item
     public static void changeCreativeTab(Item item, ItemGroup tab) {
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, item, tab,"category");
+        ObfuscationReflectionHelper.setPrivateValue(Item.class, item, tab,"group");
     }
 
     // sets or changes the creative tab of a vanilla block
     public static void changeCreativeTab(Block block, ItemGroup tab) {
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, block.asItem(), tab,"category");
+        ObfuscationReflectionHelper.setPrivateValue(Item.class, block.asItem(), tab,"group");
     }
 }
