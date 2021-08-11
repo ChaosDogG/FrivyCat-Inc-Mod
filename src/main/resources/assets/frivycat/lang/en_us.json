@@ -48,5 +48,7 @@
     "item.frivycat.veteran_diamond": "Veteran Diamond",
     "item.frivycat.vine_diamond": "Vine Diamond",
     "item.frivycat.water_diamond": "Water Diamond",
-    "item.frivycat.zircon": "Zircon"
+    "item.frivycat.zircon": "Zircon",
+    
+    "block.frivycat.ruby_block":"Ruby Block"
 }
