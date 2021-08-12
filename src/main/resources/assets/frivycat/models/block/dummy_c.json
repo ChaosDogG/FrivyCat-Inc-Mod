@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/orientable",
+    "textures": {
+      "top": "frivycat:block/dummy/top",
+      "front": "frivycat:block/dummy/front",
+      "side": "frivycat:block/dummy/right"
+    }
+  }

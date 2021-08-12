@@ -41,6 +41,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> TOPAZ_ORE = regGemOre("topaz");
     public static final RegistryObject<Block> AGATE_ORE = regGemOre("agate");
 
+    //dummy blocks
+    public static final RegistryObject<Block> DUMMY_A = regDummyBlock("a");
+    public static final RegistryObject<Block> DUMMY_B = regDummyBlock("b");
+    public static final RegistryObject<Block> DUMMY_C = regDummyBlock("c");
+
     public static void init(IEventBus eventBus) {
         // register the registries
         BLOCKS.register(eventBus);
@@ -57,5 +62,11 @@ public class ModBlocks {
     private static RegistryObject<Block> regGemOre(String name) {
         AbstractBlock.Properties properties = AbstractBlock.Properties.create(Material.ROCK).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f).sound(SoundType.STONE);
         return Utils.regBlockWithItem(BLOCKS, BLOCK_ITEMS, name + "_ore", new Block(properties), ItemGroup.BUILDING_BLOCKS);
+    }
+
+    // registers a dummy block
+    private static RegistryObject<Block> regDummyBlock(String name) {
+        AbstractBlock.Properties properties = AbstractBlock.Properties.create(Material.IRON).harvestLevel(4).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f).sound(SoundType.METAL);
+        return Utils.regBlockWithItem(BLOCKS, BLOCK_ITEMS, "dummy_" + name, new Block(properties), ItemGroup.MISC);
     }
 }

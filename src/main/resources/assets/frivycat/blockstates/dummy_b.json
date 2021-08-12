@@ -1,0 +1,16 @@
+{
+    "variants": {
+      "axis=x": {
+        "model": "frivycat:block/dummy_b_horizontal",
+        "x": 90,
+        "y": 90
+      },
+      "axis=y": {
+        "model": "frivycat:block/dummy_b"
+      },
+      "axis=z": {
+        "model": "frivycat:block/dummy_b_horizontal",
+        "x": 90
+      }
+    }
+  }

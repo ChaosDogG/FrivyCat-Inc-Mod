@@ -28,6 +28,9 @@
     "block.frivycat.topaz_ore": "Topaz Ore",
     "block.frivycat.zircon_block": "Zircon Block",
     "block.frivycat.zircon_ore": "Zircon Ore",
+    "block.frivycat.dummy_a": "Single Texture Block",
+    "block.frivycat.dummy_b": "Log Format Block",
+    "block.frivycat.dummy_c": "Front-Face Block",
 
     "item.frivycat.agate": "Agate",
     "item.frivycat.baby_bottle": "Baby Bottle",
