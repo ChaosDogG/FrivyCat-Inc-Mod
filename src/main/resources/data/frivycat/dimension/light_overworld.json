@@ -2,12 +2,11 @@
   "type": "frivycat:light_overworld",
   "generator": {
     "type": "minecraft:noise",
-    "seed": 12389023645,
+    "seed": 0,
+    "settings": "frivycat:l_p",
     "biome_source": {
-      "type": "minecraft:vanilla_layered",
-      "seed": 12389023645,
-      "large_biomes": false
-    },
-    "settings": "minecraft:overworld"
+      "type": "minecraft:fixed",
+      "biome": "frivycat:l_plains"
+    }
   }
 }

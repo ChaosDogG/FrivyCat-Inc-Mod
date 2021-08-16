@@ -14,7 +14,13 @@
     "water_color": 30417,
     "water_fog_color": 11637,
     "grass_color": 838188,
-    "foliage_color": 3393545
+    "foliage_color": 3393545,
+    "music": {
+      "sound": "minecraft:music_disc.wait",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    }
   },
   "starts": [],
   "spawners": {
@@ -130,12 +136,6 @@
     ],
     "water_creature": [
       {
-        "type": "minecraft:axolotl",
-        "weight": 1,
-        "minCount": 2,
-        "maxCount": 10
-      },
-      {
         "type": "minecraft:cod",
         "weight": 1,
         "minCount": 2,
@@ -171,8 +171,6 @@
   "carvers": {
     "air": [
       "minecraft:ocean_cave",
-      "minecraft:crack",
-      "minecraft:canyon",
       "minecraft:cave"
     ]
   },
@@ -185,11 +183,7 @@
     [],
     [],
     [],
-    [
-      "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "minecraft:disk_sand"
-    ],
+    [],
     [],
     [
       "minecraft:spring_water",
@@ -202,7 +196,8 @@
       "minecraft:flower_default",
       "minecraft:patch_sunflower",
       "minecraft:patch_berry_bush",
-      "minecraft:patch_large_fern"
+      "minecraft:patch_large_fern",
+      "minecraft:forest_flower_vegetation_common"
     ],
     [
       "minecraft:freeze_top_layer"

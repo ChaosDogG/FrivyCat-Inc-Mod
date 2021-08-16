@@ -3,7 +3,7 @@
     "ingredients": [
         [
             {
-                "tag": "minecraft:shulker_boxes"
+                "tag": "frivycat:shulker_boxes"
             },
             {
                 "item": "minecraft:shulker_shell"

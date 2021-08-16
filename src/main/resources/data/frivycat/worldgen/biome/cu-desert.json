@@ -14,7 +14,13 @@
     "water_color": 8734464,
     "water_fog_color": 7686656,
     "grass_color": 10977860,
-    "foliage_color": 11239478
+    "foliage_color": 11239478,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
   },
   "starts": [
     "minecraft:desert_pyramid",
@@ -83,14 +89,23 @@
       "minecraft:desert_well"
     ],
     [],
-    [],
+    [
+      "frivycat:black_powder_patch",
+      "frivycat:orange_powder_patch"
+    ],
     [],
     [
-      "minecraft:patch_cactus_desert",
-      "minecraft:patch_cactus_decorated",
-      "minecraft:patch_cactus",
-      "minecraft:patch_dead_bush",
-      "minecraft:patch_dead_bush_2"
+      "minecraft:flower_default",
+      "minecraft:patch_grass_badlands",
+      "minecraft:patch_dead_bush_2",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_sugar_cane_desert",
+      "minecraft:patch_pumpkin",
+      "minecraft:patch_cactus_desert"
+    ],
+    [
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

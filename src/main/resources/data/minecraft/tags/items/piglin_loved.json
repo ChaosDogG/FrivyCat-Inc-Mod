@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sea_pickle",
+    "minecraft:crimson_fungus",
+    "minecraft:crossbow",
+    "minecraft:spectral_arrow",
+    "minecraft:totem_of_undying",
+    "#frivycat:spawn_eggs",
+    "minecraft:debug_stick",
+    "#minecraft:flowers",
+    "minecraft:music_disc_pigstep"
+  ]
+}

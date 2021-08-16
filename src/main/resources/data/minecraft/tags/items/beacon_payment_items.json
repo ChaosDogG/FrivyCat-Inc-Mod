@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "frivycat:ruby",
+    "frivycat:sapphire",
+    "frivycat:zircon",
+    "frivycat:garnet",
+    "frivycat:jade",
+    "frivycat:jasper",
+    "frivycat:spinel",
+    "frivycat:topaz",
+    "frivycat:agate"
+  ]
+}

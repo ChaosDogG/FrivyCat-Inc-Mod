@@ -4,17 +4,23 @@
     "top_material": {
       "Name": "minecraft:grass_block",
       "Properties": {
-        "snowy": "false"
+        "snowy": "true"
       }
     },
     "under_material": {
-      "Name": "minecraft:basalt",
-      "Properties": {
-        "axis": "y"
-      }
+      "Name": "minecraft:snow_block",
+      "Properties": {}
     },
     "underwater_material": {
-      "Name": "minecraft:gravel"
+      "Name": "minecraft:mushroom_stem",
+      "Properties": {
+        "down": "false",
+        "east": "true",
+        "north": "true",
+        "south": "true",
+        "up": "false",
+        "west": "true"
+      }
     }
   }
 }

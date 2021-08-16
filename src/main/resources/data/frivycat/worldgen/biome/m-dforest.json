@@ -14,7 +14,19 @@
     "water_color": 2171169,
     "water_fog_color": 2171169,
     "grass_color": 2039583,
-    "foliage_color": 2039583
+    "foliage_color": 2039583,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "particle": {
+      "options": {
+        "type": "minecraft:squid_ink"
+      },
+      "probability": 0.025
+    }
   },
   "starts": [],
   "spawners": {
@@ -61,25 +73,42 @@
   },
   "features": [
     [],
-    [],
+    [
+      "minecraft:lake_water",
+      "minecraft:lake_lava"
+    ],
     [],
     [],
     [],
     [],
     [
-      "frivycat:light_test",
-      "frivycat:block_piles"
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_granite",
+      "minecraft:ore_diorite",
+      "minecraft:ore_andesite",
+      "minecraft:ore_coal",
+      "minecraft:ore_iron",
+      "minecraft:ore_gold",
+      "minecraft:ore_redstone",
+      "minecraft:ore_diamond",
+      "minecraft:ore_lapis",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel"
     ],
     [],
     [
       "minecraft:dark_forest_vegetation_brown",
       "minecraft:forest_flower_vegetation",
-      "minecraft:glow_lichen",
       "minecraft:flower_default",
       "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane"
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_pumpkin",
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
     ],
     [
       "minecraft:freeze_top_layer"

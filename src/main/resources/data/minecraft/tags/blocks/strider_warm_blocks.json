@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:lava",
     "minecraft:fire",
     "minecraft:soul_fire",
     "minecraft:torch",

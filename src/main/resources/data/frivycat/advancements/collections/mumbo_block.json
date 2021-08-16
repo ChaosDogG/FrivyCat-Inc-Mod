@@ -10,7 +10,7 @@
                             "max": 1,
                             "min": 1
                         },
-                        "item": "minecraft:redstone_block"
+                        "item": "frivycat:mumbo_block"
                     }
                 ]
             }
@@ -24,7 +24,7 @@
         "frame": "task",
         "hidden": false,
         "icon": {
-            "item": "minecraft:redstone_block"
+            "item": "frivycat:mumbo_block"
         },
         "show_toast": true,
         "title": {

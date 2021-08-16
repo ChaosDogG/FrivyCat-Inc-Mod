@@ -14,7 +14,13 @@
     "water_color": 8716288,
     "water_fog_color": 7667712,
     "grass_color": 11010048,
-    "foliage_color": 11337985
+    "foliage_color": 11337985,
+    "particle": {
+      "options": {
+        "type": "minecraft:flame"
+      },
+      "probability": 0.025
+    }
   },
   "starts": [
     "minecraft:fortress",
@@ -62,23 +68,22 @@
     [],
     [],
     [],
+    [],
     [
-      "minecraft:patch_soul_fire",
-      "minecraft:patch_fire"
-    ],
-    [
-      "minecraft:ore_debris_large",
-      "minecraft:ore_debris_small"
+      "frivycat:soul_soil_patch",
+      "frivycat:blackstone_patch",
+      "frivycat:nether_brick_patch"
     ],
     [
       "minecraft:ore_gold_nether",
-      "minecraft:ore_quartz_nether"
-    ],
-    [
-      "frivycat:blackstone_patch",
-      "frivycat:nether_brick_patch",
+      "minecraft:ore_quartz_nether",
+      "minecraft:patch_soul_fire",
+      "minecraft:patch_fire",
+      "minecraft:ore_debris_large",
+      "minecraft:ore_debris_small",
       "minecraft:ore_magma",
-      "minecraft:delta"
-    ]
+      "frivycat:enraged_debris"
+    ],
+    []
   ]
 }

@@ -14,7 +14,19 @@
     "water_color": 4013373,
     "water_fog_color": 2368548,
     "grass_color": 4210752,
-    "foliage_color": 4539717
+    "foliage_color": 4539717,
+    "mood_sound": {
+      "sound": "minecraft:particle.soul_escape",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "particle": {
+      "options": {
+        "type": "minecraft:soul"
+      },
+      "probability": 0.025
+    }
   },
   "starts": [],
   "spawners": {
@@ -60,7 +72,6 @@
   "spawn_costs": {},
   "carvers": {
     "air": [
-      "minecraft:crack",
       "minecraft:canyon",
       "minecraft:cave"
     ]

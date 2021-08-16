@@ -4,7 +4,6 @@
     "minecraft:zombie",
     "minecraft:husk",
     "minecraft:drowned",
-    "minecraft:giant",
-    "quark:wrapped"
+    "minecraft:giant"
   ]
 }

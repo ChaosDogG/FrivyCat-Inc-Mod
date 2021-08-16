@@ -1,0 +1,162 @@
+{
+  "type": "minecraft:overworld",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": 0,
+    "settings": "frivycat:spirit_realm",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "seed": 0,
+      "altitude_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "temperature_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "humidity_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "weirdness_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "biomes": [
+        {
+          "biome": "frivycat:co-bdeltas",
+          "parameters": {
+            "altitude": -1,
+            "temperature": 0.225,
+            "humidity": 0,
+            "weirdness": 1,
+            "offset": 0.2
+          }
+        },
+        {
+          "biome": "frivycat:co-plains",
+          "parameters": {
+            "altitude": -0.87,
+            "temperature": 0.59,
+            "humidity": -0.43,
+            "weirdness": 1,
+            "offset": 0.25
+          }
+        },
+        {
+          "biome": "frivycat:cu-desert",
+          "parameters": {
+            "altitude": 0.665,
+            "temperature": 0.73,
+            "humidity": -0.442,
+            "weirdness": 1,
+            "offset": 0.01
+          }
+        },
+        {
+          "biome": "frivycat:d-badlands",
+          "parameters": {
+            "altitude": 0,
+            "temperature": -1,
+            "humidity": 0.22,
+            "weirdness": 1,
+            "offset": 0.5
+          }
+        },
+        {
+          "biome": "frivycat:d-ocean",
+          "parameters": {
+            "altitude": -0.1,
+            "temperature": 0.34,
+            "humidity": 1,
+            "weirdness": 1,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "frivycat:e-nwastes",
+          "parameters": {
+            "altitude": -0.2216,
+            "temperature": 1,
+            "humidity": -1,
+            "weirdness": 1,
+            "offset": 0.009
+          }
+        },
+        {
+          "biome": "minecraft:plains",
+          "parameters": {
+            "altitude": 0.6,
+            "temperature": 0.6,
+            "humidity": 0.43,
+            "weirdness": 0,
+            "offset": 0.9
+          }
+        },
+        {
+          "biome": "frivycat:i-ebarrens",
+          "parameters": {
+            "altitude": 0.93,
+            "temperature": -0.34,
+            "humidity": 0.2,
+            "weirdness": 1,
+            "offset": 0.6
+          }
+        },
+        {
+          "biome": "minecraft:beach",
+          "parameters": {
+            "altitude": -0.19,
+            "temperature": 0.37,
+            "humidity": 0.86,
+            "weirdness": 0,
+            "offset": 1
+          }
+        },
+        {
+          "biome": "frivycat:m-dforest",
+          "parameters": {
+            "altitude": -0.553,
+            "temperature": -0.54,
+            "humidity": -0.224,
+            "weirdness": 1,
+            "offset": 0.56
+          }
+        },
+        {
+          "biome": "frivycat:p-ehighlands",
+          "parameters": {
+            "altitude": 1,
+            "temperature": -0.554,
+            "humidity": -0.9234,
+            "weirdness": 1,
+            "offset": 0.3
+          }
+        },
+        {
+          "biome": "frivycat:p-fforest",
+          "parameters": {
+            "altitude": 0.45,
+            "temperature": 0.45,
+            "humidity": 0.285,
+            "weirdness": 1,
+            "offset": 0.44
+          }
+        }
+      ]
+    }
+  }
+}

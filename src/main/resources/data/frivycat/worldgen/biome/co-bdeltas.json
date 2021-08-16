@@ -76,7 +76,6 @@
     [],
     [
       "minecraft:delta",
-      "minecraft:large_basalt_columns",
       "minecraft:small_basalt_columns"
     ],
     [],
@@ -92,7 +91,6 @@
       "minecraft:desert_well",
       "minecraft:blackstone_blobs",
       "minecraft:basalt_blobs",
-      "minecraft:fossil_upper",
       "minecraft:ore_gold_deltas",
       "minecraft:spring_delta",
       "minecraft:twisting_vines",

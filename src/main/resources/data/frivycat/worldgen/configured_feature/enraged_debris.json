@@ -9,30 +9,24 @@
       "type": "minecraft:decorated",
       "config": {
         "decorator": {
-          "type": "minecraft:depth_average",
+          "type": "minecraft:range",
           "config": {
-            "baseline": {
-              "absolute": 16
-            },
-            "spread": 8
+            "maximum": 128,
+            "bottom_offset": 8,
+            "top_offset": 16
           }
         },
         "feature": {
-          "type": "minecraft:scattered_ore",
+          "type": "minecraft:no_surface_ore",
           "config": {
+            "state": {
+              "Name": "minecraft:ancient_debris"
+            },
             "size": 6,
-            "discard_chance_on_air_exposure": 1,
-            "targets": [
-              {
-                "target": {
-                  "predicate_type": "minecraft:tag_match",
-                  "tag": "minecraft:base_stone_nether"
-                },
-                "state": {
-                  "Name": "minecraft:ancient_debris"
-                }
-              }
-            ]
+            "target": {
+              "predicate_type": "minecraft:tag_match",
+              "tag": "minecraft:base_stone_nether"
+            }
           }
         }
       }

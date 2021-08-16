@@ -1,6 +1,6 @@
 {
   "surface_builder": "frivycat:do",
-  "depth": 0.125,
+  "depth": -1,
   "scale": 0.05,
   "temperature": 0.8,
   "downfall": 0.4,
@@ -14,7 +14,19 @@
     "water_color": 6244881,
     "water_fog_color": 6773518,
     "grass_color": 72569,
-    "foliage_color": 199006
+    "foliage_color": 199006,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "particle": {
+      "options": {
+        "type": "minecraft:underwater"
+      },
+      "probability": 0.025
+    }
   },
   "starts": [
     "minecraft:monument",
@@ -50,16 +62,22 @@
     [],
     [],
     [],
+    [],
     [
-      "minecraft:glowstone"
-    ],
-    [
-      "minecraft:kelp_cold",
+      "minecraft:trees_water",
+      "minecraft:flower_default",
+      "minecraft:patch_grass_badlands",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_pumpkin",
+      "minecraft:spring_water",
+      "minecraft:spring_lava",
       "minecraft:seagrass_normal",
+      "minecraft:seagrass_simple",
+      "minecraft:kelp_cold",
       "minecraft:sea_pickle",
-      "minecraft:patch_berry_decorated",
-      "minecraft:bonus_chest",
-      "minecraft:patch_grass_normal"
+      "minecraft:bonus_chest"
     ],
     [
       "minecraft:freeze_top_layer"

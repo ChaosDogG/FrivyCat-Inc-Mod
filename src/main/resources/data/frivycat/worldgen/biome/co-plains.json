@@ -43,5 +43,28 @@
       "minecraft:nether_cave"
     ]
   },
-  "features": []
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "frivycat:ore_tnt",
+      "minecraft:ore_diorite",
+      "minecraft:ore_andesite"
+    ],
+    [],
+    [
+      "minecraft:patch_tall_grass_2",
+      "minecraft:plain_vegetation",
+      "minecraft:flower_plain_decorated",
+      "minecraft:patch_grass_plain",
+      "frivycat:bedrock_patch"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ]
 }

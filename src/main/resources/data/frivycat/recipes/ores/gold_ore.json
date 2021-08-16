@@ -5,10 +5,10 @@
             "item": "minecraft:stone"
         },
         {
-            "item": "minecraft:raw_gold"
+            "item": "minecraft:gold_ingot"
         },
         {
-            "item": "minecraft:raw_gold"
+            "item": "minecraft:gold_ingot"
         }
     ],
     "result": {

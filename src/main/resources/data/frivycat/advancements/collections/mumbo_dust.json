@@ -1,7 +1,7 @@
 {
     "display": {
       "icon": {
-        "item": "frivycat:redstone_with_mustash"
+        "item": "frivycat:mumbo_dust"
       },
       "title": {
         "text": "Holy mackerel! Now I'm just a pile of dust!",
@@ -22,7 +22,7 @@
         "conditions": {
           "items": [
             {
-              "item": "frivycat:redstone_with_mustash",
+              "item": "frivycat:mumbo_dust",
               "count": {
                 "min": 1
               }

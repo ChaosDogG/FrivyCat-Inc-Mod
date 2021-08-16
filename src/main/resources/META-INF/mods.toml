@@ -34,3 +34,6 @@ license = "GPL-3.0-or-later"
     versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"
+
+[modproperties.frivycat]
+    configuredBackground="minecraft:textures/block/jigsaw_top"

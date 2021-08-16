@@ -14,7 +14,19 @@
     "water_color": 9211020,
     "water_fog_color": 8750469,
     "grass_color": 8553090,
-    "foliage_color": 9211020
+    "foliage_color": 9211020,
+    "mood_sound": {
+      "sound": "minecraft:entity.enderman.stare",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "particle": {
+      "options": {
+        "type": "minecraft:witch"
+      },
+      "probability": 0.025
+    }
   },
   "starts": [
     "minecraft:end_city"

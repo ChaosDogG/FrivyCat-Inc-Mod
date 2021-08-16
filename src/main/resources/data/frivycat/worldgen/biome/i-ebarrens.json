@@ -21,32 +21,7 @@
     }
   },
   "starts": [],
-  "spawners": {
-    "creature": [
-      {
-        "type": "minecraft:chicken",
-        "weight": 1,
-        "minCount": 2,
-        "maxCount": 20
-      }
-    ],
-    "ambient": [
-      {
-        "type": "minecraft:chicken",
-        "weight": 1,
-        "minCount": 2,
-        "maxCount": 20
-      }
-    ],
-    "monster": [
-      {
-        "type": "minecraft:chicken",
-        "weight": 1,
-        "minCount": 2,
-        "maxCount": 20
-      }
-    ]
-  },
+  "spawners": {},
   "spawn_costs": {},
   "carvers": {
     "air": [
@@ -65,7 +40,6 @@
     [],
     [
       "minecraft:patch_grass_plain",
-      "frivycat:block_piles",
       "minecraft:oak",
       "minecraft:bonus_chest",
       "minecraft:acacia",

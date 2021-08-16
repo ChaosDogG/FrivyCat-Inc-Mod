@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "frivycat:sapphire"
+    }
+  },
+  "result": {
+    "item": "frivycat:sapphire_block",
+    "count": 1
+  }
+}
