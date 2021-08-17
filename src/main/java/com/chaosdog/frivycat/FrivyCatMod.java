@@ -20,6 +20,7 @@ public class FrivyCatMod {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.init(eventBus);
         ModBlocks.init(eventBus);
+        //ModVillagers.init(eventBus); commented until issues within the registry are resolved
 
         // put debug stick and knowledge book in tools tab of creative inventory
         Utils.changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TOOLS);
