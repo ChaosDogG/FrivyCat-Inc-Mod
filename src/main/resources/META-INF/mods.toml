@@ -20,6 +20,7 @@ license = "GPL-3.0-or-later"
     credits="I'd like to thank NetherNoah, who is helping me develop this mod!"
     authors="ChaosDog, NetherNoah777"
     description="Based on the §aFrivyCat Inc.§r Datapack" # Added color codes cause why not
+    itemIcon="frivycat:ruby"
 
 [[dependencies.frivycat]]
     modId="forge"
