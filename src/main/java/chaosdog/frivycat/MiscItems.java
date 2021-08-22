@@ -1,8 +1,8 @@
-package com.chaosdog.frivycat.init;
+package chaosdog.frivycat;
 
-import com.chaosdog.frivycat.FrivyCatMod;
-import com.chaosdog.frivycat.Utils;
-import com.chaosdog.frivycat.items.ShinyItem;
+import chaosdog.frivycat.FrivyCatMod;
+import chaosdog.frivycat.Utils;
+import chaosdog.frivycat.items.ShinyItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -12,7 +12,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class ModItems {
+public class MiscItems {
     // item registry (does not need to be public)
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FrivyCatMod.ID);
 
@@ -32,33 +32,6 @@ public class ModItems {
     public static final RegistryObject<Item> BABY_RATTLE_BOY = Utils.regItem(ITEMS,"baby_rattle_boy",  new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> BABY_RATTLE_GIRL = Utils.regItem(ITEMS,"baby_rattle_girl",  new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> BABY_BOTTLE = Utils.regItem(ITEMS,"baby_bottle",  new Item(new Item.Properties().group(ItemGroup.MISC)));
-
-    // gemstones
-    public static final RegistryObject<Item> RUBY = regGem("ruby");
-    public static final RegistryObject<Item> SAPPHIRE = regGem("sapphire");
-    public static final RegistryObject<Item> ZIRCON = regGem("zircon");
-    public static final RegistryObject<Item> GARNET = regGem("garnet");
-    public static final RegistryObject<Item> JADE = regGem("jade");
-    public static final RegistryObject<Item> JASPER = regGem("jasper");
-    public static final RegistryObject<Item> SPINEL = regGem("spinel");
-    public static final RegistryObject<Item> TOPAZ = regGem("topaz");
-    public static final RegistryObject<Item> AGATE = regGem("agate");
-
-    // special diamonds
-    public static final RegistryObject<Item> CORRUPTED_DIAMOND = regSpeciaDiamond("corrupted_diamond");
-    public static final RegistryObject<Item> CULTIST_DIAMOND = regSpeciaDiamond("cultist_diamond");
-    public static final RegistryObject<Item> DARK_DIAMOND = regSpeciaDiamond("dark_diamond");
-    public static final RegistryObject<Item> FIRE_DIAMOND = regSpeciaDiamond("fire_diamond");
-    public static final RegistryObject<Item> HOLY_DIAMOND = regSpeciaDiamond("holy_diamond");
-    public static final RegistryObject<Item> LIGHTNING_DIAMOND = regSpeciaDiamond("lightning_diamond");
-    public static final RegistryObject<Item> MADNESS_DIAMOND = regSpeciaDiamond("madness_diamond");
-    public static final RegistryObject<Item> PEACE_DIAMOND = regSpeciaDiamond("peace_diamond");
-    public static final RegistryObject<Item> SHADOW_DIAMOND = regSpeciaDiamond("shadow_diamond");
-    public static final RegistryObject<Item> VETERAN_DIAMOND = regSpeciaDiamond("veteran_diamond");
-    public static final RegistryObject<Item> VINE_DIAMOND = regSpeciaDiamond("vine_diamond");
-    public static final RegistryObject<Item> WATER_DIAMOND = regSpeciaDiamond("water_diamond");
-
-    // other items
     public static final RegistryObject<Item> MAGE_BOOK = Utils.regItem(ITEMS,"mage_book", new ShinyItem(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
     public static final RegistryObject<Item> MAGIC_WAND = Utils.regItem(ITEMS,"magic_wand", new ShinyItem(new Item.Properties().group(ItemGroup.MISC)));
 
@@ -86,11 +59,6 @@ public class ModItems {
         Item.Properties properties = new Item.Properties().rarity(rarity).group(ItemGroup.FOOD).food(food_props.build()).maxStackSize(stackSize);
 
         return Utils.regItem(ITEMS, name, new Item(properties));
-    }
-
-    // registers a gem item
-    private static RegistryObject<Item> regGem(String name) {
-        return Utils.regItem(ITEMS, name, new Item(new Item.Properties().group(ItemGroup.MISC).rarity(Rarity.RARE)));
     }
 
     // registers a special diamond item

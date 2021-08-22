@@ -1,10 +1,9 @@
-package com.chaosdog.frivycat;
+package chaosdog.frivycat;
 
-import com.chaosdog.frivycat.init.ModBlocks;
-import com.chaosdog.frivycat.init.ModItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -18,9 +17,11 @@ public class FrivyCatMod {
 
     public FrivyCatMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        ModItems.init(eventBus);
-        ModBlocks.init(eventBus);
-        //ModVillagers.init(eventBus); commented until issues within the registry are resolved
+
+        // modules
+        Gems.init(eventBus);
+        DummyBlocks.init(eventBus);
+        //Villagers.init(eventBus); commented until issues within the registry are resolved
 
         // put debug stick and knowledge book in tools tab of creative inventory
         Utils.changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TOOLS);
@@ -45,5 +46,7 @@ public class FrivyCatMod {
 
         // add Suspicious Stew to food tab
         Utils.changeCreativeTab(Items.SUSPICIOUS_STEW, ItemGroup.FOOD);
+
+        MinecraftForge.EVENT_BUS.register(VillagerTrades.class);
     }
 }

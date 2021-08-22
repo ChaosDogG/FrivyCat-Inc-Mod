@@ -1,4 +1,4 @@
-package com.chaosdog.frivycat;
+package chaosdog.frivycat;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
