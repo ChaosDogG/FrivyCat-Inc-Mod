@@ -21,7 +21,7 @@ public class FrivyCatMod {
         // modules
         Gems.init(eventBus);
         DummyBlocks.init(eventBus);
-        //Villagers.init(eventBus); commented until issues within the registry are resolved
+        Villagers.init(eventBus);
 
         // put debug stick and knowledge book in tools tab of creative inventory
         Utils.changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TOOLS);
