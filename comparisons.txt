@@ -1,0 +1,4 @@
+Datapack | Mod
+
+Gems are variants of Emerald | Gems are their own items along with ores and blocks
+Stone Banana is variant of Stone Pickaxe | Stone Banana is its own tool
