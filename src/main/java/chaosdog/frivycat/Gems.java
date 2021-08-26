@@ -31,18 +31,18 @@ public class Gems {
     public static final RegistryObject<Item> AGATE = regGem("agate");
 
     // special diamonds
-    public static final RegistryObject<Item> CORRUPTED_DIAMOND = regSpeciaDiamond("corrupted_diamond");
-    public static final RegistryObject<Item> CULTIST_DIAMOND = regSpeciaDiamond("cultist_diamond");
-    public static final RegistryObject<Item> DARK_DIAMOND = regSpeciaDiamond("dark_diamond");
-    public static final RegistryObject<Item> FIRE_DIAMOND = regSpeciaDiamond("fire_diamond");
-    public static final RegistryObject<Item> HOLY_DIAMOND = regSpeciaDiamond("holy_diamond");
-    public static final RegistryObject<Item> LIGHTNING_DIAMOND = regSpeciaDiamond("lightning_diamond");
-    public static final RegistryObject<Item> MADNESS_DIAMOND = regSpeciaDiamond("madness_diamond");
-    public static final RegistryObject<Item> PEACE_DIAMOND = regSpeciaDiamond("peace_diamond");
-    public static final RegistryObject<Item> SHADOW_DIAMOND = regSpeciaDiamond("shadow_diamond");
-    public static final RegistryObject<Item> VETERAN_DIAMOND = regSpeciaDiamond("veteran_diamond");
-    public static final RegistryObject<Item> VINE_DIAMOND = regSpeciaDiamond("vine_diamond");
-    public static final RegistryObject<Item> WATER_DIAMOND = regSpeciaDiamond("water_diamond");
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND = regSpecialDiamond("corrupted_diamond");
+    public static final RegistryObject<Item> CULTIST_DIAMOND = regSpecialDiamond("cultist_diamond");
+    public static final RegistryObject<Item> DARK_DIAMOND = regSpecialDiamond("dark_diamond");
+    public static final RegistryObject<Item> FIRE_DIAMOND = regSpecialDiamond("fire_diamond");
+    public static final RegistryObject<Item> HOLY_DIAMOND = regSpecialDiamond("holy_diamond");
+    public static final RegistryObject<Item> LIGHTNING_DIAMOND = regSpecialDiamond("lightning_diamond");
+    public static final RegistryObject<Item> MADNESS_DIAMOND = regSpecialDiamond("madness_diamond");
+    public static final RegistryObject<Item> PEACE_DIAMOND = regSpecialDiamond("peace_diamond");
+    public static final RegistryObject<Item> SHADOW_DIAMOND = regSpecialDiamond("shadow_diamond");
+    public static final RegistryObject<Item> VETERAN_DIAMOND = regSpecialDiamond("veteran_diamond");
+    public static final RegistryObject<Item> VINE_DIAMOND = regSpecialDiamond("vine_diamond");
+    public static final RegistryObject<Item> WATER_DIAMOND = regSpecialDiamond("water_diamond");
 
     // gem blocks
     public static final RegistryObject<Block> RUBY_BLOCK = regGemBlock("ruby");
@@ -68,8 +68,8 @@ public class Gems {
 
     public static void init(IEventBus eventbus) {
         // register the registries
-        eventbus.register(BLOCKS);
-        eventbus.register(ITEMS);
+        BLOCKS.register(eventbus);
+        ITEMS.register(eventbus);
     }
 
     // registers a gem block
@@ -90,7 +90,7 @@ public class Gems {
     }
 
     // registers a special diamond item
-    private static RegistryObject<Item> regSpeciaDiamond(String name) {
+    private static RegistryObject<Item> regSpecialDiamond(String name) {
         return Utils.regItem(ITEMS, name, new ShinyItem(new Item.Properties().group(ItemGroup.MISC).rarity(Rarity.EPIC)));
     }
 }

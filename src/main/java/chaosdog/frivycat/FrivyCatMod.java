@@ -22,6 +22,7 @@ public class FrivyCatMod {
         Gems.init(eventBus);
         DummyBlocks.init(eventBus);
         Villagers.init(eventBus);
+        MiscItems.init(eventBus);
 
         // put debug stick and knowledge book in tools tab of creative inventory
         Utils.changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TOOLS);

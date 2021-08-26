@@ -24,8 +24,8 @@ public class DummyBlocks {
 
     public static void init(IEventBus eventbus) {
         // register the registries
-        eventbus.register(BLOCKS);
-        eventbus.register(ITEMS);
+        BLOCKS.register(eventbus);
+        ITEMS.register(eventbus);
     }
 
     // registers a dummy block

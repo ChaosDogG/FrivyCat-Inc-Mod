@@ -1,7 +1,5 @@
 package chaosdog.frivycat;
 
-import chaosdog.frivycat.FrivyCatMod;
-import chaosdog.frivycat.Utils;
 import chaosdog.frivycat.items.ShinyItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -14,7 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class MiscItems {
     // item registry (does not need to be public)
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FrivyCatMod.ID);
+    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FrivyCatMod.ID);
 
     // foods
     public static final RegistryObject<Item> SCOOBY_SNACK = regFood("scooby_snack", 64, 2, 1f, true, true, Rarity.EPIC);
