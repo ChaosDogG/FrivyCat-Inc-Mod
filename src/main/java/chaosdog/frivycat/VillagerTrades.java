@@ -20,9 +20,10 @@ public class VillagerTrades {
     public static void addVillagerTrades(VillagerTradesEvent event) {
         // a basic villager trade
         BasicTrade dummy_level_1 = new BasicTrade(price(1), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 1, 0.1f);
-        BasicTrade dummy_level_2 = new BasicTrade(price(2), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 1, 0.1f);
-        BasicTrade dummy_level_3 = new BasicTrade(price(3), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 1, 0.1f);
-        BasicTrade dummy_level_4 = new BasicTrade(price(4), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 1, 0.1f);
+        BasicTrade dummy_level_2 = new BasicTrade(price(2), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 6, 0.1f);
+        BasicTrade dummy_level_3 = new BasicTrade(price(3), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 10, 0.1f);
+        BasicTrade dummy_level_4 = new BasicTrade(price(4), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 20, 0.1f);
+        BasicTrade dummy_level_5 = new BasicTrade(price(5), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 40, 0.1f);
 
         // get a ruby for 45 emeralds
         BasicTrade ruby_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.RUBY::get), 10, 1, 0.1f);
@@ -35,10 +36,11 @@ public class VillagerTrades {
 
         // to add your trade to a villager's trade pool:
         // trades.get(<villager level as an integer, values are 1-5>).add(<name of villager trade (BasicTrade) object>);
-        trades.get(1).add(dummy_level_1);
-        trades.get(2).add(dummy_level_2);
-        trades.get(3).add(dummy_level_3);
-        trades.get(4).add(dummy_level_4);
+        if (profession == VillagerProfession.DUMMY) trades.get(1).add(dummy_level_1);
+        if (profession == VillagerProfession.DUMMY) trades.get(2).add(dummy_level_2);
+        if (profession == VillagerProfession.DUMMY) trades.get(3).add(dummy_level_3);
+        if (profession == VillagerProfession.DUMMY) trades.get(4).add(dummy_level_4);
+        if (profession == VillagerProfession.DUMMY) trades.get(5).add(dummy_level_5);
 
         // this trade only occurs in tool smith villagers
         if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(ruby_trade);
