@@ -6,11 +6,8 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.village.PointOfInterestType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import java.lang.reflect.InvocationTargetException;
 
 public class Villagers {
     public static final DeferredRegister<PointOfInterestType> POINT_OF_INTEREST_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, FrivyCatMod.ID);
@@ -20,13 +17,6 @@ public class Villagers {
             () -> new PointOfInterestType("dummy", PointOfInterestType.getAllStates(DummyBlocks.DUMMY_A.get()), 1, 1));
     public static final RegistryObject<VillagerProfession> DUMMY = VILLAGER_PROFESSIONS.register("dummy",
             () -> new VillagerProfession("dummy", DUMMY_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.ENTITY_VILLAGER_WORK_WEAPONSMITH));
-    public static void registerDummyPOI() {
-        try {
-            ObfuscationReflectionHelper.findMethod(PointOfInterestType.class, "registerBlockStates", PointOfInterestType.class).invoke(null, DUMMY_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
 
     public static void init(IEventBus eventBus) {
         POINT_OF_INTEREST_TYPES.register(eventBus);
