@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:gift",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "frivycat:dummy_a"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "frivycat:dummy_b"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "frivycat:dummy_c"
+        }
+      ]
+    }
+  ]
+}

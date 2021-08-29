@@ -27,6 +27,14 @@ public class VillagerTrades {
 
         // get a ruby for 45 emeralds
         BasicTrade ruby_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.RUBY::get), 10, 1, 0.1f);
+        BasicTrade sapphire_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.SAPPHIRE::get), 10, 1, 0.1f);
+        BasicTrade zircon_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.ZIRCON::get), 10, 1, 0.1f);
+        BasicTrade garnet_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.GARNET::get), 10, 1, 0.1f);
+        BasicTrade jade_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.JADE::get), 10, 1, 0.1f);
+        BasicTrade jasper_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.JASPER::get), 10, 1, 0.1f);
+        BasicTrade spinel_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.SPINEL::get), 10, 1, 0.1f);
+        BasicTrade topaz_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.TOPAZ::get), 10, 1, 0.1f);
+        BasicTrade agate_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.AGATE::get), 10, 1, 0.1f);
 
         // returns a reference to the trades a villager has
         Int2ObjectMap<List<net.minecraft.entity.merchant.villager.VillagerTrades.ITrade>> trades = event.getTrades();
@@ -44,8 +52,16 @@ public class VillagerTrades {
             trades.get(5).add(dummy_level_5);
         }
 
-        // this trade only occurs in tool smith villagers
+        // these trades only occur in toolsmith villagers
         if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(ruby_trade);
+        if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(sapphire_trade);
+        if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(zircon_trade);
+        if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(garnet_trade);
+        if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(jade_trade);
+        if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(jasper_trade);
+        if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(spinel_trade);
+        if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(topaz_trade);
+        if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(agate_trade);
 
         System.out.println(profession);
     }
