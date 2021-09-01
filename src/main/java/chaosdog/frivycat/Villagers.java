@@ -21,5 +21,6 @@ public class Villagers {
     public static void init(IEventBus eventBus) {
         POINT_OF_INTEREST_TYPES.register(eventBus);
         VILLAGER_PROFESSIONS.register(eventBus);
+        FrivyCatMod.LOGGER.info("Setting up villager professions");
     }
 }

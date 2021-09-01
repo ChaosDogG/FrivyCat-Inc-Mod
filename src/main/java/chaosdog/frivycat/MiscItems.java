@@ -41,6 +41,7 @@ public class MiscItems {
     public static final RegistryObject<Item> MUG = Utils.regItem(ITEMS,"mug", new Item(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
 
     public static void init(IEventBus eventBus) {
+        FrivyCatMod.LOGGER.info("Setting up everything else");
         // register the item registry object
         ITEMS.register(eventBus);
     }

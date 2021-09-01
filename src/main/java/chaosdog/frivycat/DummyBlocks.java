@@ -23,6 +23,7 @@ public class DummyBlocks {
     public static final RegistryObject<Block> DUMMY_C = regDummyBlock("c");
 
     public static void init(IEventBus eventbus) {
+        FrivyCatMod.LOGGER.info("Setting up dummy blocks");
         // register the registries
         BLOCKS.register(eventbus);
         ITEMS.register(eventbus);

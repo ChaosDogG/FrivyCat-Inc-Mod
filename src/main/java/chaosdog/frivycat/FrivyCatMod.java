@@ -16,6 +16,7 @@ public class FrivyCatMod {
     public static final String ID = "frivycat";
 
     public FrivyCatMod() {
+        LOGGER.info("Setting up Frivy Cat mod");
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // modules
@@ -48,6 +49,9 @@ public class FrivyCatMod {
         // add Suspicious Stew to food tab
         Utils.changeCreativeTab(Items.SUSPICIOUS_STEW, ItemGroup.FOOD);
 
+        LOGGER.info("Registering villager trades");
         MinecraftForge.EVENT_BUS.register(VillagerTrades.class);
+
+        LOGGER.info("Setup complete");
     }
 }

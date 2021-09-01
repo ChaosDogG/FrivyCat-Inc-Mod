@@ -67,6 +67,7 @@ public class Gems {
     public static final RegistryObject<Block> AGATE_ORE = regGemOre("agate");
 
     public static void init(IEventBus eventbus) {
+        FrivyCatMod.LOGGER.info("Setting up Gems and Special Diamonds");
         // register the registries
         BLOCKS.register(eventbus);
         ITEMS.register(eventbus);

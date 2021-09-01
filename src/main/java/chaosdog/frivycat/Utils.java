@@ -11,12 +11,14 @@ import net.minecraftforge.registries.DeferredRegister;
 public class Utils {
     // sets or changes the creative tab of a vanilla item
     public static void changeCreativeTab(Item item, ItemGroup tab) {
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, item, tab,"group");
+        // set the group (creative tab) field of an item
+        ObfuscationReflectionHelper.setPrivateValue(Item.class, item, tab,"field_77701_a");
     }
 
     // sets or changes the creative tab of a vanilla block
     public static void changeCreativeTab(Block block, ItemGroup tab) {
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, block.asItem(), tab,"group");
+        // set the group (creative tab) field of a block
+        ObfuscationReflectionHelper.setPrivateValue(Item.class, block.asItem(), tab,"field_77701_a");
     }
 
     // register a block (no item)
