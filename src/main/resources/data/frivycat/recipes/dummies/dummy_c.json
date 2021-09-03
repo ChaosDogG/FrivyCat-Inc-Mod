@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "frivycat:dummy_b"
+  },
+  "addition": [
+    {
+      "item": "minecraft:furnace"
+    },
+    {
+      "item": "minecraft:dropper"
+    },
+    {
+      "item": "minecraft:dispenser"
+    },
+    {
+      "item": "minecraft:observer"
+    },
+    {
+      "item": "minecraft:blast_furnace"
+    },
+    {
+      "item": "minecraft:smoker"
+    },
+    {
+      "item": "minecraft:jigsaw"
+    }
+  ],
+  "result": {
+    "item": "frivycat:dummy_c"
+  }
+}

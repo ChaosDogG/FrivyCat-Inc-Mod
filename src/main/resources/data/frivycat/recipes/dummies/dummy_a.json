@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "frivycat:ruby_block"
+    },
+    {
+      "item": "frivycat:sapphire_block"
+    },
+    {
+      "item": "frivycat:zircon_block"
+    },
+    {
+      "item": "frivycat:garnet_block"
+    },
+    {
+      "item": "frivycat:jade_block"
+    },
+    {
+      "item": "frivycat:jasper_block"
+    },
+    {
+      "item": "frivycat:spinel_block"
+    },
+    {
+      "item": "frivycat:topaz_block"
+    },
+    {
+      "item": "frivycat:agate_block"
+    }
+  ],
+  "result": {
+    "item": "frivycat:dummy_a",
+    "count": 1
+  }
+}

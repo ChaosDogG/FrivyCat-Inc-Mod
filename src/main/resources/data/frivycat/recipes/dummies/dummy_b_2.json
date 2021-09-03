@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "frivycat:dummy_a"
+  },
+  "addition": [
+    {
+      "item": "minecraft:purpur_pillar"
+    },
+    {
+      "item": "minecraft:quartz_pillar"
+    }
+  ],
+  "result": {
+    "item": "frivycat:dummy_b"
+  }
+}
