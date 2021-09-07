@@ -34,7 +34,9 @@
     "block.frivycat.dummy_b": "Pillar Format Block",
     "block.frivycat.dummy_c": "Front-Face Block",
 
-    "entity.minecraft.villager.frivycat.dummy": "Dummy Profession",
+    "entity.minecraft.villager.frivycat.dummy_a": "Dummy Profession A",
+    "entity.minecraft.villager.frivycat.dummy_b": "Dummy Profession B",
+    "entity.minecraft.villager.frivycat.dummy_c": "Dummy Profession C",
 
     "item.frivycat.agate": "Agate",
     "item.frivycat.baby_bottle": "Baby Bottle",

@@ -3,12 +3,11 @@ package chaosdog.frivycat;
 import chaosdog.frivycat.items.ShinyItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.OreBlock;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Rarity;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -75,15 +74,15 @@ public class Gems {
 
     // registers a gem block
     private static RegistryObject<Block> regGemBlock(String name) {
-        AbstractBlock.Properties properties = AbstractBlock.Properties.create(Material.IRON).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f).sound(SoundType.METAL);
-        return Utils.regBlockWithItem(BLOCKS, ITEMS, name + "_block", new Block(properties), ItemGroup.BUILDING_BLOCKS);
+        return Utils.regBlockWithItem(BLOCKS, ITEMS, name + "_block", new Block(AbstractBlock.Properties.from(Blocks.EMERALD_BLOCK)), ItemGroup.BUILDING_BLOCKS);
     }
 
     // registers a gem ore block
     private static RegistryObject<Block> regGemOre(String name) {
-        AbstractBlock.Properties properties = AbstractBlock.Properties.create(Material.ROCK).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f).sound(SoundType.STONE);
-        return Utils.regBlockWithItem(BLOCKS, ITEMS, name + "_ore", new Block(properties), ItemGroup.BUILDING_BLOCKS);
+        return Utils.regBlockWithItem(BLOCKS, ITEMS, name + "_ore", new OreBlock(AbstractBlock.Properties.from(Blocks.EMERALD_ORE)), ItemGroup.BUILDING_BLOCKS);
     }
+
+
 
     // registers a gemstone item
     private static RegistryObject<Item> regGem(String name) {

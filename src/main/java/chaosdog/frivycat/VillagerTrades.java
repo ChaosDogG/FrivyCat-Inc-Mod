@@ -19,11 +19,23 @@ public class VillagerTrades {
     @SubscribeEvent
     public static void addVillagerTrades(VillagerTradesEvent event) {
         // a basic villager trade
-        BasicTrade dummy_level_1 = new BasicTrade(price(1), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 1, 0.1f);
-        BasicTrade dummy_level_2 = new BasicTrade(price(2), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 6, 0.1f);
-        BasicTrade dummy_level_3 = new BasicTrade(price(3), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 10, 0.1f);
-        BasicTrade dummy_level_4 = new BasicTrade(price(4), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 20, 0.1f);
-        BasicTrade dummy_level_5 = new BasicTrade(price(5), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 40, 0.1f);
+        BasicTrade dummy_a_level_1 = new BasicTrade(price(1), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 1, 0.1f);
+        BasicTrade dummy_a_level_2 = new BasicTrade(price(2), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 6, 0.1f);
+        BasicTrade dummy_a_level_3 = new BasicTrade(price(3), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 10, 0.1f);
+        BasicTrade dummy_a_level_4 = new BasicTrade(price(4), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 20, 0.1f);
+        BasicTrade dummy_a_level_5 = new BasicTrade(price(5), EMPTY_SLOT, new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), 10, 40, 0.1f);
+
+        BasicTrade dummy_b_level_1 = new BasicTrade(price(1), new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), 10, 1, 0.1f);
+        BasicTrade dummy_b_level_2 = new BasicTrade(price(2), new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), 10, 6, 0.1f);
+        BasicTrade dummy_b_level_3 = new BasicTrade(price(3), new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), 10, 10, 0.1f);
+        BasicTrade dummy_b_level_4 = new BasicTrade(price(4), new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), 10, 20, 0.1f);
+        BasicTrade dummy_b_level_5 = new BasicTrade(price(5), new ItemStack(() -> DummyBlocks.DUMMY_A.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), 10, 40, 0.1f);
+
+        BasicTrade dummy_c_level_1 = new BasicTrade(price(1), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_C.get().asItem()), 10, 1, 0.1f);
+        BasicTrade dummy_c_level_2 = new BasicTrade(price(2), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_C.get().asItem()), 10, 6, 0.1f);
+        BasicTrade dummy_c_level_3 = new BasicTrade(price(3), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_C.get().asItem()), 10, 10, 0.1f);
+        BasicTrade dummy_c_level_4 = new BasicTrade(price(4), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_C.get().asItem()), 10, 20, 0.1f);
+        BasicTrade dummy_c_level_5 = new BasicTrade(price(5), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_C.get().asItem()), 10, 40, 0.1f);
 
         // get a ruby for 45 emeralds
         BasicTrade ruby_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.RUBY::get), 10, 1, 0.1f);
@@ -44,12 +56,26 @@ public class VillagerTrades {
 
         // to add your trade to a villager's trade pool:
         // trades.get(<villager level as an integer, values are 1-5>).add(<name of villager trade (BasicTrade) object>);
-        if (profession == Villagers.DUMMY.get()) {
-            trades.get(1).add(dummy_level_1);
-            trades.get(2).add(dummy_level_2);
-            trades.get(3).add(dummy_level_3);
-            trades.get(4).add(dummy_level_4);
-            trades.get(5).add(dummy_level_5);
+        if (profession == Villagers.DUMMY_A.get()) {
+            trades.get(1).add(dummy_a_level_1);
+            trades.get(2).add(dummy_a_level_2);
+            trades.get(3).add(dummy_a_level_3);
+            trades.get(4).add(dummy_a_level_4);
+            trades.get(5).add(dummy_a_level_5);
+        }
+        if (profession == Villagers.DUMMY_B.get()) {
+            trades.get(1).add(dummy_b_level_1);
+            trades.get(2).add(dummy_b_level_2);
+            trades.get(3).add(dummy_b_level_3);
+            trades.get(4).add(dummy_b_level_4);
+            trades.get(5).add(dummy_b_level_5);
+        }
+        if (profession == Villagers.DUMMY_C.get()) {
+            trades.get(1).add(dummy_c_level_1);
+            trades.get(2).add(dummy_c_level_2);
+            trades.get(3).add(dummy_c_level_3);
+            trades.get(4).add(dummy_c_level_4);
+            trades.get(5).add(dummy_c_level_5);
         }
 
         // these trades only occur in toolsmith villagers
