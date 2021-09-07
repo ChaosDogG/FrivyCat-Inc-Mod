@@ -6,7 +6,7 @@
     "settings": "frivycat:h_p",
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "frivycat:h_plains"
+      "biome": "frivycat:h-plains"
     }
   }
 }

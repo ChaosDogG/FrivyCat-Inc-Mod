@@ -10,35 +10,111 @@
         },
         {
           "type": "minecraft:item",
-          "name": "frivycat:ruby"
+          "name": "frivycat:ruby",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "frivycat:e-nwastes"
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",
-          "name": "frivycat:sapphire"
+          "name": "frivycat:sapphire",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "frivycat:h-plains"
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",
-          "name": "frivycat:garnet"
+          "name": "frivycat:zircon",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "frivycat:cu-desert"
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",
-          "name": "frivycat:jade"
+          "name": "frivycat:garnet",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "frivycat:co-bdeltas"
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",
-          "name": "frivycat:jasper"
+          "name": "frivycat:jade",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "frivycat:h-plains"
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",
-          "name": "frivycat:spinel"
+          "name": "frivycat:jasper",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "frivycat:d-ocean"
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",
-          "name": "frivycat:topaz"
+          "name": "frivycat:spinel",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "frivycat:p-ehighlands"
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",
-          "name": "frivycat:agate"
+          "name": "frivycat:topaz",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "frivycat:p-ehighlands"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "frivycat:agate",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "frivycat:i-ebarrens"
+              }
+            }
+          ]
         }
       ]
     }

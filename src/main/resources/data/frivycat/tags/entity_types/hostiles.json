@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "#frivycat:ender",
-    "#frivycat:whores",
     "#minecraft:skeletons",
     "#minecraft:raiders",
     "minecraft:spider",
@@ -21,6 +20,10 @@
     "minecraft:hoglin",
     "minecraft:zoglin",
     "minecraft:ghast",
-    "minecraft:piglin_brute"
+    "minecraft:piglin_brute",
+    "minecraft:zombie",
+    "minecraft:husk",
+    "minecraft:drowned",
+    "minecraft:giant"
   ]
 }
