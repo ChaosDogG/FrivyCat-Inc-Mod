@@ -29,12 +29,12 @@
               "type": "minecraft:ore",
               "config": {
                 "state": {
-                  "Name": "minecraft:nether_bricks"
+                  "Name": "minecraft:stone"
                 },
-                "size": 33,
+                "size": 64,
                 "target": {
-                  "predicate_type": "minecraft:block_match",
-                  "block": "minecraft:netherrack"
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "frivycat:dim_base_blocks"
                 }
               }
             }

@@ -36,8 +36,12 @@
     [],
     [],
     [],
-    [],
-    [],
+    [
+      "frivycat:stone_in_dims"
+    ],
+    [
+      "frivycat:ore_agate"
+    ],
     [
       "minecraft:patch_grass_plain",
       "minecraft:oak",
@@ -46,6 +50,7 @@
       "minecraft:birch",
       "minecraft:dark_oak",
       "minecraft:mega_jungle_tree"
-    ]
+    ],
+    []
   ]
 }

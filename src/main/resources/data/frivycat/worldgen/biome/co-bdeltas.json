@@ -82,7 +82,9 @@
     [],
     [],
     [],
-    [],
+    [
+      "frivycat:stone_in_dims"
+    ],
     [
       "minecraft:spring_lava",
       "minecraft:lake_lava",
@@ -91,6 +93,7 @@
       "minecraft:desert_well",
       "minecraft:blackstone_blobs",
       "minecraft:basalt_blobs",
+      "frivycat:ore_garnet",
       "minecraft:ore_gold_deltas",
       "minecraft:spring_delta",
       "minecraft:twisting_vines",

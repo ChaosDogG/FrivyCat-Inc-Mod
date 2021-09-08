@@ -88,8 +88,11 @@
     [
       "minecraft:desert_well"
     ],
-    [],
     [
+      "frivycat:stone_in_dims"
+    ],
+    [
+      "frivycat:ore_zircon",
       "frivycat:black_powder_patch",
       "frivycat:orange_powder_patch"
     ],

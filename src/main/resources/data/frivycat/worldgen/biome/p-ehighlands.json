@@ -83,10 +83,16 @@
       "minecraft:end_gateway"
     ],
     [],
-    [],
-    [],
+    [
+      "frivycat:stone_in_dims"
+    ],
+    [
+      "frivycat:ore_spinel",
+      "frivycat:ore_topaz"
+    ],
     [
       "minecraft:chorus_plant"
-    ]
+    ],
+    []
   ]
 }

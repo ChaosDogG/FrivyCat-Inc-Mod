@@ -97,7 +97,7 @@
           }
         },
         {
-          "biome": "minecraft:plains",
+          "biome": "frivycat:h-plains",
           "parameters": {
             "altitude": 0.6,
             "temperature": 0.6,
@@ -117,7 +117,7 @@
           }
         },
         {
-          "biome": "minecraft:beach",
+          "biome": "frivycat:l-plains",
           "parameters": {
             "altitude": -0.19,
             "temperature": 0.37,

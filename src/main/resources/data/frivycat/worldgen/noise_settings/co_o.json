@@ -21,18 +21,18 @@
       "simplex_surface_noise": false,
       "random_density_offset": false,
       "sampling": {
-        "xz_scale": 1,
-        "y_scale": 3,
+        "xz_scale": 0.9999999814507745,
+        "y_scale": 0.9999999814507745,
         "xz_factor": 80,
-        "y_factor": 60
+        "y_factor": 160
       },
       "bottom_slide": {
-        "target": 320,
-        "size": 4,
-        "offset": -1
+        "target": -30,
+        "size": 0,
+        "offset": 0
       },
       "top_slide": {
-        "target": 120,
+        "target": -10,
         "size": 3,
         "offset": 0
       }

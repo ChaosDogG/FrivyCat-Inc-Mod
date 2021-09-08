@@ -70,11 +70,13 @@
     [],
     [],
     [
+      "frivycat:stone_in_dims",
       "frivycat:soul_soil_patch",
       "frivycat:blackstone_patch",
       "frivycat:nether_brick_patch"
     ],
     [
+      "frivycat:ore_ruby",
       "minecraft:ore_gold_nether",
       "minecraft:ore_quartz_nether",
       "minecraft:patch_soul_fire",

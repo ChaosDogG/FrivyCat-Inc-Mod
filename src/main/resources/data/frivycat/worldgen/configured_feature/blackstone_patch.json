@@ -20,7 +20,7 @@
             "decorator": {
               "type": "minecraft:range",
               "config": {
-                "maximum": 37,
+                "maximum": 256,
                 "bottom_offset": 5,
                 "top_offset": 10
               }

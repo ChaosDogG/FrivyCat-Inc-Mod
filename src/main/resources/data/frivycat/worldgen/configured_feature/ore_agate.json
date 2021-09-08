@@ -4,7 +4,7 @@
     "decorator": {
       "type": "minecraft:count",
       "config": {
-        "count": 4
+        "count": 20
       }
     },
     "feature": {
@@ -20,21 +20,21 @@
             "decorator": {
               "type": "minecraft:range",
               "config": {
-                "maximum": 256,
-                "bottom_offset": 5,
-                "top_offset": 10
+                "maximum": 128,
+                "bottom_offset": 0,
+                "top_offset": 0
               }
             },
             "feature": {
               "type": "minecraft:ore",
               "config": {
                 "state": {
-                  "Name": "minecraft:nether_bricks"
+                  "Name": "frivycat:agate_ore"
                 },
-                "size": 33,
+                "size": 8,
                 "target": {
-                  "predicate_type": "minecraft:block_match",
-                  "block": "minecraft:netherrack"
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "minecraft:base_stone_overworld"
                 }
               }
             }
