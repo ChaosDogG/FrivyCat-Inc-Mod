@@ -10,7 +10,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class MiscItems {
+public class Misc {
     // item registry (does not need to be public)
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FrivyCatMod.ID);
 
@@ -58,10 +58,5 @@ public class MiscItems {
         Item.Properties properties = new Item.Properties().rarity(rarity).group(ItemGroup.FOOD).food(food_props.build()).maxStackSize(stackSize);
 
         return Utils.regItem(ITEMS, name, new Item(properties));
-    }
-
-    // registers a special diamond item
-    private static RegistryObject<Item> regSpeciaDiamond(String name) {
-        return Utils.regItem(ITEMS, name, new ShinyItem(new Item.Properties().group(ItemGroup.MISC).rarity(Rarity.EPIC)));
     }
 }
