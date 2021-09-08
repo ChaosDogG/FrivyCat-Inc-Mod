@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:furnace",
+    "minecraft:dropper",
+    "minecraft:dispenser",
+    "minecraft:observer",
+    "minecraft:blast_furnace",
+    "minecraft:smoker",
+    "minecraft:jigsaw"
+  ]
+}

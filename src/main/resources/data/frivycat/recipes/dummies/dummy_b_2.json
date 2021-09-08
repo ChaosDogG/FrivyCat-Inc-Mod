@@ -3,14 +3,9 @@
   "base": {
     "item": "frivycat:dummy_a"
   },
-  "addition": [
-    {
-      "item": "minecraft:purpur_pillar"
-    },
-    {
-      "item": "minecraft:quartz_pillar"
-    }
-  ],
+  "addition": {
+    "tag": "frivycat:pillars"
+  },
   "result": {
     "item": "frivycat:dummy_b"
   }
