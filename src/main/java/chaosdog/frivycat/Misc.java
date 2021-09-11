@@ -1,5 +1,7 @@
 package chaosdog.frivycat;
 
+import chaosdog.frivycat.items.EasterEgg;
+import chaosdog.frivycat.items.LockPick;
 import chaosdog.frivycat.items.ShinyItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -21,15 +23,15 @@ public class Misc {
     public static final RegistryObject<Item> HONEY_MUG = regFood("honey_mug", 1, 12, 2f, false, true, Rarity.COMMON);
 
     // other items
-    public static final RegistryObject<Item> EASTER_EGG = Utils.regItem(ITEMS, "easter_egg", new Item(new Item.Properties().group(ItemGroup.MISC).maxStackSize(16).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> EASTER_EGG = Utils.regItem(ITEMS, "easter_egg", new EasterEgg(new Item.Properties().group(ItemGroup.MISC).maxStackSize(16).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> MIC = Utils.regItem(ITEMS, "mic", new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> PENCIL = Utils.regItem(ITEMS,"pencil", new Item(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(150)));
     public static final RegistryObject<Item> RED_TEA_BUCKET = Utils.regItem(ITEMS,"red_tea_bucket", new Item(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
-    public static final RegistryObject<Item> LOCK_PICK = Utils.regItem(ITEMS,"lock_pick", new Item(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+    public static final RegistryObject<Item> LOCK_PICK = Utils.regItem(ITEMS,"lock_pick", new LockPick(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(300)));
     public static final RegistryObject<Item> MUMBO_DUST = Utils.regItem(ITEMS,"mumbo_dust", new Item(new Item.Properties().group(ItemGroup.REDSTONE).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> BABY_RATTLE_BOY = Utils.regItem(ITEMS,"baby_rattle_boy",  new Item(new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<Item> BABY_RATTLE_GIRL = Utils.regItem(ITEMS,"baby_rattle_girl",  new Item(new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<Item> BABY_BOTTLE = Utils.regItem(ITEMS,"baby_bottle",  new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> BABY_RATTLE_BOY = Utils.regItem(ITEMS,"baby_rattle_boy", new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> BABY_RATTLE_GIRL = Utils.regItem(ITEMS,"baby_rattle_girl", new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> BABY_BOTTLE = Utils.regItem(ITEMS,"baby_bottle", new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> MAGE_BOOK = Utils.regItem(ITEMS,"mage_book", new ShinyItem(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
     public static final RegistryObject<Item> MAGIC_WAND = Utils.regItem(ITEMS,"magic_wand", new ShinyItem(new Item.Properties().group(ItemGroup.MISC)));
 
