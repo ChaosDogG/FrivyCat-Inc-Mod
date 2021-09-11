@@ -30,18 +30,18 @@ public class Gems {
     public static final RegistryObject<Item> AGATE = regGem("agate");
 
     // special diamonds
-    public static final RegistryObject<Item> CORRUPTED_DIAMOND = regSpecialDiamond("corrupted_diamond");
-    public static final RegistryObject<Item> CULTIST_DIAMOND = regSpecialDiamond("cultist_diamond");
     public static final RegistryObject<Item> DARK_DIAMOND = regSpecialDiamond("dark_diamond");
-    public static final RegistryObject<Item> FIRE_DIAMOND = regSpecialDiamond("fire_diamond");
-    public static final RegistryObject<Item> HOLY_DIAMOND = regSpecialDiamond("holy_diamond");
-    public static final RegistryObject<Item> LIGHTNING_DIAMOND = regSpecialDiamond("lightning_diamond");
-    public static final RegistryObject<Item> MADNESS_DIAMOND = regSpecialDiamond("madness_diamond");
-    public static final RegistryObject<Item> PEACE_DIAMOND = regSpecialDiamond("peace_diamond");
     public static final RegistryObject<Item> SHADOW_DIAMOND = regSpecialDiamond("shadow_diamond");
-    public static final RegistryObject<Item> VETERAN_DIAMOND = regSpecialDiamond("veteran_diamond");
+    public static final RegistryObject<Item> CULTIST_DIAMOND = regSpecialDiamond("cultist_diamond");
+    public static final RegistryObject<Item> FIRE_DIAMOND = regSpecialDiamond("fire_diamond");
+    public static final RegistryObject<Item> LIGHTNING_DIAMOND = regSpecialDiamond("lightning_diamond");
+    public static final RegistryObject<Item> PEACE_DIAMOND = regSpecialDiamond("peace_diamond");
     public static final RegistryObject<Item> VINE_DIAMOND = regSpecialDiamond("vine_diamond");
+    public static final RegistryObject<Item> VETERAN_DIAMOND = regSpecialDiamond("veteran_diamond");
+    public static final RegistryObject<Item> HOLY_DIAMOND = regSpecialDiamond("holy_diamond");
     public static final RegistryObject<Item> WATER_DIAMOND = regSpecialDiamond("water_diamond");
+    public static final RegistryObject<Item> MADNESS_DIAMOND = regSpecialDiamond("madness_diamond");
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND = regSpecialDiamond("corrupted_diamond");
 
     // gem blocks
     public static final RegistryObject<Block> RUBY_BLOCK = regGemBlock("ruby");
