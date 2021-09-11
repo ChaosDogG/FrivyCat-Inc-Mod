@@ -1,5 +1,4 @@
 {
-  "parent": "frivycat:collections/root",
   "display": {
     "icon": {
       "item": "minecraft:barrel"
@@ -16,6 +15,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
+  "parent": "frivycat:collections/root",
   "criteria": {
     "open_head_box": {
       "trigger": "minecraft:player_generates_container_loot",
@@ -29,10 +29,10 @@
       "open_head_box"
     ]
   ],
-    "rewards": {
-        "recipes": [
-            "frivycat:skull",
-	    "frivycat:lucky_block"
-        ]
-    }
+  "rewards": {
+    "recipes": [
+      "frivycat:hed",
+      "frivycat:lucky_block"
+    ]
+  }
 }

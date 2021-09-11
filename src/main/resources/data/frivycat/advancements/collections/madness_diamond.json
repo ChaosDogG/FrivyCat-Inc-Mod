@@ -1,8 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:diamond",
-      "nbt": "{Enchantments:[{id:69}],CustomModelData:11}"
+      "item": "frivycat:madness_diamond"
     },
     "title": {
       "text": "Hysterical laughter",
@@ -18,21 +17,24 @@
     "hidden": false
   },
   "parent": "frivycat:collections/special_diamonds",
-  "rewards": {
-    "function": "frivycat:madness_diamond_fix"
-  },
   "criteria": {
     "collect_madness_diamond": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:11}"
+            "item": "frivycat:madness_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
     }
-  }
+  },
+  "requirements": [
+    [
+      "collect_madness_diamond"
+    ]
+  ]
 }

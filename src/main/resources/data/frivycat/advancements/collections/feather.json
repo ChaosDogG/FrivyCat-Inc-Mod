@@ -1,34 +1,34 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "icon": {
+            "item": "minecraft:feather"
+        },
+        "title": {
+            "text": "Tickle tickle!",
+            "color": "light_purple"
+        },
+        "description": {
+            "text": "Get a feather"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "frivycat:collections/root",
     "criteria": {
         "collect": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
+                        "item": "minecraft:feather",
                         "count": {
                             "min": 1
-                        },
-                        "item": "minecraft:feather"
+                        }
                     }
                 ]
             }
-        }
-    },
-    "display": {
-        "announce_to_chat": true,
-        "description": {
-            "text": "Get a feather"
-        },
-        "frame": "task",
-        "hidden": false,
-        "icon": {
-            "item": "minecraft:feather"
-        },
-        "show_toast": true,
-        "title": {
-            "color": "light_purple",
-            "text": "Tickle tickle! owo"
         }
     },
     "requirements": [
@@ -38,11 +38,7 @@
     ],
     "rewards": {
         "recipes": [
-            "frivycat:chicken_spawn_egg",
-	    "frivycat:chicken_spawn_egg2",
-	    "frivycat:zombie_spawn_egg1",
-	    "frivycat:zombie_spawn_egg2"
+            "frivycat:spawn_eggs/passive/chicken_spawn_egg"
         ]
-    },
-    "parent": "frivycat:collections/root"
+    }
 }

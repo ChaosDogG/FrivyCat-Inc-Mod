@@ -1,8 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:diamond",
-      "nbt": "{Enchantments:[{id:69}],CustomModelData:9}"
+      "item": "frivycat:holy_diamond"
     },
     "title": {
       "text": "Let light banish corruption",
@@ -23,12 +22,18 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:9}"
+            "item": "frivycat:holy_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
     }
-  }
+  },
+  "requirements": [
+    [
+      "collect_holy_diamond"
+    ]
+  ]
 }

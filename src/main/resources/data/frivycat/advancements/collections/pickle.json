@@ -1,6 +1,8 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
+        "icon": {
+            "item": "minecraft:sea_pickle"
+        },
         "title": {
             "text": "Uh.......XD",
             "color": "green"
@@ -8,14 +10,12 @@
         "description": {
             "text": "Get the funny pickle"
         },
-        "icon": {
-            "item": "minecraft:sea_pickle"
-        },
         "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": true
     },
+    "parent": "frivycat:collections/lucky_block",
     "criteria": {
         "get": {
             "trigger": "minecraft:inventory_changed",
@@ -23,6 +23,9 @@
                 "items": [
                     {
                         "item": "minecraft:sea_pickle",
+                        "count": {
+                            "min": 1
+                        },
                         "enchantments": [
                             {
                                 "enchantment": "minecraft:sharpness",
@@ -104,6 +107,5 @@
         [
             "get"
         ]
-    ],
-    "parent": "frivycat:collections/lucky_block"
+    ]
 }

@@ -1,14 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:diamond",
-      "nbt": "{Enchantments:[{id:69}],CustomModelData:12}"
+      "item": "frivycat:corrupted_diamond"
     },
     "title": {
       "text": "You are now part of my corrupted army!",
       "color": "dark_purple",
-      "italic": true,
       "bold": true,
+      "italic": true,
       "underlined": true,
       "strikethrough": true,
       "obfuscated": true
@@ -23,17 +22,23 @@
   },
   "parent": "frivycat:collections/special_diamonds",
   "criteria": {
-    "collect_crooupted_diamond": {
+    "collect_corrupted_diamond": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:12}"
+            "item": "frivycat:corrupted_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
     }
-  }
+  },
+  "requirements": [
+    [
+      "collect_corrupted_diamond"
+    ]
+  ]
 }

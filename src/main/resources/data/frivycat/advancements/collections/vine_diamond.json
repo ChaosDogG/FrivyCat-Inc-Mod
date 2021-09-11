@@ -1,8 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:diamond",
-      "nbt": "{Enchantments:[{id:69}],CustomModelData:7}"
+      "item": "frivycat:vine_diamond"
     },
     "title": {
       "text": "Let honesty show for itself",
@@ -23,12 +22,18 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:7}"
+            "item": "frivycat:vine_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
     }
-  }
+  },
+  "requirements": [
+    [
+      "collect_vine_diamond"
+    ]
+  ]
 }

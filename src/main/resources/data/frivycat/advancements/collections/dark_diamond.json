@@ -1,8 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:diamond",
-      "nbt": "{Enchantments:[{id:69}],CustomModelData:1}"
+      "item": "frivycat:dark_diamond"
     },
     "title": {
       "text": "Let darkness aid your trickery",
@@ -23,12 +22,18 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:1}"
+            "item": "frivycat:dark_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
     }
-  }
+  },
+  "requirements": [
+    [
+      "collect_dark_diamond"
+    ]
+  ]
 }

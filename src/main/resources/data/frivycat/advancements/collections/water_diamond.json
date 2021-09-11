@@ -1,15 +1,14 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:diamond",
-      "nbt": "{Enchantments:[{id:69}],CustomModelData:10}"
+      "item": "frivycat:water_diamond"
     },
     "title": {
       "text": "Hehehe *hic* sexy ladies~ *hic*",
       "color": "blue"
     },
     "description": {
-      "text": "Get a Drunken Diamond"
+      "text": "Get a Water Diamond"
     },
     "frame": "challenge",
     "show_toast": true,
@@ -23,12 +22,18 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:10}"
+            "item": "frivycat:water_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
     }
-  }
+  },
+  "requirements": [
+    [
+      "collect_water_diamond"
+    ]
+  ]
 }

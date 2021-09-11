@@ -1,15 +1,14 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:diamond",
-      "nbt": "{Enchantments:[{id:69}],CustomModelData:5}"
+      "item": "frivycat:cultist_diamond"
     },
     "title": {
-      "text": "Curious little gem this is",
-      "color": "gold"
+      "text": "Why do you have this? How did you get it?!",
+      "color": "gray"
     },
     "description": {
-      "text": "Get an Electric Diamond"
+      "text": "Get a Cultist Diamond"
     },
     "frame": "challenge",
     "show_toast": true,
@@ -18,17 +17,23 @@
   },
   "parent": "frivycat:collections/special_diamonds",
   "criteria": {
-    "collect_electric_diamond": {
+    "collect_cultist_diamond": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:5}"
+            "item": "frivycat:cultist_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
     }
-  }
+  },
+  "requirements": [
+    [
+      "collect_cultist_diamond"
+    ]
+  ]
 }

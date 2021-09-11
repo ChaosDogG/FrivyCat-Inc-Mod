@@ -1,36 +1,36 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "icon": {
+            "item": "minecraft:structure_block"
+        },
+        "title": {
+            "text": "Structure saved",
+            "color": "light_purple",
+            "bold": false
+        },
+        "description": {
+            "text": "Get a structure block",
+            "bold": false
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "frivycat:collections/knowledge",
     "criteria": {
         "collect": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
+                        "item": "minecraft:structure_block",
                         "count": {
                             "min": 1
-                        },
-                        "item": "minecraft:structure_block"
+                        }
                     }
                 ]
             }
-        }
-    },
-    "display": {
-        "announce_to_chat": true,
-        "description": {
-            "bold": false,
-            "text": "Get a structure block"
-        },
-        "frame": "task",
-        "hidden": true,
-        "icon": {
-            "item": "minecraft:structure_block"
-        },
-        "show_toast": true,
-        "title": {
-            "bold": false,
-            "color": "light_purple",
-            "text": "Structure saved"
         }
     },
     "requirements": [
@@ -40,10 +40,8 @@
     ],
     "rewards": {
         "recipes": [
-            "frivycat:structure_void",
-			"frivycat:jigsaw_block"
+            "frivycat:dev/structure_void",
+            "frivycat:dev/jigsaw_block"
         ]
-    },
-
-    "parent": "frivycat:collections/knowledge"
+    }
 }

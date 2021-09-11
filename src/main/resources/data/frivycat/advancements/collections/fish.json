@@ -1,37 +1,54 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "icon": {
+            "item": "minecraft:salmon",
+            "nbt": "{Enchantments:[{id:69}]}"
+        },
+        "title": {
+            "text": "Thanks for all the fish",
+            "color": "dark_blue"
+        },
+        "description": {
+            "text": "Get all fish types (egg/item/bucket)"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "frivycat:collections/root",
     "criteria": {
         "collect1": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
+                        "item": "minecraft:cod",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:cod"
+                            "min": 1,
+                            "max": 1
+                        }
                     },
                     {
+                        "item": "minecraft:salmon",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:salmon"
+                            "min": 1,
+                            "max": 1
+                        }
                     },
                     {
+                        "item": "minecraft:pufferfish",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:pufferfish"
+                            "min": 1,
+                            "max": 1
+                        }
                     },
                     {
+                        "item": "minecraft:tropical_fish",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:tropical_fish"
+                            "min": 1,
+                            "max": 1
+                        }
                     }
                 ]
             }
@@ -41,32 +58,32 @@
             "conditions": {
                 "items": [
                     {
+                        "item": "minecraft:cod_spawn_egg",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:cod_spawn_egg"
+                            "min": 1,
+                            "max": 1
+                        }
                     },
                     {
+                        "item": "minecraft:salmon_spawn_egg",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:salmon_spawn_egg"
+                            "min": 1,
+                            "max": 1
+                        }
                     },
                     {
+                        "item": "minecraft:pufferfish_spawn_egg",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:pufferfish_spawn_egg"
+                            "min": 1,
+                            "max": 1
+                        }
                     },
                     {
+                        "item": "minecraft:tropical_fish_spawn_egg",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:tropical_fish_spawn_egg"
+                            "min": 1,
+                            "max": 1
+                        }
                     }
                 ]
             }
@@ -76,52 +93,35 @@
             "conditions": {
                 "items": [
                     {
+                        "item": "minecraft:cod_bucket",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:cod_bucket"
+                            "min": 1,
+                            "max": 1
+                        }
                     },
                     {
+                        "item": "minecraft:salmon_bucket",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:salmon_bucket"
+                            "min": 1,
+                            "max": 1
+                        }
                     },
                     {
+                        "item": "minecraft:pufferfish_bucket",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:pufferfish_bucket"
+                            "min": 1,
+                            "max": 1
+                        }
                     },
                     {
+                        "item": "minecraft:tropical_fish_bucket",
                         "count": {
-                            "max": 1,
-                            "min": 1
-                        },
-                        "item": "minecraft:tropical_fish_bucket"
+                            "min": 1,
+                            "max": 1
+                        }
                     }
                 ]
             }
-        }
-    },
-    "display": {
-        "announce_to_chat": true,
-        "description": {
-            "text": "Get all fish types (egg/item/bucket)"
-        },
-        "frame": "challenge",
-        "hidden": true,
-        "icon": {
-            "item": "minecraft:salmon",
-            "nbt": "{Enchantments:[{id:69}]}"
-        },
-        "show_toast": true,
-        "title": {
-            "color": "dark_blue",
-            "text": "Thanks for all the fish"
         }
     },
     "requirements": [
@@ -130,6 +130,5 @@
             "collect2",
             "collect3"
         ]
-    ],
-    "parent": "frivycat:collections/root"
+    ]
 }

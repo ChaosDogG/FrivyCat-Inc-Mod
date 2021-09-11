@@ -1,35 +1,35 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "icon": {
+            "item": "minecraft:command_block"
+        },
+        "title": {
+            "text": "Alright, let's write commands",
+            "color": "gold",
+            "bold": false
+        },
+        "description": {
+            "text": "Get a command block"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "frivycat:collections/knowledge",
     "criteria": {
         "collect": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
+                        "item": "minecraft:command_block",
                         "count": {
                             "min": 1
-                        },
-                        "item": "minecraft:command_block"
+                        }
                     }
                 ]
             }
-        }
-    },
-    "display": {
-        "announce_to_chat": true,
-        "description": {
-            "text": "Get a command block"
-        },
-        "frame": "goal",
-        "hidden": true,
-        "icon": {
-            "item": "minecraft:command_block"
-        },
-        "show_toast": true,
-        "title": {
-            "bold": false,
-            "color": "gold",
-            "text": "Alright, let's write commands"
         }
     },
     "requirements": [
@@ -39,9 +39,8 @@
     ],
     "rewards": {
         "recipes": [
-            "frivycat:chain_command_block",
-	    "frivycat:command_block_minecart"
+            "frivycat:dev/chain_command_block",
+            "frivycat:dev/command_block_minecart"
         ]
-    },
-    "parent": "frivycat:collections/knowledge"
+    }
 }

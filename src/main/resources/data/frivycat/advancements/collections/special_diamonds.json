@@ -24,9 +24,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:1}"
+            "item": "frivycat:shadow_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -36,9 +37,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:2}"
+            "item": "frivycat:shadow_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -48,9 +50,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:3}"
+            "item": "frivycat:cultist_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -60,9 +63,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:4}"
+            "item": "frivycat:fire_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -72,9 +76,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:5}"
+            "item": "frivycat:lightning_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -84,9 +89,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:6}"
+            "item": "frivycat:peace_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -96,9 +102,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:7}"
+            "item": "frivycat:vine_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -108,9 +115,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:8}"
+            "item": "frivycat:veteran_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -120,9 +128,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:9}"
+            "item": "frivycat:holy_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -132,9 +141,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:10}"
+            "item": "frivycat:water_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -144,9 +154,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:11}"
+            "item": "frivycat:madness_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
@@ -156,9 +167,10 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:diamond",
-            "count": 1,
-            "nbt": "{CustomModelData:12}"
+            "item": "frivycat:corrupted_diamond",
+            "count": {
+              "min": 1
+            }
           }
         ]
       }
