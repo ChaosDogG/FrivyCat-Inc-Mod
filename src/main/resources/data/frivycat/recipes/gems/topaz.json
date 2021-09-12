@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+"ingredients": [
+    {
+    "item": "frivycat: topaz_block"
+}
+],
+"result": {
+"item": "frivycat:topaz",
+"count": 9
+}
+}

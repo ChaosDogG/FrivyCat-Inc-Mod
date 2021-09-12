@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+"ingredients": [
+    {
+    "item": "frivycat: ruby_block"
+}
+],
+"result": {
+"item": "frivycat:ruby",
+"count": 9
+}
+}

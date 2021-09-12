@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+"ingredients": [
+    {
+    "item": "frivycat: agate_block"
+}
+],
+"result": {
+"item": "frivycat:agate",
+"count": 9
+}
+}

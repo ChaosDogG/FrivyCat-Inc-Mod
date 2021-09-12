@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+"ingredients": [
+    {
+    "item": "frivycat: jade_block"
+}
+],
+"result": {
+"item": "frivycat:jade",
+"count": 9
+}
+}

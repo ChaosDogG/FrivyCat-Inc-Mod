@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+"ingredients": [
+    {
+    "item": "frivycat: jasper_block"
+}
+],
+"result": {
+"item": "frivycat:jasper",
+"count": 9
+}
+}
