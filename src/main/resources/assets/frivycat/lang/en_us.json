@@ -20,6 +20,7 @@
     "block.frivycat.jade_ore": "Jade Ore",
     "block.frivycat.jasper_block": "Jasper Block",
     "block.frivycat.jasper_ore": "Jasper Ore",
+    "block.frivycat.mumbo_block": "Mumbo Block",
     "block.frivycat.ruby_block": "Ruby Block",
     "block.frivycat.ruby_ore": "Ruby Ore",
     "block.frivycat.sapphire_block": "Sapphire Block",
@@ -76,5 +77,8 @@
     "item.frivycat.veteran_diamond": "Veteran Diamond",
     "item.frivycat.vine_diamond": "Vine Diamond",
     "item.frivycat.water_diamond": "Water Diamond",
-    "item.frivycat.zircon": "Zircon"
+    "item.frivycat.zircon": "Zircon",
+
+    "item.frivycat.baby_rattle_boy.tooltip": "Boy",
+    "item.frivycat.baby_rattle_girl.tooltip": "Girl"
 }

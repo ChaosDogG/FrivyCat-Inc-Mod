@@ -35,7 +35,7 @@
 		{
 			"type": "entity",
 			"entity": "minecraft:husk",
-			"text": "She lives in the desert with her gal pals...but she\'s kinda oddly dressed..."
+			"text": "She lives in the desert with her gal pals...but she's kinda oddly dressed..."
 		},
 		{
 			"type": "entity",
@@ -100,7 +100,7 @@
 		{
 			"type": "entity",
 			"entity": "minecraft:giant",
-			"text": "JESUS FUCK!!! SHE\'S HUGE!!!"
+			"text": "JESUS FUCK!!! SHE'S HUGE!!!"
 		},
 		{
 			"type": "entity",
@@ -130,7 +130,7 @@
 		{
 			"type": "entity",
 			"entity": "minecraft:cat{CustomName:\\'{\"text\":\"FrivyCat\"}\\',CatType:1,Sitting:1}",
-			"text": "Guess who! It\'s yours truly!"
+			"text": "Guess who! It's yours truly!"
 		},
 		{
 			"type": "entity",
@@ -145,13 +145,13 @@
 		{
 			"type": "entity",
 			"entity": "minecraft:squid",
-			"text": "Goddammit, Chaos...You left your resourcepack full of bugs again...",
+			"text": "Goddammit, Chaos...You left your mod full of bugs again...",
 			"scale": .25
 		},
 		{
 			"type": "entity",
 			"entity": "minecraft:shulker",
-			"text": "The eyes appear different, they change color based on its name (1 of the 16 in MC), and their color\' initials are etched on top of its shell"
+			"text": "The eyes appear different, they change color based on its name (1 of the 16 in MC), and their color' initials are etched on top of its shell"
 		},
 		{
 			"type": "entity",

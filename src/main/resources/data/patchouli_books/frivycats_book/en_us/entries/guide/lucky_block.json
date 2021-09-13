@@ -5,7 +5,7 @@
 	"pages": [
 				{
 				"type": "text",
-				"text": "This is the part where I tell you how to get Lucky Blocks. I shouldn\'t have to tell you how to use them"
+				"text": "This is the part where I tell you how to get Lucky Blocks. I shouldn't have to tell you how to use them"
 		},
 		{
 			"type": "entity",
@@ -30,7 +30,7 @@
 		{
 			"type": "spotlight",
 			"item": "minecraft:player_head{SkullOwner:ChaosDog}",
-			"text": "If you\'re real desperate for heads, kill your buddy! Given you\'re on a server with this pack"
+			"text": "If you're real desperate for heads, kill your buddy! Given you're on a server with this pack"
 		}
 	]
 }

@@ -11,6 +11,7 @@
       "minecraft:furnace_minecart",
       "minecraft:tnt_minecart",
       "minecraft:hopper_minecart",
-      "minecraft:command_block_minecart"
+      "minecraft:command_block_minecart",
+		"frivycat:lock_pick"
 	  ]
 }

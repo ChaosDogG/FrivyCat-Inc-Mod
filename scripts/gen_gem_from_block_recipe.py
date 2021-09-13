@@ -11,7 +11,7 @@ gems = [
     "agate"
 ]
 
-recipe = "{{\n    \"type\": \"minecraft:crafting_shapeless\",\n\"ingredients\": [\n    {{\n    \"item\": \"frivycat: {t}_block\"\n}}\n],\n\"result\": {{\n\"item\": \"frivycat:{t}\",\n\"count\": 9\n}}\n}}"
+recipe = "{{\n    \"type\": \"minecraft:crafting_shapeless\",\n\"ingredients\": [\n    {{\n    \"item\": \"frivycat:{t}_block\"\n}}\n],\n\"result\": {{\n\"item\": \"frivycat:{t}\",\n\"count\": 9\n}}\n}}"
 
 for gem in gems:
     name = gem + ".json"

@@ -5,17 +5,17 @@
 	"pages": [
 				{
 				"type": "text",
-				"text": "Here\'s all the crap that happens here"
+				"text": "Here's all the crap that happens here"
 		},
 		{
 			"type": "entity",
 			"entity": "minecraft:zombie",
-			"text": "Bikini girls, and like mobs, will no longer burn in the daylight due to the fact that they aren\'t undead. Also, they won\'t drop zombie flesh"
+			"text": "Bikini girls, and like mobs, will no longer burn in the daylight due to the fact that they aren't undead. Also, they won't drop zombie flesh"
 		},
 		{
 			"type": "spotlight",
 			"item": "minecraft:chest",
-			"text": "There\'s also new loot tables, some have lucky blocks in them"
+			"text": "There's also new loot tables, some have lucky blocks in them"
 		},
 		{
 			"type": "spotlight",

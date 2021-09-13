@@ -278,7 +278,7 @@
                 "function": "minecraft:set_name",
                 "entity": "this",
                 "name": {
-                  "text": "Detonation Repellant",
+                  "text": "Detonation Repellent",
                   "italic": false
                 }
               },

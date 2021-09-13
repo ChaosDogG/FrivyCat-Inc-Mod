@@ -3,17 +3,26 @@ package chaosdog.frivycat;
 import chaosdog.frivycat.items.EasterEgg;
 import chaosdog.frivycat.items.LockPick;
 import chaosdog.frivycat.items.ShinyItem;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Rarity;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.List;
+
 public class Misc {
     // item registry (does not need to be public)
+    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FrivyCatMod.ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FrivyCatMod.ID);
 
     // foods
@@ -29,8 +38,9 @@ public class Misc {
     public static final RegistryObject<Item> RED_TEA_BUCKET = Utils.regItem(ITEMS,"red_tea_bucket", new Item(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
     public static final RegistryObject<Item> LOCK_PICK = Utils.regItem(ITEMS,"lock_pick", new LockPick(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(300)));
     public static final RegistryObject<Item> MUMBO_DUST = Utils.regItem(ITEMS,"mumbo_dust", new Item(new Item.Properties().group(ItemGroup.REDSTONE).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> BABY_RATTLE_BOY = Utils.regItem(ITEMS,"baby_rattle_boy", new Item(new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<Item> BABY_RATTLE_GIRL = Utils.regItem(ITEMS,"baby_rattle_girl", new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Block> MUMBO_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "mumbo_block", new Block(AbstractBlock.Properties.from(Blocks.REDSTONE_BLOCK)), ItemGroup.REDSTONE);
+    public static final RegistryObject<Item> BABY_RATTLE_BOY = regBabyRattle("boy");
+    public static final RegistryObject<Item> BABY_RATTLE_GIRL = regBabyRattle("girl");
     public static final RegistryObject<Item> BABY_BOTTLE = Utils.regItem(ITEMS,"baby_bottle", new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> MAGE_BOOK = Utils.regItem(ITEMS,"mage_book", new ShinyItem(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
     public static final RegistryObject<Item> MAGIC_WAND = Utils.regItem(ITEMS,"magic_wand", new ShinyItem(new Item.Properties().group(ItemGroup.MISC)));
@@ -45,10 +55,11 @@ public class Misc {
     public static void init(IEventBus eventBus) {
         FrivyCatMod.LOGGER.info("Setting up everything else");
         // register the item registry object
+        BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }
 
-    // generates and registers a food item
+    // generates and registers food items
     private static RegistryObject<Item> regFood(String name, int stackSize, int hungerPoints, float saturation, boolean isFast, boolean wolfFood, Rarity rarity) {
         Food.Builder food_props = new Food.Builder().hunger(hungerPoints).saturation(saturation);
         if (isFast)
@@ -60,5 +71,15 @@ public class Misc {
         Item.Properties properties = new Item.Properties().rarity(rarity).group(ItemGroup.FOOD).food(food_props.build()).maxStackSize(stackSize);
 
         return Utils.regItem(ITEMS, name, new Item(properties));
+    }
+
+    private static RegistryObject<Item> regBabyRattle(String gender) {
+        return Utils.regItem(ITEMS, "baby_rattle_" + gender, new Item(new Item.Properties().group(ItemGroup.MISC)) {
+            public void addInformation(List<ITextComponent> tooltip) {
+                if (gender.equals("boy")) tooltip.add(new TranslationTextComponent("item.frivycat.baby_rattle_boy.tooltip").mergeStyle(TextFormatting.AQUA));
+                if (gender.equals("girl")) tooltip.add(new TranslationTextComponent("item.frivycat.baby_rattle_girl.tooltip").mergeStyle(TextFormatting.LIGHT_PURPLE));
+            }
+        }
+        );
     }
 }
