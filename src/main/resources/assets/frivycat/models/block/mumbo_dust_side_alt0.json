@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/mumbo_dust_side_alt",
+	"textures": {
+		"line": "block/mumbo_dust_line0"
+	}
+}
