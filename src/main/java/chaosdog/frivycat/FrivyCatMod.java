@@ -24,6 +24,7 @@ public class FrivyCatMod {
         DummyBlocks.init(eventBus);
         Villagers.init(eventBus);
         Misc.init(eventBus);
+        ModBlocks.init(eventBus);
         Entities.init(eventBus);
 
         // put debug stick and knowledge book in tools tab of creative inventory

@@ -4,9 +4,7 @@ import chaosdog.frivycat.items.EasterEgg;
 import chaosdog.frivycat.items.LockPick;
 import chaosdog.frivycat.items.ShinyItem;
 import chaosdog.frivycat.items.StoneBanana;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
@@ -35,8 +33,7 @@ public class Misc {
     public static final RegistryObject<Item> PENCIL = Utils.regItem(ITEMS,"pencil", new Item(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(150)));
     public static final RegistryObject<Item> RED_TEA_BUCKET = Utils.regItem(ITEMS,"red_tea_bucket", new Item(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
     public static final RegistryObject<Item> LOCK_PICK = Utils.regItem(ITEMS,"lock_pick", new LockPick(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(300)));
-    public static final RegistryObject<Item> MUMBO_DUST = Utils.regItem(ITEMS,"mumbo_dust", new Item(new Item.Properties().group(ItemGroup.REDSTONE).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Block> MUMBO_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "mumbo_block", new Block(AbstractBlock.Properties.from(Blocks.REDSTONE_BLOCK)), ItemGroup.REDSTONE);
+    public static final RegistryObject<Item> MUMBO_DUST = Utils.regItem(ITEMS, "mumbo_dust", new Item(new Item.Properties().group(ItemGroup.REDSTONE).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> BABY_RATTLE_BOY = regBabyRattle("boy");
     public static final RegistryObject<Item> BABY_RATTLE_GIRL = regBabyRattle("girl");
     public static final RegistryObject<Item> BABY_BOTTLE = Utils.regItem(ITEMS,"baby_bottle", new Item(new Item.Properties().group(ItemGroup.MISC)));
@@ -70,7 +67,7 @@ public class Misc {
 
         return Utils.regItem(ITEMS, name, new Item(properties));
     }
-
+    // generates and registers baby rattles with custom tooltips
     private static RegistryObject<Item> regBabyRattle(String gender) {
         return Utils.regItem(ITEMS, "baby_rattle_" + gender, new Item(new Item.Properties().group(ItemGroup.MISC)) {
             public void addInformation(List<ITextComponent> tooltip) {
@@ -80,4 +77,9 @@ public class Misc {
         }
         );
     }
+
+    //private static RegistryObject<Item> regWire(Block blockIn, Item.Properties properties) {
+    //     return Utils.regBlockWithItem(BLOCKS, ITEMS, blockIn, properties);
+    // }
+    //
 }
