@@ -1,18 +1,22 @@
-package chaosdog.frivycat.entities;
+package chaosdog.frivycat.entities.projectile;
 
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.projectile.EggEntity;
+import net.minecraft.entity.projectile.ProjectileItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
-public class EasterEgg extends EggEntity {
+public class EasterEgg extends ProjectileItemEntity {
     public EasterEgg(EntityType<? extends EggEntity> p_i50154_1_, World p_i50154_2_) {
         super(p_i50154_1_, p_i50154_2_);
     }
-    @Override
+    public EasterEgg(World worldIn, LivingEntity throwerIn) {
+        super(EntityType.EGG, throwerIn, worldIn);
+    }
     protected void onImpact(RayTraceResult result) {
         super.onImpact(result);
         if (!this.world.isRemote) {

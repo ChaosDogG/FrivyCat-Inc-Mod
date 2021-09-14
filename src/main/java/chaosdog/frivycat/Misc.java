@@ -3,13 +3,11 @@ package chaosdog.frivycat;
 import chaosdog.frivycat.items.EasterEgg;
 import chaosdog.frivycat.items.LockPick;
 import chaosdog.frivycat.items.ShinyItem;
+import chaosdog.frivycat.items.StoneBanana;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Food;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Rarity;
+import net.minecraft.item.*;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -46,7 +44,7 @@ public class Misc {
     public static final RegistryObject<Item> MAGIC_WAND = Utils.regItem(ITEMS,"magic_wand", new ShinyItem(new Item.Properties().group(ItemGroup.MISC)));
 
     // stone banana (work in progress)
-    public static final RegistryObject<Item> STONE_BANANA = Utils.regItem(ITEMS,"stone_banana", new Item(new Item.Properties().group(ItemGroup.TOOLS).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> STONE_BANANA = Utils.regItem(ITEMS,"stone_banana", new StoneBanana(7.0f, -2.0f, ItemTier.STONE, (new Item.Properties().group(ItemGroup.TOOLS).rarity(Rarity.EPIC))));
 
     // potion filled mug (WIP)
     public static final RegistryObject<Item> POTION_MUG = Utils.regItem(ITEMS,"potion_mug", new Item(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
