@@ -24,8 +24,8 @@ public class Misc {
     // foods
     public static final RegistryObject<Item> SCOOBY_SNACK = regFood("scooby_snack", 64, 2, 1f, true, true, Rarity.EPIC);
     public static final RegistryObject<Item> COTTON_CANDY_STRAND = regFood("cotton_candy_strand", 64, 2, 1f, true, false, Rarity.COMMON);
-    public static final RegistryObject<Item> GREEN_APPLE_CANDY = regFood("green_apple_candy", 64, 4, 2f, false, true, Rarity.COMMON);
-    public static final RegistryObject<Item> HONEY_MUG = regFood("honey_mug", 1, 12, 2f, false, true, Rarity.COMMON);
+    public static final RegistryObject<Item> GREEN_APPLE_CANDY = regFood("green_apple_candy", 64, 4, 2f, false, false, Rarity.COMMON);
+    public static final RegistryObject<Item> HONEY_MUG = regHoneyMug("honey_mug", 1, 12, 2f, false, false, Rarity.COMMON);
 
     // other items
     public static final RegistryObject<Item> EASTER_EGG = Utils.regItem(ITEMS, "easter_egg", new EasterEgg(new Item.Properties().group(ItemGroup.MISC).maxStackSize(16).rarity(Rarity.RARE)));
@@ -44,8 +44,8 @@ public class Misc {
     public static final RegistryObject<Item> STONE_BANANA = Utils.regItem(ITEMS,"stone_banana", new StoneBanana(7.0f, -2.0f, ItemTier.STONE, (new Item.Properties().group(ItemGroup.TOOLS).rarity(Rarity.EPIC))));
 
     // potion filled mug (WIP)
-    public static final RegistryObject<Item> POTION_MUG = Utils.regItem(ITEMS,"potion_mug", new Item(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
-    public static final RegistryObject<Item> MUG = Utils.regItem(ITEMS,"mug", new Item(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
+    public static final RegistryObject<Item> POTION_MUG = Utils.regItem(ITEMS,"potion_mug", new PotionMug(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
+    public static final RegistryObject<Item> MUG = Utils.regItem(ITEMS,"mug", new Mug(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
 
     public static void init(IEventBus eventBus) {
         FrivyCatMod.LOGGER.info("Setting up everything else");
@@ -66,6 +66,19 @@ public class Misc {
         Item.Properties properties = new Item.Properties().rarity(rarity).group(ItemGroup.FOOD).food(food_props.build()).maxStackSize(stackSize);
 
         return Utils.regItem(ITEMS, name, new Item(properties));
+    }
+
+    private static RegistryObject<Item> regHoneyMug(String name, int stackSize, int hungerPoints, float saturation, boolean isFast, boolean wolfFood, Rarity rarity) {
+        Food.Builder food_props = new Food.Builder().hunger(hungerPoints).saturation(saturation);
+        if (isFast)
+            food_props = food_props.fastToEat();
+
+        if (wolfFood)
+            food_props = food_props.meat();
+
+        Item.Properties properties = new Item.Properties().rarity(rarity).group(ItemGroup.FOOD).food(food_props.build()).maxStackSize(stackSize);
+
+        return Utils.regItem(ITEMS, name, new HoneyMug(properties));
     }
 
     // generates and registers baby rattles

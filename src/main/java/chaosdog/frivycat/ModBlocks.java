@@ -2,8 +2,10 @@ package chaosdog.frivycat;
 
 import chaosdog.frivycat.blocks.MumboBlock;
 import chaosdog.frivycat.blocks.MumboDustWire;
+import chaosdog.frivycat.blocks.SpiritRealmPortal;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,6 +21,7 @@ public class ModBlocks {
     // Mumbo stuff
     public static final RegistryObject<Block> MUMBO_DUST_WIRE = Utils.regBlock(BLOCKS, "mumbo_dust_wire", new MumboDustWire(AbstractBlock.Properties.from(net.minecraft.block.Blocks.REDSTONE_WIRE)));
     public static final RegistryObject<Block> MUMBO_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "mumbo_block", new MumboBlock(AbstractBlock.Properties.from(net.minecraft.block.Blocks.REDSTONE_BLOCK)), ItemGroup.REDSTONE);
+    public static final RegistryObject<Block> SPIRIT_REALM_PORTAL = Utils.regBlock(BLOCKS, "spirit_realm_portal", new SpiritRealmPortal(AbstractBlock.Properties.from(Blocks.NETHER_PORTAL)));
 
     public static void init(IEventBus eventbus) {
         FrivyCatMod.LOGGER.info("Setting up dummy blocks");

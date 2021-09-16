@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:potion"
+  },
+  "addition": {
+    "item": "frivycat:mug"
+  },
+  "result": {
+    "item": "frivycat:potion_mug"
+  }
+}

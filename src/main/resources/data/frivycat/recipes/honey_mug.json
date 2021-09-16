@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#H"
+  ],
+  "key": {
+    "#": {
+      "item": "frivycat:mug"
+    },
+    "H": {
+      "item": "minecraft:honey_block"
+    }
+  },
+  "result": {
+    "item": "frivycat:honey_mug",
+    "count": 1
+  }
+}

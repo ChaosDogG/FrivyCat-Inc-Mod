@@ -80,5 +80,5 @@
     "entity.minecraft.endermite": "Lucky Endermite",
     "entity.minecraft.vex": "Lucky Vex",
     "entity.minecraft.ender_dragon": "Energized Ender Dragon",
-    "death.fell.accident.water": "%1$s defied the laws of Minecraft physics and payed the ultimate price"
+    "death.fell.accident.water": "%1$s defied the laws of Minecraft physics (dying by falling onto a waterlogged block in a minecart) and payed the ultimate price"
 }

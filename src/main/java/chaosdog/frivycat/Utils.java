@@ -1,7 +1,6 @@
 package chaosdog.frivycat;
 
 import net.minecraft.block.Block;
-import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -39,8 +38,4 @@ public class Utils {
         return item_registry.register(name, () -> item);
     }
 
-    // register an entity
-    public static <E extends EntityType<?>> RegistryObject<E> regEntity(DeferredRegister<EntityType<?>> entity_registry, String name, E entity) {
-        return entity_registry.register(name, () -> entity);
-    }
 }

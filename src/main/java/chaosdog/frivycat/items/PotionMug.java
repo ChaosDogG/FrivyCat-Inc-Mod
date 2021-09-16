@@ -5,11 +5,16 @@ import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PotionItem;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionUtils;
+import net.minecraft.potion.Potions;
 import net.minecraft.stats.Stats;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
 public class PotionMug extends PotionItem {
@@ -51,5 +56,16 @@ public class PotionMug extends PotionItem {
         }
 
         return stack;
+    }
+
+    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+        if (this.isInGroup(group)) {
+            for(Potion potion : Registry.POTION) {
+                if (potion != Potions.EMPTY) {
+                    items.add(PotionUtils.addPotionToItemStack(new ItemStack(this), potion));
+                }
+            }
+        }
+
     }
 }
