@@ -1,5 +1,7 @@
 package chaosdog.frivycat;
 
+import chaosdog.frivycat.blocks.MumboBlock;
+import chaosdog.frivycat.blocks.MumboDustWire;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -15,8 +17,8 @@ public class ModBlocks {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FrivyCatMod.ID);
 
     // Mumbo stuff
-    public static final RegistryObject<Block> MUMBO_DUST_WIRE = Utils.regBlock(BLOCKS, "mumbo_dust_wire", new Block(AbstractBlock.Properties.from(net.minecraft.block.Blocks.REDSTONE_WIRE)));
-    public static final RegistryObject<Block> MUMBO_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "mumbo_block", new Block(AbstractBlock.Properties.from(net.minecraft.block.Blocks.REDSTONE_BLOCK)), ItemGroup.REDSTONE);
+    public static final RegistryObject<Block> MUMBO_DUST_WIRE = Utils.regBlock(BLOCKS, "mumbo_dust_wire", new MumboDustWire(AbstractBlock.Properties.from(net.minecraft.block.Blocks.REDSTONE_WIRE)));
+    public static final RegistryObject<Block> MUMBO_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "mumbo_block", new MumboBlock(AbstractBlock.Properties.from(net.minecraft.block.Blocks.REDSTONE_BLOCK)), ItemGroup.REDSTONE);
 
     public static void init(IEventBus eventbus) {
         FrivyCatMod.LOGGER.info("Setting up dummy blocks");

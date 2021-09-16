@@ -2,7 +2,7 @@
     "ambientocclusion": false,
     "textures": {
         "particle": "block/repeater_on",
-        "slab": "block/furnace_bottom",
+        "slab": "block/repeater",
         "top": "block/repeater_on",
         "lit": "block/redstone_torch"
     },

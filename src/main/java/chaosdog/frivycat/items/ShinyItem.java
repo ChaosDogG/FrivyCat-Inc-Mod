@@ -14,4 +14,8 @@ public class ShinyItem extends Item {
     public boolean hasEffect(ItemStack stack) {
         return true;
     }
+
+    public boolean isPiglinCurrency(ItemStack stack) {
+        return true;
+    }
 }

@@ -56,4 +56,8 @@ public class LockPick extends Item {
         world.destroyBlock(pos, true);
 
     }
+
+    public boolean isPiglinCurrency(ItemStack stack) {
+        return true;
+    }
 }

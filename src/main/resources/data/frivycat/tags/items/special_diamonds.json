@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "frivycat:dark_diamond",
+    "frivycat:shadow_diamond",
+    "frivycat:cultist_diamond",
+    "frivycat:fire_diamond",
+    "frivycat:lightning_diamond",
+    "frivycat:peace_diamond",
+    "frivycat:vine_diamond",
+    "frivycat:veteran_diamond",
+    "frivycat:holy_diamond",
+    "frivycat:water_diamond",
+    "frivycat:madness_diamond",
+    "frivycat:corrupted_diamond"
+  ]
+}

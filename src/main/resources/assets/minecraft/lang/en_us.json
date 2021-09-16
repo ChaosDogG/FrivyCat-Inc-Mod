@@ -79,5 +79,6 @@
   "entity.minecraft.silverfish": "Lucky Silverfish",
   "entity.minecraft.endermite": "Lucky Endermite",
   "entity.minecraft.vex": "Lucky Vex",
-  "entity.minecraft.ender_dragon": "Energized Ender Dragon"
+  "entity.minecraft.ender_dragon": "Energized Ender Dragon",
+  "death.fell.accident.water": "%1$s defied the laws of Minecraft physics and payed the ultimate price"
 }

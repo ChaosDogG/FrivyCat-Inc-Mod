@@ -9,6 +9,9 @@
     "#frivycat:spawn_eggs",
     "minecraft:debug_stick",
     "#minecraft:flowers",
-    "minecraft:music_disc_pigstep"
+    "minecraft:music_disc_pigstep",
+    "frivycat:stone_banana",
+    "#frivycat:special_diamonds",
+    "frivycat:lock_pick"
   ]
 }

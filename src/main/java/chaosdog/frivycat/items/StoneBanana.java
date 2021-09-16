@@ -41,4 +41,8 @@ public class StoneBanana extends ToolItem {
         });
         return true;
     }
+
+    public boolean isPiglinCurrency(ItemStack stack) {
+        return true;
+    }
 }
