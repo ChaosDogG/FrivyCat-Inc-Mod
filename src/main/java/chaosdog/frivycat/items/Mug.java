@@ -35,22 +35,22 @@ public class Mug extends GlassBottleItem {
         if (!list.isEmpty()) {
             AreaEffectCloudEntity areaeffectcloudentity = list.get(0);
             areaeffectcloudentity.setRadius(areaeffectcloudentity.getRadius() - 0.5F);
-            worldIn.playSound((PlayerEntity)null, playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), SoundEvents.ITEM_BOTTLE_FILL_DRAGONBREATH, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            worldIn.playSound(null, playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), SoundEvents.ITEM_BOTTLE_FILL_DRAGONBREATH, SoundCategory.NEUTRAL, 1.0F, 1.0F);
             return ActionResult.func_233538_a_(this.turnBottleIntoItem(itemstack, playerIn, new ItemStack(Items.DRAGON_BREATH)), worldIn.isRemote());
         } else {
-            RayTraceResult raytraceresult = rayTrace(worldIn, playerIn, RayTraceContext.FluidMode.SOURCE_ONLY);
+            BlockRayTraceResult raytraceresult = rayTrace(worldIn, playerIn, RayTraceContext.FluidMode.SOURCE_ONLY);
             if (raytraceresult.getType() == RayTraceResult.Type.MISS) {
                 return ActionResult.resultPass(itemstack);
             } else {
                 if (raytraceresult.getType() == RayTraceResult.Type.BLOCK) {
-                    BlockPos blockpos = ((BlockRayTraceResult)raytraceresult).getPos();
+                    BlockPos blockpos = raytraceresult.getPos();
                     if (!worldIn.isBlockModifiable(playerIn, blockpos)) {
                         return ActionResult.resultPass(itemstack);
                     }
 
                     if (worldIn.getFluidState(blockpos).isTagged(FluidTags.WATER)) {
                         worldIn.playSound(playerIn, playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.NEUTRAL, 1.0F, 1.0F);
-                        return ActionResult.func_233538_a_(this.turnBottleIntoItem(itemstack, playerIn, PotionUtils.addPotionToItemStack(new ItemStack(Misc.POTION_MUG), Potions.WATER)), worldIn.isRemote());
+                        return ActionResult.func_233538_a_(this.turnBottleIntoItem(itemstack, playerIn, PotionUtils.addPotionToItemStack(new ItemStack(Misc.POTION_MUG::get), Potions.WATER)), worldIn.isRemote());
                     }
                 }
 

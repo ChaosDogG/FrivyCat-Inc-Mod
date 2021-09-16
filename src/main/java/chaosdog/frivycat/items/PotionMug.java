@@ -6,7 +6,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.item.PotionItem;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.PotionUtils;
@@ -43,11 +42,11 @@ public class PotionMug extends PotionItem {
 
         if (playerentity == null || !playerentity.abilities.isCreativeMode) {
             if (stack.isEmpty()) {
-                return new ItemStack(Misc.MUG);
+                return new ItemStack(Misc.MUG::get);
             }
 
             if (playerentity != null) {
-                playerentity.inventory.addItemStackToInventory(new ItemStack(Misc.MUG));
+                playerentity.inventory.addItemStackToInventory(new ItemStack(Misc.MUG::get));
             }
         }
 

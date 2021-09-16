@@ -7,7 +7,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.HoneyBottleItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.potion.Effects;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.World;
@@ -30,10 +29,10 @@ public class HoneyMug extends HoneyBottleItem {
         }
 
         if (stack.isEmpty()) {
-            return new ItemStack(Misc.MUG);
+            return new ItemStack(Misc.MUG::get);
         } else {
             if (entityLiving instanceof PlayerEntity && !((PlayerEntity)entityLiving).abilities.isCreativeMode) {
-                ItemStack itemstack = new ItemStack(Misc.MUG);
+                ItemStack itemstack = new ItemStack(Misc.MUG::get);
                 PlayerEntity playerentity = (PlayerEntity)entityLiving;
                 if (!playerentity.inventory.addItemStackToInventory(itemstack)) {
                     playerentity.dropItem(itemstack, false);
