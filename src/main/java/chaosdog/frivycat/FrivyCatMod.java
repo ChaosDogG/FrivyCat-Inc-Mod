@@ -25,7 +25,7 @@ public class FrivyCatMod {
         Villagers.init(eventBus);
         Misc.init(eventBus);
         ModBlocks.init(eventBus);
-        Entities.init(eventBus);
+        //Entities.init(eventBus);
 
         // put debug stick and knowledge book in tools tab of creative inventory
         Utils.changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TOOLS);
@@ -50,6 +50,9 @@ public class FrivyCatMod {
 
         // add Suspicious Stew to food tab
         Utils.changeCreativeTab(Items.SUSPICIOUS_STEW, ItemGroup.FOOD);
+
+        // add Written Book to misc tab
+        Utils.changeCreativeTab(Items.WRITTEN_BOOK, ItemGroup.MISC);
 
         LOGGER.info("Registering villager trades");
         MinecraftForge.EVENT_BUS.register(VillagerTrades.class);

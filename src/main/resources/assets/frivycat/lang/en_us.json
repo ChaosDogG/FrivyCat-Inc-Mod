@@ -35,9 +35,9 @@
     "block.frivycat.dummy_b": "Pillar Format Block",
     "block.frivycat.dummy_c": "Front-Face Block",
 
-    "entity.frivycat.villager.frivycat.dummy_a": "Dummy Profession A",
-    "entity.frivycat.villager.frivycat.dummy_b": "Dummy Profession B",
-    "entity.frivycat.villager.frivycat.dummy_c": "Dummy Profession C",
+    "entity.frivycat.villager.frivycat.dummy_a": "Reality Stabilizer",
+    "entity.frivycat.villager.frivycat.dummy_b": "Code Debugger",
+    "entity.frivycat.villager.frivycat.dummy_c": "Model Checker",
 
     "item.frivycat.agate": "Agate",
     "item.frivycat.baby_bottle": "Baby Bottle",
@@ -101,5 +101,7 @@
     "item.frivycat.zircon": "Zircon",
 
     "item.frivycat.baby_rattle_boy.tooltip": "Boy",
-    "item.frivycat.baby_rattle_girl.tooltip": "Girl"
+    "item.frivycat.baby_rattle_girl.tooltip": "Girl",
+
+    "message.corrupted_block_collide": "Something isn't right with that block...better pick it back up"
 }

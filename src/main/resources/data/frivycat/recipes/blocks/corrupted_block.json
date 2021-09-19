@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:ink_sac"
+      }
+    },
+    "result": {
+      "item": "frivycat:corrupted_block",
+      "count": 1
+    }
+  }

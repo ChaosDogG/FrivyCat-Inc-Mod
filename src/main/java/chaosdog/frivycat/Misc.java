@@ -89,7 +89,6 @@ public class Misc {
                     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
                         if (gender.equals("boy")) tooltip.add(new TranslationTextComponent("item.frivycat.baby_rattle_boy.tooltip").mergeStyle(TextFormatting.AQUA));
                         if (gender.equals("girl")) tooltip.add(new TranslationTextComponent("item.frivycat.baby_rattle_girl.tooltip").mergeStyle(TextFormatting.LIGHT_PURPLE));
-                        super.addInformation(stack, worldIn, tooltip, flagIn);
                     }
                 });
     }
