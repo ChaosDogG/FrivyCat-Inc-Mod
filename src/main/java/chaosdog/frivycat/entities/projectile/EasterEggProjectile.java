@@ -13,8 +13,8 @@ import net.minecraft.world.World;
 public class EasterEggProjectile extends EggEntity {
 
 
-    public EasterEggProjectile(EntityType<Entity> p_i50154_1_, World p_i50154_2_) {
-        super((EntityType<? extends EggEntity>) p_i50154_1_, p_i50154_2_);
+    public EasterEggProjectile(EntityType<Entity> ent, World world) {
+        super(EntityType.EGG, world);
     }
 
     public EasterEggProjectile(World worldIn, LivingEntity throwerIn) {
