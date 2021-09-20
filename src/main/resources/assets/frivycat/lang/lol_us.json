@@ -35,9 +35,9 @@
     "block.frivycat.dummy_b": "Pillar Format Block",
     "block.frivycat.dummy_c": "Front-Face Block",
 
-    "entity.frivycat.villager.frivycat.dummy_a": "Dummy Profession A",
-    "entity.frivycat.villager.frivycat.dummy_b": "Dummy Profession B",
-    "entity.frivycat.villager.frivycat.dummy_c": "Dummy Profession C",
+    "entity.frivycat.villager.frivycat.dummy_a": "Real-plase balensr",
+    "entity.frivycat.villager.frivycat.dummy_b": "Techno-Looker persn",
+    "entity.frivycat.villager.frivycat.dummy_c": "Shape-tester thing job",
 
     "item.frivycat.agate": "Agate",
     "item.frivycat.baby_bottle": "Baby Bottle",
@@ -102,8 +102,6 @@
 
     "item.frivycat.baby_rattle_boy.tooltip": "Boy",
     "item.frivycat.baby_rattle_girl.tooltip": "Girl",
-    "entity.minecraft.villager.frivycat.dummy_a": "Dummy Profession A",
-    "entity.minecraft.villager.frivycat.dummy_b": "Dummy Profession B",
-    "entity.minecraft.villager.frivycat.dummy_c": "Dummy Profession C",
-    "item.frivycat.potion_mug": "Mug of <potion name here>(WiP)"
+
+    "message.corrupted_block_collide": "Idk 'bout dis....betr re-get it"
 }

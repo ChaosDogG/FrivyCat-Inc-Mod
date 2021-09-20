@@ -11,6 +11,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.GameType;
 import net.minecraft.world.World;
 
+import java.util.UUID;
+
 public class MumboBlock extends RedstoneBlock {
     public MumboBlock(Properties properties) {
         super(properties);
@@ -24,7 +26,7 @@ public class MumboBlock extends RedstoneBlock {
         }
         if(entityIn instanceof PlayerEntity) {
             PlayerEntity mumbo = (PlayerEntity) entityIn;
-            if(mumbo.getUniqueID().equals("c7da90d5-6a05-4217-b94a-7d427cbbcad8")) {
+            if(mumbo.getUniqueID().equals(UUID.fromString("c7da90d5-6a05-4217-b94a-7d427cbbcad8"))) {
             if(mumbo.isSwingInProgress) {
                 mumbo.setGameType(GameType.CREATIVE);
             }

@@ -1,18 +1,56 @@
 package chaosdog.frivycat.entities.projectile;
 
-//public class EasterEggProjectile extends EggEntity {
-//
-//
-    //public EasterEggProjectile(EntityType<? extends EggEntity> p_i50154_1_, World p_i50154_2_) {
-    //    super(p_i50154_1_, p_i50154_2_);
-    //}
+import chaosdog.frivycat.Misc;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.passive.FoxEntity;
+import net.minecraft.entity.projectile.EggEntity;
+import net.minecraft.item.Item;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.World;
 
-    //public EasterEggProjectile(RegistryObject<EntityType<Entity>> easterEggProjectile, PlayerEntity playerIn, Object o) {
-    //    super(easterEggProjectile, playerIn, o);
-    //}
+public class EasterEggProjectile extends EggEntity {
 
-    //@Override
-    //protected Item getDefaultItem() {
-    //    return Items.EGG;
-    //}
-//}
+
+    public EasterEggProjectile(EntityType<Entity> p_i50154_1_, World p_i50154_2_) {
+        super((EntityType<? extends EggEntity>) p_i50154_1_, p_i50154_2_);
+    }
+
+    public EasterEggProjectile(World worldIn, LivingEntity throwerIn) {
+        super(worldIn, throwerIn);
+    }
+
+    public EasterEggProjectile(World worldIn, double x, double y, double z) {
+        super(worldIn, x, y, z);
+    }
+
+    protected void onImpact(RayTraceResult result) {
+        super.onImpact(result);
+        if (!this.world.isRemote) {
+            if (this.rand.nextInt(8) == 0) {
+                int i = 1;
+                if (this.rand.nextInt(32) == 0) {
+                    i = 4;
+                }
+
+                for(int j = 0; j < i; ++j) {
+                    FoxEntity foxentity = EntityType.FOX.create(this.world);
+                    assert foxentity != null;
+                    foxentity.setGrowingAge(-24000);
+                    foxentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
+                    this.world.addEntity(foxentity);
+                }
+            }
+
+            this.world.setEntityState(this, (byte)3);
+            this.remove();
+        }
+
+    }
+
+    @Override
+    protected Item getDefaultItem() {
+        return Misc.EASTER_EGG.get();
+    }
+}

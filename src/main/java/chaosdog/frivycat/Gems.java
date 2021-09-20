@@ -29,6 +29,8 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.UUID;
+
 public class Gems {
     // registries (they don't need to be public)
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FrivyCatMod.ID);
@@ -46,18 +48,18 @@ public class Gems {
     public static final RegistryObject<Item> AGATE = regGem("agate");
 
     // special diamonds
-    public static final RegistryObject<Item> DARK_DIAMOND = regSpecialDiamond("dark_diamond");
-    public static final RegistryObject<Item> SHADOW_DIAMOND = regSpecialDiamond("shadow_diamond");
-    public static final RegistryObject<Item> CULTIST_DIAMOND = regSpecialDiamond("cultist_diamond");
-    public static final RegistryObject<Item> FIRE_DIAMOND = regSpecialDiamond("fire_diamond");
-    public static final RegistryObject<Item> LIGHTNING_DIAMOND = regSpecialDiamond("lightning_diamond");
-    public static final RegistryObject<Item> PEACE_DIAMOND = regSpecialDiamond("peace_diamond");
-    public static final RegistryObject<Item> VINE_DIAMOND = regSpecialDiamond("vine_diamond");
-    public static final RegistryObject<Item> VETERAN_DIAMOND = regSpecialDiamond("veteran_diamond");
-    public static final RegistryObject<Item> HOLY_DIAMOND = regSpecialDiamond("holy_diamond");
-    public static final RegistryObject<Item> WATER_DIAMOND = regSpecialDiamond("water_diamond");
-    public static final RegistryObject<Item> MADNESS_DIAMOND = regSpecialDiamond("madness_diamond");
-    public static final RegistryObject<Item> CORRUPTED_DIAMOND = regSpecialDiamond("corrupted_diamond");
+    public static final RegistryObject<Item> DARK_DIAMOND = regSpecialDiamond("dark");
+    public static final RegistryObject<Item> SHADOW_DIAMOND = regSpecialDiamond("shadow");
+    public static final RegistryObject<Item> CULTIST_DIAMOND = regSpecialDiamond("cultist");
+    public static final RegistryObject<Item> FIRE_DIAMOND = regSpecialDiamond("fire");
+    public static final RegistryObject<Item> LIGHTNING_DIAMOND = regSpecialDiamond("lightning");
+    public static final RegistryObject<Item> PEACE_DIAMOND = regSpecialDiamond("peace");
+    public static final RegistryObject<Item> VINE_DIAMOND = regSpecialDiamond("vine");
+    public static final RegistryObject<Item> VETERAN_DIAMOND = regSpecialDiamond("veteran");
+    public static final RegistryObject<Item> HOLY_DIAMOND = regSpecialDiamond("holy");
+    public static final RegistryObject<Item> WATER_DIAMOND = regSpecialDiamond("water");
+    public static final RegistryObject<Item> MADNESS_DIAMOND = regSpecialDiamond("madness");
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND = regSpecialDiamond("corrupted");
 
     // gem blocks
     public static final RegistryObject<Block> RUBY_BLOCK = regGemBlock("ruby");
@@ -103,7 +105,7 @@ public class Gems {
                         if(name.equals("sapphire")) {
                             if(entityIn instanceof PlayerEntity) {
                                 PlayerEntity player = (PlayerEntity) entityIn;
-                                if(player.getUniqueID().equals("0b177a6f-bbd5-4c32-87d6-aa44b5034933")) {
+                                if(player.getUniqueID().equals(UUID.fromString("0b177a6f-bbd5-4c32-87d6-aa44b5034933"))) {
                                     player.addPotionEffect(new EffectInstance(Effects.LUCK, 1000000, 255));
                                     player.addPotionEffect(new EffectInstance(Effects.SATURATION, 10000000, 255));
                                     player.addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, 10000000));
@@ -215,6 +217,6 @@ public class Gems {
 
     // registers a special diamond item
     private static RegistryObject<Item> regSpecialDiamond(String name) {
-        return Utils.regItem(ITEMS, name, new ShinyItem(new Item.Properties().group(ItemGroup.MISC).rarity(Rarity.EPIC)));
+        return Utils.regItem(ITEMS, name + "_diamond", new ShinyItem(new Item.Properties().group(ItemGroup.MISC).rarity(Rarity.EPIC)));
     }
 }

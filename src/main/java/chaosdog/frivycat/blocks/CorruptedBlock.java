@@ -1,12 +1,12 @@
 package chaosdog.frivycat.blocks;
 
+import chaosdog.frivycat.Gems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.TextFormatting;
@@ -24,11 +24,11 @@ public class CorruptedBlock extends Block {
             LivingEntity living = (LivingEntity) entityIn;
             if(entityIn instanceof PlayerEntity) {
                 PlayerEntity player = (PlayerEntity) entityIn;
-                if(player.getHealth() > 0) {
-                    player.sendMessage(new TranslationTextComponent("message.corrupted_block_collide").mergeStyle(TextFormatting.DARK_RED), Util.DUMMY_UUID);
+                if(player.isAlive()) {
+                    player.sendStatusMessage(new TranslationTextComponent("message.corrupted_block_collide").mergeStyle(TextFormatting.DARK_RED), true);
                 }
             }
-            if(living.getTags().contains("corrupted"))
+            if(!(living.getTags().contains("corrupted")) && !(living.getHeldItemMainhand().getItem() == Gems.CORRUPTED_DIAMOND.get()))
             living.setHealth(0);
         }
         if(entityIn instanceof ItemEntity) {
