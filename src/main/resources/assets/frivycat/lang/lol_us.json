@@ -103,5 +103,6 @@
     "item.frivycat.baby_rattle_boy.tooltip": "Boy",
     "item.frivycat.baby_rattle_girl.tooltip": "Girl",
 
-    "message.corrupted_block_collide": "Idk 'bout dis....betr re-get it"
+    "message.corrupted_block_collide_unsafe": "Idk 'bout dis....betr re-get it",
+    "message.corrupted_block_collide_safe": "Woah....did u just unlock god hax w that thing?"
 }

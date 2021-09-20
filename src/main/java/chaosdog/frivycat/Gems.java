@@ -115,12 +115,12 @@ public class Gems {
                                 VillagerEntity villager = (VillagerEntity) entityIn;
                                 if(!(villager.getVillagerData().getProfession() == VillagerProfession.NONE) && !(villager.getVillagerData().getProfession() == VillagerProfession.NITWIT)) {
                                     villager.removePotionEffect(Effects.SLOWNESS);
+                                    villager.addPotionEffect(new EffectInstance(Effects.REGENERATION, 50, 5));
+                                    villager.addPotionEffect(new EffectInstance(Effects.GLOWING, 50, 5));
                                 }
                                 if(villager.getGrowingAge() < 0) {
                                     villager.setGrowingAge(0);
                                 }
-                                villager.addPotionEffect(new EffectInstance(Effects.REGENERATION, 50, 5));
-                                villager.addPotionEffect(new EffectInstance(Effects.GLOWING, 50, 5));
                             }
                         }
                         if(name.equals("zircon")) {
