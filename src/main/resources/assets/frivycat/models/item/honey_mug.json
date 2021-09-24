@@ -1,6 +1,5 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "honey_bottle",
 	"textures": {
 		"1": "item_textures/honey_block_bottom",
 		"2": "item_textures/honey_block_side",

@@ -1,9 +1,7 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "potion_overlay",
 	"textures": {
-		"0": "item_textures/white_stained_glass",
-		"particle": "item_textures/white_stained_glass"
+		"0": "item_textures/white_stained_glass"
 	},
 	"elements": [
 		{

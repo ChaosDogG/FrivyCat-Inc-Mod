@@ -9,6 +9,7 @@ import net.minecraft.item.ItemUseContext;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.common.Tags;
 
 import java.util.Objects;
 import java.util.stream.Stream;
@@ -50,11 +51,10 @@ public class LockPick extends Item {
     }
 
     private boolean blockCanBeLocked(BlockState clickedBlock) {
-        return Stream.of(Blocks.CHEST, Blocks.TRAPPED_CHEST, Blocks.FURNACE, Blocks.BLAST_FURNACE, Blocks.SMOKER, Blocks.BARREL, Blocks.BREWING_STAND, Blocks.DISPENSER, Blocks.DROPPER, Blocks.HOPPER).anyMatch(block -> clickedBlock.getBlock() == block);
+        return Stream.of(Tags.Blocks.CHESTS, Blocks.FURNACE, Blocks.BLAST_FURNACE, Blocks.SMOKER, Tags.Blocks.BARRELS, Blocks.BREWING_STAND, Blocks.DISPENSER, Blocks.DROPPER, Blocks.HOPPER).anyMatch(block -> clickedBlock.getBlock() == block);
     }
     private void openLockedBlock(World world, BlockPos pos) {
         world.destroyBlock(pos, true);
-
     }
 
     public boolean isPiglinCurrency(ItemStack stack) {
