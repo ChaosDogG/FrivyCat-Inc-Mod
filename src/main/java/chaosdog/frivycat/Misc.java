@@ -39,6 +39,7 @@ public class Misc {
     public static final RegistryObject<Item> BABY_BOTTLE = Utils.regItem(ITEMS,"baby_bottle", new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> MAGE_BOOK = Utils.regItem(ITEMS,"mage_book", new ShinyItem(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
     public static final RegistryObject<Item> MAGIC_WAND = Utils.regItem(ITEMS,"magic_wand", new ShinyItem(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> BUTTER = Utils.regItem(ITEMS, "butter", new Butter(new Item.Properties().group(ItemGroup.MISC)));
 
     // stone banana (work in progress)
     public static final RegistryObject<Item> STONE_BANANA = Utils.regItem(ITEMS,"stone_banana", new StoneBanana(7.0f, -2.0f, ItemTier.STONE, (new Item.Properties().group(ItemGroup.TOOLS).rarity(Rarity.EPIC))));

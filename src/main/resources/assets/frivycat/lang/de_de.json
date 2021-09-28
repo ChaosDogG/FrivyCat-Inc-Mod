@@ -35,14 +35,15 @@
   "block.frivycat.dummy_b": "Pillar Format Block",
   "block.frivycat.dummy_c": "Front-Face Block",
 
-  "entity.frivycat.villager.frivycat.dummy_a": "Dummy Profession A",
-  "entity.frivycat.villager.frivycat.dummy_b": "Dummy Profession B",
-  "entity.frivycat.villager.frivycat.dummy_c": "Dummy Profession C",
+  "entity.minecraft.villager.frivycat.dummy_a": "Reality Stabilizer",
+  "entity.minecraft.villager.frivycat.dummy_b": "Code Debugger",
+  "entity.minecraft.villager.frivycat.dummy_c": "Model Checker",
 
   "item.frivycat.agate": "Agate",
   "item.frivycat.baby_bottle": "Babyflasche",
   "item.frivycat.baby_rattle_boy": "Baby Rassel",
   "item.frivycat.baby_rattle_girl": "Baby Rassel",
+  "item.frivycat.butter": "Butter",
   "item.frivycat.corrupted_diamond": "Verdorbender Diamant",
   "item.frivycat.cotton_candy_strand": "Zuckerwatte",
   "item.frivycat.cultist_diamond": "Veehrter Diamant",
@@ -101,5 +102,8 @@
   "item.frivycat.zircon": "Zirkon",
 
   "item.frivycat.baby_rattle_boy.tooltip": "Boy",
-  "item.frivycat.baby_rattle_girl.tooltip": "Girl"
+  "item.frivycat.baby_rattle_girl.tooltip": "Girl",
+
+  "message.corrupted_block_collide_unsafe": "Something isn't right with that block...better pick it back up",
+  "message.corrupted_block_collide_safe": "How strange...seems with this item, you're receiving quite the buff...",
 }

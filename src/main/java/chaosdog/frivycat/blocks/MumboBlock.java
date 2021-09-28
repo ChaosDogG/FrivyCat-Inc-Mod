@@ -22,7 +22,7 @@ public class MumboBlock extends RedstoneBlock {
     public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
         if(entityIn instanceof WanderingTraderEntity || entityIn instanceof TraderLlamaEntity) {
             LivingEntity living = (LivingEntity) entityIn;
-            living.attackEntityFrom(DamageSource.MAGIC, 1000);
+            living.attackEntityFrom(DamageSource.MAGIC, Float.MAX_VALUE);
         }
         if(entityIn instanceof PlayerEntity) {
             PlayerEntity mumbo = (PlayerEntity) entityIn;

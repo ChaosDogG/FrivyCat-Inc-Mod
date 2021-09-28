@@ -35,14 +35,15 @@
     "block.frivycat.dummy_b": "Pillar Format Block",
     "block.frivycat.dummy_c": "Front-Face Block",
 
-    "entity.frivycat.villager.frivycat.dummy_a": "Reality Stabilizer",
-    "entity.frivycat.villager.frivycat.dummy_b": "Code Debugger",
-    "entity.frivycat.villager.frivycat.dummy_c": "Model Checker",
+    "entity.minecraft.villager.frivycat.dummy_a": "Reality Stabilizer",
+    "entity.minecraft.villager.frivycat.dummy_b": "Code Debugger",
+    "entity.minecraft.villager.frivycat.dummy_c": "Model Checker",
 
     "item.frivycat.agate": "Agate",
     "item.frivycat.baby_bottle": "Baby Bottle",
     "item.frivycat.baby_rattle_boy": "Baby Rattle",
     "item.frivycat.baby_rattle_girl": "Baby Rattle",
+    "item.frivycat.butter": "Butter",
     "item.frivycat.corrupted_diamond": "Corrupted Diamond",
     "item.frivycat.cotton_candy_strand": "Cotton Candy Strand",
     "item.frivycat.cultist_diamond": "Cultist Diamond",

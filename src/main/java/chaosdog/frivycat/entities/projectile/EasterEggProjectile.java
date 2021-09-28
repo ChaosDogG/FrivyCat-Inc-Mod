@@ -4,6 +4,7 @@ import chaosdog.frivycat.Misc;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.entity.passive.horse.LlamaEntity;
@@ -73,6 +74,13 @@ public class EasterEggProjectile extends EggEntity {
                         sheepentity.setGrowingAge(-24000);
                         sheepentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
                         sheepentity.setFleeceColor(DyeColor.byId(this.rand.nextInt(15)));
+                        if(this.rand.nextInt(10) == 0) {
+                            if(sheepentity.getFleeceColor().getColorValue() == 0){
+                                sheepentity.setCustomName(new StringTextComponent("Shaun"));
+                            }else{
+                            sheepentity.setCustomName(new StringTextComponent("jeb_"));
+                            }
+                        }
                         this.world.addEntity(sheepentity);
                     }
                 }
@@ -101,7 +109,7 @@ public class EasterEggProjectile extends EggEntity {
                     }
                 }
                 if(this.rand.nextInt(10) == 6) {
-                    for (int l = 0; l < i; ++l) {
+                    for (int p = 0; p < i; ++p) {
                         HorseEntity horseentity = EntityType.HORSE.create(this.world);
                         assert horseentity != null;
                         horseentity.setGrowingAge(-24000);
@@ -110,7 +118,7 @@ public class EasterEggProjectile extends EggEntity {
                     }
                 }
                 if(this.rand.nextInt(10) == 7) {
-                    for (int l = 0; l < i; ++l) {
+                    for (int q = 0; q < i; ++q) {
                         BeeEntity beeentity = EntityType.BEE.create(this.world);
                         assert beeentity != null;
                         beeentity.setGrowingAge(-24000);
@@ -119,7 +127,7 @@ public class EasterEggProjectile extends EggEntity {
                     }
                 }
                 if(this.rand.nextInt(10) == 8) {
-                    for (int l = 0; l < i; ++l) {
+                    for (int r = 0; r < i; ++r) {
                         LlamaEntity llamaentity = EntityType.LLAMA.create(this.world);
                         assert llamaentity != null;
                         llamaentity.setGrowingAge(-24000);
@@ -132,6 +140,17 @@ public class EasterEggProjectile extends EggEntity {
                             llamaentity.setCustomName(new StringTextComponent("Carl").mergeStyle(TextFormatting.GREEN));
                         }
                         this.world.addEntity(llamaentity);
+                    }
+                }
+                if(this.rand.nextInt(10) == 9) {
+                    for (int s = 0; s < i; ++s) {
+                        VillagerEntity villagerentity = EntityType.VILLAGER.create(this.world);
+                        assert villagerentity != null;
+                        villagerentity.setGrowingAge(-24000);
+                        villagerentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
+                        villagerentity.setCustomName(new StringTextComponent("Villager #" + this.rand.nextInt(100)));
+                        villagerentity.setCustomNameVisible(true);
+                        this.world.addEntity(villagerentity);
                     }
                 }
             }

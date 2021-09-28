@@ -2,9 +2,11 @@ package chaosdog.frivycat.items;
 
 import chaosdog.frivycat.Misc;
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PotionItem;
@@ -17,7 +19,8 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
-public class PotionMug extends PotionItem {
+public class PotionMug extends PotionItem implements IItemColor {
+    private final java.util.Map<net.minecraftforge.registries.IRegistryDelegate<Item>, IItemColor> colors = new java.util.HashMap<>();
     public PotionMug(Properties builder) {
         super(builder);
     }
@@ -67,5 +70,11 @@ public class PotionMug extends PotionItem {
             }
         }
 
+    }
+
+    @Override
+    public int getColor(ItemStack stack, int tintIndex) {
+        IItemColor iitemcolor = this.colors.get(stack.getItem().delegate);
+        return iitemcolor == null ? -1 : iitemcolor.getColor(stack, tintIndex);
     }
 }

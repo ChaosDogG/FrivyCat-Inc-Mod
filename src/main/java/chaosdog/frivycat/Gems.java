@@ -10,11 +10,13 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.entity.merchant.villager.VillagerProfession;
+import net.minecraft.entity.monster.ZoglinEntity;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.RabbitEntity;
+import net.minecraft.entity.passive.horse.ZombieHorseEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -99,7 +101,15 @@ public class Gems {
                         if (name.equals("ruby")) {
                             if(entityIn instanceof ZombieEntity) {
                                 ZombieEntity rotting = (ZombieEntity) entityIn;
-                                rotting.attackEntityFrom(DamageSource.MAGIC, 10000);
+                                rotting.attackEntityFrom(DamageSource.MAGIC, Float.MAX_VALUE);
+                            }
+                            if(entityIn instanceof ZoglinEntity) {
+                                ZoglinEntity zog = (ZoglinEntity) entityIn;
+                                zog.attackEntityFrom(DamageSource.MAGIC, Float.MAX_VALUE);
+                            }
+                            if(entityIn instanceof ZombieHorseEntity) {
+                                ZombieHorseEntity horse = (ZombieHorseEntity) entityIn;
+                                horse.attackEntityFrom(DamageSource.MAGIC, Float.MAX_VALUE);
                             }
                         }
                         if(name.equals("sapphire")) {

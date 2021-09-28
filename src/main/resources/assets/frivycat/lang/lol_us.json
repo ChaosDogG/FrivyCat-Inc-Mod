@@ -35,14 +35,15 @@
     "block.frivycat.dummy_b": "Pillar Format Block",
     "block.frivycat.dummy_c": "Front-Face Block",
 
-    "entity.frivycat.villager.frivycat.dummy_a": "Real-plase balensr",
-    "entity.frivycat.villager.frivycat.dummy_b": "Techno-Looker persn",
-    "entity.frivycat.villager.frivycat.dummy_c": "Shape-tester thing job",
+    "entity.minecraft.villager.frivycat.dummy_a": "Real-plase balensr",
+    "entity.minecraft.villager.frivycat.dummy_b": "Techno-Looker persn",
+    "entity.minecraft.villager.frivycat.dummy_c": "Shape-tester thing job",
 
     "item.frivycat.agate": "Agate",
     "item.frivycat.baby_bottle": "Baby Bottle",
     "item.frivycat.baby_rattle_boy": "Baby Rattle",
     "item.frivycat.baby_rattle_girl": "Baby Rattle",
+    "item.frivycat.butter": "Bar uv slippyness",
     "item.frivycat.corrupted_diamond": "Corrupted Diamond",
     "item.frivycat.cotton_candy_strand": "Cotton Candy Strand",
     "item.frivycat.cultist_diamond": "Cultist Diamond",
@@ -104,5 +105,5 @@
     "item.frivycat.baby_rattle_girl.tooltip": "Girl",
 
     "message.corrupted_block_collide_unsafe": "Idk 'bout dis....betr re-get it",
-    "message.corrupted_block_collide_safe": "Woah....did u just unlock god hax w that thing?"
+    "message.corrupted_block_collide_safe": "Woah....did u just unlock god hax w that thing?",
 }
