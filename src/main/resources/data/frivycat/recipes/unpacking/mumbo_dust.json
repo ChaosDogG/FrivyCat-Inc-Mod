@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "frivycat:mumbo_block"
+    }
+  ],
+  "result": {
+    "item": "frivycat:mumbo_dust",
+    "count": 9
+  }
+}

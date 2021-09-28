@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "frivycat:mumbo_dust"
+    }
+  },
+  "result": {
+    "item": "frivycat:mumbo_block",
+    "count": 1
+  }
+}

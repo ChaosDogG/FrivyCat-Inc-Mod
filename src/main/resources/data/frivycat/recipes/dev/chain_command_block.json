@@ -1,15 +1,12 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-        {
-            "item": "minecraft:command_block"
-        },
-        {
-            "item": "minecraft:chain"
-        }
-    ],
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "minecraft:command_block"
+    },
+    "addition": {
+        "item": "minecraft:chain"
+    },
     "result": {
-        "item": "minecraft:chain_command_block",
-        "count": 1
+        "item": "minecraft:chain_command_block"
     }
 }

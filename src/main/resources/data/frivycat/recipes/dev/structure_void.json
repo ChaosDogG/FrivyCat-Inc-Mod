@@ -1,15 +1,12 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-        {
-            "item": "minecraft:structure_block"
-        },
-        {
-            "item": "minecraft:string"
-        }
-    ],
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "minecraft:structure_block"
+    },
+    "addition": {
+        "item": "minecraft:string"
+    },
     "result": {
-        "item": "minecraft:structure_void",
-        "count": 1
+        "item": "minecraft:structure_void"
     }
 }

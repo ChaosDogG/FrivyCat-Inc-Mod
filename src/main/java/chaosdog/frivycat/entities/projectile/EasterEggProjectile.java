@@ -11,10 +11,14 @@ import net.minecraft.entity.passive.horse.LlamaEntity;
 import net.minecraft.entity.projectile.EggEntity;
 import net.minecraft.item.DyeColor;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+
+import java.util.Objects;
 
 public class EasterEggProjectile extends EggEntity {
 
@@ -149,6 +153,8 @@ public class EasterEggProjectile extends EggEntity {
                         villagerentity.setGrowingAge(-24000);
                         villagerentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
                         villagerentity.setCustomName(new StringTextComponent("Villager #" + this.rand.nextInt(100)));
+                        if(Objects.requireNonNull(villagerentity.getCustomName()).getString().equals("Villager #9"))
+                            villagerentity.setHeldItem(Hand.MAIN_HAND, new ItemStack(Misc.MIC.get()));
                         villagerentity.setCustomNameVisible(true);
                         this.world.addEntity(villagerentity);
                     }

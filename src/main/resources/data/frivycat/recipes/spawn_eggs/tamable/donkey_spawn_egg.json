@@ -1,16 +1,12 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-        {
-            "item": "minecraft:horse_spawn_egg"
-        },
-        {
-            "item": "minecraft:chest"
-        }
-    ],
-    "result": {
-        "item": "minecraft:donkey_spawn_egg",
-        "count": 1
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "minecraft:horse_spawn_egg"
     },
-    "group": "tameable_spawn_egg"
+    "addition": {
+        "tag": "forge:chests/wooden"
+    },
+    "result": {
+        "item": "minecraft:mule_spawn_egg"
+    }
 }
