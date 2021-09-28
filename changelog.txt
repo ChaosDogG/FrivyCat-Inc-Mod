@@ -1,2 +1,8 @@
-Initial Release (1.0):
+Initial Release (0.1.0):
     Turns the original Datapack into a Mod
+    Adds blocks/ores for gems along with special abilities for the blocks
+    Gives abilities to the Mumbo Block
+    Adds a Corrupted Block with some....interesting powers
+    S T O N E  B A N A N A
+    Gives the Easter Egg its own ability when thrown
+    Adds Butter, which makes mobs drop ALL gear/weapons on left-click
