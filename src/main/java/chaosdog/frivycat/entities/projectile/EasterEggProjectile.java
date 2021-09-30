@@ -9,6 +9,7 @@ import net.minecraft.entity.passive.*;
 import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.entity.passive.horse.LlamaEntity;
 import net.minecraft.entity.projectile.EggEntity;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.DyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -49,6 +50,7 @@ public class EasterEggProjectile extends EggEntity {
                         assert foxentity != null;
                         foxentity.setGrowingAge(-24000);
                         foxentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
+                        foxentity.setHeldItem(Hand.MAIN_HAND, new ItemStack(Misc.EASTER_EGG.get()));
                         this.world.addEntity(foxentity);
                     }
                 }
@@ -78,12 +80,13 @@ public class EasterEggProjectile extends EggEntity {
                         sheepentity.setGrowingAge(-24000);
                         sheepentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
                         sheepentity.setFleeceColor(DyeColor.byId(this.rand.nextInt(15)));
-                        if(this.rand.nextInt(10) == 0) {
+                        if(this.rand.nextInt(2) == 0) {
                             if(sheepentity.getFleeceColor().getColorValue() == 0){
                                 sheepentity.setCustomName(new StringTextComponent("Shaun"));
                             }else{
                             sheepentity.setCustomName(new StringTextComponent("jeb_"));
                             }
+                            sheepentity.setCustomNameVisible(true);
                         }
                         this.world.addEntity(sheepentity);
                     }
@@ -152,10 +155,18 @@ public class EasterEggProjectile extends EggEntity {
                         assert villagerentity != null;
                         villagerentity.setGrowingAge(-24000);
                         villagerentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        villagerentity.setCustomName(new StringTextComponent("Villager #" + this.rand.nextInt(100)));
-                        if(Objects.requireNonNull(villagerentity.getCustomName()).getString().equals("Villager #9"))
+                        villagerentity.setCustomName(new StringTextComponent("Villager #" + this.rand.nextInt(101)));
+                        if(Objects.requireNonNull(villagerentity.getCustomName()).getString().equals("Villager #0")) {
+                            villagerentity.setHealth(0);
+                        }
+                        if(Objects.requireNonNull(villagerentity.getCustomName()).getString().equals("Villager #4")) {
+                            villagerentity.setItemStackToSlot(EquipmentSlotType.HEAD, new ItemStack(Misc.MUSTACHE.get()));
+                        }
+                        if(Objects.requireNonNull(villagerentity.getCustomName()).getString().equals("Villager #9")) {
                             villagerentity.setHeldItem(Hand.MAIN_HAND, new ItemStack(Misc.MIC.get()));
+                        }
                         villagerentity.setCustomNameVisible(true);
+                        villagerentity.setShakeHeadTicks(20);
                         this.world.addEntity(villagerentity);
                     }
                 }

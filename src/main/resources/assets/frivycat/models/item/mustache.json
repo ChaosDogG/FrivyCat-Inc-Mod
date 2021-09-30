@@ -1,0 +1,21 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "frivycat:item/mustache"
+	},
+	"display": {
+		"gui": {
+			"translation": [0, -3.25, 0],
+			"scale": [1.75, 1.75, 1]
+		},
+		"head": {
+			"translation": [0, -3.25, -6],
+			"scale": [1.75, 1.75, 1]
+		},
+		"fixed": {
+			"translation": [0, -3.25, 0],
+			"scale": [1.75, 1.75, 1]
+		}
+	}
+}

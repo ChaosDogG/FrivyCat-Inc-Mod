@@ -3,6 +3,7 @@ package chaosdog.frivycat;
 import chaosdog.frivycat.items.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
@@ -47,6 +48,10 @@ public class Misc {
     // potion filled mug (WIP)
     public static final RegistryObject<Item> POTION_MUG = Utils.regItem(ITEMS,"potion_mug", new PotionMug(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
     public static final RegistryObject<Item> MUG = Utils.regItem(ITEMS,"mug", new Mug(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
+
+    // mustaches
+    public static final RegistryObject<Item> MUSTACHE = Utils.regItem(ITEMS, "mustache", new ArmorItem(ModArmorMaterials.MUSTACHE, EquipmentSlotType.HEAD, (new Item.Properties().group(ItemGroup.COMBAT))));
+    public static final RegistryObject<Item> MUMBO_MUSTACHE = Utils.regItem(ITEMS, "mumbo_mustache", new ArmorItem(ModArmorMaterials.MUMBO_MUSTACHE, EquipmentSlotType.HEAD, (new Item.Properties().group(ItemGroup.COMBAT))));
 
     public static void init(IEventBus eventBus) {
         FrivyCatMod.LOGGER.info("Setting up everything else");

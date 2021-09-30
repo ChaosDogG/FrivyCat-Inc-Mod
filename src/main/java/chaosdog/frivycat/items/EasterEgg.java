@@ -1,14 +1,15 @@
 package chaosdog.frivycat.items;
 
 import chaosdog.frivycat.entities.projectile.EasterEggProjectile;
+import net.minecraft.block.DispenserBlock;
+import net.minecraft.dispenser.IPosition;
+import net.minecraft.dispenser.ProjectileDispenseBehavior;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.EggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Stats;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 
 public class EasterEgg extends EggItem {
@@ -16,6 +17,14 @@ public class EasterEgg extends EggItem {
 
     public EasterEgg(Properties builder) {
         super(builder);
+        DispenserBlock.registerDispenseBehavior(this, new ProjectileDispenseBehavior() {
+            @Override
+            protected ProjectileEntity getProjectileEntity(World worldIn, IPosition position, ItemStack stackIn) {
+                return Util.make(new EasterEggProjectile(worldIn, position.getX(), position.getY(), position.getZ()), (easteregg) -> {
+                    easteregg.setItem(stackIn);
+                });
+            }
+        });
     }
 
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {

@@ -8,13 +8,15 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolItem;
+import net.minecraft.item.*;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 // this will be the class that will represent the stone banana
@@ -45,4 +47,42 @@ public class StoneBanana extends ToolItem {
     public boolean isPiglinCurrency(ItemStack stack) {
         return true;
     }
+
+    @Override
+    public ActionResultType onItemUseFirst(ItemStack stack, ItemUseContext context) {
+        World world = context.getWorld();
+
+        if(!world.isRemote) {
+            PlayerEntity playerIn = Objects.requireNonNull(context.getPlayer());
+            BlockState blockIn = world.getBlockState(context.getPos());
+
+            onBedrockBlockBreakAttempt(blockIn, context, playerIn);
+            stack.damageItem(1, playerIn, player -> player.sendBreakAnimation(context.getHand()));
+        }
+        return super.onItemUseFirst(stack, context);
+    }
+
+    private void onBedrockBlockBreakAttempt(BlockState blockIn, ItemUseContext context, PlayerEntity playerIn) {
+        if(isBedrock(blockIn)) {
+            if(!playerIn.isCreative()) {
+                breakBedrock(context.getWorld(), context.getPos());
+            }
+            else if (playerIn.isCreative()) {
+                yeetBedrock(context.getWorld(), context.getPos());
+            }
+        }
+    }
+
+    private boolean isBedrock(BlockState blockIn) {
+        return blockIn.getBlock().matchesBlock(Blocks.BEDROCK);
+    }
+
+    private void breakBedrock(World world, BlockPos pos) {
+        world.destroyBlock(pos, true);
+    }
+
+    private void yeetBedrock(World world, BlockPos pos) {
+        world.destroyBlock(pos, false);
+    }
+
 }
