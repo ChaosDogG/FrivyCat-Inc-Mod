@@ -23,26 +23,33 @@ public class Misc {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FrivyCatMod.ID);
 
     // foods
-    public static final RegistryObject<Item> SCOOBY_SNACK = regFood("scooby_snack", 64, 2, 1f, true, true, Rarity.EPIC);
-    public static final RegistryObject<Item> COTTON_CANDY_STRAND = regFood("cotton_candy_strand", 64, 2, 1f, true, false, Rarity.COMMON);
-    public static final RegistryObject<Item> GREEN_APPLE_CANDY = regFood("green_apple_candy", 64, 4, 2f, false, false, Rarity.COMMON);
-    public static final RegistryObject<Item> HONEY_MUG = regHoneyMug("honey_mug", 1, 12, 2f, false, false, Rarity.COMMON);
+    public static final RegistryObject<Item> SCOOBY_SNACK = Utils.regItem(ITEMS,"scooby_snack", new Item(new Item.Properties().group(ItemGroup.FOOD).rarity(Rarity.EPIC).food(ModFoods.SCOOBY_SNACK)));
+    public static final RegistryObject<Item> COTTON_CANDY_STRAND = Utils.regItem(ITEMS,"cotton_candy_strand", new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COTTON_CANDY_STRAND)));
+    public static final RegistryObject<Item> GREEN_APPLE_CANDY = Utils.regItem(ITEMS,"green_apple_candy", new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.GREEN_APPLE_CANDY)));
+    public static final RegistryObject<Item> HONEY_MUG = Utils.regItem(ITEMS,"honey_mug", new HoneyMug(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.HONEY_MUG)));
 
     // other items
     public static final RegistryObject<Item> EASTER_EGG = Utils.regItem(ITEMS, "easter_egg", new EasterEgg(new Item.Properties().group(ItemGroup.MISC).maxStackSize(16).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> MIC = Utils.regItem(ITEMS, "mic", new Item(new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<Item> PENCIL = Utils.regItem(ITEMS,"pencil", new Item(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(150)));
     public static final RegistryObject<Item> RED_TEA_BUCKET = Utils.regItem(ITEMS,"red_tea_bucket", new Item(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
     public static final RegistryObject<Item> BABY_RATTLE_BOY = regBabyRattle("boy");
     public static final RegistryObject<Item> BABY_RATTLE_GIRL = regBabyRattle("girl");
-    public static final RegistryObject<Item> LOCK_PICK = Utils.regItem(ITEMS,"lock_pick", new LockPick(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(300)));
-    public static final RegistryObject<Item> MUMBO_DUST = Utils.regItem(ITEMS, "mumbo_dust", new Item(new Item.Properties().group(ItemGroup.REDSTONE).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> BABY_BOTTLE = Utils.regItem(ITEMS,"baby_bottle", new Item(new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<Item> MAGE_BOOK = Utils.regItem(ITEMS,"mage_book", new ShinyItem(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
-    public static final RegistryObject<Item> MAGIC_WAND = Utils.regItem(ITEMS,"magic_wand", new ShinyItem(new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<Item> BUTTER = Utils.regItem(ITEMS, "butter", new Butter(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> MUMBO_DUST = Utils.regItem(ITEMS, "mumbo_dust", new Item(new Item.Properties().group(ItemGroup.REDSTONE).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> DISPENSER_BOW = Utils.regItem(ITEMS, "dispenser_bow", new Item(new Item.Properties().group(ItemGroup.TOOLS).rarity(Rarity.UNCOMMON)));
 
-    // stone banana (work in progress)
+    // tools (work in progress)
+    //TODO should allow player to edit signs on right-click if Quark is not installed
+    public static final RegistryObject<Item> PENCIL = Utils.regItem(ITEMS,"pencil", new Item(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(150)));
+    //TODO can "record" a mob's cries to be played in a jukebox/note block
+    public static final RegistryObject<Item> MIC = Utils.regItem(ITEMS, "mic", new Item(new Item.Properties().group(ItemGroup.MISC)));
+    //TODO TBD
+    public static final RegistryObject<Item> MAGE_BOOK = Utils.regItem(ITEMS,"mage_book", new ShinyItem(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+    //TODO various magical things
+    public static final RegistryObject<Item> MAGIC_WAND = Utils.regItem(ITEMS,"magic_wand", new MagicWand(new Item.Properties().group(ItemGroup.MISC).maxDamage(500)));
+    //TODO should force entities to drop their weapons/armor and preventing them from picking them back up, forced dismount, and mobs should drop this if they pick it up
+    public static final RegistryObject<Item> BUTTER = Utils.regItem(ITEMS, "butter", new Butter(new Item.Properties().group(ItemGroup.MISC)));
+    //TODO should forcefully open locked chest
+    public static final RegistryObject<Item> LOCK_PICK = Utils.regItem(ITEMS,"lock_pick", new LockPick(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(300)));
     public static final RegistryObject<Item> STONE_BANANA = Utils.regItem(ITEMS,"stone_banana", new StoneBanana(7.0f, -2.0f, ItemTier.STONE, (new Item.Properties().group(ItemGroup.TOOLS).rarity(Rarity.EPIC))));
 
     // potion filled mug (WIP)
@@ -50,6 +57,7 @@ public class Misc {
     public static final RegistryObject<Item> MUG = Utils.regItem(ITEMS,"mug", new Mug(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
 
     // mustaches
+    //TODO make these render as items, not as armor
     public static final RegistryObject<Item> MUSTACHE = Utils.regItem(ITEMS, "mustache", new ArmorItem(ModArmorMaterials.MUSTACHE, EquipmentSlotType.HEAD, (new Item.Properties().group(ItemGroup.COMBAT))));
     public static final RegistryObject<Item> MUMBO_MUSTACHE = Utils.regItem(ITEMS, "mumbo_mustache", new ArmorItem(ModArmorMaterials.MUMBO_MUSTACHE, EquipmentSlotType.HEAD, (new Item.Properties().group(ItemGroup.COMBAT))));
 
@@ -58,33 +66,6 @@ public class Misc {
         // register the item registry object
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
-    }
-
-    // generates and registers food items
-    private static RegistryObject<Item> regFood(String name, int stackSize, int hungerPoints, float saturation, boolean isFast, boolean wolfFood, Rarity rarity) {
-        Food.Builder food_props = new Food.Builder().hunger(hungerPoints).saturation(saturation);
-        if (isFast)
-            food_props = food_props.fastToEat();
-
-        if (wolfFood)
-            food_props = food_props.meat();
-
-        Item.Properties properties = new Item.Properties().rarity(rarity).group(ItemGroup.FOOD).food(food_props.build()).maxStackSize(stackSize);
-
-        return Utils.regItem(ITEMS, name, new Item(properties));
-    }
-
-    private static RegistryObject<Item> regHoneyMug(String name, int stackSize, int hungerPoints, float saturation, boolean isFast, boolean wolfFood, Rarity rarity) {
-        Food.Builder food_props = new Food.Builder().hunger(hungerPoints).saturation(saturation);
-        if (isFast)
-            food_props = food_props.fastToEat();
-
-        if (wolfFood)
-            food_props = food_props.meat();
-
-        Item.Properties properties = new Item.Properties().rarity(rarity).group(ItemGroup.FOOD).food(food_props.build()).maxStackSize(stackSize);
-
-        return Utils.regItem(ITEMS, name, new HoneyMug(properties));
     }
 
     // generates and registers baby rattles

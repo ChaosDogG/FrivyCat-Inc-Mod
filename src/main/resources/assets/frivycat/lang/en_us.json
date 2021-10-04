@@ -48,6 +48,7 @@
     "item.frivycat.cotton_candy_strand": "Cotton Candy Strand",
     "item.frivycat.cultist_diamond": "Cultist Diamond",
     "item.frivycat.dark_diamond": "Dark Diamond",
+    "item.frivycat.dispenser_bow": "Dispenser Bow",
     "item.frivycat.easter_egg": "Easter Egg",
     "item.frivycat.fire_diamond": "Fire Diamond",
     "item.frivycat.garnet": "Garnet",
@@ -68,6 +69,7 @@
     "item.frivycat.mustache": "Mustache",
     "item.frivycat.peace_diamond": "Peace Diamond",
     "item.frivycat.pencil": "Pencil",
+    "item.frivycat.potion_mug": "Potion Mug",
     "item.frivycat.potion_mug.effect.empty": "Uncraftable Mug",
     "item.frivycat.potion_mug.effect.water": "Mug of Water",
     "item.frivycat.potion_mug.effect.mundane": "Mundane Mug",
@@ -107,5 +109,6 @@
     "item.frivycat.baby_rattle_girl.tooltip": "Girl",
 
     "message.corrupted_block_collide_unsafe": "Something isn't right with that block...better pick it back up",
-    "message.corrupted_block_collide_safe": "How strange...seems with this item, you're receiving quite the buff..."
+    "message.corrupted_block_collide_safe": "How strange...seems with this item, you're receiving quite the buff...",
+    "message.magic_wand.failed": "Hrm....maybe you need more levels..."
 }
