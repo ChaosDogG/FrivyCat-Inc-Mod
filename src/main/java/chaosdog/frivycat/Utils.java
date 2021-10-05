@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.potion.Effect;
+import net.minecraft.potion.Potion;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
@@ -38,4 +40,13 @@ public class Utils {
         return item_registry.register(name, () -> item);
     }
 
+    //register an Effect
+    public static <E extends Effect> RegistryObject<E> regEffect(DeferredRegister<Effect> effect_registry, String name, E effect) {
+        return effect_registry.register(name, () -> effect);
+    }
+
+    //register a Potion
+    public static <P extends Potion> RegistryObject<P> regPotion(DeferredRegister<Potion> potion_registry, String name, P potion) {
+        return potion_registry.register(name, () -> potion);
+    }
 }

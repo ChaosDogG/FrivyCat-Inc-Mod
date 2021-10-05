@@ -35,6 +35,8 @@
   "block.frivycat.dummy_b": "Pillar Format Block",
   "block.frivycat.dummy_c": "Front-Face Block",
 
+  "effect.frivycat.slippery": "Slippery",
+
   "entity.minecraft.villager.frivycat.dummy_a": "Reality Stabilizer",
   "entity.minecraft.villager.frivycat.dummy_b": "Code Debugger",
   "entity.minecraft.villager.frivycat.dummy_c": "Model Checker",
@@ -48,6 +50,7 @@
   "item.frivycat.cotton_candy_strand": "Zuckerwatte",
   "item.frivycat.cultist_diamond": "Veehrter Diamant",
   "item.frivycat.dark_diamond": "Dunkler Diamant",
+  "item.frivycat.dispenser_bow": "Dispenser Bow",
   "item.frivycat.easter_egg": "Easter Egg",
   "item.frivycat.fire_diamond": "Feuer Diamont",
   "item.frivycat.garnet": "Granat",
@@ -64,8 +67,11 @@
   "item.frivycat.mic": "Mikro",
   "item.frivycat.mug": "Becher",
   "item.frivycat.mumbo_dust": "Mumbo Dust",
+  "item.frivycat.mumbo_mustache": "Mumbo's Mustache",
+  "item.frivycat.mustache": "Mustache",
   "item.frivycat.peace_diamond": "Friendens Diamont",
   "item.frivycat.pencil": "Bleistift",
+  "item.frivycat.potion_mug": "Potion Mug",
   "item.frivycat.potion_mug.effect.empty": "Uncraftable Mug",
   "item.frivycat.potion_mug.effect.water": "Mug of Water",
   "item.frivycat.potion_mug.effect.mundane": "Mundane Mug",
@@ -106,4 +112,5 @@
 
   "message.corrupted_block_collide_unsafe": "Something isn't right with that block...better pick it back up",
   "message.corrupted_block_collide_safe": "How strange...seems with this item, you're receiving quite the buff...",
+  "message.magic_wand.failed": "Hrm....maybe you need more levels..."
 }

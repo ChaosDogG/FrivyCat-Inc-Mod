@@ -35,6 +35,8 @@
     "block.frivycat.dummy_b": "Pillar Format Block",
     "block.frivycat.dummy_c": "Front-Face Block",
 
+    "effect.frivycat.slippery": "cant hold dis",
+
     "entity.minecraft.villager.frivycat.dummy_a": "Real-plase balensr",
     "entity.minecraft.villager.frivycat.dummy_b": "Techno-Looker persn",
     "entity.minecraft.villager.frivycat.dummy_c": "Shape-tester thing job",
@@ -109,5 +111,6 @@
     "item.frivycat.baby_rattle_girl.tooltip": "Girl",
 
     "message.corrupted_block_collide_unsafe": "Idk 'bout dis....betr re-get it",
-    "message.corrupted_block_collide_safe": "Woah....did u just unlock god hax w that thing?"
+    "message.corrupted_block_collide_safe": "Woah....did u just unlock god hax w that thing?",
+    "message.magic_wand.failed": "Hrm....maybe you need more levels..."
 }
