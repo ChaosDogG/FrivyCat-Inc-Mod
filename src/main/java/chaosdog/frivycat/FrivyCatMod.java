@@ -1,11 +1,14 @@
 package chaosdog.frivycat;
 
+import chaosdog.frivycat.entities.ModEntityTypes;
+import chaosdog.frivycat.world.structure.ModStructures;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,9 +28,10 @@ public class FrivyCatMod {
         Villagers.init(eventBus);
         Misc.init(eventBus);
         ModBlocks.init(eventBus);
-        ModEntities.init(eventBus);
+        ModEntityTypes.init(eventBus);
         ModEffects.init(eventBus);
         ModPotions.init(eventBus);
+        ModStructures.register(eventBus);
 
         // put debug stick and knowledge book in tools tab of creative inventory
         Utils.changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TOOLS);
@@ -56,8 +60,16 @@ public class FrivyCatMod {
         // add Written Book to misc tab
         Utils.changeCreativeTab(Items.WRITTEN_BOOK, ItemGroup.MISC);
 
+        eventBus.addListener(this::setup);
+
         LOGGER.info("Registering villager trades");
         MinecraftForge.EVENT_BUS.register(VillagerTrades.class);
+
+        private void setup(final FMLClientSetupEvent event) {
+            event.enqueueWork(() -> {
+                ModStructures.setupStructures();
+            });
+        }
 
         LOGGER.info("Setup complete");
     }
