@@ -64,13 +64,13 @@ public class FrivyCatMod {
 
         LOGGER.info("Registering villager trades");
         MinecraftForge.EVENT_BUS.register(VillagerTrades.class);
+        LOGGER.info("Setup complete");
+    }
 
         private void setup(final FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
                 ModStructures.setupStructures();
             });
         }
-
-        LOGGER.info("Setup complete");
     }
-}
+

@@ -22,6 +22,8 @@ import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.gen.feature.structure.StructureStart;
 import net.minecraft.world.gen.feature.structure.VillageConfig;
 import net.minecraft.world.gen.feature.template.TemplateManager;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
 
 public class DeathFellAccidentWaterStructure extends Structure<NoFeatureConfig> {
     public DeathFellAccidentWaterStructure() {
@@ -71,17 +73,17 @@ public class DeathFellAccidentWaterStructure extends Structure<NoFeatureConfig> 
                     new VillageConfig(() -> dynamicRegistryMapper.getRegistry(Registry.JIGSAW_POOL_KEY)
                             .getOrDefault(new ResourceLocation(FrivyCatMod.ID, "death_fell_accident_water/start_pool")),
                             10), AbstractVillagePiece::new,chunkGenerator,templateManagerIn,
-                    pos,this.components,this.rand,false,true);
+                    pos, this.components, this.rand,false,true);
 
-            this.components.forEach(piece -> piece.offset(0, -26, 0));
+            this.components.forEach(piece -> piece.offset(0, -25, 0));
             this.components.forEach(piece -> piece.getBoundingBox().minY -= 1);
 
             this.recalculateStructureSize();
 
-            /*LogManager.getLogger().log(Level.DEBUG, "Troll Mound at " +
+            LogManager.getLogger().log(Level.DEBUG, "Troll Mound at " +
                     this.components.get(0).getBoundingBox().minX + " " +
                     this.components.get(0).getBoundingBox().minY + " " +
-                    this.components.get(0).getBoundingBox().minZ);*/
+                    this.components.get(0).getBoundingBox().minZ);
         }
     }
 }

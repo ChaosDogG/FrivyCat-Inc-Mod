@@ -1,7 +1,9 @@
 package chaosdog.frivycat.world.structure;
 
 import chaosdog.frivycat.FrivyCatMod;
+import chaosdog.frivycat.world.structure.structures.ChaosHeadStructure;
 import chaosdog.frivycat.world.structure.structures.DeathFellAccidentWaterStructure;
+import chaosdog.frivycat.world.structure.structures.VillagerSpawnerStructure;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -23,10 +25,18 @@ public class ModStructures {
 
     public static final RegistryObject<Structure<NoFeatureConfig>> DEATH_FELL_ACCIDENT_WATER =
             STRUCTURES.register("death_fell_accident_water", DeathFellAccidentWaterStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> CHAOS_HEAD =
+            STRUCTURES.register("chaos_head", ChaosHeadStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> VILLAGER_SPAWNER =
+            STRUCTURES.register("villager_spawner", VillagerSpawnerStructure::new);
 
     public static void setupStructures() {
         setupMapSpacingAndLand(DEATH_FELL_ACCIDENT_WATER.get(),
                 new StructureSeparationSettings(100,50,1234567890), true);
+        setupMapSpacingAndLand(CHAOS_HEAD.get(),
+                new StructureSeparationSettings(100,50,987654321), true);
+        setupMapSpacingAndLand(VILLAGER_SPAWNER.get(),
+                new StructureSeparationSettings(100,50,123454321), true);
     }
 
     public static <F extends Structure<?>> void setupMapSpacingAndLand(F structure, StructureSeparationSettings structureSeparationSettings,

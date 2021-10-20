@@ -61,6 +61,7 @@ public class ModWorldEvents {
             tempMap.putIfAbsent(ModStructures.DEATH_FELL_ACCIDENT_WATER.get(),
                     DimensionStructuresSettings.field_236191_b_.get(ModStructures.DEATH_FELL_ACCIDENT_WATER.get()));
             serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
+
         }
     }
 }
