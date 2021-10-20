@@ -45,7 +45,6 @@ public class Misc {
     public static final RegistryObject<Item> MAGE_BOOK = Utils.regItem(ITEMS,"mage_book", new ShinyItem(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
     //TODO various magical things
     public static final RegistryObject<Item> MAGIC_WAND = Utils.regItem(ITEMS,"magic_wand", new MagicWand(new Item.Properties().group(ItemGroup.MISC).maxDamage(500)));
-    //TODO should force entities to drop their weapons/armor and preventing them from picking them back up, forced dismount, and mobs should drop this if they pick it up
     public static final RegistryObject<Item> BUTTER = Utils.regItem(ITEMS, "butter", new Butter(new Item.Properties().group(ItemGroup.MISC)));
     //TODO should forcefully open locked chest
     public static final RegistryObject<Item> LOCK_PICK = Utils.regItem(ITEMS,"lock_pick", new LockPick(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(300)));
@@ -56,7 +55,6 @@ public class Misc {
     public static final RegistryObject<Item> MUG = Utils.regItem(ITEMS,"mug", new Mug(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
 
     // mustaches
-    //TODO make these render as items, not as armor
     public static final RegistryObject<Item> MUSTACHE = Utils.regItem(ITEMS, "mustache", new Mustache(new Item.Properties().group(ItemGroup.COMBAT)));
     public static final RegistryObject<Item> MUMBO_MUSTACHE = Utils.regItem(ITEMS, "mumbo_mustache", new Mustache(new Item.Properties().group(ItemGroup.COMBAT)));
 

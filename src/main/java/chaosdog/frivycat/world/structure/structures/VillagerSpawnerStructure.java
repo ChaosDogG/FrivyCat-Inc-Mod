@@ -75,7 +75,7 @@ public class VillagerSpawnerStructure extends Structure<NoFeatureConfig> {
                             10), AbstractVillagePiece::new,chunkGenerator,templateManagerIn,
                     pos, this.components, this.rand,false,true);
 
-            this.components.forEach(piece -> piece.offset(0, 1, 0));
+            this.components.forEach(piece -> piece.offset(0, 2, 0));
             this.components.forEach(piece -> piece.getBoundingBox().minY -= 1);
 
             this.recalculateStructureSize();

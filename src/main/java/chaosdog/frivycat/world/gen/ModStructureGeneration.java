@@ -22,6 +22,8 @@ public class ModStructureGeneration {
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
 
             structures.add(() -> ModStructures.DEATH_FELL_ACCIDENT_WATER.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+            structures.add(() -> ModStructures.CHAOS_HEAD.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+            structures.add(() -> ModStructures.VILLAGER_SPAWNER.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         }
     }
 }

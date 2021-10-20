@@ -34,5 +34,9 @@ public class ModBlocks {
         ITEMS.register(eventbus);
     }
 
+    /*public static void initClient() {
+        RenderTypeLookup.setRenderLayer(SPIRIT_REALM_PORTAL, RenderType.getTranslucent());
+    }*/
+
 
 }
