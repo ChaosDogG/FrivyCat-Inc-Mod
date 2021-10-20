@@ -3,10 +3,46 @@
   "generator": {
     "type": "minecraft:noise",
     "seed": 0,
-    "settings": "frivycat:co_o",
+    "settings": {
+        "bedrock_roof_position": 0,
+        "bedrock_floor_position": 0,
+        "sea_level": 32,
+        "disable_mob_generation": true,
+        "default_block": { "Name": "minecraft:obsidian" },
+        "default_fluid": {
+            "Name": "minecraft:water",
+            "Properties": { "level": "0" }
+        },
+        "noise": {
+            "height": 256,
+            "density_factor": 0,
+            "density_offset": 0.019921875,
+            "size_horizontal": 1,
+            "size_vertical": 2,
+            "simplex_surface_noise": false,
+            "random_density_offset": false,
+            "sampling": {
+                "xz_scale": 0.9999999814507745,
+                "y_scale": 0.9999999814507745,
+                "xz_factor": 80,
+                "y_factor": 160
+            },
+            "bottom_slide": {
+                "target": -30,
+                "size": 0,
+                "offset": 0
+            },
+            "top_slide": {
+                "target": -10,
+                "size": 3,
+                "offset": 0
+            }
+        },
+        "structures": { "structures": {} }
+    },
     "biome_source": {
-      "type": "minecraft:fixed",
-      "biome": "frivycat:co-plains"
+        "type": "minecraft:fixed",
+        "biome": "frivycat:co-plains"
     }
   }
 }

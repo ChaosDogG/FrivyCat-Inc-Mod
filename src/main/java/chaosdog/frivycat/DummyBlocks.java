@@ -28,7 +28,7 @@ public class DummyBlocks {
     public static final RegistryObject<Block> DUMMY_C = regDummyFrontFace("c");
 
     public static void init(IEventBus eventbus) {
-        FrivyCatMod.LOGGER.info("Setting up dummy blocks");
+        FrivyCatMod.LOG.info("Setting up dummy blocks");
         // register the registries
         BLOCKS.register(eventbus);
         ITEMS.register(eventbus);

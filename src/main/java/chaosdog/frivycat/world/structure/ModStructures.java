@@ -77,6 +77,7 @@ public class ModStructures {
     }
 
     public static void register(IEventBus eventBus) {
+        FrivyCatMod.LOG.info("Setting up structures");
         STRUCTURES.register(eventBus);
     }
 }

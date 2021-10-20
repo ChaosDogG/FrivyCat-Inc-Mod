@@ -15,7 +15,7 @@ public class ModEffects {
     //public static final RegistryObject<ModEffect> CREATIVE_LIKE = Utils.regEffect(EFFECTS, "creative_like", new ModEffect(EffectType.BENEFICIAL, 0x19a6f5));
 
     public static void init(IEventBus eventBus) {
-        FrivyCatMod.LOGGER.info("Setting up Effects");
+        FrivyCatMod.LOG.info("Setting up Effects");
         //register the registry
         EFFECTS.register(eventBus);
     }

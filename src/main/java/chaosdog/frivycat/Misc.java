@@ -61,7 +61,7 @@ public class Misc {
     public static final RegistryObject<Item> MUMBO_MUSTACHE = Utils.regItem(ITEMS, "mumbo_mustache", new Mustache(new Item.Properties().group(ItemGroup.COMBAT)));
 
     public static void init(IEventBus eventBus) {
-        FrivyCatMod.LOGGER.info("Setting up everything else");
+        FrivyCatMod.LOG.info("Setting up everything else");
         // register the item registry object
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);

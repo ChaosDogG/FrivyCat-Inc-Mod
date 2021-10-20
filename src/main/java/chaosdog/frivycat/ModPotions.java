@@ -13,7 +13,7 @@ public class ModPotions {
 
 
     public static void init(IEventBus eventBus) {
-        FrivyCatMod.LOGGER.info("Setting up Potions");
+        FrivyCatMod.LOG.info("Setting up Potions");
         //register the registry
         POTIONS.register(eventBus);
     }

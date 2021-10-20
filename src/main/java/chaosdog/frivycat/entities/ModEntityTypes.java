@@ -21,7 +21,7 @@ public class ModEntityTypes {
                             .build(new ResourceLocation(FrivyCatMod.ID, "easter_egg").toString()));
 
     public static void init(IEventBus eventBus) {
-        FrivyCatMod.LOGGER.info("Setting up the entities");
+        FrivyCatMod.LOG.info("Setting up the entities");
         // register the entity registry object
         ENTITY_TYPES.register(eventBus);
     }

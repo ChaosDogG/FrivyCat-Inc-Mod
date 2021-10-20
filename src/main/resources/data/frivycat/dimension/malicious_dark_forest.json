@@ -1,12 +1,56 @@
 {
-  "type": "frivycat:malicious_dark_forest",
-  "generator": {
-    "type": "minecraft:noise",
-    "seed": 0,
-    "settings": "frivycat:m_d",
-    "biome_source": {
-      "type": "minecraft:fixed",
-      "biome": "frivycat:m-dforest"
+    "type": "frivycat:malicious_dark_forest",
+    "generator": {
+        "type": "minecraft:noise",
+        "seed": 0,
+        "settings": {
+            "bedrock_roof_position": -10,
+            "bedrock_floor_position": 0,
+            "sea_level": 63,
+            "disable_mob_generation": true,
+            "default_block": { "Name": "minecraft:black_concrete" },
+            "default_fluid": {
+                "Name": "minecraft:water",
+                "Properties": { "level": "0" }
+            },
+            "noise": {
+                "height": 256,
+                "density_factor": 1,
+                "density_offset": 0.019921875,
+                "size_horizontal": 1,
+                "size_vertical": 2,
+                "simplex_surface_noise": false,
+                "random_density_offset": false,
+                "sampling": {
+                    "xz_scale": 0.9999999814507745,
+                    "y_scale": 0.9999999814507745,
+                    "xz_factor": 80,
+                    "y_factor": 160
+                },
+                "bottom_slide": {
+                    "target": -30,
+                    "size": 0,
+                    "offset": 0
+                },
+                "top_slide": {
+                    "target": -10,
+                    "size": 3,
+                    "offset": 0
+                }
+            },
+            "structures": {
+                "structures": {
+                    "minecraft:mansion": {
+                        "spacing": 1000,
+                        "separation": 500,
+                        "salt": 0
+                    }
+                }
+            }
+        },
+        "biome_source": {
+            "type": "minecraft:fixed",
+            "biome": "frivycat:m-dforest"
+        }
     }
-  }
 }

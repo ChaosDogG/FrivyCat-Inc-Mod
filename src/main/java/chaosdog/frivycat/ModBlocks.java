@@ -28,7 +28,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CORRUPTED_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "corrupted_block", new CorruptedBlock(AbstractBlock.Properties.create(Material.TNT).harvestLevel(0).hardnessAndResistance(0f, 10000f).sound(SoundType.SLIME).doesNotBlockMovement()), ItemGroup.DECORATIONS);
 
     public static void init(IEventBus eventbus) {
-        FrivyCatMod.LOGGER.info("Setting up blocks");
+        FrivyCatMod.LOG.info("Setting up blocks");
         // register the registries
         BLOCKS.register(eventbus);
         ITEMS.register(eventbus);

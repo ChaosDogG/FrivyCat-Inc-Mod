@@ -1,25 +1,28 @@
 package chaosdog.frivycat;
 
 import chaosdog.frivycat.entities.ModEntityTypes;
+import chaosdog.frivycat.world.biomeprovider.SpiritRealmBiomeSource;
 import chaosdog.frivycat.world.structure.ModStructures;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod("frivycat")
 public class FrivyCatMod {
-    public static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOG = LogManager.getLogger();
     public static final String ID = "frivycat";
 
     public FrivyCatMod() {
-        LOGGER.info("Setting up Frivy Cat mod");
+        LOG.info("Setting up Frivy Cat mod");
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // modules
@@ -62,15 +65,14 @@ public class FrivyCatMod {
 
         eventBus.addListener(this::setup);
 
-        LOGGER.info("Registering villager trades");
+        LOG.info("Registering villager trades");
         MinecraftForge.EVENT_BUS.register(VillagerTrades.class);
-        LOGGER.info("Setup complete");
+        LOG.info("Setup complete");
     }
 
-        private void setup(final FMLClientSetupEvent event) {
-            event.enqueueWork(() -> {
-                ModStructures.setupStructures();
-            });
-        }
+    private void setup(final FMLCommonSetupEvent event) {
+        ModStructures.setupStructures();
+        Registry.register(Registry.BIOME_PROVIDER_CODEC, new ResourceLocation("frivycat:spirit_realm_biomes"), SpiritRealmBiomeSource.CODEC);
     }
+}
 
