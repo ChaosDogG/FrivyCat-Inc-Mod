@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "frivycat:block/apple_generator"
+    }
+  }
+}

@@ -34,6 +34,11 @@
     "block.frivycat.dummy_a": "Single Texture Block",
     "block.frivycat.dummy_b": "Pillar Format Block",
     "block.frivycat.dummy_c": "Front-Face Block",
+    "block.frivycat.apple_generator": "Apple Generator",
+    "block.frivycat.gold_generator": "Gold Generator",
+    "block.frivycat.iron_generator": "Iron Generator",
+    "block.frivycat.log_generator": "Log Generator",
+    "block.frivycat.obsidian_generator": "Obsidian Generator",
 
     "effect.frivycat.slippery": "Slippery",
 
