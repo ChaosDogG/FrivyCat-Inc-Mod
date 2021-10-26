@@ -20,6 +20,17 @@ public class ModEntityTypes {
                             EntityClassification.MISC).size(0.25F, 0.25F).trackingRange(4).updateInterval(10)
                             .build(new ResourceLocation(FrivyCatMod.ID, "easter_egg").toString()));
 
+    /*public static final RegistryObject<EntityType<PigperEntity>> PIGPER =
+            ENTITY_TYPES.register("pig-per",
+                    () -> EntityType.Builder.create(PigperEntity::new,
+                            EntityClassification.CREATURE).size(0.9f, 0.9f).trackingRange(10)
+                            .build(new ResourceLocation(FrivyCatMod.ID, "pig-per").toString()));
+    public static final RegistryObject<EntityType<CreepigEntity>> CREEPIG =
+            ENTITY_TYPES.register("cree-pig",
+                    () -> EntityType.Builder.create(CreepigEntity::new,
+                            EntityClassification.MONSTER).size(1.0f, 2.0f).trackingRange(10)
+                            .build(new ResourceLocation(FrivyCatMod.ID, "cree-pig").toString()));*/
+
     public static void init(IEventBus eventBus) {
         FrivyCatMod.LOG.info("Setting up the entities");
         // register the entity registry object

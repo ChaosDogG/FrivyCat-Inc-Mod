@@ -35,6 +35,7 @@
     "block.frivycat.dummy_b": "Pillar Format Block",
     "block.frivycat.dummy_c": "Front-Face Block",
     "block.frivycat.apple_generator": "Apple Generator",
+    "block.frivycat.diamond_generator": "Diamond Generator",
     "block.frivycat.gold_generator": "Gold Generator",
     "block.frivycat.iron_generator": "Iron Generator",
     "block.frivycat.log_generator": "Log Generator",
@@ -42,6 +43,8 @@
 
     "effect.frivycat.slippery": "Slippery",
 
+    "entity.frivycat.easter_egg_projectile": "Easter Egg Projectile",
+    "entity.frivycat.pig-per": "Pig-Per",
     "entity.minecraft.villager.frivycat.dummy_a": "Reality Stabilizer",
     "entity.minecraft.villager.frivycat.dummy_b": "Code Debugger",
     "entity.minecraft.villager.frivycat.dummy_c": "Model Checker",
@@ -76,6 +79,7 @@
     "item.frivycat.mustache": "Mustache",
     "item.frivycat.peace_diamond": "Peace Diamond",
     "item.frivycat.pencil": "Pencil",
+    "item.frivycat.pigper_spawn_egg": "Pig-Per Creation Capsule",
     "item.frivycat.potion_mug": "Potion Mug",
     "item.frivycat.potion_mug.effect.empty": "Uncraftable Mug",
     "item.frivycat.potion_mug.effect.water": "Mug of Water",

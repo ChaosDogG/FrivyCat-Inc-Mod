@@ -28,7 +28,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> CORRUPTED_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "corrupted_block", new CorruptedBlock(AbstractBlock.Properties.create(Material.TNT).harvestLevel(0).hardnessAndResistance(0f, 10000f).sound(SoundType.SLIME).doesNotBlockMovement()), ItemGroup.DECORATIONS);
 
     //Generator stuff
+    //TODO make these blocks spawn their respected item/item type
+    public static final RegistryObject<Block> LOG_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "log_generator", new GeneratorBlock(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(5).hardnessAndResistance(10f, 100f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)), ItemGroup.MISC);
+    public static final RegistryObject<Block> IRON_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "iron_generator", new GeneratorBlock(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(5).hardnessAndResistance(10f, 100f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)), ItemGroup.MISC);
     public static final RegistryObject<Block> APPLE_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "apple_generator", new GeneratorBlock(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(5).hardnessAndResistance(10f, 100f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)), ItemGroup.MISC);
+    public static final RegistryObject<Block> GOLD_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "gold_generator", new GeneratorBlock(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(5).hardnessAndResistance(10f, 100f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)), ItemGroup.MISC);
+    public static final RegistryObject<Block> DIAMOND_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "diamond_generator", new GeneratorBlock(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(5).hardnessAndResistance(10f, 100f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)), ItemGroup.MISC);
+    public static final RegistryObject<Block> OBSIDIAN_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "obsidian_generator", new GeneratorBlock(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(5).hardnessAndResistance(10f, 100f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)), ItemGroup.MISC);
 
     public static void init(IEventBus eventbus) {
         FrivyCatMod.LOG.info("Setting up blocks");

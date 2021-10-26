@@ -58,6 +58,9 @@ public class Misc {
     public static final RegistryObject<Item> MUSTACHE = Utils.regItem(ITEMS, "mustache", new Mustache(new Item.Properties().group(ItemGroup.COMBAT)));
     public static final RegistryObject<Item> MUMBO_MUSTACHE = Utils.regItem(ITEMS, "mumbo_mustache", new Mustache(new Item.Properties().group(ItemGroup.COMBAT)));
 
+    // capsules
+    //public static final RegistryObject<ModSpawnEggItem> PIGPER_SPAWN_EGG = Utils.regItem(ITEMS, "pigper_spawn_egg", new ModSpawnEggItem(ModEntityTypes.PIGPER, 0x0da70b, 0x90413f, new Item.Properties().group(ItemGroup.MISC)));
+
     public static void init(IEventBus eventBus) {
         FrivyCatMod.LOG.info("Setting up everything else");
         // register the item registry object

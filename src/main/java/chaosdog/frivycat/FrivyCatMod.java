@@ -74,5 +74,9 @@ public class FrivyCatMod {
         ModStructures.setupStructures();
         Registry.register(Registry.BIOME_PROVIDER_CODEC, new ResourceLocation("frivycat:spirit_realm_biomes"), SpiritRealmBiomeSource.CODEC);
     }
+
+    /*private void doClientStuff(final FMLClientSetupEvent event){
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PIGPER.get(), PigperRenderer::new);
+    }*/
 }
 
