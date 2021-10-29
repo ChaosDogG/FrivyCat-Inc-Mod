@@ -6,11 +6,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -36,6 +39,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> DIAMOND_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "diamond_generator", new GeneratorBlock(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(5).hardnessAndResistance(10f, 100f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)), ItemGroup.MISC);
     public static final RegistryObject<Block> OBSIDIAN_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "obsidian_generator", new GeneratorBlock(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(5).hardnessAndResistance(10f, 100f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE)), ItemGroup.MISC);
 
+    //Fires
+    public static final RegistryObject<Block> SPIRIT_FIRE = Utils.regBlock(BLOCKS, "spirit_fire", new SpiritFire(AbstractBlock.Properties.from(Blocks.FIRE)));
+
     public static void init(IEventBus eventbus) {
         FrivyCatMod.LOG.info("Setting up blocks");
         // register the registries
@@ -43,9 +49,10 @@ public class ModBlocks {
         ITEMS.register(eventbus);
     }
 
-    /*public static void initClient() {
-        RenderTypeLookup.setRenderLayer(SPIRIT_REALM_PORTAL, RenderType.getTranslucent());
-    }*/
+    public static void initClient(FMLClientSetupEvent event){
+        RenderTypeLookup.setRenderLayer(SPIRIT_REALM_PORTAL.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(SPIRIT_FIRE.get(), RenderType.getCutout());
+    }
 
 
 }

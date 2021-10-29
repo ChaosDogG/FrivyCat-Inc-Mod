@@ -1,0 +1,166 @@
+{
+    "type": "frivycat:wooded_terrors",
+    "generator": {
+        "type": "minecraft:noise",
+        "seed": 0,
+        "settings": {
+            "name": "minecraft:overworld",
+            "bedrock_roof_position": -10,
+            "bedrock_floor_position": 0,
+            "sea_level": 63,
+            "disable_mob_generation": true,
+            "default_block": {
+                "Name": "minecraft:netherrack"
+            },
+            "default_fluid": {
+                "Name": "minecraft:lava",
+                "Properties": {
+                    "level": "0"
+                }
+            },
+            "noise": {
+                "height": 256,
+                "density_factor": 1,
+                "density_offset": 0.019921875,
+                "size_horizontal": 1,
+                "size_vertical": 2,
+                "simplex_surface_noise": false,
+                "random_density_offset": false,
+                "sampling": {
+                    "xz_scale": 0.9999999814507745,
+                    "y_scale": 0.9999999814507745,
+                    "xz_factor": 80,
+                    "y_factor": 160
+                },
+                "bottom_slide": {
+                    "target": -15,
+                    "size": 3,
+                    "offset": 0
+                },
+                "top_slide": {
+                    "target": -10,
+                    "size": 3,
+                    "offset": 0
+                }
+            },
+            "structures": {
+                "structures": {
+                    "minecraft:mansion": {
+                        "spacing": 1000,
+                        "separation": 500,
+                        "salt": 0
+                    },
+                    "minecraft:fortress": {
+                        "spacing": 27,
+                        "separation": 4,
+                        "salt": 30084232
+                    },
+                    "minecraft:bastion_remnant": {
+                        "spacing": 27,
+                        "separation": 4,
+                        "salt": 30084232
+                    },
+                    "minecraft:endcity": {
+                        "spacing": 10,
+                        "separation": 5,
+                        "salt": 0
+                    }
+                }
+            }
+        },
+        "biome_source": {
+            "type": "minecraft:multi_noise",
+            "seed": 0,
+            "altitude_noise": {
+                "firstOctave": -7,
+                "amplitudes": [
+                    1,
+                    1
+                ]
+            },
+            "temperature_noise": {
+                "firstOctave": -7,
+                "amplitudes": [
+                    1,
+                    1
+                ]
+            },
+            "humidity_noise": {
+                "firstOctave": -7,
+                "amplitudes": [
+                    1,
+                    1
+                ]
+            },
+            "weirdness_noise": {
+                "firstOctave": -7,
+                "amplitudes": [
+                    1,
+                    1
+                ]
+            },
+            "biomes": [
+                {
+                    "biome": "frivycat:malicious_dark_forest",
+                    "parameters": {
+                        "altitude": 0.25,
+                        "temperature": 0.5,
+                        "humidity": 0.25,
+                        "weirdness": -1,
+                        "offset": 0
+                    }
+                },
+                {
+                    "biome": "frivycat:paranoid_end_highlands",
+                    "parameters": {
+                        "altitude": 1,
+                        "temperature": -0.5,
+                        "humidity": -0.5,
+                        "weirdness": -0.5,
+                        "offset": 0.5
+                    }
+                },
+                {
+                    "biome": "frivycat:enraged_nether_wastes",
+                    "parameters": {
+                        "altitude": -1,
+                        "temperature": 1,
+                        "humidity": -1,
+                        "weirdness": -0.25,
+                        "offset": 0
+                    }
+                },
+                {
+                    "biome": "frivycat:controlled_plains",
+                    "parameters": {
+                        "altitude": 0.5,
+                        "temperature": 0.25,
+                        "humidity": -0.25,
+                        "weirdness": 0.25,
+                        "offset": 1
+                    }
+                },
+                {
+                    "biome": "frivycat:insane_end_barrens",
+                    "parameters": {
+                        "altitude": -0.5,
+                        "temperature": -0.25,
+                        "humidity": 0.5,
+                        "weirdness": 0.5,
+                        "offset": 1
+                    }
+                },
+                {
+                    "biome": "frivycat:corrupted_basalt_deltas",
+                    "parameters": {
+                        "altitude": -0.25,
+                        "temperature": -1,
+                        "humidity": 1,
+                        "weirdness": 1,
+                        "offset": 0.5
+                    }
+                }
+            ]
+        }
+    }
+}

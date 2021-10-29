@@ -68,6 +68,7 @@ public class Misc {
         ITEMS.register(eventBus);
     }
 
+
     // generates and registers baby rattles
     private static RegistryObject<Item> regBabyRattle(String gender) {
         return Utils.regItem(ITEMS, "baby_rattle_" + gender,

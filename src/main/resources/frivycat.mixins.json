@@ -4,6 +4,11 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "frivycat.refmap.json",
   "verbose": true,
-  "client": [ "ServerWorldInfoMixin" ],
-  "minVersion": "0.8"
+  "client": [
+    "ServerWorldInfoMixin"
+  ],
+  "minVersion": "0.8",
+  "mixins": [
+    "AbstractFireCustom"
+  ]
 }

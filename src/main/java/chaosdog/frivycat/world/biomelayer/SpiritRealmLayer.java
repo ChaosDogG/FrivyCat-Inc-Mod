@@ -23,24 +23,24 @@ public class SpiritRealmLayer implements IAreaTransformer0 {
     private static Registry<Biome> biomeRegistry;
 
     protected ArrayList<RegistryKey<Biome>> commonBiomes = new ArrayList<>(Arrays.asList(
-            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:co-plains")),
             RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:l-plains")),
             RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:cu-desert")),
             RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:d-ocean")),
-            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:e-nwastes")),
-            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:p-ehighlands"))
+            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:p-fforest")),
+            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:h-plains"))
     ));
 
     protected ArrayList<RegistryKey<Biome>> uncommonBiomes = new ArrayList<>(Arrays.asList(
-            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:co-bdeltas")),
             RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:m-dforest")),
-            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:i-ebarrens")),
-            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:d-badlands"))
+            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:i-ebarrens"))
     ));
 
     protected ArrayList<RegistryKey<Biome>> rareBiomes = new ArrayList<>(Arrays.asList(
-            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:p-fforest")),
-            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:h-plains"))
+            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:co-plains")),
+            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:co-bdeltas")),
+            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:p-ehighlands")),
+            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:e-nwastes")),
+            RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:d-badlands"))
     ));
 
     @Override
