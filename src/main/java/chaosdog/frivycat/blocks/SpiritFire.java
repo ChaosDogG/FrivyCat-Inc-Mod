@@ -1,5 +1,6 @@
 package chaosdog.frivycat.blocks;
 
+import chaosdog.frivycat.Gems;
 import net.minecraft.block.*;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -10,6 +11,7 @@ public class SpiritFire extends AbstractFireBlock{
     public SpiritFire(AbstractBlock.Properties properties) {
         super(properties, 0.0f);
     }
+
     public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
         return this.canSurvive(stateIn, worldIn, currentPos) ? this.getDefaultState() : Blocks.AIR.getDefaultState();
     }
@@ -19,7 +21,7 @@ public class SpiritFire extends AbstractFireBlock{
     }
 
     public static boolean shouldLightSpiritFire(Block block) {
-        return block == Blocks.NETHERRACK;
+        return block == Gems.ZIRCON_BLOCK.get();
     }
 
     protected boolean canBurn(BlockState state) {

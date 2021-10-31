@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "frivycat:block/passive_fields_portal"
+    "axis=x": {
+      "model": "frivycat:block/passive_fields_portal_ns"
+    },
+    "axis=z": {
+      "model": "frivycat:block/passive_fields_portal_ew"
     }
   }
 }

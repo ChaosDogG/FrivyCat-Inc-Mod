@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "frivycat:block/wooded_terrors_portal"
+    "axis=x": {
+      "model": "frivycat:block/wooded_terrors_portal_ns"
+    },
+    "axis=z": {
+      "model": "frivycat:block/wooded_terrors_portal_ew"
     }
   }
 }

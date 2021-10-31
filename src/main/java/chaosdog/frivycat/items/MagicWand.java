@@ -2,11 +2,14 @@ package chaosdog.frivycat.items;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 
 import java.util.Objects;
@@ -30,7 +33,7 @@ public class MagicWand extends Item {
         return super.onItemUseFirst(stack, context);
     }
     //TODO this should randomly enchant every item in the player's inventory when they right-click on an enchant table
-    /*private void randomEnchant(BlockState blockIn, ItemUseContext context, PlayerEntity playerIn) {
+    private void randomEnchant(BlockState blockIn, ItemUseContext context, PlayerEntity playerIn) {
         if(isEnchantTable(blockIn)) {
             if(playerIn.experienceLevel == 3) {
                 applyRandEnchant(context.getItem(), context.getPlayer());
@@ -43,7 +46,7 @@ public class MagicWand extends Item {
     private void applyRandEnchant(ItemStack item, PlayerEntity player, int id) {
         player.inventory.getSizeInventory();
         item.addEnchantment(EnchantmentHelper.addRandomEnchantment(nextInt, item, 10, true));
-    }*/
+    }
 
     private boolean isEnchantTable(BlockState blockIn) {
         return blockIn.getBlock() == Blocks.ENCHANTING_TABLE;

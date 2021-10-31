@@ -2,26 +2,44 @@ package chaosdog.frivycat.blocks;
 
 import chaosdog.frivycat.world.structure.dimension.FCDimensionType;
 import chaosdog.frivycat.world.structure.dimension.FCTeleporter;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BreakableBlock;
+import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.RegistryKey;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.item.ItemStack;
+import net.minecraft.state.EnumProperty;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;
 
 public class FCPortalBlock extends BreakableBlock {
+    public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.HORIZONTAL_AXIS;
+    protected static final VoxelShape X_AABB = Block.makeCuboidShape(0.0D, 0.0D, 6.0D, 16.0D, 16.0D, 10.0D);
+    protected static final VoxelShape Z_AABB = Block.makeCuboidShape(6.0D, 0.0D, 0.0D, 10.0D, 16.0D, 16.0D);
     private final FCDimensionType dimension;
 
     public FCPortalBlock(FCDimensionType dimension) {
         super(Properties.from(Blocks.GLASS).doesNotBlockMovement());
         this.dimension = dimension;
+        this.setDefaultState(this.stateContainer.getBaseState().with(AXIS, Direction.Axis.X));
+    }
+
+    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+        switch(state.get(AXIS)) {
+            case Z:
+                return Z_AABB;
+            case X:
+            default:
+                return X_AABB;
+        }
     }
 
     @Override
@@ -48,6 +66,13 @@ public class FCPortalBlock extends BreakableBlock {
         }
     }
 
+    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
+        Direction.Axis direction$axis = facing.getAxis();
+        Direction.Axis direction$axis1 = stateIn.get(AXIS);
+        boolean flag = direction$axis1 != direction$axis && direction$axis.isHorizontal();
+        return !flag && !facingState.matchesBlock(this) && !(new PortalSize(worldIn, currentPos, direction$axis1)).validatePortal() ? Blocks.AIR.getDefaultState() : super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+    }
+
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if(entity.hasPortalCooldown()) {
@@ -62,5 +87,28 @@ public class FCPortalBlock extends BreakableBlock {
             entity.changeDimension(serverworld, new FCTeleporter(serverworld, dimension, this));
             entity.setPortalCooldown();
         }
+    }
+    public ItemStack getItem(IBlockReader worldIn, BlockPos pos, BlockState state) {
+        return ItemStack.EMPTY;
+    }
+    public BlockState rotate(BlockState state, Rotation rot) {
+        switch(rot) {
+            case COUNTERCLOCKWISE_90:
+            case CLOCKWISE_90:
+                switch(state.get(AXIS)) {
+                    case Z:
+                        return state.with(AXIS, Direction.Axis.X);
+                    case X:
+                        return state.with(AXIS, Direction.Axis.Z);
+                    default:
+                        return state;
+                }
+            default:
+                return state;
+        }
+    }
+
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+        builder.add(AXIS);
     }
 }

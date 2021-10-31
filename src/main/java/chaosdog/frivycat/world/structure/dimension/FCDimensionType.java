@@ -14,9 +14,9 @@ import net.minecraft.world.World;
 import java.util.function.Supplier;
 
 public enum FCDimensionType {
-    PASSIVE_FIELDS(ParticleTypes.ENCHANTED_HIT, Gems.TOPAZ_BLOCK),
-    WOODED_TERRORS(ParticleTypes.PORTAL, () -> Blocks.TNT),
-    SPIRIT_REALM(ParticleTypes.CRIT, Gems.ZIRCON_BLOCK);
+    PASSIVE_FIELDS(ParticleTypes.HAPPY_VILLAGER, Gems.TOPAZ_BLOCK),
+    WOODED_TERRORS(ParticleTypes.FLAME, () -> Blocks.TNT),
+    SPIRIT_REALM(ParticleTypes.SOUL, Gems.ZIRCON_BLOCK);
 
     private final IParticleData portalParticles;
     private final Supplier<Block> frame;

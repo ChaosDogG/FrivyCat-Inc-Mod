@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "frivycat:block/spirit_realm_portal"
+    "axis=x": {
+      "model": "frivycat:block/spirit_realm_portal_ns"
+    },
+    "axis=z": {
+      "model": "frivycat:block/spirit_realm_portal_ew"
     }
   }
 }
