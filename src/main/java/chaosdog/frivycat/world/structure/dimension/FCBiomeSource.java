@@ -1,6 +1,7 @@
 package chaosdog.frivycat.world.structure.dimension;
 
 import chaosdog.frivycat.FrivyCatMod;
+import chaosdog.frivycat.world.WorldSeed;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.util.registry.Registry;
@@ -19,7 +20,7 @@ public class FCBiomeSource extends BiomeProvider {
 
     private final String layerName;
     private final Registry<Biome> biomeRegistry;
-    private final long seed;
+    private long seed;
     private final Layer genBiomes;
 
     public FCBiomeSource(String group, long seed, Registry<Biome> registry) {
@@ -27,6 +28,8 @@ public class FCBiomeSource extends BiomeProvider {
         this.layerName = group;
         this.biomeRegistry = registry;
         this.seed = seed;
+        if(seed == -1) this.seed = WorldSeed.getSeed();
+        FrivyCatMod.LOG.debug("biome source seed for " + group + ": " + this.seed);
         try {
             FCLayer layer = FCLayer.valueOf(group.toUpperCase());
             this.genBiomes = FCLayerUtil.genLayers(seed, biomeRegistry, layer);

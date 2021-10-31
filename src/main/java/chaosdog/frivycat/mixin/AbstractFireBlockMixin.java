@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(AbstractFireBlock.class)
-public abstract class AbstractFireCustom {
+public abstract class AbstractFireBlockMixin {
 
     @Inject(at = @At("HEAD"), method = "getFireForPlacement", cancellable = true)
     private static void addCustomFire(IBlockReader reader, BlockPos pos, CallbackInfoReturnable<BlockState> cir){
