@@ -40,6 +40,9 @@
     "block.frivycat.iron_generator": "Iron Generator",
     "block.frivycat.log_generator": "Log Generator",
     "block.frivycat.obsidian_generator": "Obsidian Generator",
+    "block.frivycat.passive_fields_portal":"Passive Fields Portal",
+    "block.frivycat.wooded_terrors_portal":"Wooded Terrors Portal",
+    "block.frivycat.spirit_realm_portal":"Spirit Realm Portal",
 
     "effect.frivycat.slippery": "Slippery",
 

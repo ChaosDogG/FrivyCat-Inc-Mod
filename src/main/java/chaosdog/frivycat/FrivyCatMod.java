@@ -1,8 +1,9 @@
 package chaosdog.frivycat;
 
 import chaosdog.frivycat.entities.ModEntityTypes;
-import chaosdog.frivycat.world.biomeprovider.SpiritRealmBiomeSource;
 import chaosdog.frivycat.world.structure.ModStructures;
+import chaosdog.frivycat.world.structure.dimension.FCBiomeSource;
+import chaosdog.frivycat.world.structure.dimension.FCDimensions;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
@@ -36,6 +37,7 @@ public class FrivyCatMod {
         ModEffects.init(eventBus);
         ModPotions.init(eventBus);
         ModStructures.register(eventBus);
+        FCDimensions.init(eventBus);
 
         // put debug stick and knowledge book in tools tab of creative inventory
         Utils.changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TOOLS);
@@ -65,6 +67,7 @@ public class FrivyCatMod {
         Utils.changeCreativeTab(Items.WRITTEN_BOOK, ItemGroup.MISC);
 
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::doClientStuff);
 
         LOG.info("Registering villager trades");
         MinecraftForge.EVENT_BUS.register(VillagerTrades.class);
@@ -73,11 +76,12 @@ public class FrivyCatMod {
 
     private void setup(final FMLCommonSetupEvent event) {
         ModStructures.setupStructures();
-        Registry.register(Registry.BIOME_PROVIDER_CODEC, new ResourceLocation("frivycat:spirit_realm_biomes"), SpiritRealmBiomeSource.CODEC);
+        Registry.register(Registry.BIOME_PROVIDER_CODEC, new ResourceLocation("frivycat:dimension_biomes"), FCBiomeSource.CODEC);
     }
 
     private void doClientStuff(final FMLClientSetupEvent event){
-        ModBlocks.initClient(event);
+        ModBlocks.initClient();
+        FCDimensions.initClient();
         //RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PIGPER.get(), PigperRenderer::new);
     }
 }

@@ -13,7 +13,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -27,7 +26,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> MUMBO_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "mumbo_block", new MumboBlock(AbstractBlock.Properties.from(net.minecraft.block.Blocks.REDSTONE_BLOCK)), ItemGroup.REDSTONE);
 
     //Custom stuff
-    public static final RegistryObject<Block> SPIRIT_REALM_PORTAL = Utils.regBlock(BLOCKS, "spirit_realm_portal", new SpiritRealmPortal(AbstractBlock.Properties.from(Blocks.NETHER_PORTAL)));
     public static final RegistryObject<Block> CORRUPTED_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "corrupted_block", new CorruptedBlock(AbstractBlock.Properties.create(Material.TNT).harvestLevel(0).hardnessAndResistance(0f, 10000f).sound(SoundType.SLIME).doesNotBlockMovement()), ItemGroup.DECORATIONS);
 
     //Generator stuff
@@ -49,8 +47,7 @@ public class ModBlocks {
         ITEMS.register(eventbus);
     }
 
-    public static void initClient(FMLClientSetupEvent event){
-        RenderTypeLookup.setRenderLayer(SPIRIT_REALM_PORTAL.get(), RenderType.getTranslucent());
+    public static void initClient(){
         RenderTypeLookup.setRenderLayer(SPIRIT_FIRE.get(), RenderType.getCutout());
     }
 

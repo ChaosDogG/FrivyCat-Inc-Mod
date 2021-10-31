@@ -2,7 +2,7 @@
     "type": "frivycat:spirit_realm",
     "generator": {
         "type": "minecraft:noise",
-        "seed": 0,
+        "seed": -1,
         "settings": {
             "bedrock_roof_position": -10,
             "bedrock_floor_position": 0,
@@ -94,8 +94,9 @@
             }
         },
         "biome_source": {
-            "type": "frivycat:spirit_realm_biomes",
-            "seed": 0
+            "type": "frivycat:dimension_biomes",
+            "group":"spirit_realm",
+            "seed": -1
         }
     }
 }
