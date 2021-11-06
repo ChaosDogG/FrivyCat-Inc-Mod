@@ -1,10 +1,14 @@
 package chaosdog.frivycat.items;
 
+import net.minecraft.block.DispenserBlock;
+import net.minecraft.dispenser.IBlockSource;
+import net.minecraft.dispenser.OptionalDispenseBehavior;
 import net.minecraft.enchantment.IArmorVanishable;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
@@ -14,6 +18,13 @@ import net.minecraft.world.World;
 public class Mustache extends Item implements IArmorVanishable {
     public Mustache(Properties p_i48487_1_) {
         super(p_i48487_1_);
+        DispenserBlock.registerDispenseBehavior(this, new OptionalDispenseBehavior() {
+            @Override
+            public ItemStack dispenseStack(IBlockSource source, ItemStack stack) {
+                this.setSuccessful(ArmorItem.func_226626_a_(source, stack));
+                return stack;
+            }
+        });
     }
 
     @Override

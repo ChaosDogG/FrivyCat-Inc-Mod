@@ -2,13 +2,11 @@ package chaosdog.frivycat.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;
@@ -26,10 +24,12 @@ public class GeneratorBlock extends Block {
         }
 
         if(worldIn.getBlockState(pos).canEntitySpawn(worldIn, pos, EntityType.ITEM)) {
-            Entity entity = EntityType.ITEM.spawn(worldIn, (CompoundNBT)null, (ITextComponent)null, (PlayerEntity)null, pos.up(), SpawnReason.STRUCTURE, false, false);
-            if(entity != null) {
-                entity.isBurning();
-            }
+            double d0 = (double)(worldIn.rand.nextFloat() * 0.7F) + (double)0.15F;
+            double d1 = (double)(worldIn.rand.nextFloat() * 0.7F) + (double)0.060000002F + 0.6D;
+            double d2 = (double)(worldIn.rand.nextFloat() * 0.7F) + (double)0.15F;
+            ItemEntity itementity = new ItemEntity(worldIn, (double)pos.getX() + d0, (double)pos.getY() + d1, (double)pos.getZ() + d2, new ItemStack(Items.APPLE));
+            itementity.setDefaultPickupDelay();
+            worldIn.addEntity(itementity);
         }
     }
 }

@@ -4,7 +4,6 @@ import chaosdog.frivycat.ModEffects;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.EndPortalFrameBlock;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,9 +13,11 @@ import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.Items;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.ActionResultType;
-import net.minecraft.util.DamageSource;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.Objects;
 
 public class Butter extends Item {
     public Butter(Properties properties) {
@@ -24,16 +25,13 @@ public class Butter extends Item {
     }
 
     @Override
-    public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity) {
-        if(entity instanceof LivingEntity) {
-            LivingEntity living = (LivingEntity) entity;
-            living.attackEntityFrom(DamageSource.GENERIC, 0.0f);
-            living.addPotionEffect(new EffectInstance(ModEffects.SLIPPERY.get(), 200, 1));
-        }
+    public ActionResultType itemInteractionForEntity(ItemStack stack, PlayerEntity player, LivingEntity living, Hand hand) {
+        living.addPotionEffect(new EffectInstance(ModEffects.SLIPPERY.get(), 200, 1));
         if(!player.isCreative()) {
             stack.shrink(1);
+            return ActionResultType.CONSUME;
         }
-        return true;
+        return ActionResultType.PASS;
     }
 
     @Override
@@ -46,6 +44,7 @@ public class Butter extends Item {
                 return ActionResultType.SUCCESS;
             } else {
                 BlockState clicked1 = clicked.with(EndPortalFrameBlock.EYE, Boolean.FALSE);
+                PlayerEntity playerIn = Objects.requireNonNull(context.getPlayer());
                 world.setBlockState(block, clicked1, 2);
                 world.updateComparatorOutputLevel(block, Blocks.END_PORTAL_FRAME);
                 double d0 = (double)(world.rand.nextFloat() * 0.7F) + (double)0.15F;
