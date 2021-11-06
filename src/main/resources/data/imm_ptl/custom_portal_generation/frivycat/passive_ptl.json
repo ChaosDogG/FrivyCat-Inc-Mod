@@ -5,14 +5,14 @@
 	"reversable": true,
 	"form": {
 		"type": "imm_ptl:classical",
-		"from_frame_block": "minecraft:dirt",
+		"from_frame_block": "frivycat:topaz_block",
 		"area_block": "minecraft:air",
-		"to_frame_block": "minecraft:dirt",
+		"to_frame_block": "frivycat:topaz_block",
 		"generate_frame_if_not_found": true
 	},
 	"trigger": {
 		"type": "imm_ptl:use_item",
-		"item": "minecraft:written_book",
+		"item": "minecraft:flint_and_steel",
 		"consume": true
 	}
 }
