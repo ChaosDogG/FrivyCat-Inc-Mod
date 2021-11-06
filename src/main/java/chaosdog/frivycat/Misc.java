@@ -1,5 +1,6 @@
 package chaosdog.frivycat;
 
+import chaosdog.frivycat.entities.ModEntityTypes;
 import chaosdog.frivycat.items.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
@@ -60,6 +61,8 @@ public class Misc {
 
     // capsules
     //public static final RegistryObject<ModSpawnEggItem> PIGPER_SPAWN_EGG = Utils.regItem(ITEMS, "pigper_spawn_egg", new ModSpawnEggItem(ModEntityTypes.PIGPER, 0x0da70b, 0x90413f, new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<ModSpawnEggItem> SCOOBY_SKELETON_SPAWN_EGG = Utils.regItem(ITEMS, "scooby_skeleton_spawn_egg", new ModSpawnEggItem(ModEntityTypes.SCOOBY_SKELETON, 0x53462d, 0x6a5a39, new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<ModSpawnEggItem> SCOOBY_STRAY_SPAWN_EGG = Utils.regItem(ITEMS, "scooby_stray_spawn_egg", new ModSpawnEggItem(ModEntityTypes.SCOOBY_STRAY, 0x827a53, 0xa49b70, new Item.Properties().group(ItemGroup.MISC)));
 
     public static void init(IEventBus eventBus) {
         FrivyCatMod.LOG.info("Setting up everything else");

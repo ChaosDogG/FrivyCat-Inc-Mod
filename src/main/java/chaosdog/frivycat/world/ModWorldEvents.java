@@ -1,6 +1,7 @@
 package chaosdog.frivycat.world;
 
 import chaosdog.frivycat.FrivyCatMod;
+import chaosdog.frivycat.world.gen.ModEntityGeneration;
 import chaosdog.frivycat.world.gen.ModStructureGeneration;
 import chaosdog.frivycat.world.structure.ModStructures;
 import com.mojang.serialization.Codec;
@@ -30,6 +31,7 @@ public class ModWorldEvents {
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
         ModStructureGeneration.generateStructures(event);
+        ModEntityGeneration.onEntitySpawn(event);
     }
 
     @SubscribeEvent

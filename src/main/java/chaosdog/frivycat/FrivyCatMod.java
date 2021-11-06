@@ -1,6 +1,8 @@
 package chaosdog.frivycat;
 
 import chaosdog.frivycat.entities.ModEntityTypes;
+import chaosdog.frivycat.entities.render.ScoobySkeletonRenderer;
+import chaosdog.frivycat.entities.render.ScoobyStrayRenderer;
 import chaosdog.frivycat.world.structure.ModStructures;
 import chaosdog.frivycat.world.structure.dimension.FCBiomeSource;
 import chaosdog.frivycat.world.structure.dimension.FCDimensions;
@@ -11,6 +13,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -83,6 +86,8 @@ public class FrivyCatMod {
         ModBlocks.initClient();
         FCDimensions.initClient();
         //RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PIGPER.get(), PigperRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.SCOOBY_SKELETON.get(), ScoobySkeletonRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.SCOOBY_STRAY.get(), ScoobyStrayRenderer::new);
     }
 }
 

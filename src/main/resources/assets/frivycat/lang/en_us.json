@@ -48,6 +48,8 @@
 
     "entity.frivycat.easter_egg_projectile": "Easter Egg Projectile",
     "entity.frivycat.pig-per": "Pig-Per",
+    "entity.frivycat.scooby-skeleton": "Scooby-Skeleton",
+    "entity.frivycat.scooby-stray": "Scooby-Stray",
     "entity.minecraft.villager.frivycat.dummy_a": "Reality Stabilizer",
     "entity.minecraft.villager.frivycat.dummy_b": "Code Debugger",
     "entity.minecraft.villager.frivycat.dummy_c": "Model Checker",
@@ -83,6 +85,8 @@
     "item.frivycat.peace_diamond": "Peace Diamond",
     "item.frivycat.pencil": "Pencil",
     "item.frivycat.pigper_spawn_egg": "Pig-Per Creation Capsule",
+    "item.frivycat.scooby_skeleton_spawn_egg": "Scooby-Skeleton Creation Capsule",
+    "item.frivycat.scooby_stray_spawn_egg": "Scooby-Stray Creation Capsule",
     "item.frivycat.potion_mug": "Potion Mug",
     "item.frivycat.potion_mug.effect.empty": "Uncraftable Mug",
     "item.frivycat.potion_mug.effect.water": "Mug of Water",

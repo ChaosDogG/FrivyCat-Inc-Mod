@@ -249,7 +249,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{SkullOwner:Nep}"
+              "tag": "{SkullOwner:_Nep__}"
             },
             {
               "function": "minecraft:set_lore",
@@ -269,7 +269,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{SkullOwner:Natsu}"
+              "tag": "{SkullOwner:Natsu___}"
             },
             {
               "function": "minecraft:set_lore",
