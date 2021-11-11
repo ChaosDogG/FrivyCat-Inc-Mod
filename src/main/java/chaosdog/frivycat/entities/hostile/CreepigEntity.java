@@ -1,6 +1,6 @@
 package chaosdog.frivycat.entities.hostile;
 
-/*public class CreepigEntity extends CreeperEntity implements IChargeableMob {
+/*public class CreepigEntity extends MonsterEntity implements IChargeableMob {
     private static final DataParameter<Integer> STATE = EntityDataManager.createKey(CreepigEntity.class, DataSerializers.VARINT);
     private static final DataParameter<Boolean> POWERED = EntityDataManager.createKey(CreepigEntity.class, DataSerializers.BOOLEAN);
     private static final DataParameter<Boolean> IGNITED = EntityDataManager.createKey(CreepigEntity.class, DataSerializers.BOOLEAN);
@@ -10,13 +10,13 @@ package chaosdog.frivycat.entities.hostile;
     private int explosionRadius = 3;
     private int droppedSkulls;
 
-    public CreepigEntity(EntityType<? extends CreeperEntity> type, World worldIn) {
+    public CreepigEntity(EntityType<? extends CreepigEntity> type, World worldIn) {
         super(type, worldIn);
     }
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new SwimGoal(this));
-        this.goalSelector.addGoal(2, new CreeperSwellGoal(this));
+        //this.goalSelector.addGoal(2, new CreeperSwellGoal(this));
         this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, OcelotEntity.class, 6.0F, 1.0D, 1.2D));
         this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, CatEntity.class, 6.0F, 1.0D, 1.2D));
         this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.0D, false));
@@ -27,8 +27,11 @@ package chaosdog.frivycat.entities.hostile;
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
     }
 
-    public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return MonsterEntity.func_234295_eP_().createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D);
+    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
+        return MobEntity.func_233666_p_()
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 0.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 20.0D)
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D);
     }
 
 
@@ -125,7 +128,7 @@ package chaosdog.frivycat.entities.hostile;
     protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
         super.dropSpecialItems(source, looting, recentlyHitIn);
         Entity entity = source.getTrueSource();
-        if (entity != this && entity instanceof CreeperEntity) {
+        if (entity instanceof CreeperEntity) {
             CreeperEntity creeperentity = (CreeperEntity)entity;
             if (creeperentity.ableToCauseSkullDrop()) {
                 creeperentity.incrementDroppedSkulls();
@@ -144,20 +147,17 @@ package chaosdog.frivycat.entities.hostile;
     }
 
 
-    @Override
     @OnlyIn(Dist.CLIENT)
     public float getCreeperFlashIntensity(float partialTicks) {
         return MathHelper.lerp(partialTicks, (float)this.lastActiveTime, (float)this.timeSinceIgnited) / (float)(this.fuseTime - 2);
     }
 
 
-    @Override
     public int getCreeperState() {
         return this.dataManager.get(STATE);
     }
 
 
-    @Override
     public void setCreeperState(int state) {
         this.dataManager.set(STATE, state);
     }
@@ -226,11 +226,9 @@ package chaosdog.frivycat.entities.hostile;
     }
 
 
-    @Override
     public boolean ableToCauseSkullDrop() {
         return this.isCharged() && this.droppedSkulls < 1;
     }
-    @Override
     public void incrementDroppedSkulls() {
         ++this.droppedSkulls;
     }
