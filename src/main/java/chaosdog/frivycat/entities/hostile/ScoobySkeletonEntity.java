@@ -39,7 +39,7 @@ public class ScoobySkeletonEntity extends AbstractSkeletonEntity {
                 .createMutableAttribute(Attributes.MAX_HEALTH, 10.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 3.0D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 50.0D);
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 16.0D);
     }
 
     protected SoundEvent getAmbientSound() {
@@ -58,6 +58,7 @@ public class ScoobySkeletonEntity extends AbstractSkeletonEntity {
         return SoundEvents.ENTITY_SKELETON_STEP;
     }
 
+    @Override
     public boolean attackEntityAsMob(Entity entityIn) {
         if (!super.attackEntityAsMob(entityIn)) {
             return false;

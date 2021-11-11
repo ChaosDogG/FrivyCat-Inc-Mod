@@ -1,5 +1,6 @@
 package chaosdog.frivycat.entities.hostile;
 
+import chaosdog.frivycat.ModEffects;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -40,7 +41,7 @@ public class ScoobyStrayEntity extends AbstractSkeletonEntity {
                 .createMutableAttribute(Attributes.MAX_HEALTH, 10.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 3.0D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 50.0D);
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 16.0D);
     }
 
     public static boolean func_223327_b(EntityType<ScoobyStrayEntity> p_223327_0_, IServerWorld p_223327_1_, SpawnReason reason, BlockPos p_223327_3_, Random p_223327_4_) {
@@ -81,7 +82,7 @@ public class ScoobyStrayEntity extends AbstractSkeletonEntity {
     protected AbstractArrowEntity fireArrow(ItemStack arrowStack, float distanceFactor) {
         AbstractArrowEntity abstractarrowentity = super.fireArrow(arrowStack, distanceFactor);
         if (abstractarrowentity instanceof ArrowEntity) {
-            ((ArrowEntity)abstractarrowentity).addEffect(new EffectInstance(Effects.SLOWNESS, 600));
+            ((ArrowEntity)abstractarrowentity).addEffect(new EffectInstance(ModEffects.SLIPPERY.get(), 600));
             ((ArrowEntity)abstractarrowentity).addEffect(new EffectInstance(Effects.LUCK, 600));
         }
 
