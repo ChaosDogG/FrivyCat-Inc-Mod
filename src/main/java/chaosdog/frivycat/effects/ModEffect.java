@@ -9,7 +9,10 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectType;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
+
+import java.util.Arrays;
 
 public class ModEffect extends Effect {
     public ModEffect(EffectType type, int liquidColor) {
@@ -20,23 +23,28 @@ public class ModEffect extends Effect {
     public void performEffect(LivingEntity living, int amplifier) {
         if(this == ModEffects.SLIPPERY.get()) {
             if(!(living instanceof PlayerEntity)) {
-                living.entityDropItem(living.getHeldItem(Hand.MAIN_HAND));
-                living.entityDropItem(living.getHeldItem(Hand.OFF_HAND));
-                living.setHeldItem(Hand.MAIN_HAND, ItemStack.EMPTY);
-                living.setHeldItem(Hand.OFF_HAND, ItemStack.EMPTY);
-                living.entityDropItem(living.getItemStackFromSlot(EquipmentSlotType.HEAD));
-                living.entityDropItem(living.getItemStackFromSlot(EquipmentSlotType.CHEST));
-                living.entityDropItem(living.getItemStackFromSlot(EquipmentSlotType.LEGS));
-                living.entityDropItem(living.getItemStackFromSlot(EquipmentSlotType.FEET));
-                living.setItemStackToSlot(EquipmentSlotType.HEAD, ItemStack.EMPTY);
-                living.setItemStackToSlot(EquipmentSlotType.CHEST, ItemStack.EMPTY);
-                living.setItemStackToSlot(EquipmentSlotType.LEGS, ItemStack.EMPTY);
-                living.setItemStackToSlot(EquipmentSlotType.FEET, ItemStack.EMPTY);
+                for (Hand hand1 : Arrays.asList(Hand.MAIN_HAND, Hand.OFF_HAND)) {
+                    living.entityDropItem(living.getHeldItem(hand1));
+                }
+                for (Hand hand : Arrays.asList(Hand.MAIN_HAND, Hand.OFF_HAND)) {
+                    living.setHeldItem(hand, ItemStack.EMPTY);
+                }
+                for (EquipmentSlotType slotType : Arrays.asList(EquipmentSlotType.HEAD, EquipmentSlotType.CHEST, EquipmentSlotType.LEGS, EquipmentSlotType.FEET)) {
+                    living.entityDropItem(living.getItemStackFromSlot(slotType));
+                }
+                for (EquipmentSlotType equipmentSlotType : Arrays.asList(EquipmentSlotType.HEAD, EquipmentSlotType.CHEST, EquipmentSlotType.LEGS, EquipmentSlotType.FEET)) {
+                    living.setItemStackToSlot(equipmentSlotType, ItemStack.EMPTY);
+                }
+                for (DamageSource damageSource : Arrays.asList(DamageSource.ANVIL, DamageSource.GENERIC, DamageSource.FALLING_BLOCK, DamageSource.CRAMMING, DamageSource.SWEET_BERRY_BUSH)) {
+                    living.isInvulnerableTo(damageSource);
+                }
                 if(living.isPassenger()) {
                     living.dismount();
                 }
                 if (living instanceof SheepEntity){
-                    ((SheepEntity) living).setSheared(true);
+                    if(((SheepEntity) living).isShearable()){
+                        ((SheepEntity) living).setSheared(true);
+                    }
                 }
             }else {
                 PlayerEntity player = (PlayerEntity) living;
@@ -45,6 +53,9 @@ public class ModEffect extends Effect {
                     if(!item.isEmpty() && EnchantmentHelper.hasBindingCurse(item)) {
                         EnchantmentHelper.getEnchantments(item).clear();
                     }
+                }
+                for (DamageSource damageSource : Arrays.asList(DamageSource.ANVIL, DamageSource.GENERIC, DamageSource.FALLING_BLOCK, DamageSource.CRAMMING, DamageSource.SWEET_BERRY_BUSH)) {
+                    player.isInvulnerableTo(damageSource);
                 }
                 player.inventory.dropAllItems();
                 if(player.isPassenger()){
