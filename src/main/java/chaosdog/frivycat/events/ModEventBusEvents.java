@@ -4,6 +4,7 @@ import chaosdog.frivycat.FrivyCatMod;
 import chaosdog.frivycat.entities.ModEntityTypes;
 import chaosdog.frivycat.entities.hostile.ScoobySkeletonEntity;
 import chaosdog.frivycat.entities.hostile.ScoobyStrayEntity;
+import chaosdog.frivycat.entities.passive.PigperEntity;
 import chaosdog.frivycat.events.loot.LuckyBlocksInStructures;
 import chaosdog.frivycat.items.ModSpawnEggItem;
 import net.minecraft.entity.EntityType;
@@ -20,9 +21,10 @@ import javax.annotation.Nonnull;
 public class ModEventBusEvents {
     @SubscribeEvent
     public static void addEntityAttributes(EntityAttributeCreationEvent event) {
+        //event.put(ModEntityTypes.CREEPIG.get(), CreepigEntity.setCustomAttributes().create());
+        event.put(ModEntityTypes.PIGPER.get(), PigperEntity.setCustomAttributes().create());
         event.put(ModEntityTypes.SCOOBY_SKELETON.get(), ScoobySkeletonEntity.setCustomAttributes().create());
         event.put(ModEntityTypes.SCOOBY_STRAY.get(), ScoobyStrayEntity.setCustomAttributes().create());
-        //event.put(ModEntityTypes.PIGPER.get(), PigperEntity.setCustomAttributes().create());
     }
 
     @SubscribeEvent

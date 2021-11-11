@@ -60,7 +60,7 @@ public class Misc {
     public static final RegistryObject<Item> MUMBO_MUSTACHE = Utils.regItem(ITEMS, "mumbo_mustache", new Mustache(new Item.Properties().group(ItemGroup.COMBAT)));
 
     // capsules
-    //public static final RegistryObject<ModSpawnEggItem> PIGPER_SPAWN_EGG = Utils.regItem(ITEMS, "pigper_spawn_egg", new ModSpawnEggItem(ModEntityTypes.PIGPER, 0x0da70b, 0x90413f, new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<ModSpawnEggItem> PIGPER_SPAWN_EGG = Utils.regItem(ITEMS, "pigper_spawn_egg", new ModSpawnEggItem(ModEntityTypes.PIGPER, 0x0da70b, 0x90413f, new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<ModSpawnEggItem> SCOOBY_SKELETON_SPAWN_EGG = Utils.regItem(ITEMS, "scooby_skeleton_spawn_egg", new ModSpawnEggItem(ModEntityTypes.SCOOBY_SKELETON, 0x53462d, 0x6a5a39, new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<ModSpawnEggItem> SCOOBY_STRAY_SPAWN_EGG = Utils.regItem(ITEMS, "scooby_stray_spawn_egg", new ModSpawnEggItem(ModEntityTypes.SCOOBY_STRAY, 0x827a53, 0xa49b70, new Item.Properties().group(ItemGroup.MISC)));
 

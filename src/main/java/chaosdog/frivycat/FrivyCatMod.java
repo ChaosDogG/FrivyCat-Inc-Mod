@@ -1,6 +1,7 @@
 package chaosdog.frivycat;
 
 import chaosdog.frivycat.entities.ModEntityTypes;
+import chaosdog.frivycat.entities.render.PigperRenderer;
 import chaosdog.frivycat.entities.render.ScoobySkeletonRenderer;
 import chaosdog.frivycat.entities.render.ScoobyStrayRenderer;
 import chaosdog.frivycat.world.structure.ModStructures;
@@ -85,7 +86,8 @@ public class FrivyCatMod {
     private void doClientStuff(final FMLClientSetupEvent event){
         ModBlocks.initClient();
         FCDimensions.initClient();
-        //RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PIGPER.get(), PigperRenderer::new);
+        //RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.CREEPIG.get(), CreepigRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PIGPER.get(), PigperRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.SCOOBY_SKELETON.get(), ScoobySkeletonRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.SCOOBY_STRAY.get(), ScoobyStrayRenderer::new);
     }

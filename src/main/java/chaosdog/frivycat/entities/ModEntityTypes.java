@@ -3,6 +3,7 @@ package chaosdog.frivycat.entities;
 import chaosdog.frivycat.FrivyCatMod;
 import chaosdog.frivycat.entities.hostile.ScoobySkeletonEntity;
 import chaosdog.frivycat.entities.hostile.ScoobyStrayEntity;
+import chaosdog.frivycat.entities.passive.PigperEntity;
 import chaosdog.frivycat.entities.projectile.EasterEggProjectile;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
@@ -33,12 +34,12 @@ public class ModEntityTypes {
                     () -> EntityType.Builder.create(ScoobyStrayEntity::new,
                                     EntityClassification.MONSTER).size(1.0f,2.0f).trackingRange(10)
                             .build(new ResourceLocation(FrivyCatMod.ID, "scooby_stray").toString()));
-    /*public static final RegistryObject<EntityType<PigperEntity>> PIGPER =
+    public static final RegistryObject<EntityType<PigperEntity>> PIGPER =
             ENTITY_TYPES.register("pig-per",
                     () -> EntityType.Builder.create(PigperEntity::new,
                             EntityClassification.CREATURE).size(0.9f, 0.9f).trackingRange(10)
                             .build(new ResourceLocation(FrivyCatMod.ID, "pig-per").toString()));
-    public static final RegistryObject<EntityType<CreepigEntity>> CREEPIG =
+    /*public static final RegistryObject<EntityType<CreepigEntity>> CREEPIG =
             ENTITY_TYPES.register("cree-pig",
                     () -> EntityType.Builder.create(CreepigEntity::new,
                             EntityClassification.MONSTER).size(1.0f, 2.0f).trackingRange(10)
