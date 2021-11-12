@@ -84,7 +84,7 @@ public class FrivyCatMod {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event){
-        ModBlocks.initClient();
+        //ModBlocks.initClient();
         FCDimensions.initClient();
         //RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.CREEPIG.get(), CreepigRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PIGPER.get(), PigperRenderer::new);
