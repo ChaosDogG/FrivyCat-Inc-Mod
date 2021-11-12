@@ -1,13 +1,6 @@
 package chaosdog.frivycat.blocks;
 
-import chaosdog.frivycat.Gems;
-import net.minecraft.block.*;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-
-public class SpiritFire extends AbstractFireBlock{
+/*public class SpiritFire extends AbstractFireBlock{
     public SpiritFire(AbstractBlock.Properties properties) {
         super(properties, 0.0f);
     }
@@ -27,6 +20,6 @@ public class SpiritFire extends AbstractFireBlock{
     protected boolean canBurn(BlockState state) {
         return true;
     }
-}
+}*/
 
 
