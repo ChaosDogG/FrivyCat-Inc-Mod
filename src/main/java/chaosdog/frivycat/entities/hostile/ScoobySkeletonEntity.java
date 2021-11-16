@@ -9,8 +9,8 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.merchant.villager.WanderingTraderEntity;
 import net.minecraft.entity.monster.AbstractSkeletonEntity;
-import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.monster.SkeletonEntity;
+import net.minecraft.entity.passive.horse.TraderLlamaEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.item.ItemStack;
@@ -28,8 +28,8 @@ public class ScoobySkeletonEntity extends AbstractSkeletonEntity {
     }
 
     protected void registerGoals() {
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, CreeperEntity.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, SkeletonEntity.class, true));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, SkeletonEntity.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, TraderLlamaEntity.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, WanderingTraderEntity.class, true));
         super.registerGoals();
     }

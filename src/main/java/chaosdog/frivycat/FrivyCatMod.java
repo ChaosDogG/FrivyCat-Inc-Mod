@@ -33,6 +33,7 @@ public class FrivyCatMod {
 
         // modules
         Gems.init(eventBus);
+        SpecialDiamonds.init(eventBus);
         DummyBlocks.init(eventBus);
         Villagers.init(eventBus);
         Misc.init(eventBus);

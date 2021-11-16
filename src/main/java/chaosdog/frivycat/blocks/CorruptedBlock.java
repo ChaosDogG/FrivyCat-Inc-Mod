@@ -1,6 +1,6 @@
 package chaosdog.frivycat.blocks;
 
-import chaosdog.frivycat.Gems;
+import chaosdog.frivycat.SpecialDiamonds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -27,16 +27,16 @@ public class CorruptedBlock extends Block {
             LivingEntity living = (LivingEntity) entityIn;
             if(entityIn instanceof PlayerEntity) {
                 PlayerEntity player = (PlayerEntity) entityIn;
-                if(player.isAlive() && !(player.getHeldItemMainhand().getItem() == Gems.CORRUPTED_DIAMOND.get())) {
+                if(player.isAlive() && !(player.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get())) {
                     player.sendStatusMessage(new TranslationTextComponent("message.corrupted_block_collide_unsafe").mergeStyle(TextFormatting.DARK_RED), true);
                 }
-                if(player.getHeldItemMainhand().getItem() == Gems.CORRUPTED_DIAMOND.get()) {
+                if(player.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get()) {
                     player.sendStatusMessage(new TranslationTextComponent("message.corrupted_block_collide_safe").mergeStyle(TextFormatting.DARK_PURPLE), true);
                 }
             }
-            if(!(living.getTags().contains("corrupted")) && !(living.getHeldItemMainhand().getItem() == Gems.CORRUPTED_DIAMOND.get()) && !(entityIn instanceof SquidEntity))
+            if(!(living.getTags().contains("corrupted")) && !(living.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get()) && !(entityIn instanceof SquidEntity))
             living.setHealth(0);
-            if(living.getHeldItemMainhand().getItem() == Gems.CORRUPTED_DIAMOND.get()) {
+            if(living.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get()) {
                 living.addPotionEffect(new EffectInstance(Effects.LUCK, 4000, 50));
                 living.addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, 4000, 3));
             }
