@@ -11,7 +11,7 @@
     },
     "frame": "task",
     "background": "minecraft:textures/block/structure_block_data.png",
-    "show_toast": true,
+    "show_toast": false,
     "announce_to_chat": false,
     "hidden": false
   },

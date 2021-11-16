@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "stone_bananas",
   "pattern": [
     "#  ",
     "###"
   ],
   "key": {
     "#": {
-      "item": "minecraft:cobblestone"
+      "tag": "minecraft:stone_tool_materials"
     }
   },
   "result": {
     "item": "frivycat:stone_banana",
     "count": 1
-  },
-  "group": "stone_bananas"
+  }
 }

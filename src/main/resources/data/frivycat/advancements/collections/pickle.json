@@ -23,9 +23,6 @@
                 "items": [
                     {
                         "item": "minecraft:sea_pickle",
-                        "count": {
-                            "min": 1
-                        },
                         "enchantments": [
                             {
                                 "enchantment": "minecraft:sharpness",

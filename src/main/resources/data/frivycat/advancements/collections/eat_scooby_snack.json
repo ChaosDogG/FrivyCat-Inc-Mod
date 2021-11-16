@@ -1,7 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "frivycat:scooby_snack"
+            "item": "frivycat:scooby_snack",
+            "nbt": "{Enchantment:[{id:69}]}"
         },
         "title": {
             "text": "Ree-hee-hee-hee-hee-hee-hee",

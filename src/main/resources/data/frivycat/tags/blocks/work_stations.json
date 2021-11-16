@@ -13,6 +13,7 @@
         "minecraft:smithing_table",
         "minecraft:smoker",
         "minecraft:stonecutter",
-		"minecraft:fletching_table"
+		"minecraft:fletching_table",
+        "#frivycat:dummy_blocks"
     ]
 }

@@ -28,9 +28,9 @@
   ],
   "rewards": {
     "recipes": [
-      "frivycat:villager_spawn_egg",
-      "frivycat:wandering_trader_spawn_egg",
-	  "frivycat:bell"
+      "frivycat:spawn_eggs/passive/villager_spawn_egg",
+      "frivycat:spawn_eggs/passive/wandering_trader_spawn_egg",
+	  "frivycat:easter_eggs/bell"
     ]
   }
 }

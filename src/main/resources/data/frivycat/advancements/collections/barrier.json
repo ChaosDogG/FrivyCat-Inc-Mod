@@ -1,14 +1,28 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "icon": {
+            "item": "minecraft:barrier"
+        },
+        "title": {
+            "text": "I SHALL NOT PASS?! FOOLS!",
+            "color": "red",
+            "bold": false
+        },
+        "description": {
+            "text": "Get a barrier or step on one"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "frivycat:collections/knowledge",
     "criteria": {
         "collect": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:barrier"
                     }
                 ]
@@ -21,28 +35,10 @@
             }
         }
     },
-    "display": {
-        "announce_to_chat": true,
-        "description": {
-            "text": "Get a barrier or step on one"
-        },
-        "frame": "task",
-        "hidden": true,
-        "icon": {
-            "item": "minecraft:barrier"
-        },
-        "show_toast": true,
-        "title": {
-            "bold": false,
-            "color": "red",
-            "text": "I SHALL NOT PASS?! FOOLS!"
-        }
-    },
     "requirements": [
         [
             "collect",
             "step"
         ]
-    ],
-    "parent": "frivycat:collections/knowledge"
+    ]
 }

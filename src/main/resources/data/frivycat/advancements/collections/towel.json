@@ -1,14 +1,28 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "icon": {
+            "item": "minecraft:white_carpet",
+            "nbt": "{Enchantments:[{id:69}]}"
+        },
+        "title": {
+            "text": "Bring a towel",
+            "color": "gray"
+        },
+        "description": {
+            "text": "Get a carpet of any color"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "frivycat:collections/fish",
     "criteria": {
         "collect1": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:white_carpet"
                     }
                 ]
@@ -19,9 +33,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:orange_carpet"
                     }
                 ]
@@ -32,9 +43,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:lime_carpet"
                     }
                 ]
@@ -45,9 +53,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:light_blue_carpet"
                     }
                 ]
@@ -58,9 +63,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:cyan_carpet"
                     }
                 ]
@@ -71,9 +73,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:pink_carpet"
                     }
                 ]
@@ -84,9 +83,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:light_gray_carpet"
                     }
                 ]
@@ -97,9 +93,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:gray_carpet"
                     }
                 ]
@@ -110,9 +103,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:green_carpet"
                     }
                 ]
@@ -123,9 +113,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:brown_carpet"
                     }
                 ]
@@ -136,9 +123,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:yellow_carpet"
                     }
                 ]
@@ -149,9 +133,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:purple_carpet"
                     }
                 ]
@@ -162,9 +143,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:magenta_carpet"
                     }
                 ]
@@ -175,9 +153,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:blue_carpet"
                     }
                 ]
@@ -188,9 +163,6 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:red_carpet"
                     }
                 ]
@@ -201,30 +173,10 @@
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:black_carpet"
                     }
                 ]
             }
-        }
-    },
-    "display": {
-        "announce_to_chat": true,
-        "description": {
-            "text": "Get a carpet of any color"
-        },
-        "frame": "challenge",
-        "hidden": false,
-        "icon": {
-            "item": "minecraft:white_carpet",
-            "nbt": "{Enchantments:[{id:69}]}"
-        },
-        "show_toast": true,
-        "title": {
-            "color": "gray",
-            "text": "Bring a towel"
         }
     },
     "requirements": [
@@ -246,6 +198,5 @@
             "collect15",
             "collect16"
         ]
-    ],
-    "parent": "frivycat:collections/fish"
+    ]
 }

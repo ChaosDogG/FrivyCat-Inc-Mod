@@ -22,10 +22,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:holy_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:holy_diamond"
           }
         ]
       }

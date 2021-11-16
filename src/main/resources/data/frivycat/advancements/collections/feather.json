@@ -22,10 +22,7 @@
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:feather",
-                        "count": {
-                            "min": 1
-                        }
+                        "item": "minecraft:feather"
                     }
                 ]
             }

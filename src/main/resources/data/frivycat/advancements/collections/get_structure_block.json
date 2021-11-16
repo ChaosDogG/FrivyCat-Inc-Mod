@@ -24,10 +24,7 @@
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:structure_block",
-                        "count": {
-                            "min": 1
-                        }
+                        "item": "minecraft:structure_block"
                     }
                 ]
             }

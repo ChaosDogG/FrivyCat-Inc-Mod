@@ -1,36 +1,32 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "icon": {
+            "item": "minecraft:knowledge_book"
+        },
+        "title": {
+            "text": "I KNOW EVERYTHING!",
+            "color": "green"
+        },
+        "description": {
+            "text": "Get a knowledge book"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "frivycat:collections/book_and_quill",
     "criteria": {
         "collect": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "max": 1,
-                            "min": 1
-                        },
                         "item": "minecraft:knowledge_book"
                     }
                 ]
             }
         }
-    },
-    "display": {
-        "title": {
-            "color": "green",
-            "text": "I KNOW EVERYTHING!"
-        },
-        "description": {
-            "text": "Get a knowledge book"
-        },
-        "icon": {
-            "item": "minecraft:knowledge_book"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": true
     },
     "requirements": [
         [
@@ -41,6 +37,5 @@
         "recipes": [
             "frivycat:book_box"
         ]
-    },
-    "parent":"frivycat:collections/book_and_quill"
+    }
 }

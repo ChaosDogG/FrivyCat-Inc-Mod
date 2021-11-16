@@ -34,7 +34,7 @@
     ],
     "rewards": {
         "recipes": [
-            "frivycat:parrot_spawn_egg"
+            "frivycat:spawn_eggs/tamable/parrot_spawn_egg"
         ]
     },
     "parent": "frivycat:tames/tame_doggo"

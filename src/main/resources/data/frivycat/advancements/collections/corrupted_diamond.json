@@ -27,10 +27,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:corrupted_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:corrupted_diamond"
           }
         ]
       }

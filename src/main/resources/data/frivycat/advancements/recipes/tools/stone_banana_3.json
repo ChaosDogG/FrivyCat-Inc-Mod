@@ -1,0 +1,32 @@
+{
+  "parent": "frivycat:recipes/root",
+  "criteria": {
+    "has_trigger_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:stone_tool_materials"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "frivycat:tools/stone_banana3"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_trigger_item",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "frivycat:tools/stone_banana3"
+    ]
+  }
+}

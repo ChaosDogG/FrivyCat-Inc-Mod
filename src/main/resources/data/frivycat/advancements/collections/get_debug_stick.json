@@ -1,41 +1,37 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "icon": {
+            "item": "minecraft:debug_stick"
+        },
+        "title": {
+            "text": "Woah! This is neat!",
+            "color": "gold",
+            "bold": false
+        },
+        "description": {
+            "text": "Get a hold of a debug stick"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "frivycat:collections/root",
     "criteria": {
         "collect": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:debug_stick"
                     }
                 ]
             }
         }
     },
-    "display": {
-        "announce_to_chat": true,
-        "description": {
-            "text": "Get a hold of a debug stick"
-        },
-        "frame": "task",
-        "hidden": true,
-        "icon": {
-            "item": "minecraft:debug_stick"
-        },
-        "show_toast": true,
-        "title": {
-            "bold": false,
-            "color": "gold",
-            "text": "Woah! This is neat!"
-        }
-    },
     "requirements": [
         [
             "collect"
         ]
-    ],
-    "parent": "frivycat:collections/root"
+    ]
 }

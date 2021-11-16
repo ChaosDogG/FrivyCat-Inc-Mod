@@ -1,5 +1,22 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "icon": {
+            "item": "minecraft:name_tag"
+        },
+        "title": {
+            "text": "Anyone got a name?",
+            "color": "gold",
+            "bold": false
+        },
+        "description": {
+            "text": "Get a name tag"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "frivycat:collections/root",
     "criteria": {
         "collect": {
             "trigger": "minecraft:inventory_changed",
@@ -12,23 +29,6 @@
             }
         }
     },
-    "display": {
-        "announce_to_chat": true,
-        "description": {
-            "text": "Get a name tag"
-        },
-        "frame": "task",
-        "hidden": false,
-        "icon": {
-            "item": "minecraft:name_tag"
-        },
-        "show_toast": true,
-        "title": {
-            "bold": false,
-            "color": "gold",
-            "text": "Anyone got a name?"
-        }
-    },
     "requirements": [
         [
             "collect"
@@ -38,6 +38,5 @@
         "recipes": [
             "frivycat:tag"
         ]
-    },
-    "parent": "frivycat:collections/root"
+    }
 }

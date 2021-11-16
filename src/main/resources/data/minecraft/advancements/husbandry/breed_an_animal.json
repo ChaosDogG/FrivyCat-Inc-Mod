@@ -1,5 +1,4 @@
 {
-  "parent": "minecraft:husbandry/root",
   "display": {
     "icon": {
       "item": "minecraft:wheat"
@@ -15,6 +14,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
+  "parent": "minecraft:husbandry/root",
   "criteria": {
     "bred": {
       "trigger": "minecraft:bred_animals",
@@ -28,37 +28,25 @@
   ],
   "rewards": {
     "recipes": [
-      "frivycat:sheep_spawn_egg",
-      "frivycat:sheep_spawn_egg2",
-      "frivycat:sheep_spawn_egg3",
-      "frivycat:cow_spawn_egg1",
-      "frivycat:cow_spawn_egg2",
-      "frivycat:cow_spawn_egg3",
-      "frivycat:horse_spawn_egg1",
-      "frivycat:horse_spawn_egg2",
-      "frivycat:horse_spawn_egg3",
-      "frivycat:pig_spawn_egg",
-      "frivycat:hoglin_spawn_egg",
-      "frivycat:strider_spawn_egg",
-      "frivycat:rabbit_spawn_egg1",
-      "frivycat:rabbit_spawn_egg2",
-      "frivycat:rabbit_spawn_egg3",
-      "frivycat:rabbit_spawn_egg4",
-      "frivycat:rabbit_spawn_egg5",
-      "frivycat:rabbit_spawn_egg6",
-      "frivycat:rabbit_spawn_egg7",
-      "frivycat:chicken_spawn_egg",
-      "frivycat:chicken_spawn_egg2",
-      "frivycat:mule_spawn_egg",
-      "frivycat:ocelot_spawn_egg",
-      "frivycat:turtle_spawn_egg",
-      "frivycat:squid_spawn_egg",
-      "frivycat:dolphin_spawn_egg",
-      "frivycat:fox_spawn_egg",
-      "frivycat:panda_spawn_egg",
-      "frivycat:skeleton_horse_spawn_egg",
-      "frivycat:zombie_horse_spawn_egg",
-      "frivycat:mooshroom_spawn_egg"
+      "frivycat:spawn_eggs/hostile/hoglin_spawn_egg",
+      "frivycat:spawn_eggs/neutral/dolphin_spawn_egg",
+      "frivycat:spawn_eggs/passive/chicken_spawn_egg",
+      "frivycat:spawn_eggs/passive/cow_spawn_egg",
+      "frivycat:spawn_eggs/passive/fox_spawn_egg",
+      "frivycat:spawn_eggs/passive/mooshroom_spawn_egg",
+      "frivycat:spawn_eggs/passive/ocelot_spawn_egg",
+      "frivycat:spawn_eggs/passive/panda_spawn_egg",
+      "frivycat:spawn_eggs/passive/pig_spawn_egg",
+      "frivycat:spawn_eggs/passive/pigper_spawn_egg",
+      "frivycat:spawn_eggs/passive/rabbit_spawn_egg",
+      "frivycat:spawn_eggs/passive/sheep_spawn_egg",
+      "frivycat:spawn_eggs/passive/squid_spawn_egg",
+      "frivycat:spawn_eggs/passive/strider_spawn_egg",
+      "frivycat:spawn_eggs/passive/turtle_spawn_egg",
+      "frivycat:spawn_eggs/tamable/horse_spawn_egg",
+      "frivycat:spawn_eggs/tamable/mule_spawn_egg",
+      "frivycat:spawn_eggs/tamable/skeleton_horse_spawn_egg",
+      "frivycat:spawn_eggs/tamable/zombie_horse_spawn_egg"
     ]
   }
 }

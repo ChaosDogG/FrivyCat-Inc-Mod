@@ -38,7 +38,7 @@
   ],
   "rewards": {
       "recipes": [
-         "frivycat:bee_spawn_egg"
+         "frivycat:spawn_eggs/neutral/bee_spawn_egg"
     ]
   }
 }

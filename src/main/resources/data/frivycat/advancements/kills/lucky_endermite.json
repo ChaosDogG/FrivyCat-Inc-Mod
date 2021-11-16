@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:silverfish_spawn_egg"
+    },
+    "title": {
+      "text": "Vwoop Vwoop",
+      "color": "dark_purple"
+    },
+    "description": {
+      "text": "Kill a Lucky Endermite"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "frivycat:kills/root",
+  "criteria": {
+    "slay": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:endermite"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "slay"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "frivycat:spawn_eggs/hostile/endermite_spawn_egg"
+    ]
+  }
+}

@@ -20,6 +20,7 @@
         "minecraft:stone_axe",
         "minecraft:iron_axe",
         "minecraft:golden_axe",
-        "minecraft:diamond_axe"
+        "minecraft:diamond_axe",
+        "frivycat:stone_banana"
     ]
 }

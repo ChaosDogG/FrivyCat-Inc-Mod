@@ -26,11 +26,11 @@ public class Misc {
     public static final RegistryObject<Item> SCOOBY_SNACK = Utils.regItem(ITEMS,"scooby_snack", new Item(new Item.Properties().group(ItemGroup.FOOD).rarity(Rarity.EPIC).food(ModFoods.SCOOBY_SNACK)));
     public static final RegistryObject<Item> COTTON_CANDY_STRAND = Utils.regItem(ITEMS,"cotton_candy_strand", new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COTTON_CANDY_STRAND)));
     public static final RegistryObject<Item> GREEN_APPLE_CANDY = Utils.regItem(ITEMS,"green_apple_candy", new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.GREEN_APPLE_CANDY)));
-    public static final RegistryObject<Item> HONEY_MUG = Utils.regItem(ITEMS,"honey_mug", new HoneyMug(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.HONEY_MUG)));
+    public static final RegistryObject<Item> HONEY_MUG = Utils.regItem(ITEMS,"honey_mug", new HoneyMug(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.HONEY_MUG).maxStackSize(1)));
 
     // other items
     public static final RegistryObject<Item> EASTER_EGG = Utils.regItem(ITEMS, "easter_egg", new EasterEgg(new Item.Properties().group(ItemGroup.MISC).maxStackSize(16).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> RED_TEA_BUCKET = Utils.regItem(ITEMS,"red_tea_bucket", new Item(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+    public static final RegistryObject<Item> RED_TEA_BUCKET = Utils.regItem(ITEMS,"red_tea_bucket", new RedTeaBucket(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
     public static final RegistryObject<Item> BABY_RATTLE_BOY = regBabyRattle("boy");
     public static final RegistryObject<Item> BABY_RATTLE_GIRL = regBabyRattle("girl");
     public static final RegistryObject<Item> BABY_BOTTLE = Utils.regItem(ITEMS,"baby_bottle", new Item(new Item.Properties().group(ItemGroup.MISC)));

@@ -39,11 +39,11 @@
   ],
   "rewards": {
     "recipes": [
-      "frivycat:vindicator_spawn_egg",
-      "frivycat:evoker_spawn_egg",
-      "frivycat:witch_spawn_egg",
-      "frivycat:pillager_spawn_egg",
-      "frivycat:ravager_spawn_egg"
+      "frivycat:spawn_eggs/hostile/evoker_spawn_egg",
+      "frivycat:spawn_eggs/hostile/pillager_spawn_egg",
+      "frivycat:spawn_eggs/hostile/ravager_spawn_egg",
+      "frivycat:spawn_eggs/hostile/vindicator_spawn_egg",
+      "frivycat:spawn_eggs/hostile/witch_spawn_egg"
     ]
   }
 }

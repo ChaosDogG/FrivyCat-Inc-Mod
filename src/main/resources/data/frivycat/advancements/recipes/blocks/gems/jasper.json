@@ -1,0 +1,32 @@
+{
+  "parent": "frivycat:recipes/root",
+  "criteria": {
+    "has_trigger_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "frivycat:jasper"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "frivycat:blocks/jasper_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_trigger_item",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "frivycat:blocks/jasper_block"
+    ]
+  }
+}

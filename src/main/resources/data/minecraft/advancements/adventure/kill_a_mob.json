@@ -1,5 +1,4 @@
 {
-  "parent": "minecraft:adventure/root",
   "display": {
     "icon": {
       "item": "minecraft:iron_sword",
@@ -16,6 +15,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
+  "parent": "minecraft:adventure/root",
   "criteria": {
     "minecraft:blaze": {
       "trigger": "minecraft:player_killed_entity",
@@ -23,10 +23,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:blaze"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -37,10 +37,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:cave_spider"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -51,10 +51,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:creeper"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -65,10 +65,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:drowned"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -79,10 +79,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:elder_guardian"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -93,10 +93,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:ender_dragon"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -107,10 +107,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:enderman"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -121,10 +121,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:endermite"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -135,10 +135,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:evoker"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -149,10 +149,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:ghast"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -163,10 +163,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:guardian"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -177,10 +177,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:hoglin"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -191,10 +191,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:husk"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -205,10 +205,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:magma_cube"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -219,10 +219,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:phantom"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -233,10 +233,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:piglin"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -247,10 +247,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:pillager"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -261,10 +261,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:ravager"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -275,10 +275,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:shulker"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -289,10 +289,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:silverfish"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -303,10 +303,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:skeleton"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -317,10 +317,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:slime"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -331,10 +331,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:spider"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -345,10 +345,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:stray"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -359,10 +359,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:vex"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -373,10 +373,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:vindicator"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -387,10 +387,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:witch"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -401,10 +401,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:wither_skeleton"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -415,10 +415,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:wither"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -429,10 +429,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:zoglin"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -443,10 +443,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:zombie_villager"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -457,10 +457,10 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:zombie"
-            },
-            "entity": "this"
+            }
           }
         ]
       }
@@ -471,10 +471,38 @@
         "entity": [
           {
             "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
               "type": "minecraft:zombified_piglin"
-            },
-            "entity": "this"
+            }
+          }
+        ]
+      }
+    },
+    "frivycat:scooby_skeleton": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "frivycat:scooby_skeleton"
+            }
+          }
+        ]
+      }
+    },
+    "frivycat:scooby_stray": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "frivycat:scooby_stray"
+            }
           }
         ]
       }
@@ -514,45 +542,37 @@
       "minecraft:zoglin",
       "minecraft:zombie_villager",
       "minecraft:zombie",
-      "minecraft:zombified_piglin"
+      "minecraft:zombified_piglin",
+      "frivycat:scooby_skeleton",
+      "frivycat:scooby_stray"
     ]
   ],
   "rewards": {
     "recipes": [
-      "frivycat:creeper_spawn_egg",
-      "frivycat:drowned_spawn_egg",
-      "frivycat:elder_guardian_spawn_egg",
-      "frivycat:enderman_spawn_egg",
-      "frivycat:endermite_spawn_egg",
-      "frivycat:ghast_spawn_egg1",
-      "frivycat:ghast_spawn_egg2",
-      "frivycat:ghast_spawn_egg3",
-      "frivycat:guardian_spawn_egg",
-      "frivycat:husk_spawn_egg",
-      "frivycat:phantom_spawn_egg",
-      "frivycat:piglin_spawn_egg",
-      "frivycat:shulker_spawn_egg1",
-      "frivycat:shulker_spawn_egg2",
-      "frivycat:silverfish_spawn_egg",
-      "frivycat:skeleton_spawn_egg",
-      "frivycat:slime_spawn_egg",
-      "frivycat:magma_cube_spawn_egg",
-      "frivycat:stray_spawn_egg",
-      "frivycat:vex_spawn_egg",
-      "frivycat:zombie_spawn_egg1",
-      "frivycat:zombie_spawn_egg2",
-      "frivycat:zombie_villager_spawn_egg1",
-      "frivycat:zombie_villager_spawn_egg2",
-      "frivycat:zombie_villager_spawn_egg3",
-      "frivycat:zombified_piglin_spawn_egg",
-      "frivycat:wither_skeleton_spawn_egg1",
-      "frivycat:wither_skeleton_spawn_egg2",
-      "frivycat:wither_skeleton_spawn_egg3",
-      "frivycat:wither_skeleton_spawn_egg4",
-      "frivycat:wither_skeleton_spawn_egg5",
-      "frivycat:wither_skeleton_spawn_egg6",
-      "frivycat:polar_bear_spawn_egg",
-      "frivycat:zoglin_spawn_egg"
+      "frivycat:spawn_eggs/hostile/creeper_spawn_egg",
+      "frivycat:spawn_eggs/hostile/drowned_spawn_egg",
+      "frivycat:spawn_eggs/hostile/elder_guardian_spawn_egg",
+      "frivycat:spawn_eggs/hostile/ghast_spawn_egg",
+      "frivycat:spawn_eggs/hostile/guardian_spawn_egg",
+      "frivycat:spawn_eggs/hostile/husk_spawn_egg",
+      "frivycat:spawn_eggs/hostile/magma_cube_spawn_egg",
+      "frivycat:spawn_eggs/hostile/phantom_spawn_egg",
+      "frivycat:spawn_eggs/hostile/scooby_skeleton_spawn_egg",
+      "frivycat:spawn_eggs/hostile/scooby_stray_spawn_egg_1",
+      "frivycat:spawn_eggs/hostile/scooby_stray_spawn_egg_2",
+      "frivycat:spawn_eggs/hostile/shulker_spawn_egg",
+      "frivycat:spawn_eggs/hostile/skeleton_spawn_egg",
+      "frivycat:spawn_eggs/hostile/slime_spawn_egg",
+      "frivycat:spawn_eggs/hostile/stray_spawn_egg",
+      "frivycat:spawn_eggs/hostile/wither_skeleton_spawn_egg",
+      "frivycat:spawn_eggs/hostile/zoglin_spawn_egg",
+      "frivycat:spawn_eggs/hostile/zombie_spawn_egg1",
+      "frivycat:spawn_eggs/hostile/zombie_spawn_egg2",
+      "frivycat:spawn_eggs/hostile/zombie_villager_spawn_egg1",
+      "frivycat:spawn_eggs/hostile/zombie_villager_spawn_egg2",
+      "frivycat:spawn_eggs/hostile/zombified_piglin_spawn_egg",
+      "frivycat:spawn_eggs/neutral/enderman_spawn_egg",
+      "frivycat:spawn_eggs/neutral/polar_bear_spawn_egg"
     ]
   }
 }

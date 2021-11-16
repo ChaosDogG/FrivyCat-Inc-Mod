@@ -20,7 +20,7 @@
   "parent": "frivycat:tames/root",
   "rewards": {
     "recipes": [
-      "frivycat:wolf_spawn_egg"
+      "frivycat:spawn_eggs/tamable/wolf_spawn_egg"
     ]
   },
   "criteria": {

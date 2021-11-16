@@ -1,6 +1,5 @@
 package chaosdog.frivycat;
 
-import chaosdog.frivycat.items.ShinyItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -49,20 +48,6 @@ public class Gems {
     public static final RegistryObject<Item> TOPAZ = regGem("topaz");
     public static final RegistryObject<Item> AGATE = regGem("agate");
 
-    // special diamonds
-    public static final RegistryObject<Item> DARK_DIAMOND = regSpecialDiamond("dark");
-    public static final RegistryObject<Item> SHADOW_DIAMOND = regSpecialDiamond("shadow");
-    public static final RegistryObject<Item> CULTIST_DIAMOND = regSpecialDiamond("cultist");
-    public static final RegistryObject<Item> FIRE_DIAMOND = regSpecialDiamond("fire");
-    public static final RegistryObject<Item> LIGHTNING_DIAMOND = regSpecialDiamond("lightning");
-    public static final RegistryObject<Item> PEACE_DIAMOND = regSpecialDiamond("peace");
-    public static final RegistryObject<Item> VINE_DIAMOND = regSpecialDiamond("vine");
-    public static final RegistryObject<Item> VETERAN_DIAMOND = regSpecialDiamond("veteran");
-    public static final RegistryObject<Item> HOLY_DIAMOND = regSpecialDiamond("holy");
-    public static final RegistryObject<Item> WATER_DIAMOND = regSpecialDiamond("water");
-    public static final RegistryObject<Item> MADNESS_DIAMOND = regSpecialDiamond("madness");
-    public static final RegistryObject<Item> CORRUPTED_DIAMOND = regSpecialDiamond("corrupted");
-
     // gem blocks
     public static final RegistryObject<Block> RUBY_BLOCK = regGemBlock("ruby");
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = regGemBlock("sapphire");
@@ -86,7 +71,7 @@ public class Gems {
     public static final RegistryObject<Block> AGATE_ORE = regGemOre("agate");
 
     public static void init(IEventBus eventbus) {
-        FrivyCatMod.LOG.info("Setting up Gems and Special Diamonds");
+        FrivyCatMod.LOG.info("Setting up Gems");
         // register the registries
         BLOCKS.register(eventbus);
         ITEMS.register(eventbus);
@@ -169,7 +154,6 @@ public class Gems {
                             if(entityIn instanceof IronGolemEntity) {
                                 IronGolemEntity iron = (IronGolemEntity) entityIn;
                                 if(iron.getHealth() < iron.getMaxHealth()) {
-                                    iron.heal(100);
                                     iron.setGlowing(true);
                                 }
                                 if(iron.getHealth() == iron.getMaxHealth()) {
@@ -218,15 +202,8 @@ public class Gems {
         return Utils.regBlockWithItem(BLOCKS, ITEMS, name + "_ore", new OreBlock(AbstractBlock.Properties.from(Blocks.EMERALD_ORE)), ItemGroup.BUILDING_BLOCKS);
     }
 
-
-
     // registers a gemstone item
     private static RegistryObject<Item> regGem(String name) {
         return Utils.regItem(ITEMS, name, new Item(new Item.Properties().group(ItemGroup.MISC).rarity(Rarity.RARE)));
-    }
-
-    // registers a special diamond item
-    private static RegistryObject<Item> regSpecialDiamond(String name) {
-        return Utils.regItem(ITEMS, name + "_diamond", new ShinyItem(new Item.Properties().group(ItemGroup.MISC).rarity(Rarity.EPIC)));
     }
 }

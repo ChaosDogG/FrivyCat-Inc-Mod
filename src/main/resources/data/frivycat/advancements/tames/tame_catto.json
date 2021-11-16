@@ -35,9 +35,8 @@
     ],
     "rewards": {
         "recipes": [
-            "frivycat:cat_spawn_egg1",
-            "frivycat:cat_spawn_egg2",
-            "frivycat:ocelot_spawn_egg"
+            "frivycat:spawn_eggs/tamable/cat_spawn_egg1",
+            "frivycat:spawn_eggs/tamable/cat_spawn_egg2"
         ]
     },
     "parent": "frivycat:tames/tame_donkey"

@@ -10,7 +10,7 @@
       "item": "minecraft:redstone"
     },
     "#": {
-      "tag": "minecraft:stone_crafting_materials"
+      "item": "minecraft:cobblestone"
     },
     "X": {
       "item": "frivycat:dispenser_bow"

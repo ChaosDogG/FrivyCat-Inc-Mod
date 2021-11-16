@@ -23,32 +23,16 @@
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:cod",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:cod"
                     },
                     {
-                        "item": "minecraft:salmon",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:salmon"
                     },
                     {
-                        "item": "minecraft:pufferfish",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:pufferfish"
                     },
                     {
-                        "item": "minecraft:tropical_fish",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:tropical_fish"
                     }
                 ]
             }
@@ -58,32 +42,16 @@
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:cod_spawn_egg",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:cod_spawn_egg"
                     },
                     {
-                        "item": "minecraft:salmon_spawn_egg",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:salmon_spawn_egg"
                     },
                     {
-                        "item": "minecraft:pufferfish_spawn_egg",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:pufferfish_spawn_egg"
                     },
                     {
-                        "item": "minecraft:tropical_fish_spawn_egg",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:tropical_fish_spawn_egg"
                     }
                 ]
             }
@@ -93,32 +61,16 @@
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:cod_bucket",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:cod_bucket"
                     },
                     {
-                        "item": "minecraft:salmon_bucket",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:salmon_bucket"
                     },
                     {
-                        "item": "minecraft:pufferfish_bucket",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:pufferfish_bucket"
                     },
                     {
-                        "item": "minecraft:tropical_fish_bucket",
-                        "count": {
-                            "min": 1,
-                            "max": 1
-                        }
+                        "item": "minecraft:tropical_fish_bucket"
                     }
                 ]
             }

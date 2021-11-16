@@ -22,10 +22,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:veteran_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:veteran_diamond"
           }
         ]
       }

@@ -1,35 +1,32 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "icon": {
+            "item": "minecraft:spawner"
+        },
+        "title": {
+            "text": "I own the key to mob farms!",
+            "color": "dark_gray",
+            "bold": false
+        },
+        "description": {
+            "text": "Get a mob spawner"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "frivycat:collections/root",
     "criteria": {
         "collect": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "count": {
-                            "min": 1
-                        },
                         "item": "minecraft:spawner"
                     }
                 ]
             }
-        }
-    },
-    "display": {
-        "announce_to_chat": true,
-        "description": {
-            "text": "Get a mob spawner"
-        },
-        "frame": "task",
-        "hidden": true,
-        "icon": {
-            "item": "minecraft:spawner"
-        },
-        "show_toast": true,
-        "title": {
-            "bold": false,
-            "color": "dark_gray",
-            "text": "I own the key to mob farms!"
         }
     },
     "requirements": [
@@ -39,8 +36,7 @@
     ],
     "rewards": {
         "recipes": [
-            "frivycat:spawner"
+            "frivycat:dev/spawner_gutter"
         ]
-    },
-    "parent": "frivycat:collections/root"
+    }
 }

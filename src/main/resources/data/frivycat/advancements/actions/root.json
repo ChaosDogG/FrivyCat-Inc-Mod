@@ -9,9 +9,9 @@
     "description": {
       "text": "Actions Tab"
     },
-    "frame": "task",
     "background": "minecraft:textures/block/structure_block.png",
-    "show_toast": true,
+    "frame": "task",
+    "show_toast": false,
     "announce_to_chat": false,
     "hidden": false
   },

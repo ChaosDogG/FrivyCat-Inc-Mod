@@ -1,13 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:emerald"
+      "item": "frivycat:ruby"
     },
     "title": {
-      "text": "Thanks for using this datapack!"
+      "text": "Thanks for using this mod!"
     },
     "description": {
-      "text": "Install the datapack"
+      "text": "Install the mod"
     },
     "frame": "task",
     "background": "minecraft:textures/block/structure_block_data.png",

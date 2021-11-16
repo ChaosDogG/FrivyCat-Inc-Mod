@@ -1,8 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:diamond",
-      "nbt": "{Enchantments:[{id:69}]}"
+      "item": "frivycat:catalyst_diamond"
     },
     "title": {
       "text": "YO, YOU FOUND ONE?!",
@@ -24,10 +23,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:dark_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:dark_diamond"
           }
         ]
       }
@@ -37,10 +33,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:shadow_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:shadow_diamond"
           }
         ]
       }
@@ -50,10 +43,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:cultist_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:cultist_diamond"
           }
         ]
       }
@@ -63,10 +53,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:fire_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:fire_diamond"
           }
         ]
       }
@@ -76,10 +63,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:lightning_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:lightning_diamond"
           }
         ]
       }
@@ -89,10 +73,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:peace_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:peace_diamond"
           }
         ]
       }
@@ -102,10 +83,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:vine_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:vine_diamond"
           }
         ]
       }
@@ -115,10 +93,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:veteran_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:veteran_diamond"
           }
         ]
       }
@@ -128,10 +103,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:holy_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:holy_diamond"
           }
         ]
       }
@@ -141,10 +113,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:water_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:water_diamond"
           }
         ]
       }
@@ -154,10 +123,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:madness_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:madness_diamond"
           }
         ]
       }
@@ -167,10 +133,7 @@
       "conditions": {
         "items": [
           {
-            "item": "frivycat:corrupted_diamond",
-            "count": {
-              "min": 1
-            }
+            "item": "frivycat:corrupted_diamond"
           }
         ]
       }

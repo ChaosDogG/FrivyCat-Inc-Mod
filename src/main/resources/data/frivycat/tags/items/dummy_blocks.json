@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "frivycat:dummy_a",
+    "frivycat:dummy_b",
+    "frivycat:dummy_c"
+  ]
+}
