@@ -14,6 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 
 public class CorruptedBlock extends Block {
@@ -27,16 +28,22 @@ public class CorruptedBlock extends Block {
             LivingEntity living = (LivingEntity) entityIn;
             if(entityIn instanceof PlayerEntity) {
                 PlayerEntity player = (PlayerEntity) entityIn;
-                if(player.isAlive() && !(player.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get())) {
+                if(player.isAlive() && !(player.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get() || player.getHeldItemOffhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get())) {
+                    if(!worldIn.getGameRules().getBoolean(GameRules.KEEP_INVENTORY)) {
+                        player.inventory.dropAllItems();
+                    }
                     player.sendStatusMessage(new TranslationTextComponent("message.corrupted_block_collide_unsafe").mergeStyle(TextFormatting.DARK_RED), true);
+                    player.experience = this.RANDOM.nextFloat();
+                    player.experienceLevel = this.RANDOM.nextInt(101);
                 }
-                if(player.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get()) {
+                if(player.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get() || player.getHeldItemOffhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get()) {
                     player.sendStatusMessage(new TranslationTextComponent("message.corrupted_block_collide_safe").mergeStyle(TextFormatting.DARK_PURPLE), true);
                 }
             }
-            if(!(living.getTags().contains("corrupted")) && !(living.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get()) && !(entityIn instanceof SquidEntity))
-            living.setHealth(0);
-            if(living.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get()) {
+            if(!(living.getTags().contains("corrupted") || living.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get() || living.getHeldItemOffhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get() || entityIn instanceof SquidEntity)) {
+                living.setHealth(0);
+            }
+            if(living.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get() || living.getHeldItemOffhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get()) {
                 living.addPotionEffect(new EffectInstance(Effects.LUCK, 4000, 50));
                 living.addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, 4000, 3));
             }
