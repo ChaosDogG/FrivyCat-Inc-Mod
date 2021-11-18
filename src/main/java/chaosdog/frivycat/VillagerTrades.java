@@ -13,7 +13,7 @@ import java.util.List;
 
 public class VillagerTrades {
     // represents an empty slot in the trade UI
-    public static final ItemStack EMPTY_SLOT =  new ItemStack(Blocks.AIR);
+    public static final ItemStack EMPTY_SLOT = new ItemStack(Blocks.AIR);
 
     // adds custom trades to a villager pool (each villager get random trades depending on its profession
     @SubscribeEvent
@@ -38,15 +38,15 @@ public class VillagerTrades {
         BasicTrade dummy_c_level_5 = new BasicTrade(price(5), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_C.get().asItem()), 10, 40, 0.1f);
 
         // get a ruby for 45 emeralds
-        BasicTrade ruby_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.RUBY::get), 10, 1, 0.1f);
-        BasicTrade sapphire_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.SAPPHIRE::get), 10, 1, 0.1f);
-        BasicTrade zircon_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.ZIRCON::get), 10, 1, 0.1f);
+        BasicTrade ruby_trade = new BasicTrade(price(5), EMPTY_SLOT, new ItemStack(Gems.RUBY::get), 10, 1, 0.1f);
+        BasicTrade sapphire_trade = new BasicTrade(price(10), EMPTY_SLOT, new ItemStack(Gems.SAPPHIRE::get), 10, 1, 0.1f);
+        BasicTrade zircon_trade = new BasicTrade(price(10), EMPTY_SLOT, new ItemStack(Gems.ZIRCON::get), 10, 1, 0.1f);
         BasicTrade garnet_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.GARNET::get), 10, 1, 0.1f);
-        BasicTrade jade_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.JADE::get), 10, 1, 0.1f);
-        BasicTrade jasper_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.JASPER::get), 10, 1, 0.1f);
-        BasicTrade spinel_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.SPINEL::get), 10, 1, 0.1f);
-        BasicTrade topaz_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.TOPAZ::get), 10, 1, 0.1f);
-        BasicTrade agate_trade = new BasicTrade(price(45), EMPTY_SLOT, new ItemStack(Gems.AGATE::get), 10, 1, 0.1f);
+        BasicTrade jade_trade = new BasicTrade(price(10), EMPTY_SLOT, new ItemStack(Gems.JADE::get), 10, 1, 0.1f);
+        BasicTrade jasper_trade = new BasicTrade(price(10), EMPTY_SLOT, new ItemStack(Gems.JASPER::get), 10, 1, 0.1f);
+        BasicTrade spinel_trade = new BasicTrade(price(15), EMPTY_SLOT, new ItemStack(Gems.SPINEL::get), 10, 1, 0.1f);
+        BasicTrade topaz_trade = new BasicTrade(price(15), EMPTY_SLOT, new ItemStack(Gems.TOPAZ::get), 10, 1, 0.1f);
+        BasicTrade agate_trade = new BasicTrade(price(5), EMPTY_SLOT, new ItemStack(Gems.AGATE::get), 10, 1, 0.1f);
 
         // returns a reference to the trades a villager has
         Int2ObjectMap<List<net.minecraft.entity.merchant.villager.VillagerTrades.ITrade>> trades = event.getTrades();
