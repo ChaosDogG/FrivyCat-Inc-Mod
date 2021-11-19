@@ -1,35 +1,52 @@
 package chaosdog.frivycat.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.item.ItemEntity;
+import chaosdog.frivycat.FrivyCatMod;
+import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
 public class GeneratorBlock extends Block {
-    public GeneratorBlock(Properties properties) {
-        super(properties);
+    private final Type type;
+
+    public GeneratorBlock(Type type) {
+        super(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(5).hardnessAndResistance(10f, 100f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE).tickRandomly());
+        this.type = type;
     }
 
     @Override
-    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
-        rand.nextInt(100);
-        while(worldIn.getBlockState(pos).matchesBlock(this)) {
-            pos = pos.down();
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random rand) {
+        if(world.getBlockState(pos.up()).getBlock() instanceof AirBlock) {
+            FrivyCatMod.LOG.debug("Spawing item!");
+            ItemStack stack = new ItemStack(type.getItem(rand));
+            Block.spawnAsEntity(world, pos.up(), stack);
         }
+    }
 
-        if(worldIn.getBlockState(pos).canEntitySpawn(worldIn, pos, EntityType.ITEM)) {
-            double d0 = (double)(worldIn.rand.nextFloat() * 0.7F) + (double)0.15F;
-            double d1 = (double)(worldIn.rand.nextFloat() * 0.7F) + (double)0.060000002F + 0.6D;
-            double d2 = (double)(worldIn.rand.nextFloat() * 0.7F) + (double)0.15F;
-            ItemEntity itementity = new ItemEntity(worldIn, (double)pos.getX() + d0, (double)pos.getY() + d1, (double)pos.getZ() + d2, new ItemStack(Items.APPLE));
-            itementity.setDefaultPickupDelay();
-            worldIn.addEntity(itementity);
+    public enum Type {
+        LOG,
+        IRON(Items.IRON_INGOT),
+        APPLE(Items.APPLE),
+        GOLD(Items.GOLD_INGOT),
+        DIAMOND(Items.DIAMOND),
+        OBSIDIAN(Blocks.OBSIDIAN.asItem());
+
+        private final Item item;
+
+        Type(Item item) { this.item = item; }
+
+        Type() { item = null; }
+
+        public Item getItem(Random rand) {
+            if(item == null) { return BlockTags.LOGS.getRandomElement(rand).asItem(); }
+            return item;
         }
     }
 }
