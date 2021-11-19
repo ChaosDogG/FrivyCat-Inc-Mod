@@ -37,7 +37,7 @@ public class VillagerTrades {
         BasicTrade dummy_c_level_4 = new BasicTrade(price(4), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_C.get().asItem()), 10, 20, 0.1f);
         BasicTrade dummy_c_level_5 = new BasicTrade(price(5), new ItemStack(() -> DummyBlocks.DUMMY_B.get().asItem()), new ItemStack(() -> DummyBlocks.DUMMY_C.get().asItem()), 10, 40, 0.1f);
 
-        // get a ruby for 45 emeralds
+        // get a ruby for X emeralds
         BasicTrade ruby_trade = new BasicTrade(price(5), EMPTY_SLOT, new ItemStack(Gems.RUBY::get), 10, 1, 0.1f);
         BasicTrade sapphire_trade = new BasicTrade(price(10), EMPTY_SLOT, new ItemStack(Gems.SAPPHIRE::get), 10, 1, 0.1f);
         BasicTrade zircon_trade = new BasicTrade(price(10), EMPTY_SLOT, new ItemStack(Gems.ZIRCON::get), 10, 1, 0.1f);

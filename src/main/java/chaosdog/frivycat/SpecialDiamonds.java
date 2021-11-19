@@ -26,6 +26,7 @@ public class SpecialDiamonds {
     public static final RegistryObject<Item> WATER_DIAMOND = regSpecialDiamond("water");
     public static final RegistryObject<Item> MADNESS_DIAMOND = regSpecialDiamond("madness");
     public static final RegistryObject<Item> CORRUPTED_DIAMOND = regSpecialDiamond("corrupted");
+    // should not be shiny
     public static final RegistryObject<Item> CATALYST_DIAMOND = regSpecialDiamond("catalyst");
     public static final RegistryObject<Item> DRAINED_DIAMOND = regSpecialDiamond("drained");
 
