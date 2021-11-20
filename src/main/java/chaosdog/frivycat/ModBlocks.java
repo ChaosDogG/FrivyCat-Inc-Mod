@@ -6,13 +6,10 @@ import chaosdog.frivycat.blocks.MumboBlock;
 import chaosdog.frivycat.blocks.MumboDustWire;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Items;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -31,7 +28,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> CORRUPTED_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "corrupted_block", new CorruptedBlock(AbstractBlock.Properties.create(Material.TNT).harvestLevel(0).hardnessAndResistance(0f, 10000f).sound(SoundType.SLIME).doesNotBlockMovement()), ItemGroup.DECORATIONS);
 
     //Generator stuff
-    //TODO make these blocks spawn their respected item/item type
     public static final RegistryObject<Block> LOG_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "log_generator", new GeneratorBlock(GeneratorBlock.Type.LOG), ItemGroup.MISC);
     public static final RegistryObject<Block> IRON_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "iron_generator", new GeneratorBlock(GeneratorBlock.Type.IRON), ItemGroup.MISC);
     public static final RegistryObject<Block> APPLE_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "apple_generator", new GeneratorBlock(GeneratorBlock.Type.APPLE), ItemGroup.MISC);

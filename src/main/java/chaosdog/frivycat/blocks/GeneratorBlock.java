@@ -24,7 +24,7 @@ public class GeneratorBlock extends Block {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random rand) {
         if(world.getBlockState(pos.up()).getBlock() instanceof AirBlock) {
-            FrivyCatMod.LOG.debug("Spawing item!");
+            FrivyCatMod.LOG.debug("Spawning item!");
             ItemStack stack = new ItemStack(type.getItem(rand));
             Block.spawnAsEntity(world, pos.up(), stack);
         }
