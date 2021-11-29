@@ -77,7 +77,12 @@
             }
           }
         ],
-        "entity": {},
+        "entity": {
+          "type": "minecraft:piglin",
+          "flags": {
+            "is_baby": false
+          }
+        },
         "item": {
           "tag": "minecraft:piglin_loved"
         }

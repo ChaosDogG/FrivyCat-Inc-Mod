@@ -15,7 +15,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{RepairCost:0,Enchantments:[{id:\"minecraft:sharpness\",lvl:10s},{id:\"minecraft:smite\",lvl:10s},{id:\"minecraft:bane_of_arthropods\",lvl:10s},{id:\"minecraft:knockback\",lvl:10s},{id:\"minecraft:fire_aspect\",lvl:10s},{id:\"minecraft:looting\",lvl:10s},{id:\"minecraft:sweeping\",lvl:10s}]}"
+              "tag": "{RepairCost:0,Enchantments:[{id:\"minecraft:sharpness\",lvl:10s},{id:\"minecraft:knockback\",lvl:10s},{id:\"minecraft:fire_aspect\",lvl:10s},{id:\"minecraft:looting\",lvl:10s},{id:\"minecraft:sweeping\",lvl:10s}]}"
             },
             {
               "function": "minecraft:set_damage",
@@ -37,7 +37,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{RepairCost:0,Enchantments:[{id:\"minecraft:sharpness\",lvl:10s},{id:\"minecraft:smite\",lvl:10s},{id:\"minecraft:bane_of_arthropods\",lvl:10s},{id:\"minecraft:efficiency\",lvl:10s},{id:\"minecraft:fortune\",lvl:10s}]}"
+              "tag": "{RepairCost:0,Enchantments:[{id:\"minecraft:sharpness\",lvl:10s},{id:\"minecraft:efficiency\",lvl:10s},{id:\"minecraft:knockback\",lvl:10s},{id:\"minecraft:fire_aspect\",lvl:10s},{id:\"minecraft:looting\",lvl:10s},{id:\"minecraft:fortune\",lvl:10s}]}"
             },
             {
               "function": "minecraft:set_damage",
@@ -169,7 +169,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{RepairCost:0,Enchantments:[{id:\"minecraft:multishot\",lvl:10s},{id:\"minecraft:piercing\",lvl:10s},{id:\"minecraft:quick_charge\",lvl:5s}]}"
+              "tag": "{RepairCost:0,Enchantments:[{id:\"minecraft:multishot\",lvl:1s},{id:\"minecraft:piercing\",lvl:10s},{id:\"minecraft:quick_charge\",lvl:5s}]}"
             },
             {
               "function": "minecraft:set_damage",
