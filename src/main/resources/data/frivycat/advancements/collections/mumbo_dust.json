@@ -1,36 +1,36 @@
 {
-  "display": {
-    "icon": {
-      "item": "frivycat:mumbo_dust"
-    },
-    "title": {
-      "text": "Holy mackerel! Now I'm just a pile of dust!",
-      "color": "red"
-    },
-    "description": {
-      "text": "Get Mumbo Dust"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "parent": "frivycat:collections/mumbo_block",
-  "criteria": {
-    "collect": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
+    "display": {
+        "icon": {
             "item": "frivycat:mumbo_dust"
-          }
+        },
+        "title": {
+            "text": "Hello everyone, this is Mumbo, as...uhm...dust apparently?",
+            "color": "red"
+        },
+        "description": {
+            "text": "Get some Mumbo Dust"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "frivycat:collections/root",
+    "criteria": {
+        "collect": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "frivycat:mumbo_dust"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "collect"
         ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "collect"
     ]
-  ]
 }

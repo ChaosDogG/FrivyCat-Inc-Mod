@@ -15,7 +15,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "frivycat:kills/root",
+  "parent": "frivycat:kills/lucky_silverfish",
   "criteria": {
     "slay": {
       "trigger": "minecraft:player_killed_entity",
