@@ -5,7 +5,10 @@
       "item": "minecraft:milk_bucket"
     },
     {
-      "item": "minecraft:clock"
+      "item": "minecraft:wooden_shovel"
+    },
+    {
+      "item": "minecraft:bowl"
     }
   ],
   "result": {

@@ -1,10 +1,10 @@
 {
     "type": "minecraft:smithing",
     "base": {
-        "tag": "frivycat:cave_decor"
+        "item": "minecraft:spider_spawn_egg"
     },
     "addition": {
-        "item": "minecraft:spider_spawn_egg"
+        "tag": "frivycat:cave_decor"
     },
     "result": {
         "item": "minecraft:cave_spider_spawn_egg"
