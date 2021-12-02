@@ -128,6 +128,8 @@
   "item.frivycat.baby_rattle_boy.tooltip": "Boy",
   "item.frivycat.baby_rattle_girl.tooltip": "Girl",
 
+  "itemGroup.wipTab": "Work In Progress (WiP)",
+
   "message.corrupted_block_collide_unsafe": "Something isn't right with that block...better pick it back up",
   "message.corrupted_block_collide_safe": "How strange...seems with this item, you're receiving quite the buff...",
   "message.magic_wand.failed": "Hrm....maybe you need more levels..."

@@ -34,25 +34,25 @@ public class Misc {
     public static final RegistryObject<Item> BABY_RATTLE_BOY = regBabyRattle("boy");
     public static final RegistryObject<Item> BABY_RATTLE_GIRL = regBabyRattle("girl");
     public static final RegistryObject<Item> BABY_BOTTLE = Utils.regItem(ITEMS,"baby_bottle", new Item(new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<Item> MUMBO_DUST = Utils.regItem(ITEMS, "mumbo_dust", new Item(new Item.Properties().group(ItemGroup.REDSTONE).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> DISPENSER_BOW = Utils.regItem(ITEMS, "dispenser_bow", new Item(new Item.Properties().group(ItemGroup.TOOLS).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> BUTTER = Utils.regItem(ITEMS, "butter", new Butter(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> MUMBO_DUST = Utils.regItem(ITEMS, "mumbo_dust", new Item(new Item.Properties().group(ModItemGroup.WIP).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> DISPENSER_BOW = Utils.regItem(ITEMS, "dispenser_bow", new Item(new Item.Properties().group(ModItemGroup.WIP).rarity(Rarity.UNCOMMON)));
 
     // tools (work in progress)
     //TODO should allow player to edit signs on right-click if Quark is not installed
-    public static final RegistryObject<Item> PENCIL = Utils.regItem(ITEMS,"pencil", new Item(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(150)));
+    public static final RegistryObject<Item> PENCIL = Utils.regItem(ITEMS,"pencil", new Item(new Item.Properties().group(ModItemGroup.WIP).maxDamage(150)));
     //TODO can "record" a mob's cries to be played in a jukebox/note block
-    public static final RegistryObject<Item> MIC = Utils.regItem(ITEMS, "mic", new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> MIC = Utils.regItem(ITEMS, "mic", new Item(new Item.Properties().group(ModItemGroup.WIP)));
     //TODO TBD
-    public static final RegistryObject<Item> MAGE_BOOK = Utils.regItem(ITEMS,"mage_book", new ShinyItem(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+    public static final RegistryObject<Item> MAGE_BOOK = Utils.regItem(ITEMS,"mage_book", new ShinyItem(new Item.Properties().group(ModItemGroup.WIP).maxStackSize(1)));
     //TODO various magical things
-    public static final RegistryObject<Item> MAGIC_WAND = Utils.regItem(ITEMS,"magic_wand", new MagicWand(new Item.Properties().group(ItemGroup.MISC).maxDamage(500)));
-    public static final RegistryObject<Item> BUTTER = Utils.regItem(ITEMS, "butter", new Butter(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> MAGIC_WAND = Utils.regItem(ITEMS,"magic_wand", new MagicWand(new Item.Properties().group(ModItemGroup.WIP).maxDamage(500)));
     //TODO should forcefully open locked chest
-    public static final RegistryObject<Item> LOCK_PICK = Utils.regItem(ITEMS,"lock_pick", new LockPick(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(300)));
-    public static final RegistryObject<Item> STONE_BANANA = Utils.regItem(ITEMS,"stone_banana", new StoneBanana(7.0f, -2.0f, ItemTier.STONE, (new Item.Properties().group(ItemGroup.TOOLS).rarity(Rarity.EPIC))));
+    public static final RegistryObject<Item> LOCK_PICK = Utils.regItem(ITEMS,"lock_pick", new LockPick(new Item.Properties().group(ModItemGroup.WIP).maxDamage(300)));
+    public static final RegistryObject<Item> STONE_BANANA = Utils.regItem(ITEMS,"stone_banana", new StoneBanana(7.0f, -2.0f, ItemTier.STONE, (new Item.Properties().group(ModItemGroup.WIP).rarity(Rarity.EPIC))));
 
     // potion filled mug (WIP)
-    public static final RegistryObject<Item> POTION_MUG = Utils.regItem(ITEMS,"potion_mug", new PotionMug(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
+    public static final RegistryObject<Item> POTION_MUG = Utils.regItem(ITEMS,"potion_mug", new PotionMug(new Item.Properties().group(ModItemGroup.WIP).maxStackSize(1)));
     public static final RegistryObject<Item> MUG = Utils.regItem(ITEMS,"mug", new Mug(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(1)));
 
     // mustaches

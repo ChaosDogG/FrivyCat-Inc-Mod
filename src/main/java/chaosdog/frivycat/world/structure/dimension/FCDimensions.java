@@ -3,12 +3,12 @@ package chaosdog.frivycat.world.structure.dimension;
 import chaosdog.frivycat.FrivyCatMod;
 import chaosdog.frivycat.Utils;
 import chaosdog.frivycat.blocks.FCPortalBlock;
+import chaosdog.frivycat.items.ModItemGroup;
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.village.PointOfInterestType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -35,9 +35,9 @@ public class FCDimensions {
         PORTAL_ITEMS.register(eventbus);
         POI_TYPES.register(eventbus);
 
-        Utils.regBlockWithItem(PORTALS, PORTAL_ITEMS, "passive_fields_portal", PASSIVE_FIELDS_PORTAL, ItemGroup.DECORATIONS);
-        Utils.regBlockWithItem(PORTALS, PORTAL_ITEMS, "wooded_terrors_portal", WOODED_TERRORS_PORTAL, ItemGroup.DECORATIONS);
-        Utils.regBlockWithItem(PORTALS, PORTAL_ITEMS, "spirit_realm_portal", SPIRIT_REALM_PORTAL, ItemGroup.DECORATIONS);
+        Utils.regBlockWithItem(PORTALS, PORTAL_ITEMS, "passive_fields_portal", PASSIVE_FIELDS_PORTAL, ModItemGroup.WIP);
+        Utils.regBlockWithItem(PORTALS, PORTAL_ITEMS, "wooded_terrors_portal", WOODED_TERRORS_PORTAL, ModItemGroup.WIP);
+        Utils.regBlockWithItem(PORTALS, PORTAL_ITEMS, "spirit_realm_portal", SPIRIT_REALM_PORTAL, ModItemGroup.WIP);
     }
 
     public static void initClient() {

@@ -128,6 +128,8 @@
     "item.frivycat.baby_rattle_boy.tooltip": "Boy",
     "item.frivycat.baby_rattle_girl.tooltip": "Girl",
 
+    "itemGroup.wipTab": "Wurk In Prgres (WiP)",
+
     "message.corrupted_block_collide_unsafe": "Idk 'bout dis....betr re-get it",
     "message.corrupted_block_collide_safe": "Woah....did u just unlock god hax w that thing?",
     "message.magic_wand.failed": "Hrm....maybe you need more levels..."

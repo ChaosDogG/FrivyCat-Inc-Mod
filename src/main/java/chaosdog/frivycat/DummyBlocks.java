@@ -37,11 +37,11 @@ public class DummyBlocks {
     // registers a dummy block
     private static RegistryObject<Block> regDummyBlock(String name) {
         AbstractBlock.Properties properties = AbstractBlock.Properties.create(Material.IRON).harvestLevel(4).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f).sound(SoundType.METAL);
-        return Utils.regBlockWithItem(BLOCKS, ITEMS, "dummy_" + name, new Block(properties), ItemGroup.MISC);
+        return Utils.regBlockWithItem(BLOCKS, ITEMS, "dummy_" + name, new Block(properties), ItemGroup.DECORATIONS);
     }
     private static RegistryObject<Block> regDummyPillar(String name) {
         AbstractBlock.Properties properties = AbstractBlock.Properties.create(Material.IRON).harvestLevel(4).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f).sound(SoundType.METAL);
-        return Utils.regBlockWithItem(BLOCKS, ITEMS, "dummy_" + name, new RotatedPillarBlock(properties), ItemGroup.MISC);
+        return Utils.regBlockWithItem(BLOCKS, ITEMS, "dummy_" + name, new RotatedPillarBlock(properties), ItemGroup.DECORATIONS);
     }
     private static RegistryObject<Block> regDummyFrontFace(String name) {
         AbstractBlock.Properties properties = AbstractBlock.Properties.create(Material.IRON).harvestLevel(4).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f).sound(SoundType.METAL);
@@ -56,6 +56,6 @@ public class DummyBlocks {
             protected void interactWith(World worldIn, BlockPos pos, PlayerEntity player) {
 
             }
-        }, ItemGroup.MISC);
+        }, ItemGroup.DECORATIONS);
     }
 }

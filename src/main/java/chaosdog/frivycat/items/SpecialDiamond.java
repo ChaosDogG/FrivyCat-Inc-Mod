@@ -1,7 +1,6 @@
 package chaosdog.frivycat.items;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Rarity;
 
@@ -9,7 +8,7 @@ public class SpecialDiamond extends Item {
     private final boolean isShiny;
 
     public SpecialDiamond(boolean isShiny) {
-        super(new Item.Properties().group(ItemGroup.MISC).rarity(Rarity.EPIC));
+        super(new Item.Properties().group(ModItemGroup.WIP).rarity(Rarity.EPIC));
         this.isShiny = isShiny;
     }
 

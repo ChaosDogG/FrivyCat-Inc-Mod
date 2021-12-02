@@ -4,6 +4,7 @@ import chaosdog.frivycat.blocks.CorruptedBlock;
 import chaosdog.frivycat.blocks.GeneratorBlock;
 import chaosdog.frivycat.blocks.MumboBlock;
 import chaosdog.frivycat.blocks.MumboDustWire;
+import chaosdog.frivycat.items.ModItemGroup;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -28,12 +29,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> CORRUPTED_BLOCK = Utils.regBlockWithItem(BLOCKS, ITEMS, "corrupted_block", new CorruptedBlock(AbstractBlock.Properties.create(Material.TNT).harvestLevel(0).hardnessAndResistance(0f, 10000f).sound(SoundType.SLIME).doesNotBlockMovement()), ItemGroup.DECORATIONS);
 
     //Generator stuff
-    public static final RegistryObject<Block> LOG_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "log_generator", new GeneratorBlock(GeneratorBlock.Type.LOG), ItemGroup.MISC);
-    public static final RegistryObject<Block> IRON_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "iron_generator", new GeneratorBlock(GeneratorBlock.Type.IRON), ItemGroup.MISC);
-    public static final RegistryObject<Block> APPLE_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "apple_generator", new GeneratorBlock(GeneratorBlock.Type.APPLE), ItemGroup.MISC);
-    public static final RegistryObject<Block> GOLD_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "gold_generator", new GeneratorBlock(GeneratorBlock.Type.GOLD), ItemGroup.MISC);
-    public static final RegistryObject<Block> DIAMOND_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "diamond_generator", new GeneratorBlock(GeneratorBlock.Type.DIAMOND), ItemGroup.MISC);
-    public static final RegistryObject<Block> OBSIDIAN_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "obsidian_generator", new GeneratorBlock(GeneratorBlock.Type.OBSIDIAN), ItemGroup.MISC);
+    public static final RegistryObject<Block> LOG_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "log_generator", new GeneratorBlock(GeneratorBlock.Type.LOG), ModItemGroup.WIP);
+    public static final RegistryObject<Block> IRON_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "iron_generator", new GeneratorBlock(GeneratorBlock.Type.IRON), ModItemGroup.WIP);
+    public static final RegistryObject<Block> APPLE_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "apple_generator", new GeneratorBlock(GeneratorBlock.Type.APPLE), ModItemGroup.WIP);
+    public static final RegistryObject<Block> GOLD_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "gold_generator", new GeneratorBlock(GeneratorBlock.Type.GOLD), ModItemGroup.WIP);
+    public static final RegistryObject<Block> DIAMOND_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "diamond_generator", new GeneratorBlock(GeneratorBlock.Type.DIAMOND), ModItemGroup.WIP);
+    public static final RegistryObject<Block> OBSIDIAN_GENERATOR = Utils.regBlockWithItem(BLOCKS, ITEMS, "obsidian_generator", new GeneratorBlock(GeneratorBlock.Type.OBSIDIAN), ModItemGroup.WIP);
 
     //Fires
     //public static final RegistryObject<Block> SPIRIT_FIRE = Utils.regBlock(BLOCKS, "spirit_fire", new SpiritFire(AbstractBlock.Properties.from(Blocks.FIRE)));
