@@ -69,7 +69,7 @@ public class ScoobyStrayEntity extends AbstractSkeletonEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SPEED, 200));
+                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.UNLUCK, 200));
             }
 
             return true;
@@ -83,7 +83,7 @@ public class ScoobyStrayEntity extends AbstractSkeletonEntity {
         AbstractArrowEntity abstractarrowentity = super.fireArrow(arrowStack, distanceFactor);
         if (abstractarrowentity instanceof ArrowEntity) {
             ((ArrowEntity)abstractarrowentity).addEffect(new EffectInstance(ModEffects.SLIPPERY.get(), 600));
-            ((ArrowEntity)abstractarrowentity).addEffect(new EffectInstance(Effects.LUCK, 600));
+            ((ArrowEntity)abstractarrowentity).addEffect(new EffectInstance(Effects.UNLUCK, 600));
         }
 
         return abstractarrowentity;
