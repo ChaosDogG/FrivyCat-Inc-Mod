@@ -128,6 +128,16 @@
     "item.frivycat.baby_rattle_boy.tooltip": "Boy",
     "item.frivycat.baby_rattle_girl.tooltip": "Girl",
 
+    "item.frivycat.ruby.jei_info": "This lil sucker, a remnant of the scrapped MC Ruby from the old days, transports all zombie villagers to it within a 10-50 block radius and automatically converts them to the deformed, armless, freaks you all know and hate :3",
+    "item.frivycat.sapphire.jei_info": "Put this lil thing in a frame and suddenly Nitwits can get employed. Notice how I said “can” and not “will”. Yeah, good luck getting these guys hired.",
+    "item.frivycat.zircon.jei_info": "This thing does the exact opposite as the Sapphire, so I suggest just burning this.",
+    "item.frivycat.garnet.jei_info": "This pretty red gem does so-it’s that red dot again! I’m gonna get that lil sucker! Get back here, you!",
+    "item.frivycat.jade.jei_info": "A gem that makes crops grow like crazy? It makes for a great show when put in a villager breeder though :3",
+    "item.frivycat.jasper.jei_info": "This thing seems to make iron golems stronger...oh no… It also appears to point out nearby corrupted mobs.",
+    "item.frivycat.spinel.jei_info": "A strange lil trinket that makes spawners throw more things at you, have fun :3",
+    "item.frivycat.topaz.jei_info": "Don’t use this after the Spinel, or else I won’t be able to watch you suffer :3",
+    "item.frivycat.agate.jei_info": "Oh, this thing is neat. If I put this near a chicken, I’ll have infinite ammo to annoy the people I truly despise! Oh, and ingredients for capsules, but those aren’t as important as annoying my foes :3",
+
     "itemGroup.wipTab": "Work In Progress (WiP)",
 
     "message.corrupted_block_collide_unsafe": "Something isn't right with that block...better pick it back up",
