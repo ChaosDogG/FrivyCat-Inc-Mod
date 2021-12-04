@@ -1,6 +1,13 @@
 {
     "replace": false,
     "values": [
-        "#frivycat:hostiles"
+        "#minecraft:skeletons",
+        "#minecraft:raiders",
+        "minecraft:zombie_villager",
+        "minecraft:piglin_brute",
+        "minecraft:zombie",
+        "minecraft:husk",
+        "minecraft:drowned",
+        "minecraft:giant"
     ]
 }
