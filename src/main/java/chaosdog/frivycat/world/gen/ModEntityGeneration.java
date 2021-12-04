@@ -13,8 +13,8 @@ import java.util.List;
 
 public class ModEntityGeneration {
     public static void onEntitySpawn(final BiomeLoadingEvent event){
-        addEntityToAllOverworldBiomes(event, ModEntityTypes.PIGPER.get(), 20, 1, 4);
-        addEntityToAllOverworldBiomes(event, ModEntityTypes.SCOOBY_SKELETON.get(), 20, 1, 4);
+        addEntityToSpecificBiomes(event, ModEntityTypes.PIGPER.get(), 20, 1, 4, Biomes.PLAINS);
+        addEntityToSpecificBiomes(event, ModEntityTypes.SCOOBY_SKELETON.get(), 20, 1, 4, Biomes.DARK_FOREST);
         addEntityToSpecificBiomes(event, ModEntityTypes.SCOOBY_STRAY.get(), 20, 1, 4, Biomes.SNOWY_TUNDRA);
     }
 
