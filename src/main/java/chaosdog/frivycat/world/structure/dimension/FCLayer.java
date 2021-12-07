@@ -30,7 +30,7 @@ public enum FCLayer implements IAreaTransformer0 {
 
     private static List<RegistryKey<Biome>> getPassiveFieldBiomes() {
         return Arrays.asList(
-              RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:peaceful_flower_forest")),
+                RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:peaceful_flower_forest")),
                 RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:honest_plains")),
                 RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:light_plains")),
                 RegistryKey.getOrCreateKey(Registry.BIOME_KEY, new ResourceLocation("frivycat:curious_desert")),
