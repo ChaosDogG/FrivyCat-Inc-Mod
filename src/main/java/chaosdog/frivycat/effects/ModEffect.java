@@ -21,6 +21,9 @@ public class ModEffect extends Effect {
 
     @Override
     public void performEffect(LivingEntity living, int amplifier) {
+
+        //boolean hasCreativeLike = living.isPotionActive(ModEffects.CREATIVE_LIKE.get());
+
         if(this == ModEffects.SLIPPERY.get()) {
             if(!(living instanceof PlayerEntity)) {
                 for (Hand hand1 : Arrays.asList(Hand.MAIN_HAND, Hand.OFF_HAND)) {
@@ -63,19 +66,19 @@ public class ModEffect extends Effect {
                 }
             }
         }
-        /*if(this == ModEffects.CREATIVE_LIKE.get()) {
-            if(living instanceof PlayerEntity) {
-                PlayerEntity player = (PlayerEntity) living;
-                player.abilities.allowFlying = true;
-                player.abilities.isCreativeMode = true;
-                player.abilities.disableDamage = true;
-            }
-        }else{
+        /*if(!hasCreativeLike) {
             if(living instanceof PlayerEntity) {
                 PlayerEntity player = (PlayerEntity) living;
                 player.abilities.allowFlying = false;
                 player.abilities.isCreativeMode = false;
                 player.abilities.disableDamage = false;
+            }
+        }else{
+            if(living instanceof PlayerEntity) {
+                PlayerEntity player = (PlayerEntity) living;
+                player.abilities.allowFlying = true;
+                player.abilities.isCreativeMode = true;
+                player.abilities.disableDamage = true;
             }
         }*/
     }
