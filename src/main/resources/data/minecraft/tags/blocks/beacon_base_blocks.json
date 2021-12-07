@@ -1,10 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#frivycat:ores",
-    "minecraft:quartz_block",
-    "minecraft:coal_block",
-    "minecraft:lapis_block",
-    "#frivycat:gem_blocks"
+    "#forge:ores",
+    "#forge:storage_blocks"
   ]
 }

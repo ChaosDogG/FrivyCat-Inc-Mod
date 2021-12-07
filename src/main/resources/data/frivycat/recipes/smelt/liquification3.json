@@ -1,7 +1,7 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-        "tag": "frivycat:stones"
+        "tag": "forge:stone"
     },
     "result": "minecraft:lava_bucket",
     "experience": 0.1,

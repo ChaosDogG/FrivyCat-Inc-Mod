@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ores/ruby",
+    "#forge:ores/sapphire",
+    "#forge:ores/zircon",
+    "#forge:ores/garnet",
+    "#forge:ores/jade",
+    "#forge:ores/jasper",
+    "#forge:ores/spinel",
+    "#forge:ores/topaz",
+    "#forge:ores/agate"
+  ]
+}

@@ -6,7 +6,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "frivycat:gem_blocks"
+            "item": "frivycat:ruby_block"
           }
         ]
       }

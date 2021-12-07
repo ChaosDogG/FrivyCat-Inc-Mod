@@ -2,7 +2,7 @@
 	"replace": false,
 	"values": [
 		"minecraft:redstone",
-		"minecraft:redstone_block",
+		"#forge:storage_blocks/redstone",
 		"minecraft:piston",
 		"minecraft:sticky_piston",
 		"minecraft:observer",
@@ -16,7 +16,7 @@
 		"minecraft:comparator",
 		"minecraft:hopper",
 		"#frivycat:pressure_plates",
-		"#frivycat:fence_gates",
+		"#forge:fence_gates",
 		"minecraft:redstone_lamp",
 		"minecraft:tripwire_hook",
 		"minecraft:note_block",
