@@ -230,7 +230,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 40,
-          "name": "frivycat:chests/head_box",
+          "name": "frivycat:gameplay/piglin_head_barter",
           "functions": [
             {
               "function": "minecraft:set_count",
