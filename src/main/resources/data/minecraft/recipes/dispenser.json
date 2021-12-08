@@ -10,7 +10,7 @@
       "item": "minecraft:redstone"
     },
     "#": {
-      "item": "minecraft:cobblestone"
+      "tag": "forge:cobblestone"
     },
     "X": {
       "item": "frivycat:dispenser_bow"
