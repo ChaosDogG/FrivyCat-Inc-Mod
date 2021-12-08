@@ -15,7 +15,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.8.1'
+version = '0.8.2'
 group = 'com.chaosdog.frivycat' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'frivycat'
 
@@ -169,6 +169,8 @@ dependencies {
     //runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.0.6.4")
     //compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.0.6.4:api")
 
+    //runtimeOnly fg.deobf("curse.maven:player_mobs-430513:3377977")
+
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"
@@ -198,7 +200,7 @@ jar {
             "Specification-Vendor": "frivycat",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
-            "Implementation-Version": "0.8.1",
+            "Implementation-Version": "0.8.2",
             "Implementation-Vendor" :"frivycat",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
             "MixinConfigs": "frivycat.mixins.json"
