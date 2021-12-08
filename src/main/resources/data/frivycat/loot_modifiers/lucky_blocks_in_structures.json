@@ -2,7 +2,7 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "minecraft:chests/village/village_armorer"
+      "loot_table_id": "minecraft:chests/spawn_bonus_chest"
     }
   ],
   "addition": "minecraft:player_head"
