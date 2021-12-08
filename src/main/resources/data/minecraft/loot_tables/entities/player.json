@@ -14,13 +14,17 @@
             },
             {
               "function": "minecraft:set_lore",
+              "entity": "killer",
               "lore": [
                 [
-				  {"selector":"@s"},
-				  {"text":"'s victim"}
-				]
-              ],
-              "entity": "killer"
+                  {
+                    "selector": "@s"
+                  },
+                  {
+                    "text": "'s victim"
+                  }
+                ]
+              ]
             }
           ]
         }
@@ -36,10 +40,20 @@
               "condition": "minecraft:entity_properties",
               "entity": "killer",
               "predicate": {
+                "type": "minecraft:creeper",
                 "nbt": "{powered:1b}"
               }
             }
           ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "frivycat:entities/signature_player_loot"
         }
       ]
     }
