@@ -4,6 +4,7 @@ import chaosdog.frivycat.entities.ModEntityTypes;
 import chaosdog.frivycat.entities.render.PigperRenderer;
 import chaosdog.frivycat.entities.render.ScoobySkeletonRenderer;
 import chaosdog.frivycat.entities.render.ScoobyStrayRenderer;
+import chaosdog.frivycat.paintings.ModPaintings;
 import chaosdog.frivycat.world.structure.ModStructures;
 import chaosdog.frivycat.world.structure.dimension.FCBiomeSource;
 import chaosdog.frivycat.world.structure.dimension.FCDimensions;
@@ -40,8 +41,9 @@ public class FrivyCatMod {
         ModBlocks.init(eventBus);
         ModEntityTypes.init(eventBus);
         ModEffects.init(eventBus);
+        ModPaintings.init(eventBus);
         ModPotions.init(eventBus);
-        ModStructures.register(eventBus);
+        ModStructures.init(eventBus);
         FCDimensions.init(eventBus);
 
         // put debug stick and knowledge book in tools tab of creative inventory
