@@ -61,7 +61,7 @@ public class ModStructures {
                     settings.getValue().getStructures().func_236195_a_();
             /*
              * Pre-caution in case a mod makes the structure map immutable like datapacks do.
-             * I take no chances myself. You never know what another mods does...
+             * I take no chances myself. You never know what another mod does...
              *
              * structureConfig requires AccessTransformer  (See resources/META-INF/accesstransformer.cfg)
              */
@@ -76,7 +76,7 @@ public class ModStructures {
         });
     }
 
-    public static void register(IEventBus eventBus) {
+    public static void init(IEventBus eventBus) {
         FrivyCatMod.LOG.info("Setting up structures");
         STRUCTURES.register(eventBus);
     }
