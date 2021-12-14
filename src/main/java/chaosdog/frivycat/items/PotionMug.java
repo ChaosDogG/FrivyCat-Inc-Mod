@@ -2,26 +2,43 @@ package chaosdog.frivycat.items;
 
 import chaosdog.frivycat.Misc;
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.PotionItem;
+import net.minecraft.item.UseAction;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionUtils;
 import net.minecraft.potion.Potions;
 import net.minecraft.stats.Stats;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.DrinkHelper;
+import net.minecraft.util.Hand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class PotionMug extends PotionItem {
+import javax.annotation.Nullable;
+import java.util.List;
+
+public class PotionMug extends Item {
 
     public PotionMug(Properties builder) {
         super(builder);
     }
+
+    @Override
+    public ItemStack getDefaultInstance() {
+        return PotionUtils.addPotionToItemStack(super.getDefaultInstance(), Potions.WATER);
+    }
+
     @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
         PlayerEntity playerentity = entityLiving instanceof PlayerEntity ? (PlayerEntity)entityLiving : null;
@@ -57,6 +74,36 @@ public class PotionMug extends PotionItem {
         }
 
         return stack;
+    }
+
+    @Override
+    public int getUseDuration(ItemStack stack) {
+        return 32;
+    }
+
+    @Override
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.DRINK;
+    }
+
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
+        return DrinkHelper.startDrinking(worldIn, playerIn, handIn);
+    }
+
+    @Override
+    public String getTranslationKey(ItemStack stack) {
+        return PotionUtils.getPotionFromItem(stack).getNamePrefixed(this.getTranslationKey() + ".effect.");
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        PotionUtils.addPotionTooltip(stack, tooltip, 1.0F);
+    }
+
+    @Override
+    public boolean hasEffect(ItemStack stack) {
+        return super.hasEffect(stack) || !PotionUtils.getEffectsFromStack(stack).isEmpty();
     }
 
     public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
