@@ -15,7 +15,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.9.0'
+version = '0.9.1'
 group = 'com.chaosdog.frivycat' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'frivycat'
 
@@ -192,12 +192,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "frivycat",
-            "Specification-Vendor": "frivycat",
+            "Specification-Title": "FrivyCat Inc. Mod",
+            "Specification-Vendor": "ChaosDog",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
-            "Implementation-Version": "0.9.0",
-            "Implementation-Vendor" :"frivycat",
+            "Implementation-Version": "0.9.1",
+            "Implementation-Vendor" :"ChaosDog",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
             "MixinConfigs": "frivycat.mixins.json"
         ])
