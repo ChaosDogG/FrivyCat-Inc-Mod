@@ -37,6 +37,7 @@ public class Misc {
     public static final RegistryObject<Item> BUTTER = Utils.regItem(ITEMS, "butter", new Butter(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> MUMBO_DUST = Utils.regItem(ITEMS, "mumbo_dust", new Item(new Item.Properties().group(ModItemGroup.WIP).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> DISPENSER_BOW = Utils.regItem(ITEMS, "dispenser_bow", new Item(new Item.Properties().group(ModItemGroup.WIP).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> FRIVY_COIN = Utils.regItem(ITEMS, "frivy_coin", new Item(new Item.Properties().group(ItemGroup.MISC)));
 
     // tools (work in progress)
     //TODO should allow player to edit signs on right-click if Quark is not installed
