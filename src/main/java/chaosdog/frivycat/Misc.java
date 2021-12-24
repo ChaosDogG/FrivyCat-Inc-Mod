@@ -37,7 +37,11 @@ public class Misc {
     public static final RegistryObject<Item> BUTTER = Utils.regItem(ITEMS, "butter", new Butter(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> MUMBO_DUST = Utils.regItem(ITEMS, "mumbo_dust", new Item(new Item.Properties().group(ModItemGroup.WIP).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> DISPENSER_BOW = Utils.regItem(ITEMS, "dispenser_bow", new Item(new Item.Properties().group(ModItemGroup.WIP).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> FRIVY_COIN = Utils.regItem(ITEMS, "frivy_coin", new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> FRIVY_COIN_1 = regFrivyCoin("1");
+    public static final RegistryObject<Item> FRIVY_COIN_5 = regFrivyCoin("5");
+    public static final RegistryObject<Item> FRIVY_COIN_20 = regFrivyCoin("20");
+    public static final RegistryObject<Item> FRIVY_COIN_80 = regFrivyCoin("80");
+    public static final RegistryObject<Item> FRIVY_COIN_320 = regFrivyCoin("320");
 
     // tools (work in progress)
     //TODO should allow player to edit signs on right-click if Quark is not installed
@@ -81,6 +85,20 @@ public class Misc {
                     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
                         if (gender.equals("boy")) tooltip.add(new TranslationTextComponent("item.frivycat.baby_rattle_boy.tooltip").mergeStyle(TextFormatting.AQUA));
                         if (gender.equals("girl")) tooltip.add(new TranslationTextComponent("item.frivycat.baby_rattle_girl.tooltip").mergeStyle(TextFormatting.LIGHT_PURPLE));
+                    }
+                });
+    }
+
+    private static RegistryObject<Item> regFrivyCoin(String amount) {
+        return Utils.regItem(ITEMS, "frivy_coin_" + amount,
+                new Item(new Item.Properties().group(ItemGroup.MISC)){
+                    @Override
+                    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+                        if (amount.equals("1")) tooltip.add(new TranslationTextComponent("item.frivycat.frivy_coin_1.tooltip").mergeStyle(TextFormatting.GRAY));
+                        if (amount.equals("5")) tooltip.add(new TranslationTextComponent("item.frivycat.frivy_coin_5.tooltip").mergeStyle(TextFormatting.GRAY));
+                        if (amount.equals("20")) tooltip.add(new TranslationTextComponent("item.frivycat.frivy_coin_20.tooltip").mergeStyle(TextFormatting.GRAY));
+                        if (amount.equals("80")) tooltip.add(new TranslationTextComponent("item.frivycat.frivy_coin_80.tooltip").mergeStyle(TextFormatting.GRAY));
+                        if (amount.equals("320")) tooltip.add(new TranslationTextComponent("item.frivycat.frivy_coin_320.tooltip").mergeStyle(TextFormatting.GRAY));
                     }
                 });
     }

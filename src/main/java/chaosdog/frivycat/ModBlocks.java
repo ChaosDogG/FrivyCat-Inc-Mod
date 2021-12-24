@@ -9,6 +9,8 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -46,9 +48,10 @@ public class ModBlocks {
         ITEMS.register(eventbus);
     }
 
-    /*public static void initClient(){
-        RenderTypeLookup.setRenderLayer(SPIRIT_FIRE.get(), RenderType.getCutout());
-    }*/
+    public static void initClient(){
+        //RenderTypeLookup.setRenderLayer(SPIRIT_FIRE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(APPLE_GENERATOR.get(), RenderType.getCutout());
+    }
 
 
 }
