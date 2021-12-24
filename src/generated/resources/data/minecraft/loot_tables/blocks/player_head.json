@@ -146,7 +146,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "frivycat:frivy_coin",
+          "name": "frivycat:frivy_coin_1",
           "functions": [
             {
               "function": "minecraft:set_count",

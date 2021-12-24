@@ -17,10 +17,10 @@ license = "GPL-3.0-or-later"
     version="${file.jarVersion}"
     displayName="FrivyCat Inc. Mod"
     logoFile="pack.png"
-    credits="I'd like to thank NetherNoah, who is helping me develop this mod!"
-    authors="ChaosDog, NetherNoah777"
+    credits="I'd like to thank NetherNoah, who is helping me develop this mod and Flint, who is helping with textures, models, and testing!"
+    authors="§aChaosDog§r, NetherNoah777, FlintCam"
     description="Based on the §aFrivyCat Inc.§r Datapack" # Added color codes cause why not
-    itemIcon="frivycat:ruby"
+    itemIcon="frivycat:frivy_coin_1"
 
 [[dependencies.frivycat]]
     modId="forge"
