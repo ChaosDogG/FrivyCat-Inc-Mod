@@ -27,6 +27,10 @@ public class ModPaintings {
             PAINTING_TYPES.register("doge_intensifies", () -> new PaintingType(16, 16));
     public static final RegistryObject<PaintingType> WALUIGI_LOGO =
             PAINTING_TYPES.register("waluigi_logo", () -> new PaintingType(16, 16));
+    public static final RegistryObject<PaintingType> FLINT =
+            PAINTING_TYPES.register("flint", () -> new PaintingType(16, 16));
+    public static final RegistryObject<PaintingType> KIT =
+            PAINTING_TYPES.register("kit", () -> new PaintingType(16, 16));
 
     public static final RegistryObject<PaintingType> MUMBO =
             PAINTING_TYPES.register("mumbo", () -> new PaintingType(32, 32));
@@ -38,6 +42,14 @@ public class ModPaintings {
             PAINTING_TYPES.register("mrcrayfish", () -> new PaintingType(32, 32));
     public static final RegistryObject<PaintingType> DONIBOBES =
             PAINTING_TYPES.register("donibobes", () -> new PaintingType(32, 32));
+    public static final RegistryObject<PaintingType> SB737 =
+            PAINTING_TYPES.register("sb737", () -> new PaintingType(32, 32));
+    public static final RegistryObject<PaintingType> SOCKS =
+            PAINTING_TYPES.register("socks", () -> new PaintingType(32, 32));
+    public static final RegistryObject<PaintingType> LAFF =
+            PAINTING_TYPES.register("laff", () -> new PaintingType(32, 32));
+    public static final RegistryObject<PaintingType> TBH =
+            PAINTING_TYPES.register("tbh", () -> new PaintingType(32, 32));
 
     public static final RegistryObject<PaintingType> CHAOS_SPIRITS =
             PAINTING_TYPES.register("chaos_spirits", () -> new PaintingType(64, 48));
