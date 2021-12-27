@@ -1,0 +1,16 @@
+[
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "nbt": "{UUID:[I; 45087227, -938195768, -1854429906, 237685847]}"
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "nbt": "{Username:\"GamingGlalie\"}"
+    }
+  }
+]

@@ -18,37 +18,12 @@
           ],
           "conditions": [
             {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{UUID:[I; -276237267, 1686784346, -1408652854, -1928168243]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{UUID:[I; -1595349667, -977451854, -1151378586, 1679145181]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Username:\"Kitsunii\"}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Username:\"ItsFundy\"}"
-                  }
-                }
-              ]
+              "condition": "minecraft:reference",
+              "name": "frivycat:kit"
+            },
+            {
+              "condition": "minecraft:reference",
+              "name": "frivycat:fundy"
             }
           ]
         },
@@ -67,57 +42,8 @@
           ],
           "conditions": [
             {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{UUID:[I;-941977387,  1778729495,  -1186300606,  2092681944]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Username:\"MumboJumbo\"}"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:potato",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 0,
-                "max": 5
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{UUID:[I;186088047,  -1143649230,  -2015974844,  -1258075853]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Username:\"GamingJess\"}"
-                  }
-                }
-              ]
+              "condition": "minecraft:reference",
+              "name": "frivycat:mumbo"
             }
           ]
         },
@@ -144,23 +70,8 @@
           ],
           "conditions": [
             {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{UUID:[I; 1118725117, -1781313724, -1594744884, 1349686830]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Username:\"_Blanc_\"}"
-                  }
-                }
-              ]
+              "condition": "minecraft:reference",
+              "name": "frivycat:blanc"
             }
           ]
         },
@@ -178,37 +89,51 @@
           ],
           "conditions": [
             {
-              "condition": "minecraft:alternative",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{UUID:[I; 1729415803, -161855146, -2101710720, -1032698363]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{UUID:[I; -1732198706, 36849758, -1903756704, 1299768879]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Username:\"DoniBobes\"}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Username:\"SB737\"}"
-                  }
-                }
-              ]
+              "condition": "minecraft:reference",
+              "name": "frivycat:doni"
+            },
+            {
+              "condition": "minecraft:reference",
+              "name": "frivycat:sb"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dirt",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 5
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "frivycat:kristen"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:tag",
+          "name": "frivycat:ices",
+          "expand": true,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 5
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:reference",
+              "name": "frivycat:glalie"
             }
           ]
         }
