@@ -23,6 +23,12 @@ public class ModEntityTypes {
                             EntityClassification.MISC).size(0.25F, 0.25F).trackingRange(4).updateInterval(10)
                             .build(new ResourceLocation(FrivyCatMod.ID, "easter_egg").toString()));
 
+    /*public static final RegistryObject<EntityType<IllusionerLadyEntity>> ILLUSIONER_LADY =
+            ENTITY_TYPES.register("illusioner_lady",
+                    () -> EntityType.Builder.create(IllusionerLadyEntity::new,
+                                    EntityClassification.MONSTER).size(1.0f,2.0f).trackingRange(10)
+                            .build(new ResourceLocation(FrivyCatMod.ID, "illusioner_lady").toString()));*/
+
     public static final RegistryObject<EntityType<ScoobySkeletonEntity>> SCOOBY_SKELETON =
             ENTITY_TYPES.register("scooby-skeleton",
                     () -> EntityType.Builder.create(ScoobySkeletonEntity::new,

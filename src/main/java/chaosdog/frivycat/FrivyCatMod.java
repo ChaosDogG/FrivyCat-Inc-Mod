@@ -90,6 +90,7 @@ public class FrivyCatMod {
         ModBlocks.initClient();
         FCDimensions.initClient();
         //RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.CREEPIG.get(), CreepigRenderer::new);
+        //RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.ILLUSIONER_LADY.get(), IllusionerLadyRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PIGPER.get(), PigperRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.SCOOBY_SKELETON.get(), ScoobySkeletonRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.SCOOBY_STRAY.get(), ScoobyStrayRenderer::new);

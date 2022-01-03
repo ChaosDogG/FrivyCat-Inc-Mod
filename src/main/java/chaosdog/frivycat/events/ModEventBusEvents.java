@@ -22,6 +22,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void addEntityAttributes(EntityAttributeCreationEvent event) {
         //event.put(ModEntityTypes.CREEPIG.get(), CreepigEntity.setCustomAttributes().create());
+        //event.put(ModEntityTypes.ILLUSIONER_LADY.get(), IllusionerLadyEntity.setCustomAttributes().create());
         event.put(ModEntityTypes.PIGPER.get(), PigperEntity.setCustomAttributes().create());
         event.put(ModEntityTypes.SCOOBY_SKELETON.get(), ScoobySkeletonEntity.setCustomAttributes().create());
         event.put(ModEntityTypes.SCOOBY_STRAY.get(), ScoobyStrayEntity.setCustomAttributes().create());
