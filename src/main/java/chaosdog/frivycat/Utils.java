@@ -10,6 +10,8 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
 
+import java.util.List;
+
 public class Utils {
     // sets or changes the creative tab of a vanilla item
     public static void changeCreativeTab(Item item, ItemGroup tab) {
@@ -48,5 +50,23 @@ public class Utils {
     //register a Potion
     public static <P extends Potion> RegistryObject<P> regPotion(DeferredRegister<Potion> potion_registry, String name, P potion) {
         return potion_registry.register(name, () -> potion);
+    }
+
+    // Gets the minimum value of an integer array
+    public static int getMinValue(List<Integer> numbers){
+        int minValue = numbers.get(0);
+        for(int i = 1; i < numbers.size(); i++){
+            if(numbers.get(i) < minValue && numbers.get(i) != 0) minValue = numbers.get(i);
+        }
+        return minValue;
+    }
+
+    // Gets the maximum value of an integer array
+    public static int getMaxValue(List<Integer> numbers){
+        int maxValue = numbers.get(0);
+        for(int i = 1; i < numbers.size(); i++){
+            if(numbers.get(i) > maxValue && numbers.get(i) != 0) maxValue = numbers.get(i);
+        }
+        return maxValue;
     }
 }

@@ -88,8 +88,6 @@ public class VillagerTrades {
         if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(spinel_trade);
         if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(topaz_trade);
         if (profession == VillagerProfession.TOOLSMITH) trades.get(1).add(agate_trade);
-
-        System.out.println(profession);
     }
 
     // convenience method returning an emerald ItemStack representing the price of an item

@@ -1,4 +1,4 @@
-package chaosdog.frivycat.world.structure.dimension;
+package chaosdog.frivycat.world.dimension;
 
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.Registry;

@@ -1,4 +1,4 @@
-package chaosdog.frivycat.world.structure.dimension;
+package chaosdog.frivycat.world.dimension;
 
 import chaosdog.frivycat.Gems;
 import net.minecraft.block.Block;

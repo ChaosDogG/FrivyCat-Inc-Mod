@@ -1,7 +1,7 @@
 package chaosdog.frivycat.blocks;
 
-import chaosdog.frivycat.world.structure.dimension.FCDimensionType;
-import chaosdog.frivycat.world.structure.dimension.FCTeleporter;
+import chaosdog.frivycat.world.dimension.FCDimensionType;
+import chaosdog.frivycat.world.dimension.FCTeleporter;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;

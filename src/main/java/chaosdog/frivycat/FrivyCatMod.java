@@ -5,9 +5,9 @@ import chaosdog.frivycat.entities.render.PigperRenderer;
 import chaosdog.frivycat.entities.render.ScoobySkeletonRenderer;
 import chaosdog.frivycat.entities.render.ScoobyStrayRenderer;
 import chaosdog.frivycat.paintings.ModPaintings;
-import chaosdog.frivycat.world.structure.ModStructures;
-import chaosdog.frivycat.world.structure.dimension.FCBiomeSource;
-import chaosdog.frivycat.world.structure.dimension.FCDimensions;
+import chaosdog.frivycat.world.FCWorld;
+import chaosdog.frivycat.world.dimension.FCBiomeSource;
+import chaosdog.frivycat.world.dimension.FCDimensions;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
@@ -15,6 +15,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -32,6 +33,9 @@ public class FrivyCatMod {
         LOG.info("Setting up Frivy Cat mod");
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        FCConfig.initConfig(ModLoadingContext.get());
+        LOG.info("Loaded config");
+
         // modules
         Gems.init(eventBus);
         SpecialDiamonds.init(eventBus);
@@ -43,8 +47,7 @@ public class FrivyCatMod {
         ModEffects.init(eventBus);
         ModPaintings.init(eventBus);
         ModPotions.init(eventBus);
-        ModStructures.init(eventBus);
-        FCDimensions.init(eventBus);
+        FCWorld.init(eventBus);
 
         // put debug stick and knowledge book in tools tab of creative inventory
         Utils.changeCreativeTab(Items.DEBUG_STICK.asItem(), ItemGroup.TOOLS);
@@ -82,7 +85,6 @@ public class FrivyCatMod {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        ModStructures.setupStructures();
         Registry.register(Registry.BIOME_PROVIDER_CODEC, new ResourceLocation("frivycat:dimension_biomes"), FCBiomeSource.CODEC);
     }
 
