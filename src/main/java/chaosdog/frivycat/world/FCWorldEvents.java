@@ -31,7 +31,7 @@ public class FCWorldEvents {
 
         switch(event.getName().toString()) {
             case "minecraft:plains":
-                spawnInfo.withSpawner(EntityClassification.AMBIENT, new MobSpawnInfo.Spawners(ModEntityTypes.PIGPER.get(), 20, 1, 4));
+                spawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(ModEntityTypes.PIGPER.get(), 20, 1, 4));
                 break;
 
             case "minecraft:dark_forest": case "minecraft:dark_forest_hills":
