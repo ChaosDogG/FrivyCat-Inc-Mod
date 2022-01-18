@@ -14,7 +14,7 @@ license = "GPL-3.0-or-later"
 
 [[mods]]
     modId="frivycat"
-    version="${file.jarVersion}"
+    version="0.9.7"
     displayName="FrivyCat Inc. Mod"
     logoFile="pack.png"
     credits="I'd like to thank NetherNoah, who is helping me develop this mod and Flint, who is helping with textures, models, and testing!"
