@@ -45,9 +45,9 @@ public class FCConfig {
 
         Structures(ForgeConfigSpec.Builder builder) {
             builder.comment("Structure Settings").push("structures");
-            deathFellAccidentWater = new WorldGenOption(builder, true, 100, "Generate death.fell.accident.water Structure?", "deathFellAccidentWater");
-            chaosHead = new WorldGenOption(builder, true, 100, "Generate ChaosDog's head?", "chaosHead");
-            villagerSpawner = new WorldGenOption(builder, true, 100, "Generate villager spawners?", "villagerSpawner");
+            deathFellAccidentWater = new WorldGenOption(builder, true, 20, "Generate death.fell.accident.water Structure?", "deathFellAccidentWater");
+            chaosHead = new WorldGenOption(builder, true, 20, "Generate ChaosDog's head?", "chaosHead");
+            villagerSpawner = new WorldGenOption(builder, true, 20, "Generate villager spawners?", "villagerSpawner");
             builder.pop();
         }
     }
@@ -62,12 +62,12 @@ public class FCConfig {
 
         Generators(ForgeConfigSpec.Builder builder) {
             builder.comment("Item Generator Settings").push("generators");
-            logRarity = builder.defineInRange("logRarity", 5, 1, Integer.MAX_VALUE);
+            logRarity = builder.defineInRange("logRarity", 10, 1, Integer.MAX_VALUE);
             appleRarity = builder.defineInRange("appleRarity", 10, 1, Integer.MAX_VALUE);
-            ironRarity = builder.defineInRange("ironRarity", 20, 1, Integer.MAX_VALUE);
-            goldRarity = builder.defineInRange("goldRarity", 30, 1, Integer.MAX_VALUE);
-            obsidianRarity = builder.defineInRange("obsidianRarity", 30, 1, Integer.MAX_VALUE);
-            diamondRarity = builder.defineInRange("diamondRarity", 50, 1, Integer.MAX_VALUE);
+            ironRarity = builder.defineInRange("ironRarity", 15, 1, Integer.MAX_VALUE);
+            goldRarity = builder.defineInRange("goldRarity", 20, 1, Integer.MAX_VALUE);
+            obsidianRarity = builder.defineInRange("obsidianRarity", 25, 1, Integer.MAX_VALUE);
+            diamondRarity = builder.defineInRange("diamondRarity", 30, 1, Integer.MAX_VALUE);
             builder.pop();
         }
     }
