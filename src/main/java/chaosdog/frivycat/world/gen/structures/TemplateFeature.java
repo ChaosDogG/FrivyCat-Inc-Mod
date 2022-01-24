@@ -32,6 +32,9 @@ public abstract class TemplateFeature extends Feature<NoFeatureConfig> {
 
         settings.setIgnoreEntities(false);
 
+        FrivyCatMod.LOG.debug("Structure: " + templateName);
+        FrivyCatMod.LOG.debug("Location: " + pos.getX() + " " + pos.getY() + " " + pos.getZ());
+
         // place the structure
         template.func_237144_a_(reader, pos, settings, rand);
         if (postProcess) postProcessStructure(template, reader, rand, pos, settings, generator);

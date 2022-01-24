@@ -27,7 +27,7 @@ public class GroundStructure extends TemplateFeature {
     @Override
     public boolean generate(ISeedReader reader, ChunkGenerator generator, Random rand, BlockPos pos, NoFeatureConfig config) {
         //NetherNoah777: My mod will load ChaosDog's head monument if it is installed
-        if (ModList.get().isLoaded("paradisemod") && structure.toString().equals("frivycat:chaos_head")) return false;
+        if(ModList.get().isLoaded("paradisemod") && structure.toString().equals("frivycat:chaos_head")) return false;
         if(rand.nextInt(chance) != 0 || !enabled) return false;
         Template template = reader.getWorld().getStructureTemplateManager().getTemplate(structure);
         int sizeX = template.getSize().getX();
