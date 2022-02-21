@@ -15,6 +15,8 @@ import net.minecraft.world.World;
 
 import java.util.UUID;
 
+import net.minecraft.block.AbstractBlock.Properties;
+
 public class MumboBlock extends RedstoneBlock {
     public MumboBlock(Properties properties) {
         super(properties);

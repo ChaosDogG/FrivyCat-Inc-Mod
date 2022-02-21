@@ -17,6 +17,8 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 
+import net.minecraft.block.AbstractBlock.Properties;
+
 public class CorruptedBlock extends Block {
     public CorruptedBlock(Properties properties) {
         super(properties);

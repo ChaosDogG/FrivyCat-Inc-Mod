@@ -1,10 +1,7 @@
 package chaosdog.frivycat.mixin;
 
-import net.minecraft.block.AbstractFireBlock;
-import org.spongepowered.asm.mixin.Mixin;
-
-@Mixin(AbstractFireBlock.class)
-public abstract class AbstractFireBlockMixin {
+//@Mixin(AbstractFireBlock.class)
+//public abstract class AbstractFireBlockMixin {
 
 /*    @Inject(at = @At("HEAD"), method = "getShape", cancellable = true)
     private static void addCustomFire(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext context, CallbackInfoReturnable<BlockState> cir){

@@ -11,6 +11,8 @@ import net.minecraft.world.World;
 
 import java.util.Objects;
 
+import net.minecraft.item.Item.Properties;
+
 public class MagicWand extends Item {
     public MagicWand(Properties properties) {
         super(properties);

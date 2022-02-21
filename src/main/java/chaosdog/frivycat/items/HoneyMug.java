@@ -11,6 +11,8 @@ import net.minecraft.potion.Effects;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.World;
 
+import net.minecraft.item.Item.Properties;
+
 public class HoneyMug extends HoneyBottleItem {
     public HoneyMug(Properties builder) {
         super(builder);

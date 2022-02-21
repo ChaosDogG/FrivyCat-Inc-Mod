@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import net.minecraft.item.Item.Properties;
+
 public class ModSpawnEggItem extends SpawnEggItem {
     protected static final List<ModSpawnEggItem> UNADDED_EGGS = new ArrayList<>();
     private final Lazy<? extends EntityType<?>> entityTypeSupplier;
@@ -30,7 +32,7 @@ public class ModSpawnEggItem extends SpawnEggItem {
 
     public static void initSpawnEggs() {
         final Map<EntityType<?>, SpawnEggItem> EGGS = ObfuscationReflectionHelper.getPrivateValue(
-                SpawnEggItem.class, null, "field_195987_b");
+                SpawnEggItem.class, null, "EGGS");
         DefaultDispenseItemBehavior dispenseItemBehavior = new DefaultDispenseItemBehavior() {
             @Override
             protected ItemStack dispenseStack(IBlockSource source, ItemStack stack){

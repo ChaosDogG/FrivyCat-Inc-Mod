@@ -5,6 +5,8 @@ import net.minecraft.item.ItemStack;
 
 // custom class for items that need to be shiny (as in having the enchanted glint effect)
 // it is constructed the same way as regular items
+import net.minecraft.item.Item.Properties;
+
 public class ShinyItem extends Item {
     public ShinyItem(Properties properties) {
         super(properties);

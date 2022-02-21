@@ -22,6 +22,8 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
+import net.minecraft.item.Item.Properties;
+
 public class Mug extends GlassBottleItem {
     public Mug(Properties builder) {
         super(builder);

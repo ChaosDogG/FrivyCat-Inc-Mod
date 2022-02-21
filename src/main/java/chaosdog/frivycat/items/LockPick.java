@@ -14,6 +14,8 @@ import net.minecraftforge.common.Tags;
 import java.util.Objects;
 import java.util.stream.Stream;
 
+import net.minecraft.item.Item.Properties;
+
 public class LockPick extends Item {
     public LockPick(Properties properties) {
         super(properties);

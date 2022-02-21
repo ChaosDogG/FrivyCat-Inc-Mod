@@ -16,13 +16,13 @@ public class Utils {
     // sets or changes the creative tab of a vanilla item
     public static void changeCreativeTab(Item item, ItemGroup tab) {
         // set the group (creative tab) field of an item
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, item, tab,"field_77701_a");
+        ObfuscationReflectionHelper.setPrivateValue(Item.class, item, tab,"group");
     }
 
     // sets or changes the creative tab of a vanilla block
     public static void changeCreativeTab(Block block, ItemGroup tab) {
         // set the group (creative tab) field of a block
-        ObfuscationReflectionHelper.setPrivateValue(Item.class, block.asItem(), tab,"field_77701_a");
+        ObfuscationReflectionHelper.setPrivateValue(Item.class, block.asItem(), tab,"group");
     }
 
     // register a block (no item)

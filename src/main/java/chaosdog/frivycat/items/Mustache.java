@@ -15,9 +15,11 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
+import net.minecraft.item.Item.Properties;
+
 public class Mustache extends Item implements IArmorVanishable {
-    public Mustache(Properties p_i48487_1_) {
-        super(p_i48487_1_);
+    public Mustache(Properties properties) {
+        super(properties);
         DispenserBlock.registerDispenseBehavior(this, new OptionalDispenseBehavior() {
             @Override
             public ItemStack dispenseStack(IBlockSource source, ItemStack stack) {

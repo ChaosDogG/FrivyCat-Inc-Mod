@@ -10,6 +10,8 @@ import net.minecraft.item.MilkBucketItem;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.World;
 
+import net.minecraft.item.Item.Properties;
+
 public class RedTeaBucket extends MilkBucketItem {
     public RedTeaBucket(Properties builder) {
         super(builder);
