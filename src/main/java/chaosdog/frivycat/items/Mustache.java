@@ -1,50 +1,44 @@
 package chaosdog.frivycat.items;
 
-import net.minecraft.block.DispenserBlock;
-import net.minecraft.dispenser.IBlockSource;
-import net.minecraft.dispenser.OptionalDispenseBehavior;
-import net.minecraft.enchantment.IArmorVanishable;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.world.World;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Vanishable;
+import net.minecraft.world.level.Level;
 
-import net.minecraft.item.Item.Properties;
-
-public class Mustache extends Item implements IArmorVanishable {
+public class Mustache extends Item implements Vanishable {
     public Mustache(Properties properties) {
         super(properties);
-        DispenserBlock.registerDispenseBehavior(this, new OptionalDispenseBehavior() {
+        /*DispenserBlock.registerBehavior(this, new OptionalDispenseItemBehavior() {
             @Override
-            public ItemStack dispenseStack(IBlockSource source, ItemStack stack) {
-                this.setSuccessful(ArmorItem.func_226626_a_(source, stack));
+            public ItemStack dispenseArmor(BlockSource source, ItemStack stack) {
+                this.setSuccess(ArmorItem.func_226626_a_(source, stack));
                 return stack;
             }
-        });
+        });*/
     }
 
     @Override
-    public boolean canEquip(ItemStack stack, EquipmentSlotType armorType, Entity entity) {
-        return armorType == EquipmentSlotType.HEAD;
+    public boolean canEquip(ItemStack stack, EquipmentSlot armorType, Entity entity) {
+        return armorType == EquipmentSlot.HEAD;
     }
 
     @Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-        ItemStack itemstack = playerIn.getHeldItem(handIn);
-        EquipmentSlotType equipmentslottype = MobEntity.getSlotForItemStack(itemstack);
-        ItemStack itemstack1 = playerIn.getItemStackFromSlot(equipmentslottype);
+    public InteractionResultHolder<ItemStack> use(Level worldIn, Player playerIn, InteractionHand handIn) {
+        ItemStack itemstack = playerIn.getItemInHand(handIn);
+        EquipmentSlot equipmentslottype = Mob.getEquipmentSlotForItem(itemstack);
+        ItemStack itemstack1 = playerIn.getItemBySlot(equipmentslottype);
         if (itemstack1.isEmpty()) {
-            playerIn.setItemStackToSlot(equipmentslottype, itemstack.copy());
+            playerIn.setItemSlot(equipmentslottype, itemstack.copy());
             itemstack.setCount(0);
-            return ActionResult.func_233538_a_(itemstack, worldIn.isRemote());
+            return InteractionResultHolder.sidedSuccess(itemstack, worldIn.isClientSide());
         } else {
-            return ActionResult.resultFail(itemstack);
+            return InteractionResultHolder.fail(itemstack);
         }
     }
 }

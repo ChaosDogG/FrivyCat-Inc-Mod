@@ -2,18 +2,22 @@ package chaosdog.frivycat.blocks;
 
 import chaosdog.frivycat.FCConfig;
 import chaosdog.frivycat.FrivyCatMod;
-import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.AirBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
@@ -21,31 +25,31 @@ public class GeneratorBlock extends Block {
     private final Type type;
 
     public GeneratorBlock(Type type) {
-        super(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(5).hardnessAndResistance(10f, 100f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE));
+        super(BlockBehaviour.Properties.of(Material.STONE).strength(10f, 100f).sound(SoundType.STONE));
         this.type = type;
     }
 
     @Override
-    public void tick(BlockState state, ServerWorld world, BlockPos pos, Random rand) {
-        Block blockAbove = world.getBlockState(pos.up()).getBlock();
+    public void tick(BlockState state, ServerLevel world, BlockPos pos, Random rand) {
+        Block blockAbove = world.getBlockState(pos.above()).getBlock();
         if((blockAbove instanceof AirBlock || blockAbove == Blocks.WATER) && rand.nextInt(type.getRarity()) == 0) {
             FrivyCatMod.LOG.debug("Spawning item!");
             ItemStack stack = new ItemStack(type.getItem(rand));
-            Block.spawnAsEntity(world, pos.up(), stack);
+            Block.popResource(world, pos.above(), stack);
         }
 
         scheduleNextTick(world, pos);
     }
 
     @Override
-    public BlockState updatePostPlacement(BlockState state, Direction facing, BlockState facingState, IWorld world, BlockPos currentPos, BlockPos facingPos) {
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, Level world, BlockPos currentPos, BlockPos facingPos) {
         scheduleNextTick(world, currentPos);
         return state;
     }
 
-    private void scheduleNextTick(IWorld world, BlockPos pos) {
-        if (!world.isRemote() && !world.getPendingBlockTicks().isTickScheduled(pos, this)) {
-            world.getPendingBlockTicks().scheduleTick(pos, this, 1);
+    private void scheduleNextTick(Level world, BlockPos pos) {
+        if (!world.isClientSide() && !world.getBlockTicks().willTickThisTick(pos, this)) {
+            world.getBlockTicks().hasScheduledTick(pos, this);
         }
     }
 

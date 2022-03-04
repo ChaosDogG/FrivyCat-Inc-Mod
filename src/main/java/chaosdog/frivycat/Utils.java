@@ -1,26 +1,26 @@
 package chaosdog.frivycat;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.potion.Effect;
-import net.minecraft.potion.Potion;
-import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
 
 public class Utils {
     // sets or changes the creative tab of a vanilla item
-    public static void changeCreativeTab(Item item, ItemGroup tab) {
+    public static void changeCreativeTab(Item item, CreativeModeTab tab) {
         // set the group (creative tab) field of an item
         ObfuscationReflectionHelper.setPrivateValue(Item.class, item, tab,"group");
     }
 
     // sets or changes the creative tab of a vanilla block
-    public static void changeCreativeTab(Block block, ItemGroup tab) {
+    public static void changeCreativeTab(Block block, CreativeModeTab tab) {
         // set the group (creative tab) field of a block
         ObfuscationReflectionHelper.setPrivateValue(Item.class, block.asItem(), tab,"group");
     }
@@ -31,9 +31,9 @@ public class Utils {
     }
 
     // register a block with an item
-    public static <B extends Block> RegistryObject<B> regBlockWithItem(DeferredRegister<Block> block_registry, DeferredRegister<Item> item_registry, String name, B block, ItemGroup tab) {
+    public static <B extends Block> RegistryObject<B> regBlockWithItem(DeferredRegister<Block> block_registry, DeferredRegister<Item> item_registry, String name, B block, CreativeModeTab tab) {
         RegistryObject<B> toReturn = block_registry.register(name, () -> block);
-        item_registry.register(name, () -> new BlockItem(block, new Item.Properties().group(tab)));
+        item_registry.register(name, () -> new BlockItem(block, new Item.Properties().tab(tab)));
         return toReturn;
     }
 
@@ -43,7 +43,7 @@ public class Utils {
     }
 
     //register an Effect
-    public static <E extends Effect> RegistryObject<E> regEffect(DeferredRegister<Effect> effect_registry, String name, E effect) {
+    public static <E extends MobEffect> RegistryObject<E> regEffect(DeferredRegister<MobEffect> effect_registry, String name, E effect) {
         return effect_registry.register(name, () -> effect);
     }
 

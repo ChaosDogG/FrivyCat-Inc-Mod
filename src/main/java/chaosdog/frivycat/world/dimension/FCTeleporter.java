@@ -1,27 +1,29 @@
 package chaosdog.frivycat.world.dimension;
 
 import chaosdog.frivycat.blocks.FCPortalBlock;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.PortalInfo;
-import net.minecraft.entity.Entity;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.entity.EntitySize;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.util.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.Mth;
 import net.minecraft.util.TeleportationRepositioner;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.village.PointOfInterest;
 import net.minecraft.village.PointOfInterestManager;
-import net.minecraft.world.DimensionType;
-import net.minecraft.world.border.WorldBorder;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.gen.Heightmap;
-import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.border.WorldBorder;
+import net.minecraft.world.level.dimension.DimensionType;
+import net.minecraft.world.level.portal.PortalInfo;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.server.TicketType;
 import net.minecraftforge.common.util.ITeleporter;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
+import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 
 import javax.annotation.Nullable;
 import java.lang.reflect.InvocationTargetException;
@@ -33,11 +35,11 @@ import java.util.function.Function;
 public class FCTeleporter implements ITeleporter {
     private static final Method getRelativePortalPosition = ObfuscationReflectionHelper.findMethod(Entity.class, "func_241839_a", Direction.Axis.class, TeleportationRepositioner.Result.class);
 
-    private final ServerWorld world;
+    private final ServerLevel world;
     private final FCDimensionType dimension;
     private final FCPortalBlock portal;
 
-    public FCTeleporter(ServerWorld world, FCDimensionType dimension, FCPortalBlock portal) {
+    public FCTeleporter(ServerLevel world, FCDimensionType dimension, FCPortalBlock portal) {
         this.world = world;
         this.dimension = dimension;
         this.portal = portal;
@@ -45,25 +47,25 @@ public class FCTeleporter implements ITeleporter {
 
     @Nullable
     @Override
-    public PortalInfo getPortalInfo(Entity entity, ServerWorld destWorld, Function<ServerWorld, PortalInfo> defaultPortalInfo) {
-        boolean toDim = destWorld.getDimensionKey() == dimension.getKey();
-        if(entity.world.getDimensionKey() != dimension.getKey() && !toDim) return null;
+    public PortalInfo getPortalInfo(Entity entity, ServerLevel destWorld, Function<ServerLevel, PortalInfo> defaultPortalInfo) {
+        boolean toDim = this.world.dimensionType() == dimension.getKey();
+        if(entity.level.dimensionType() != dimension.getKey() && !toDim) return null;
         else {
             WorldBorder border = destWorld.getWorldBorder();
-            double minX = Math.max(-2.9999872E7D, border.minX() + 16.0D);
-            double minZ = Math.max(-2.9999872E7D, border.minZ() + 16.0D);
-            double maxX = Math.min(2.9999872E7D, border.maxX() - 16.0D);
-            double maxZ = Math.min(2.9999872E7D, border.maxZ() - 16.0D);
-            double offset = DimensionType.getCoordinateDifference(entity.world.getDimensionType(), destWorld.getDimensionType());
-            BlockPos blockpos = new BlockPos(MathHelper.clamp(entity.prevPosX * offset, minX, maxX), entity.prevPosY, MathHelper.clamp(entity.prevPosZ * offset, minZ, maxZ));
+            double minX = Math.max(-2.9999872E7D, border.getMinX() + 16.0D);
+            double minZ = Math.max(-2.9999872E7D, border.getMinZ() + 16.0D);
+            double maxX = Math.min(2.9999872E7D, border.getMaxX() - 16.0D);
+            double maxZ = Math.min(2.9999872E7D, border.getMaxZ() - 16.0D);
+            double offset = DimensionType.getTeleportationScale(entity.level.dimensionType(), destWorld.dimensionType());
+            BlockPos blockpos = new BlockPos(Mth.clamp(entity.prevPosX * offset, minX, maxX), entity.prevPosY, Mth.clamp(entity.prevPosZ * offset, minZ, maxZ));
             return getPortalLogic(entity, blockpos).map((portalres) -> {
                 BlockPos entityPos = new BlockPos((int) entity.prevPosX, (int) entity.prevPosY, (int) entity.prevPosZ);
-                BlockState state = entity.world.getBlockState(entityPos);
+                BlockState state = entity.level.getBlockState(entityPos);
                 Direction.Axis axis;
-                Vector3d vector3d;
-                axis = entity.getHorizontalFacing().getAxis();
-                TeleportationRepositioner.Result result = TeleportationRepositioner.findLargestRectangle(entityPos, axis, 21, Direction.Axis.Y, 21, (pos) -> entity.world.getBlockState(pos) == state);
-                try { vector3d = (Vector3d) getRelativePortalPosition.invoke(entity, axis, result); }
+                Vec3 vector3d;
+                axis = entity.getEyePosition().get();
+                TeleportationRepositioner.Result result = TeleportationRepositioner.findLargestRectangle(entityPos, axis, 21, Direction.Axis.Y, 21, (pos) -> entity.level.getBlockState(pos) == state);
+                try { vector3d = (Vec3) getRelativePortalPosition.invoke(entity, axis, result); }
                 catch (IllegalAccessException | InvocationTargetException e) {
                     e.printStackTrace();
                     throw new RuntimeException(e);
@@ -74,7 +76,7 @@ public class FCTeleporter implements ITeleporter {
         }
     }
 
-    private static PortalInfo getInfo(TeleportationRepositioner.Result result, Direction.Axis axis, Vector3d offsetVector, EntitySize size, Vector3d motion, float rotationYaw, float rotationPitch) {
+    private static PortalInfo getInfo(TeleportationRepositioner.Result result, Direction.Axis axis, Vec3 offsetVector, EntitySize size, Vec3 motion, float rotationYaw, float rotationPitch) {
         BlockPos blockpos = result.startPos;
         double width = result.width;
         double height = result.height;
@@ -89,7 +91,7 @@ public class FCTeleporter implements ITeleporter {
     private Optional<TeleportationRepositioner.Result> getPortalLogic(Entity entity, BlockPos pos) {
         Optional<TeleportationRepositioner.Result> existing = getExistingPortal(entity, pos);
 
-        if (entity instanceof ServerPlayerEntity) {
+        if (entity instanceof ServerPlayer) {
             if(existing.isPresent()) return existing;
             else {
                 Direction.Axis axis = entity.getHorizontalFacing().getAxis();

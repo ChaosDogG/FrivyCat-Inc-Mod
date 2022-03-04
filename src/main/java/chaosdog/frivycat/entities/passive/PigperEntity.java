@@ -1,138 +1,142 @@
 package chaosdog.frivycat.entities.passive;
 
 import chaosdog.frivycat.entities.ModEntityTypes;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.*;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.effect.LightningBoltEntity;
-import net.minecraft.entity.monster.CreeperEntity;
-import net.minecraft.entity.passive.AnimalEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.network.datasync.DataParameter;
-import net.minecraft.network.datasync.DataSerializers;
-import net.minecraft.network.datasync.EntityDataManager;
-import net.minecraft.util.*;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Difficulty;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.vehicle.DismountHelper;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 
 import javax.annotation.Nullable;
 
-public class PigperEntity extends AnimalEntity implements IRideable, IEquipable{
-    private static final DataParameter<Boolean> SADDLED = EntityDataManager.createKey(PigperEntity.class, DataSerializers.BOOLEAN);
-    private static final DataParameter<Integer> BOOST_TIME = EntityDataManager.createKey(PigperEntity.class, DataSerializers.VARINT);
-    private static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(Items.GUNPOWDER);
-    private final BoostHelper field_234214_bx_ = new BoostHelper(this.dataManager, BOOST_TIME, SADDLED);
+public class PigperEntity extends Animal implements ItemSteerable, Saddleable {
+    private static final EntityDataAccessor<Boolean> SADDLED = SynchedEntityData.defineId(PigperEntity.class, EntityDataSerializers.BOOLEAN);
+    private static final EntityDataAccessor<Integer> BOOST_TIME = SynchedEntityData.defineId(PigperEntity.class, EntityDataSerializers.INT);
+    private static final Ingredient TEMPTATION_ITEMS = Ingredient.of(Items.GUNPOWDER);
+    private final ItemBasedSteering steering = new ItemBasedSteering(this.entityData, BOOST_TIME, SADDLED);
 
-    public PigperEntity(EntityType<? extends PigperEntity> type, World world) {
+    public PigperEntity(EntityType<? extends PigperEntity> type, Level world) {
         super(type, world);
     }
 
     protected void registerGoals() {
-        this.goalSelector.addGoal(0, new SwimGoal(this));
+        this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.25D));
         this.goalSelector.addGoal(3, new BreedGoal(this, 1.0D));
-        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.fromItems(Items.CARROT_ON_A_STICK), false));
-        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, false, TEMPTATION_ITEMS));
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(Items.CARROT_ON_A_STICK), false));
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, TEMPTATION_ITEMS, false));
         this.goalSelector.addGoal(5, new FollowParentGoal(this, 1.1D));
-        this.goalSelector.addGoal(6, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
-        this.goalSelector.addGoal(7, new LookAtGoal(this, PlayerEntity.class, 6.0F));
-        this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
+        this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+        this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 6.0F));
+        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
     }
 
-    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
-        return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 10.0D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D);
+    public static AttributeSupplier.Builder setCustomAttributes() {
+        return Mob.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 10.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.25D);
     }
 
     @Override
     @Nullable
     public Entity getControllingPassenger() {
-        return this.getPassengers().isEmpty() ? null : this.getPassengers().get(0);
+        return this.getFirstPassenger();
     }
 
     @Override
-    public boolean canBeSteered() {
+    public boolean canBeControlledByRider() {
         Entity entity = this.getControllingPassenger();
-        if (!(entity instanceof PlayerEntity)) {
+        if (!(entity instanceof Player)) {
             return false;
         } else {
-            PlayerEntity playerentity = (PlayerEntity)entity;
-            return playerentity.getHeldItemMainhand().getItem() == Items.CARROT_ON_A_STICK || playerentity.getHeldItemOffhand().getItem() == Items.CARROT_ON_A_STICK;
+            Player playerentity = (Player)entity;
+            return playerentity.getMainHandItem().getItem() == Items.CARROT_ON_A_STICK || playerentity.getOffhandItem().getItem() == Items.CARROT_ON_A_STICK;
         }
     }
 
     @Override
-    public void notifyDataManagerChange(DataParameter<?> key) {
-        if (BOOST_TIME.equals(key) && this.world.isRemote) {
-            this.field_234214_bx_.updateData();
+    public void onSyncedDataUpdated(EntityDataAccessor<?> pKey) {
+        if (BOOST_TIME.equals(pKey) && this.level.isClientSide) {
+            this.steering.onSynced();
         }
 
-        super.notifyDataManagerChange(key);
+        super.onSyncedDataUpdated(pKey);
     }
 
-    protected void registerData() {
-        super.registerData();
-        this.dataManager.register(SADDLED, false);
-        this.dataManager.register(BOOST_TIME, 0);
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(SADDLED, false);
+        this.entityData.define(BOOST_TIME, 0);
     }
 
     @Override
-    public void writeAdditional(CompoundNBT compound) {
-        super.writeAdditional(compound);
-        this.field_234214_bx_.setSaddledToNBT(compound);
+    public void addAdditionalSaveData(CompoundTag compound) {
+        super.addAdditionalSaveData(compound);
+        this.steering.addAdditionalSaveData(compound);
     }
 
     /**
      * (abstract) Protected helper method to read subclass entity data from NBT.
      */
-    public void readAdditional(CompoundNBT compound) {
-        super.readAdditional(compound);
-        this.field_234214_bx_.setSaddledFromNBT(compound);
+    public void readAdditionalSaveData(CompoundTag compound) {
+        super.readAdditionalSaveData(compound);
+        this.steering.readAdditionalSaveData(compound);
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_CREEPER_HURT;
+        return SoundEvents.CREEPER_HURT;
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.ENTITY_CREEPER_HURT;
+        return SoundEvents.CREEPER_HURT;
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_CREEPER_DEATH;
+        return SoundEvents.CREEPER_DEATH;
     }
 
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.ENTITY_PIG_STEP, 0.15F, 1.0F);
+        this.playSound(SoundEvents.PIG_STEP, 0.15F, 1.0F);
     }
 
     @Override
-    public ActionResultType getEntityInteractionResult(PlayerEntity playerIn, Hand hand) {
-        boolean flag = this.isBreedingItem(playerIn.getHeldItem(hand));
-        if (!flag && this.isHorseSaddled() && !this.isBeingRidden() && !playerIn.isSecondaryUseActive()) {
-            if (!this.world.isRemote) {
+    public InteractionResult mobInteract(Player playerIn, InteractionHand hand) {
+        boolean flag = this.isFood(playerIn.getItemInHand(hand));
+        if (!flag && this.isSaddled() && !this.isVehicle() && !playerIn.isSecondaryUseActive()) {
+            if (!this.level.isClientSide) {
                 playerIn.startRiding(this);
             }
 
-            return ActionResultType.func_233537_a_(this.world.isRemote);
+            return InteractionResult.sidedSuccess(this.level.isClientSide);
         } else {
-            ActionResultType actionresulttype = super.getEntityInteractionResult(playerIn, hand);
-            if (!actionresulttype.isSuccessOrConsume()) {
-                ItemStack itemstack = playerIn.getHeldItem(hand);
-                return itemstack.getItem() == Items.SADDLE ? itemstack.interactWithEntity(playerIn, this, hand) : ActionResultType.PASS;
+            InteractionResult actionresulttype = super.mobInteract(playerIn, hand);
+            if (!actionresulttype.consumesAction()) {
+                ItemStack itemstack = playerIn.getItemInHand(hand);
+                return itemstack.getItem() == Items.SADDLE ? itemstack.interactLivingEntity(playerIn, this, hand) : InteractionResult.PASS;
             } else {
                 return actionresulttype;
             }
@@ -140,49 +144,49 @@ public class PigperEntity extends AnimalEntity implements IRideable, IEquipable{
     }
 
     @Override
-    public boolean func_230264_L__() {
-        return this.isAlive() && !this.isChild();
+    public boolean isSaddleable() {
+        return this.isAlive() && !this.isBaby();
     }
 
-    protected void dropInventory() {
-        super.dropInventory();
-        if (this.isHorseSaddled()) {
-            this.entityDropItem(Items.SADDLE);
+    protected void dropEquipment() {
+        super.dropEquipment();
+        if (this.isSaddled()) {
+            this.spawnAtLocation(Items.SADDLE);
         }
 
     }
 
     @Override
-    public boolean isHorseSaddled() {
-        return this.field_234214_bx_.getSaddled();
+    public boolean isSaddled() {
+        return this.steering.hasSaddle();
     }
 
     @Override
-    public void func_230266_a_(@Nullable SoundCategory p_230266_1_) {
-        this.field_234214_bx_.setSaddledFromBoolean(true);
+    public void equipSaddle(@Nullable SoundSource p_230266_1_) {
+        this.steering.setSaddle(true);
         if (p_230266_1_ != null) {
-            this.world.playMovingSound(null, this, SoundEvents.ENTITY_PIG_SADDLE, p_230266_1_, 0.5F, 1.0F);
+            this.level.playSound(null, this, SoundEvents.PIG_SADDLE, p_230266_1_, 0.5F, 1.0F);
         }
 
     }
 
     @Override
-    public Vector3d getDismountPosition(LivingEntity livingEntity) {
-        Direction direction = this.getAdjustedHorizontalFacing();
+    public Vec3 getDismountLocationForPassenger(LivingEntity livingEntity) {
+        Direction direction = this.getMotionDirection();
         if (direction.getAxis() != Direction.Axis.Y) {
-            int[][] aint = TransportationHelper.func_234632_a_(direction);
-            BlockPos blockpos = this.getPosition();
-            BlockPos.Mutable blockpos$mutable = new BlockPos.Mutable();
+            int[][] aint = DismountHelper.offsetsForDirection(direction);
+            BlockPos blockpos = this.blockPosition();
+            BlockPos.MutableBlockPos blockpos$mutable = new BlockPos.MutableBlockPos();
 
-            for (Pose pose : livingEntity.getAvailablePoses()) {
-                AxisAlignedBB axisalignedbb = livingEntity.getPoseAABB(pose);
+            for (Pose pose : livingEntity.getDismountPoses()) {
+                AABB aabb = livingEntity.getLocalBoundsForPose(pose);
 
                 for (int[] aint1 : aint) {
-                    blockpos$mutable.setPos(blockpos.getX() + aint1[0], blockpos.getY(), blockpos.getZ() + aint1[1]);
-                    double d0 = this.world.func_242403_h(blockpos$mutable);
-                    if (TransportationHelper.func_234630_a_(d0)) {
-                        Vector3d vector3d = Vector3d.copyCenteredWithVerticalOffset(blockpos$mutable, d0);
-                        if (TransportationHelper.func_234631_a_(this.world, livingEntity, axisalignedbb.offset(vector3d))) {
+                    blockpos$mutable.set(blockpos.getX() + aint1[0], blockpos.getY(), blockpos.getZ() + aint1[1]);
+                    double d0 = this.level.getBlockFloorHeight(blockpos$mutable);
+                    if (DismountHelper.isBlockFloorValid(d0)) {
+                        Vec3 vector3d = Vec3.upFromBottomCenterOf(blockpos$mutable, d0);
+                        if (DismountHelper.canDismountTo(this.level, livingEntity, aabb.move(vector3d))) {
                             livingEntity.setPose(pose);
                             return vector3d;
                         }
@@ -191,53 +195,53 @@ public class PigperEntity extends AnimalEntity implements IRideable, IEquipable{
             }
 
         }
-        return super.getDismountPosition(livingEntity);
+        return super.getDismountLocationForPassenger(livingEntity);
     }
 
     @Override
-    public void causeLightningStrike(ServerWorld world, LightningBoltEntity lightning) {
+    public void thunderHit(ServerLevel world, LightningBolt lightning) {
         if (world.getDifficulty() != Difficulty.PEACEFUL && net.minecraftforge.event.ForgeEventFactory.canLivingConvert(this, EntityType.CREEPER, (timer) -> {})) {
-            CreeperEntity creeperentity = EntityType.CREEPER.create(world);
+            Creeper creeperentity = EntityType.CREEPER.create(world);
             assert creeperentity != null;
-            creeperentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, this.rotationPitch);
-            creeperentity.setNoAI(this.isAIDisabled());
+            creeperentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), this.getXRot());
+            creeperentity.setNoAi(this.isNoAi());
             if (this.hasCustomName()) {
                 creeperentity.setCustomName(this.getCustomName());
                 creeperentity.setCustomNameVisible(this.isCustomNameVisible());
             }
 
-            creeperentity.enablePersistence();
+            creeperentity.setPersistenceRequired();
             net.minecraftforge.event.ForgeEventFactory.onLivingConvert(this, creeperentity);
-            world.addEntity(creeperentity);
-            this.remove();
+            world.addFreshEntity(creeperentity);
+            this.discard();
         } else {
-            super.causeLightningStrike(world, lightning);
+            super.thunderHit(world, lightning);
         }
 
     }
 
     @Override
-    public void travel(Vector3d travelVector) {
-        this.ride(this, this.field_234214_bx_, travelVector);
+    public void travel(Vec3 travelVector) {
+        this.travel(this, this.steering, travelVector);
     }
 
     @Override
-    public float getMountedSpeed() {
+    public float getSteeringSpeed() {
         return (float)this.getAttributeValue(Attributes.MOVEMENT_SPEED) * 0.225F;
     }
 
     @Override
-    public void travelTowards(Vector3d travelVec) {
+    public void travelWithInput(Vec3 travelVec) {
         super.travel(travelVec);
     }
 
     @Override
     public boolean boost() {
-        return this.field_234214_bx_.boost(this.getRNG());
+        return this.steering.boost(this.getRandom());
     }
 
     @Override
-    public PigperEntity createChild(ServerWorld world, AgeableEntity mate) {
+    public PigperEntity getBreedOffspring(ServerLevel world, AgeableMob mate) {
         return ModEntityTypes.PIGPER.get().create(world);
     }
 
@@ -246,13 +250,12 @@ public class PigperEntity extends AnimalEntity implements IRideable, IEquipable{
      * the animal type)
      */
     @Override
-    public boolean isBreedingItem(ItemStack stack) {
+    public boolean isFood(ItemStack stack) {
         return TEMPTATION_ITEMS.test(stack);
     }
 
     @Override
-    @OnlyIn(Dist.CLIENT)
-    public Vector3d getLeashStartPosition() {
-        return new Vector3d(0.0D, (double)(0.6F * this.getEyeHeight()), (double)(this.getWidth() * 0.4F));
+    public Vec3 getLeashOffset() {
+        return new Vec3(0.0D, (double)(0.6F * this.getEyeHeight()), (double)(this.getBbWidth() * 0.4F));
     }
 }

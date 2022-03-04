@@ -1,58 +1,61 @@
 package chaosdog.frivycat.effects;
 
 import chaosdog.frivycat.ModEffects;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.SheepEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Effect;
-import net.minecraft.potion.EffectType;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 
 import java.util.Arrays;
 
-public class ModEffect extends Effect {
-    public ModEffect(EffectType type, int liquidColor) {
+public class ModEffect extends MobEffect {
+    public ModEffect(MobEffectCategory type, int liquidColor) {
         super(type, liquidColor);
     }
 
     @Override
-    public void performEffect(LivingEntity living, int amplifier) {
+    public void applyEffectTick(LivingEntity living, int amplifier) {
 
         //boolean hasCreativeLike = living.isPotionActive(ModEffects.CREATIVE_LIKE.get());
 
         if(this == ModEffects.SLIPPERY.get()) {
-            if(!(living instanceof PlayerEntity)) {
-                for (Hand hand1 : Arrays.asList(Hand.MAIN_HAND, Hand.OFF_HAND)) {
-                    living.entityDropItem(living.getHeldItem(hand1));
+            if(!(living instanceof Player)) {
+                for (EquipmentSlot hand1 : Arrays.asList(EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND)) {
+                    living.discard(living.getItemBySlot(hand1));
                 }
-                for (Hand hand : Arrays.asList(Hand.MAIN_HAND, Hand.OFF_HAND)) {
-                    living.setHeldItem(hand, ItemStack.EMPTY);
+                for (EquipmentSlot hand : Arrays.asList(EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND)) {
+                    living.setItemSlot(hand, ItemStack.EMPTY);
                 }
-                for (EquipmentSlotType slotType : Arrays.asList(EquipmentSlotType.HEAD, EquipmentSlotType.CHEST, EquipmentSlotType.LEGS, EquipmentSlotType.FEET)) {
-                    living.entityDropItem(living.getItemStackFromSlot(slotType));
+                for (EquipmentSlot slotType : Arrays.asList(EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET)) {
+                    living.entityDropItem(living.getItemBySlot(slotType));
                 }
-                for (EquipmentSlotType equipmentSlotType : Arrays.asList(EquipmentSlotType.HEAD, EquipmentSlotType.CHEST, EquipmentSlotType.LEGS, EquipmentSlotType.FEET)) {
-                    living.setItemStackToSlot(equipmentSlotType, ItemStack.EMPTY);
+                for (EquipmentSlot equipmentSlotType : Arrays.asList(EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET)) {
+                    living.setItemSlot(equipmentSlotType, ItemStack.EMPTY);
                 }
                 for (DamageSource damageSource : Arrays.asList(DamageSource.ANVIL, DamageSource.GENERIC, DamageSource.FALLING_BLOCK, DamageSource.CRAMMING, DamageSource.SWEET_BERRY_BUSH)) {
                     living.isInvulnerableTo(damageSource);
                 }
                 if(living.isPassenger()) {
-                    living.dismount();
+                    living.ejectPassengers();
                 }
-                if (living instanceof SheepEntity){
-                    if(((SheepEntity) living).isShearable()){
-                        ((SheepEntity) living).setSheared(true);
+                if (living instanceof Sheep){
+                    if(!((Sheep) living).isSheared()){
+                        ((Sheep) living).setSheared(true);
                     }
                 }
             }else {
-                PlayerEntity player = (PlayerEntity) living;
-                for(int i = 0; i<player.inventory.getSizeInventory(); ++i) {
-                    ItemStack item = player.inventory.getStackInSlot(i);
+                Player player = (Player) living;
+                for(int i = 0; i< player.getInventory().getContainerSize(); ++i) {
+                    ItemStack item = player.getInventory().getItem(i);
                     if(!item.isEmpty() && EnchantmentHelper.hasBindingCurse(item)) {
                         EnchantmentHelper.getEnchantments(item).clear();
                     }
@@ -60,9 +63,9 @@ public class ModEffect extends Effect {
                 for (DamageSource damageSource : Arrays.asList(DamageSource.ANVIL, DamageSource.GENERIC, DamageSource.FALLING_BLOCK, DamageSource.CRAMMING, DamageSource.SWEET_BERRY_BUSH)) {
                     player.isInvulnerableTo(damageSource);
                 }
-                player.inventory.dropAllItems();
+                player.getInventory().dropAll();
                 if(player.isPassenger()){
-                    player.dismount();
+                    player.ejectPassengers();
                 }
             }
         }

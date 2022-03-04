@@ -1,179 +1,179 @@
 package chaosdog.frivycat.entities.projectile;
 
 import chaosdog.frivycat.Misc;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.merchant.villager.VillagerEntity;
-import net.minecraft.entity.passive.*;
-import net.minecraft.entity.passive.horse.HorseEntity;
-import net.minecraft.entity.passive.horse.LlamaEntity;
-import net.minecraft.entity.projectile.EggEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.DyeColor;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.World;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.animal.*;
+import net.minecraft.world.entity.animal.horse.Horse;
+import net.minecraft.world.entity.animal.horse.Llama;
+import net.minecraft.world.entity.monster.Strider;
+import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.projectile.ThrownEgg;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.HitResult;
 
 import java.util.Objects;
 
-public class EasterEggProjectile extends EggEntity {
+public class EasterEggProjectile extends ThrownEgg {
 
 
-    public EasterEggProjectile(EntityType<Entity> ent, World world) {
+    public EasterEggProjectile(EntityType<? extends EasterEggProjectile> ent, Level world) {
         super(EntityType.EGG, world);
     }
 
-    public EasterEggProjectile(World worldIn, LivingEntity throwerIn) {
+    public EasterEggProjectile(Level worldIn, LivingEntity throwerIn) {
         super(worldIn, throwerIn);
     }
 
-    public EasterEggProjectile(World worldIn, double x, double y, double z) {
+    public EasterEggProjectile(Level worldIn, double x, double y, double z) {
         super(worldIn, x, y, z);
     }
+
     @Override
-    protected void onImpact(RayTraceResult result) {
-        super.onImpact(result);
-        if (!this.world.isRemote) {
-            if (this.rand.nextInt(8) == 0) {
+    protected void onHit(HitResult result) {
+        super.onHit(result);
+        if (!this.level.isClientSide) {
+            if (this.random.nextInt(8) == 0) {
                 int i = 1;
-                if (this.rand.nextInt(32) == 0) {
+                if (this.random.nextInt(32) == 0) {
                     i = 4;
                 }
-                if (this.rand.nextInt(10) == 0) {
+                if (this.random.nextInt(10) == 0) {
                     for (int j = 0; j < i; ++j) {
-                        FoxEntity foxentity = EntityType.FOX.create(this.world);
+                        Fox foxentity = EntityType.FOX.create(this.level);
                         assert foxentity != null;
-                        foxentity.setGrowingAge(-24000);
-                        foxentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        foxentity.setHeldItem(Hand.MAIN_HAND, new ItemStack(Misc.EASTER_EGG.get()));
-                        this.world.addEntity(foxentity);
+                        foxentity.setAge(-24000);
+                        foxentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        foxentity.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Misc.EASTER_EGG.get()));
+                        this.level.addFreshEntity(foxentity);
                     }
                 }
-                if (this.rand.nextInt(10) == 1) {
+                if (this.random.nextInt(10) == 1) {
                     for (int k = 0; k < i; ++k) {
-                        CatEntity catentity = EntityType.CAT.create(this.world);
+                        Cat catentity = EntityType.CAT.create(this.level);
                         assert catentity != null;
-                        catentity.setGrowingAge(-24000);
-                        catentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        catentity.setCatType(this.rand.nextInt(10));
-                        this.world.addEntity(catentity);
+                        catentity.setAge(-24000);
+                        catentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        catentity.setCatType(this.random.nextInt(10));
+                        this.level.addFreshEntity(catentity);
                     }
                 }
-                if(this.rand.nextInt(10) == 2) {
+                if(this.random.nextInt(10) == 2) {
                     for (int l = 0; l < i; ++l) {
-                        WolfEntity wolfentity = EntityType.WOLF.create(this.world);
+                        Wolf wolfentity = EntityType.WOLF.create(this.level);
                         assert wolfentity != null;
-                        wolfentity.setGrowingAge(-24000);
-                        wolfentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        this.world.addEntity(wolfentity);
+                        wolfentity.setAge(-24000);
+                        wolfentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        this.level.addFreshEntity(wolfentity);
                     }
                 }
-                if(this.rand.nextInt(10) == 3) {
+                if(this.random.nextInt(10) == 3) {
                     for (int m = 0; m < i; ++m) {
-                        SheepEntity sheepentity = EntityType.SHEEP.create(this.world);
+                        Sheep sheepentity = EntityType.SHEEP.create(this.level);
                         assert sheepentity != null;
-                        sheepentity.setGrowingAge(-24000);
-                        sheepentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        sheepentity.setFleeceColor(DyeColor.byId(this.rand.nextInt(15)));
-                        if(this.rand.nextInt(2) == 0) {
-                            if(sheepentity.getFleeceColor().getColorValue() == 0){
-                                sheepentity.setCustomName(new StringTextComponent("Shaun"));
+                        sheepentity.setAge(-24000);
+                        sheepentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        sheepentity.setColor(DyeColor.byId(this.random.nextInt(15)));
+                        if(this.random.nextInt(2) == 0) {
+                            if(sheepentity.getColor().getId() == 0){
+                                sheepentity.setCustomName(new TextComponent("Shaun"));
                             }else{
-                            sheepentity.setCustomName(new StringTextComponent("jeb_"));
+                            sheepentity.setCustomName(new TextComponent("jeb_"));
                             }
                             sheepentity.setCustomNameVisible(true);
                         }
-                        this.world.addEntity(sheepentity);
+                        this.level.addFreshEntity(sheepentity);
                     }
                 }
-                if(this.rand.nextInt(10) == 4) {
+                if(this.random.nextInt(10) == 4) {
                     for (int n = 0; n < i; ++n) {
-                        PandaEntity pandaentity = EntityType.PANDA.create(this.world);
+                        Panda pandaentity = EntityType.PANDA.create(this.level);
                         assert pandaentity != null;
-                        pandaentity.setGrowingAge(-24000);
-                        pandaentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        pandaentity.setMainGene(PandaEntity.Gene.getRandomType(this.rand));
-                        pandaentity.setHiddenGene(PandaEntity.Gene.getRandomType(this.rand));
-                        if(pandaentity.getMainGene() == PandaEntity.Gene.LAZY && pandaentity.getHiddenGene() == PandaEntity.Gene.AGGRESSIVE) {
-                            pandaentity.setCustomName(new StringTextComponent("Genma").mergeStyle(TextFormatting.BOLD));
+                        pandaentity.setAge(-24000);
+                        pandaentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        pandaentity.setMainGene(Panda.Gene.getRandom(this.random));
+                        pandaentity.setHiddenGene(Panda.Gene.getRandom(this.random));
+                        if(pandaentity.getMainGene() == Panda.Gene.LAZY && pandaentity.getHiddenGene() == Panda.Gene.AGGRESSIVE) {
+                            pandaentity.setCustomName(new TextComponent("Genma").withStyle(ChatFormatting.BOLD));
                             pandaentity.setCustomNameVisible(true);
                         }
-                        this.world.addEntity(pandaentity);
+                        this.level.addFreshEntity(pandaentity);
                     }
                 }
-                if(this.rand.nextInt(10) == 5) {
+                if(this.random.nextInt(10) == 5) {
                     for (int o = 0; o < i; ++o) {
-                        StriderEntity striderentity = EntityType.STRIDER.create(this.world);
+                        Strider striderentity = EntityType.STRIDER.create(this.level);
                         assert striderentity != null;
-                        striderentity.setGrowingAge(-24000);
-                        striderentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        this.world.addEntity(striderentity);
+                        striderentity.setAge(-24000);
+                        striderentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        this.level.addFreshEntity(striderentity);
                     }
                 }
-                if(this.rand.nextInt(10) == 6) {
+                if(this.random.nextInt(10) == 6) {
                     for (int p = 0; p < i; ++p) {
-                        HorseEntity horseentity = EntityType.HORSE.create(this.world);
+                        Horse horseentity = EntityType.HORSE.create(this.level);
                         assert horseentity != null;
-                        horseentity.setGrowingAge(-24000);
-                        horseentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        this.world.addEntity(horseentity);
+                        horseentity.setAge(-24000);
+                        horseentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        this.level.addFreshEntity(horseentity);
                     }
                 }
-                if(this.rand.nextInt(10) == 7) {
+                if(this.random.nextInt(10) == 7) {
                     for (int q = 0; q < i; ++q) {
-                        BeeEntity beeentity = EntityType.BEE.create(this.world);
+                        Bee beeentity = EntityType.BEE.create(this.level);
                         assert beeentity != null;
-                        beeentity.setGrowingAge(-24000);
-                        beeentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        this.world.addEntity(beeentity);
+                        beeentity.setAge(-24000);
+                        beeentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        this.level.addFreshEntity(beeentity);
                     }
                 }
-                if(this.rand.nextInt(10) == 8) {
+                if(this.random.nextInt(10) == 8) {
                     for (int r = 0; r < i; ++r) {
-                        LlamaEntity llamaentity = EntityType.LLAMA.create(this.world);
+                        Llama llamaentity = EntityType.LLAMA.create(this.level);
                         assert llamaentity != null;
-                        llamaentity.setGrowingAge(-24000);
-                        llamaentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        llamaentity.setVariant(this.rand.nextInt(4));
+                        llamaentity.setAge(-24000);
+                        llamaentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        llamaentity.setVariant(this.random.nextInt(4));
                         if(llamaentity.getVariant() == 2) {
-                            llamaentity.setCustomName(new StringTextComponent("Paul").mergeStyle(TextFormatting.LIGHT_PURPLE));
+                            llamaentity.setCustomName(new TextComponent("Paul").withStyle(ChatFormatting.LIGHT_PURPLE));
                         }
                         if(llamaentity.getVariant() == 3) {
-                            llamaentity.setCustomName(new StringTextComponent("Carl").mergeStyle(TextFormatting.GREEN));
+                            llamaentity.setCustomName(new TextComponent("Carl").withStyle(ChatFormatting.GREEN));
                         }
-                        this.world.addEntity(llamaentity);
+                        this.level.addFreshEntity(llamaentity);
                     }
                 }
-                if(this.rand.nextInt(10) == 9) {
+                if(this.random.nextInt(10) == 9) {
                     for (int s = 0; s < i; ++s) {
-                        VillagerEntity villagerentity = EntityType.VILLAGER.create(this.world);
+                        Villager villagerentity = EntityType.VILLAGER.create(this.level);
                         assert villagerentity != null;
-                        villagerentity.setGrowingAge(-24000);
-                        villagerentity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
-                        villagerentity.setCustomName(new StringTextComponent("Villager #" + this.rand.nextInt(101)));
+                        villagerentity.setAge(-24000);
+                        villagerentity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        villagerentity.setCustomName(new TextComponent("Villager #" + this.random.nextInt(101)));
                         if(Objects.requireNonNull(villagerentity.getCustomName()).getString().equals("Villager #0")) {
                             villagerentity.setHealth(0);
                         }
                         if(Objects.requireNonNull(villagerentity.getCustomName()).getString().equals("Villager #4")) {
-                            villagerentity.setItemStackToSlot(EquipmentSlotType.HEAD, new ItemStack(Misc.MUSTACHE.get()));
+                            villagerentity.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Misc.MUSTACHE.get()));
                         }
                         if(Objects.requireNonNull(villagerentity.getCustomName()).getString().equals("Villager #9")) {
-                            villagerentity.setHeldItem(Hand.MAIN_HAND, new ItemStack(Misc.MIC.get()));
+                            villagerentity.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Misc.MIC.get()));
                         }
                         villagerentity.setCustomNameVisible(true);
-                        villagerentity.setShakeHeadTicks(20);
-                        this.world.addEntity(villagerentity);
+                        villagerentity.setUnhappyCounter(20);
+                        this.level.addFreshEntity(villagerentity);
                     }
                 }
             }
 
-            this.world.setEntityState(this, (byte)3);
-            this.remove();
+            this.level.broadcastEntityEvent(this, (byte)3);
+            this.discard();
         }
 
     }

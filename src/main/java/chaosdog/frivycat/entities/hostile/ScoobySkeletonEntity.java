@@ -1,80 +1,80 @@
 package chaosdog.frivycat.entities.hostile;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
-import net.minecraft.entity.merchant.villager.WanderingTraderEntity;
-import net.minecraft.entity.monster.AbstractSkeletonEntity;
-import net.minecraft.entity.monster.SkeletonEntity;
-import net.minecraft.entity.passive.horse.TraderLlamaEntity;
-import net.minecraft.entity.projectile.AbstractArrowEntity;
-import net.minecraft.entity.projectile.ArrowEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.world.World;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.animal.horse.TraderLlama;
+import net.minecraft.world.entity.monster.AbstractSkeleton;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Skeleton;
+import net.minecraft.world.entity.npc.WanderingTrader;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.Arrow;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 
-public class ScoobySkeletonEntity extends AbstractSkeletonEntity {
+public class ScoobySkeletonEntity extends AbstractSkeleton {
 
-    public ScoobySkeletonEntity(EntityType<? extends ScoobySkeletonEntity> type, World world){
+    public ScoobySkeletonEntity(EntityType<? extends ScoobySkeletonEntity> type, Level world){
         super(type, world);
     }
 
     protected void registerGoals() {
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, SkeletonEntity.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, TraderLlamaEntity.class, true));
-        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, WanderingTraderEntity.class, true));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Skeleton.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, TraderLlama.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, WanderingTrader.class, true));
         super.registerGoals();
     }
 
-    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
-        return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 20.0D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 3.0D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 16.0D);
+    public static AttributeSupplier.Builder setCustomAttributes() {
+        return Monster.createMonsterAttributes()
+                .add(Attributes.MAX_HEALTH, 20.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.25D)
+                .add(Attributes.ATTACK_DAMAGE, 3.0D)
+                .add(Attributes.FOLLOW_RANGE, 16.0D);
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_SKELETON_AMBIENT;
+        return SoundEvents.SKELETON_AMBIENT;
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.ENTITY_SKELETON_HURT;
+        return SoundEvents.SKELETON_HURT;
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_SKELETON_DEATH;
+        return SoundEvents.SKELETON_DEATH;
     }
 
     protected SoundEvent getStepSound() {
-        return SoundEvents.ENTITY_SKELETON_STEP;
+        return SoundEvents.SKELETON_STEP;
     }
 
     @Override
-    public boolean attackEntityAsMob(Entity entityIn) {
-        if (!super.attackEntityAsMob(entityIn)) {
+    public boolean doHurtTarget(Entity entityIn) {
+        if (!super.doHurtTarget(entityIn)) {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.UNLUCK, 200));
+                ((LivingEntity)entityIn).addEffect(new MobEffectInstance(MobEffects.UNLUCK, 200));
             }
 
             return true;
         }
     }
 
-    protected AbstractArrowEntity fireArrow(ItemStack arrowStack, float distanceFactor) {
-        AbstractArrowEntity abstractarrowentity = super.fireArrow(arrowStack, distanceFactor);
-        if (abstractarrowentity instanceof ArrowEntity) {
-            ((ArrowEntity)abstractarrowentity).addEffect(new EffectInstance(Effects.UNLUCK, 600));
+    protected AbstractArrow getArrow(ItemStack arrowStack, float distanceFactor) {
+        AbstractArrow abstractarrowentity = super.getArrow(arrowStack, distanceFactor);
+        if (abstractarrowentity instanceof Arrow) {
+            ((Arrow)abstractarrowentity).addEffect(new MobEffectInstance(MobEffects.UNLUCK, 600));
         }
 
         return abstractarrowentity;

@@ -11,5 +11,5 @@ package chaosdog.frivycat.mixin;
             cir.cancel();
             cir.setReturnValue(ModBlocks.SPIRIT_FIRE.get().getDefaultState());
         }
-    }*/
-}
+    }
+}*/

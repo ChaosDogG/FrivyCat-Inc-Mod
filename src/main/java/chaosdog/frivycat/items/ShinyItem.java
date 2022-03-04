@@ -1,11 +1,7 @@
 package chaosdog.frivycat.items;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-
-// custom class for items that need to be shiny (as in having the enchanted glint effect)
-// it is constructed the same way as regular items
-import net.minecraft.item.Item.Properties;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 public class ShinyItem extends Item {
     public ShinyItem(Properties properties) {
@@ -13,7 +9,7 @@ public class ShinyItem extends Item {
     }
 
     @Override
-    public boolean hasEffect(ItemStack stack) {
+    public boolean isFoil(ItemStack stack) {
         return true;
     }
 
