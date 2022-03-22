@@ -152,5 +152,10 @@
 
     "message.corrupted_block_collide_unsafe": "Something isn't right with that block...better pick it back up",
     "message.corrupted_block_collide_safe": "How strange...seems with this item, you're receiving quite the buff...",
+    "message.darkness_diamond_curios.dirt": "What an interesting stack of dirt, would be a shame if it got sheepish >:3",
+    "message.madness_diamond_curios.mini": "Awwww, it seems a mini you has spawned♪",
+    "message.madness_diamond_curios.oops": "Uhm...let's just pretend that didn't happen-",
+    "message.madness_diamond_curios.missing_items": "Hrm...perhaps you should be holding something, maybe an Allium or an Arrow",
+    "message.madness_diamond_curios.missing_mods": "It seems this diamond's powers are beyond your understanding...perhaps you could install some clones of some sort...",
     "message.magic_wand.failed": "Hrm....maybe you need more levels..."
 }

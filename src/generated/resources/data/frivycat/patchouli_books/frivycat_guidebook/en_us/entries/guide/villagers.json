@@ -1,6 +1,6 @@
 {
 	"name": "Custom Villagers",
-	"category": "patchouli:villagers",
+	"category": "frivycat:villagers",
 	"icon": "minecraft:villager_spawn_egg",
 	"pages": [
 				{

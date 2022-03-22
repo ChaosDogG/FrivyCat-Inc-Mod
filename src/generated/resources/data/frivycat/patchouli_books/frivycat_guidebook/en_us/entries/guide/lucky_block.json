@@ -1,6 +1,6 @@
 {
 	"name": "Lucky Blocks",
-	"category": "patchouli:lucky_blocks",
+	"category": "frivycat:lucky_blocks",
 	"icon": "minecraft:player_head{SkullOwner:MHF_Question}",
 	"pages": [
 				{

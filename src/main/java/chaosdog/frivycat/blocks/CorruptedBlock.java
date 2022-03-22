@@ -8,6 +8,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.passive.SquidEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Items;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.math.BlockPos;
@@ -28,7 +29,7 @@ public class CorruptedBlock extends Block {
             LivingEntity living = (LivingEntity) entityIn;
             if(entityIn instanceof PlayerEntity) {
                 PlayerEntity player = (PlayerEntity) entityIn;
-                if(player.isAlive() && !(player.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get() || player.getHeldItemOffhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get())) {
+                if(player.isAlive() && !(player.getHeldItemMainhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get() || player.getHeldItemOffhand().getItem() == SpecialDiamonds.CORRUPTED_DIAMOND.get() || (player.getTags().contains("corrupted") && player.getHeldItemMainhand().getItem() == Items.INK_SAC))) {
                     if(!worldIn.getGameRules().getBoolean(GameRules.KEEP_INVENTORY)) {
                         player.inventory.dropAllItems();
                     }

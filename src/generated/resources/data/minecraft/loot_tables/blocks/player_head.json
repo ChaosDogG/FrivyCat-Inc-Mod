@@ -42,7 +42,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "frivycat:blocks/lucky_block_o",
+          "name": "frivycat:blocks/surprise_block_o",
           "conditions": [
             {
               "condition": "minecraft:inverted",
@@ -68,7 +68,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "frivycat:blocks/lucky_block_n",
+          "name": "frivycat:blocks/surprise_block_n",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -80,7 +80,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "frivycat:blocks/lucky_block_e",
+          "name": "frivycat:blocks/surprise_block_e",
           "conditions": [
             {
               "condition": "minecraft:location_check",
