@@ -1,8 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "#frivycat:non_boss_spawn_eggs",
-        "minecraft:elder_guardian_spawn_egg",
-        "minecraft:ravager_spawn_egg"
-    ]
-}

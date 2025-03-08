@@ -1,7 +1,0 @@
-{
-	"credit": "Made with Blockbench",
-	"parent": "frivycat:block/mumbo_dust_side_alt",
-	"textures": {
-		"line": "frivycat:block/mumbo_dust_line0"
-	}
-}
