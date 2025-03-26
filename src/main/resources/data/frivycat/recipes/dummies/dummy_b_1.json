@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "frivycat:dummy_a"
+  },
+  "addition": {
+    "tag": "minecraft:logs"
+  },
+  "result": {
+    "item": "frivycat:dummy_b"
+  }
+}

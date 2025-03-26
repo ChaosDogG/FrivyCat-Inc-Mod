@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "frivycat:water_diamond"
+    },
+    "title": {
+      "text": "Hehehe *hic* sexy ladies~ *hic*",
+      "color": "blue"
+    },
+    "description": {
+      "text": "Get a Water Diamond"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "frivycat:collections/special_diamonds",
+  "criteria": {
+    "collect_water_diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "frivycat:water_diamond"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "collect_water_diamond"
+    ]
+  ]
+}

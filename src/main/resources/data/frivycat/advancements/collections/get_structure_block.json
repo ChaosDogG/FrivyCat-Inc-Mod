@@ -1,0 +1,44 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:structure_block"
+        },
+        "title": {
+            "text": "Structure saved",
+            "color": "light_purple",
+            "bold": false
+        },
+        "description": {
+            "text": "Get a structure block",
+            "bold": false
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "frivycat:collections/knowledge",
+    "criteria": {
+        "collect": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:structure_block"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "collect"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "frivycat:dev/structure_void",
+            "frivycat:dev/jigsaw_block"
+        ]
+    }
+}

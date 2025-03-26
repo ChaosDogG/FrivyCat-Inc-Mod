@@ -1,0 +1,1 @@
+execute at @e[type=#frivycat:leadable_npc] as @e[type=#frivycat:leadable_npc] run kill @e[predicate=frivycat:lead,sort=nearest,limit=1,distance=..1]

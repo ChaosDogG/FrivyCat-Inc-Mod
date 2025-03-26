@@ -1,0 +1,38 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:structure_void",
+            "nbt": "{Enchantments:[{id:69}]}"
+        },
+        "title": {
+            "text": "The voidd? But how?!",
+            "color": "dark_aqua",
+            "bold": false
+        },
+        "description": {
+            "text": "Get a structure void"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "frivycat:collections/get_structure_block",
+    "criteria": {
+        "collect": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:structure_void"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "collect"
+        ]
+    ]
+}

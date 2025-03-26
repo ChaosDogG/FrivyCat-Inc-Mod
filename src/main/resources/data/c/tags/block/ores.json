@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#c:ores/ruby",
+    "#c:ores/sapphire",
+    "#c:ores/zircon",
+    "#c:ores/garnet",
+    "#c:ores/jade",
+    "#c:ores/jasper",
+    "#c:ores/spinel",
+    "#c:ores/topaz",
+    "#c:ores/agate"
+  ]
+}

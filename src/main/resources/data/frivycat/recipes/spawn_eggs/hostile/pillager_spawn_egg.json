@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:villager_spawn_egg"
+  },
+  "addition": {
+    "item": "minecraft:crossbow"
+  },
+  "result": {
+    "item": "minecraft:pillager_spawn_egg"
+  }
+}

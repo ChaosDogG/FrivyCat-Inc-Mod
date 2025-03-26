@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column_horizontal",
+    "textures": {
+      "end": "frivycat:block/dummy/top",
+      "side": "frivycat:block/dummy/left"
+    }
+  }

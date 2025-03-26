@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:netherrack",
+    "minecraft:blue_terracotta",
+    "minecraft:black_concrete",
+    "minecraft:spruce_planks",
+    "minecraft:command_block",
+    "minecraft:dirt",
+    "minecraft:obsidian",
+    "minecraft:dead_brain_coral_block",
+    "minecraft:end_stone",
+    "minecraft:sandstone"
+  ]
+}

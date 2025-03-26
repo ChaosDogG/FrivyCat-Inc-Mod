@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "frivycat:garnet"
+    }
+  },
+  "result": {
+    "item": "frivycat:garnet_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,86 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:salmon",
+            "nbt": "{Enchantments:[{id:69}]}"
+        },
+        "title": {
+            "text": "Thanks for all the fish",
+            "color": "dark_blue"
+        },
+        "description": {
+            "text": "Get all fish types (egg/item/bucket)"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "frivycat:collections/root",
+    "criteria": {
+        "collect1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:cod"
+                    },
+                    {
+                        "item": "minecraft:salmon"
+                    },
+                    {
+                        "item": "minecraft:pufferfish"
+                    },
+                    {
+                        "item": "minecraft:tropical_fish"
+                    }
+                ]
+            }
+        },
+        "collect2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:cod_spawn_egg"
+                    },
+                    {
+                        "item": "minecraft:salmon_spawn_egg"
+                    },
+                    {
+                        "item": "minecraft:pufferfish_spawn_egg"
+                    },
+                    {
+                        "item": "minecraft:tropical_fish_spawn_egg"
+                    }
+                ]
+            }
+        },
+        "collect3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:cod_bucket"
+                    },
+                    {
+                        "item": "minecraft:salmon_bucket"
+                    },
+                    {
+                        "item": "minecraft:pufferfish_bucket"
+                    },
+                    {
+                        "item": "minecraft:tropical_fish_bucket"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "collect1",
+            "collect2",
+            "collect3"
+        ]
+    ]
+}

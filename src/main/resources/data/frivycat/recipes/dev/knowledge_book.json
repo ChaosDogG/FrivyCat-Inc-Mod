@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "BNW",
+        " E "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:writable_book"
+        },
+        "B": {
+            "item": "minecraft:book"
+        },
+        "N": {
+            "item": "minecraft:nether_star"
+        },
+        "W": {
+            "item": "minecraft:written_book"
+        },
+        "E": {
+            "item": "minecraft:enchanted_book"
+        }
+    },
+    "result": {
+        "item": "minecraft:knowledge_book",
+        "count": 1
+    }
+}

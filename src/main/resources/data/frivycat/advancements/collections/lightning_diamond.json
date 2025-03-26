@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "frivycat:lightning_diamond"
+    },
+    "title": {
+      "text": "Curious little gem this is",
+      "color": "gold"
+    },
+    "description": {
+      "text": "Get an Lightning Diamond"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "frivycat:collections/special_diamonds",
+  "criteria": {
+    "collect_lightning_diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "frivycat:lightning_diamond"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "collect_lightning_diamond"
+    ]
+  ]
+}

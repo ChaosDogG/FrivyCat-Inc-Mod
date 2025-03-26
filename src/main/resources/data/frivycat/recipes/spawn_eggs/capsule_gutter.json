@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "tag": "frivycat:spawn_eggs"
+    },
+    "result": "minecraft:egg",
+    "count": 1
+}

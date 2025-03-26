@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "frivycat:block/iron_generator"
+    }
+  }
+}

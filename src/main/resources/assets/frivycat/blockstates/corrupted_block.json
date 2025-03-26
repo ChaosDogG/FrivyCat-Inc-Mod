@@ -1,0 +1,7 @@
+{
+    "variants": {
+    "": {
+        "model": "frivycat:block/corrupted_block"
+    }
+  }
+}

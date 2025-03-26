@@ -1,0 +1,38 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:command_block_minecart",
+            "nbt": "{Enchantments:[{id:69}]}"
+        },
+        "title": {
+            "text": "Wait, that rolls?",
+            "color": "gold",
+            "bold": false
+        },
+        "description": {
+            "text": "Get a command block minecart"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "frivycat:collections/get_command_block",
+    "criteria": {
+        "collect": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:command_block_minecart"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "collect"
+        ]
+    ]
+}

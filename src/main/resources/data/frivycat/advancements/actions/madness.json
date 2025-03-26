@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:ink_sac",
+      "nbt": "{Enchantments:[{id:69}]}"
+    },
+    "title": {
+      "text": "MADNESS",
+      "color": "dark_purple",
+      "obfuscated": true
+    },
+    "description": {
+      "text": "Witness the madness",
+      "obfuscated": false
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "frivycat:actions/root",
+  "criteria": {
+    "witness": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

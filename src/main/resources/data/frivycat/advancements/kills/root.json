@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:wooden_sword"
+    },
+    "title": {
+      "text": "Kills"
+    },
+    "description": {
+      "text": "Kills Tab"
+    },
+    "frame": "task",
+    "background": "minecraft:textures/item/feather.png",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "load": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "frivycat:recipes/root",
+  "criteria": {
+    "has_trigger_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:egg"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "frivycat:easter_egg"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_trigger_item",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "frivycat:easter_egg"
+    ]
+  }
+}

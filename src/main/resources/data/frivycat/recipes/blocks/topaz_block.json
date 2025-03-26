@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "frivycat:topaz"
+    }
+  },
+  "result": {
+    "item": "frivycat:topaz_block",
+    "count": 1
+  }
+}

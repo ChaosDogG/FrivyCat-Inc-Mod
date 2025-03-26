@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "frivycat:mustache"
+  },
+  "addition": {
+    "item": "minecraft:redstone"
+  },
+  "result": {
+    "item": "frivycat:mumbo_mustache"
+  }
+}

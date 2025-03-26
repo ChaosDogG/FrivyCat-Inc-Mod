@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stone_bananas",
+  "pattern": [
+    "#  ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  },
+  "result": {
+    "item": "frivycat:stone_banana",
+    "count": 1
+  }
+}

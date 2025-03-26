@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "frivycat:dark_diamond"
+    },
+    "title": {
+      "text": "Let darkness aid your trickery",
+      "color": "black"
+    },
+    "description": {
+      "text": "Get a Dark Diamond"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "frivycat:collections/special_diamonds",
+  "criteria": {
+    "collect_dark_diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "frivycat:dark_diamond"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "collect_dark_diamond"
+    ]
+  ]
+}

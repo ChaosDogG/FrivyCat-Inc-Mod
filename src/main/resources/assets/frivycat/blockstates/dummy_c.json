@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "frivycat:block/dummy_c",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "frivycat:block/dummy_c"
+    },
+    "facing=south": {
+      "model": "frivycat:block/dummy_c",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "frivycat:block/dummy_c",
+      "y": 270
+    }
+  }
+}

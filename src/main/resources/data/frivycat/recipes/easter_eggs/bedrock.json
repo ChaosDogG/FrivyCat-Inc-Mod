@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#W"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:stone"
+        },
+        "W": {
+            "tag": "minecraft:beds"
+        }
+    },
+    "result": {
+        "item": "minecraft:bedrock",
+        "count": 1
+    }
+}

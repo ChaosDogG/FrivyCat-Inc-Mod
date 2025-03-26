@@ -1,0 +1,202 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:white_carpet",
+            "nbt": "{Enchantments:[{id:69}]}"
+        },
+        "title": {
+            "text": "Bring a towel",
+            "color": "gray"
+        },
+        "description": {
+            "text": "Get a carpet of any color"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "frivycat:collections/fish",
+    "criteria": {
+        "collect1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:white_carpet"
+                    }
+                ]
+            }
+        },
+        "collect2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:orange_carpet"
+                    }
+                ]
+            }
+        },
+        "collect3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:lime_carpet"
+                    }
+                ]
+            }
+        },
+        "collect4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:light_blue_carpet"
+                    }
+                ]
+            }
+        },
+        "collect5": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:cyan_carpet"
+                    }
+                ]
+            }
+        },
+        "collect6": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:pink_carpet"
+                    }
+                ]
+            }
+        },
+        "collect7": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:light_gray_carpet"
+                    }
+                ]
+            }
+        },
+        "collect8": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:gray_carpet"
+                    }
+                ]
+            }
+        },
+        "collect9": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:green_carpet"
+                    }
+                ]
+            }
+        },
+        "collect10": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:brown_carpet"
+                    }
+                ]
+            }
+        },
+        "collect11": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:yellow_carpet"
+                    }
+                ]
+            }
+        },
+        "collect12": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:purple_carpet"
+                    }
+                ]
+            }
+        },
+        "collect13": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:magenta_carpet"
+                    }
+                ]
+            }
+        },
+        "collect14": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:blue_carpet"
+                    }
+                ]
+            }
+        },
+        "collect15": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:red_carpet"
+                    }
+                ]
+            }
+        },
+        "collect16": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:black_carpet"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "collect1",
+            "collect2",
+            "collect3",
+            "collect4",
+            "collect5",
+            "collect6",
+            "collect7",
+            "collect8",
+            "collect9",
+            "collect10",
+            "collect11",
+            "collect12",
+            "collect13",
+            "collect14",
+            "collect15",
+            "collect16"
+        ]
+    ]
+}

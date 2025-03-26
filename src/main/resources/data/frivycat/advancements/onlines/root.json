@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "frivycat:ruby"
+    },
+    "title": {
+      "text": "Thanks for using this mod!"
+    },
+    "description": {
+      "text": "Install the mod"
+    },
+    "frame": "task",
+    "background": "minecraft:textures/block/structure_block_data.png",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "join": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

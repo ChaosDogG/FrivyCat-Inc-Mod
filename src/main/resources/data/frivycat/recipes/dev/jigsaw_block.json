@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:structure_block"
+  },
+  "addition": {
+    "item": "minecraft:chain_command_block"
+  },
+  "result": {
+    "item": "minecraft:jigsaw"
+  }
+}

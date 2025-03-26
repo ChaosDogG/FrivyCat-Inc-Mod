@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:gems/ruby",
+    "#forge:gems/sapphire",
+    "#forge:gems/zircon",
+    "#forge:gems/garnet",
+    "#forge:gems/jade",
+    "#forge:gems/jasper",
+    "#forge:gems/spinel",
+    "#forge:gems/topaz",
+    "#forge:gems/agate"
+  ]
+}

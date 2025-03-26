@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "frivycat:spinel"
+    }
+  },
+  "result": {
+    "item": "frivycat:spinel_block",
+    "count": 1
+  }
+}
